@@ -826,6 +826,12 @@ Prefab:
       propertyPath: attack
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 114422357488255534, guid: b8ef3e26a68ff474d8761f85957cba24,
+        type: 2}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 1951276325018502, guid: b22afc43f0ba9407dab23ba81bdfda82,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
   m_IsPrefabParent: 0

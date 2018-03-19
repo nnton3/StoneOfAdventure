@@ -21,12 +21,11 @@ GameObject:
   - component: {fileID: 4202193078492392}
   - component: {fileID: 61679058860159934}
   - component: {fileID: 50345046623708150}
+  - component: {fileID: 114357272933690488}
   - component: {fileID: 212519759059844440}
   - component: {fileID: 114468798033349594}
   - component: {fileID: 95426340243016194}
   - component: {fileID: 82673962577006648}
-  - component: {fileID: 114279649922234244}
-  - component: {fileID: 114855126874598426}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Arrow
@@ -189,7 +188,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114279649922234244
+--- !u!114 &114357272933690488
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -200,9 +199,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdfcddd30cf924080bd262a395637026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFly: {fileID: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  moveSpeed: 0.2
+  health: 0
+  armor: 0
+  attack: 0
+  attackSpeed: 0
+  attackRange: 1
+  invulnerability: 0
+  attackCheck: 1
+  stunned: 0
+  alive: 1
+  moveSpeed: 2
+  input: 0
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  direction: 1
 --- !u!114 &114468798033349594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,25 +221,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1316398423939484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80be856b74ec74f49a1eaec2d034df8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 0
-  horizontalRayCount: 4
-  verticalRayCount: 4
-  directionX: 0
-  playerInput: {x: 0, y: 0}
---- !u!114 &114855126874598426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316398423939484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a196e9e3da234a75b1e379e310c830c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bb95c67a77eb44b0af89cde00d4900e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 1

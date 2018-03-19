@@ -2,61 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow: Unit {
-
-	/*public AudioClip audioFly;
-	bool audioFlyCheck = true;
-
-
-	public Vector3 velocity;
-	public float moveSpeed;
-	Controller2D controller;
-	float gameTime = 1f;
-	float _direction;
-
-	void Awake () {
-		StartCoroutine ("Pause");
-	}
+public class arrow : Unit {
 
 	void Start () {
-		controller = GetComponent<Controller2D> ();
+		rb = GetComponent<Rigidbody2D> ();
+		StartCoroutine ("Timer");
 	}
 
-	void Update() {
-	
-		if (gameTime != Time.timeScale) {
-			velocity.x = Vector2.right.x * moveSpeed * _direction * Time.timeScale;
-			gameTime = Time.timeScale;
-		}
+	void Update () {
+		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
+	}
 
-		controller.Move (velocity);
-
-		if (velocity.x > 0 && audioFlyCheck) {
-			audioFlyCheck = false;
-			StartCoroutine ("AudioFly");
+	void OnTriggerEnter2D (Collider2D target) {
+		if (target.CompareTag ("Enemy")) {
+			target.GetComponent<Unit> ().SetDamage(attack);
+			Destroy (gameObject);
 		}
 	}
 
-	IEnumerator Pause() {
-		yield return new WaitForSeconds (5f);
+	public void SetDirection (float direction) {
+		input = direction;
+	}
+
+	public override void GetDamage () {}
+
+	public override void SetDamage (float damage) {}
+
+	public override void SetStun () {}
+
+	public override void Die () {}
+
+	IEnumerator Timer() {
+		yield return new WaitForSeconds (3f);
 		Destroy (gameObject);
 	}
-
-	public void SetCaster(Archer archer, float direction) {
-		_direction = direction;
-		velocity.x = Vector2.left.x * moveSpeed * _direction;
-	}
-
-	IEnumerator AudioFly () {
-		//audioController.PlayOneShot (audioFly, .5f);
-		yield return new WaitForSeconds (.3f);
-		audioFlyCheck = true;
-	}*/
-	public override void GetDamage (){}
-
-	public override void SetDamage (float damage){}
-
-	public override void SetStun (){}
-
-	public override void Die (){}
 }
