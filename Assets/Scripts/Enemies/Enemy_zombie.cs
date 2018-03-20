@@ -76,7 +76,6 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Получить урон
 	public override void SetDamage (float damage) {
 		if (health <= damage) {
-			anim.SetTrigger ("die");
 			Die ();
 			return;
 		}
@@ -91,6 +90,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 
 	//Умереть
 	public override void Die () {
+		anim.SetTrigger ("die");
 		alive = false;
 		gameObject.layer = 2;
 	}

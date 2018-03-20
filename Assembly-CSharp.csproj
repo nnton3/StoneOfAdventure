@@ -153,6 +153,7 @@
      <Compile Include="Assets\Scripts\Enemies\Aborigen.cs" />
      <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zombieBrian.cs" />
      <Compile Include="Assets\Scripts\Enemies\Invoker.cs" />
      <Compile Include="Assets\Scripts\Enemies\miniBossOgre\miniBossOgr.cs" />
      <Compile Include="Assets\Scripts\Enemies\ModifyAborigenFast.cs" />
