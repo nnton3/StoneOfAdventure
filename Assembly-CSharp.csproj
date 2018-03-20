@@ -149,12 +149,9 @@
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\RatingSystem.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\SwitchAnim.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ToggleAnim.cs" />
-     <Compile Include="Assets\Scripts\AlertDetection.cs" />
-     <Compile Include="Assets\Scripts\DropItem.cs" />
      <Compile Include="Assets\Scripts\Effects\FadeEffect_En_Dis.cs" />
      <Compile Include="Assets\Scripts\Enemies\Aborigen.cs" />
      <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
-     <Compile Include="Assets\Scripts\Enemies\arrow.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie.cs" />
      <Compile Include="Assets\Scripts\Enemies\Invoker.cs" />
      <Compile Include="Assets\Scripts\Enemies\miniBossOgre\miniBossOgr.cs" />
@@ -170,10 +167,9 @@
      <Compile Include="Assets\Scripts\Level3Boss\Level3Boss.cs" />
      <Compile Include="Assets\Scripts\Level3Boss\Level3Portal.cs" />
      <Compile Include="Assets\Scripts\Level3Boss\Puddle.cs" />
-     <Compile Include="Assets\Scripts\LocationPortal.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\Аrrow.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
-     <Compile Include="Assets\Scripts\RaycastController.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\HomyReplics.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Laser.cs" />
@@ -188,6 +184,9 @@
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />
      <None Include="Assets\AssetStore\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\AssetStore\Looader\Licence.txt" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

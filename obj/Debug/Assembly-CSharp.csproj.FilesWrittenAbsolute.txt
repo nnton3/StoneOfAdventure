@@ -104,3 +104,4 @@
 /Users/Anton/Desktop/StoneOfAdventure/Temp/bin/Debug/Unity.Cecil.Mdb.dll
 /Users/Anton/Desktop/StoneOfAdventure/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/Anton/Desktop/StoneOfAdventure/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
+/Users/Anton/Desktop/StoneOfAdventure/Temp/bin/Debug/Facebook.Unity.Settings.dll

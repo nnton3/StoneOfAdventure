@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 50817673537310694}
   - component: {fileID: 212228862097152372}
   - component: {fileID: 95848480876829544}
-  - component: {fileID: 114012727436898862}
   - component: {fileID: 114044067048161718}
+  - component: {fileID: 114920142325306624}
   m_Layer: 0
   m_Name: PlayerArrow
   m_TagString: PlayerArrow
@@ -107,31 +107,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114012727436898862
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1951276325018502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdfcddd30cf924080bd262a395637026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  armor: 0
-  attack: 0
-  attackSpeed: 0
-  attackRange: 1
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  moveSpeed: 10
-  input: 0
-  rb: {fileID: 0}
-  anim: {fileID: 0}
-  direction: 1
 --- !u!114 &114044067048161718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,6 +119,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 1
+--- !u!114 &114920142325306624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951276325018502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23a02c378c614595994d01e482a081e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  armor: 0
+  attack: 50
+  attackSpeed: 0
+  attackRange: 1
+  invulnerability: 0
+  attackCheck: 1
+  stunned: 0
+  alive: 1
+  moveSpeed: 15
+  input: 0
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  direction: 1
 --- !u!212 &212228862097152372
 SpriteRenderer:
   m_ObjectHideFlags: 1
