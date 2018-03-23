@@ -23,6 +23,7 @@ public class DangerArea : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
+		Debug.Log ("work");
 		if (other.CompareTag ("Player")) {
 			enemieAlert (other.gameObject);
 		}
