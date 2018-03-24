@@ -45,7 +45,22 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	public override void GetDamage () {
 		if (attackCheck) {
 			attackCheck = false;
-			anim.SetTrigger ("attack");
+			float attackAnim = Random.Range (0f, 1f);
+			Debug.Log ("attackAnim = " + attackAnim);
+			if (attackAnim <= 0.3f) {
+				anim.SetTrigger ("attack1");
+				return;
+			}
+
+			if (attackAnim > 0.3f && attackAnim <= 0.6f) {
+				anim.SetTrigger ("attack2");
+				return;
+			}
+
+			if (attackAnim > 0.6f) {
+				anim.SetTrigger ("block");
+				return;
+			}
 		}
 	}
 
