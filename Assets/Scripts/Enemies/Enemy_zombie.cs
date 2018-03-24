@@ -93,6 +93,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 		anim.SetTrigger ("die");
 		alive = false;
 		gameObject.layer = 2;
+		gameObject.tag = "Puddle";
 	}
 
 	//Начать преследование

@@ -46,7 +46,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		if (attackCheck) {
 			attackCheck = false;
 			float attackAnim = Random.Range (0f, 1f);
-			Debug.Log ("attackAnim = " + attackAnim);
+
 			if (attackAnim <= 0.3f) {
 				anim.SetTrigger ("attack1");
 				return;
@@ -111,6 +111,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		anim.SetTrigger ("die");
 		alive = false;
 		gameObject.layer = 2;
+		gameObject.tag = "Puddle";
 	}
 
 	//Начать преследование
