@@ -102,6 +102,9 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 		idle = false;
 	}
 
+	public void StartChase() {
+	}
+
 	//Остановить преследование
 	public void Idle () {
 

@@ -59,6 +59,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 			if (attackAnim > 0.6f) {
 				anim.SetTrigger ("block");
+				InBlock ();
 				return;
 			}
 		}
@@ -88,8 +89,9 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	//Поставить блок
-	public void InBlock() {
+	void InBlock() {
 		invulnerability = true;
+		StartCoroutine ("BlockTimer");
 	}
 
 	public override void SetDamage (float damage){
@@ -98,10 +100,12 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 			return;
 		}
 
+		anim.SetTrigger ("attackable");
+
 		if (invulnerability) {
 			return;
 		}
-		anim.SetTrigger ("attackable");
+
 		health -= damage;
 	}
 
@@ -123,5 +127,11 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	//Остановить преследование
 	public void Idle () {
 		
+	}
+
+	IEnumerator BlockTimer() {
+		yield return new WaitForSeconds (2f);
+		anim.SetTrigger ("block");
+		ResetAttackCheck ();
 	}
 }
