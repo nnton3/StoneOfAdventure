@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/Enemy_zombieBrian.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/General Mechanics/DangerArea.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie.cs" Line="103" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombieBrian.cs" Line="104" Column="3" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombieBrian.cs" Line="125" Column="3" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie.cs" Line="102" Column="28" />
+      <File FileName="Assets/Scripts/General Mechanics/DangerArea.cs" Line="30" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

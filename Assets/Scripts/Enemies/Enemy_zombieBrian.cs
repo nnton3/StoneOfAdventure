@@ -25,7 +25,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-
+		Debug.Log("attackCheck = " + attackCheck);
 		if (!idle) {
 			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < attackRange && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
@@ -74,6 +74,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 		yield return new WaitForSeconds (attackSpeed);
 		attackCheck = true;
+		Debug.Log ("work");
 	}
 
 	//Построить луч атаки
@@ -95,7 +96,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	public override void SetDamage (float damage){
-		if (health <= damage) {
+		if (health <= damage && !invulnerability) {
 			Die ();
 			return;
 		}
@@ -121,6 +122,10 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	//Начать преследование
 	public void Chase (GameObject player) {
 		target = player;
+		anim.SetTrigger ("born");
+	}
+
+	public void StartChase() {
 		idle = false;
 	}
 
@@ -130,8 +135,8 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	IEnumerator BlockTimer() {
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (5f);
 		anim.SetTrigger ("block");
-		ResetAttackCheck ();
+		StartCoroutine ("ResetAttackCheck");
 	}
 }

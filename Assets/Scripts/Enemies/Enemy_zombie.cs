@@ -99,10 +99,11 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Начать преследование
 	public void Chase (GameObject player) {
 		target = player;
-		idle = false;
+		anim.SetTrigger ("born");
 	}
 
 	public void StartChase() {
+		idle = false;
 	}
 
 	//Остановить преследование

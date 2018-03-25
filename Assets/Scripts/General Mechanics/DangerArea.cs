@@ -7,6 +7,7 @@ public class DangerArea : MonoBehaviour {
 	alert enemieAlert;
 	idle enemieIdle;
 	List<IReaction<GameObject>> enemies = new List<IReaction<GameObject>>();
+	bool check = true;
 
 	void Start () {
 		foreach (IReaction<GameObject> enemy in enemies) {
@@ -24,7 +25,10 @@ public class DangerArea : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.CompareTag ("Player")) {
-			enemieAlert (other.gameObject);
+			if (check) {
+				enemieAlert (other.gameObject);
+				check = false;
+			}
 		}
 	}
 
