@@ -161,6 +161,7 @@
      <Compile Include="Assets\Scripts\General Mechanics\DangerArea.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\Flip.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\Interfaces.cs" />
+     <Compile Include="Assets\Scripts\General Mechanics\Transition.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\Unit.cs" />
      <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\HPBar.cs" />

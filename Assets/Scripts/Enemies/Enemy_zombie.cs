@@ -91,6 +91,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Умереть
 	public override void Die () {
 		anim.SetTrigger ("die");
+		start.AddCorpse ();
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";

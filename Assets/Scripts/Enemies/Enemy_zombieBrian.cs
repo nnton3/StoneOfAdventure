@@ -46,7 +46,6 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		if (attackCheck) {
 			attackCheck = false;
 			float attackAnim = Random.Range (0f, 1f);
-
 			if (attackAnim <= 0.3f) {
 				anim.SetTrigger ("attack1");
 				return;
@@ -74,7 +73,6 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 		yield return new WaitForSeconds (attackSpeed);
 		attackCheck = true;
-		Debug.Log ("work");
 	}
 
 	//Построить луч атаки
@@ -114,6 +112,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	public override void Die (){
 		anim.SetTrigger ("die");
+		start.AddCorpse ();
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
@@ -135,7 +134,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	IEnumerator BlockTimer() {
-		yield return new WaitForSeconds (5f);
+		yield return new WaitForSeconds (2f);
 		anim.SetTrigger ("block");
 		StartCoroutine ("ResetAttackCheck");
 	}
