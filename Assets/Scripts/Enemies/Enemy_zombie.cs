@@ -12,6 +12,10 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Ссылка на игрока
 	GameObject target;
 
+	public float runDistance = 7f;
+	public float runSpeed = 5f;
+	float zombySpeed;
+
 	bool idle = true;
 
 	void Awake() {
@@ -25,11 +29,10 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	}
 
 	void Update () {
-
-		Vector2 targetVector = new Vector2 (direction, 0f);
-		Vector2 rayOrigin = new Vector2 (transform.position.x, transform.position.y + 0.7f);
-		Debug.DrawRay (rayOrigin, targetVector * attackRange, Color.red);
-
+		if (Mathf.Abs (target.transform.position.x - transform.position.x) < runDistance) {
+			zombySpeed = runSpeed;
+		} else
+			zombySpeed = moveSpeed;
 
 		if (!idle) {
 			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < attackRange && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
@@ -42,9 +45,9 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 			}
 		}
 
-		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
+		rb.velocity = new Vector2 (input * zombySpeed, rb.velocity.y);
 
-		anim.SetFloat ("speed", Mathf.Abs (input * moveSpeed));
+		anim.SetFloat ("speed", Mathf.Abs (input * zombySpeed));
 	}
 
 	//Нанести урон

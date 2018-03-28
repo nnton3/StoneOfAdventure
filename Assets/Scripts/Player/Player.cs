@@ -16,21 +16,23 @@ public class Player : Unit {
 	
 	void Update () {
 
-		//Управление
-		if (Input.GetKeyDown (KeyCode.F)) {       //Атака мечом
-			GetDamage ();
-		}
+		if (attackCheck) {
+			//Управление
+			if (Input.GetKeyDown (KeyCode.F)) {       //Атака мечом
+				GetDamage ();
+			}
 
-		if (Input.GetKeyDown (KeyCode.R)) {       //Перекат
-			Roll ();
-		}
+			if (Input.GetKeyDown (KeyCode.R)) {       //Перекат
+				Roll ();
+			}
 
-		if (Input.GetKeyDown (KeyCode.B)) {       //Блок
-			Block ();
-		}
+			if (Input.GetKeyDown (KeyCode.B)) {       //Блок
+				Block ();
+			}
 
-		if (Input.GetKeyDown (KeyCode.P)) {       //Атака из лука
-			PullBow ();
+			if (Input.GetKeyDown (KeyCode.P)) {       //Атака из лука
+				PullBow ();
+			}
 		}
 
 		if (stunned || !alive) {
@@ -136,6 +138,7 @@ public class Player : Unit {
 		if (!invulnerability) {
 			invulnerability = true;
 			Physics2D.IgnoreLayerCollision (9, 8, true);
+			attackCheck = false;
 			anim.SetTrigger ("roll");
 			input = Mathf.Sign (direction);
 		}
@@ -150,6 +153,7 @@ public class Player : Unit {
 
 	//Стрельба из лука
 	void PullBow () {
+		attackCheck = false;
 		anim.SetTrigger ("pullBow");
 	}
 

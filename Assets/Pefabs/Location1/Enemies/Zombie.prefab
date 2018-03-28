@@ -120,9 +120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  attack: 5
+  attack: 10
   attackSpeed: 1.5
-  attackRange: 1.25
+  attackRange: 1.5
   invulnerability: 0
   attackCheck: 1
   stunned: 0
@@ -135,6 +135,8 @@ MonoBehaviour:
   attackCollision:
     serializedVersion: 2
     m_Bits: 256
+  runDistance: 7
+  runSpeed: 5
 --- !u!114 &114927335698607798
 MonoBehaviour:
   m_ObjectHideFlags: 1
