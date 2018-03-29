@@ -9,6 +9,9 @@ public class Player : Unit {
 
 	bool inBlock = false;
 
+	//Сила толчка во время получения урона
+	public float impulsePower = 1;
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
@@ -78,16 +81,17 @@ public class Player : Unit {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction);
 		}
 	}
 
 	//Получить урон
-	public override void SetDamage (float damage) {
+	public override void SetDamage (float damage, float impulseDirection) {
 		if (!invulnerability) {
 			if (health > damage) {
 				anim.SetTrigger ("attackable");
 				SetStun ();
+				Impulse (impulseDirection);
 				health -= damage;
 			} else
 				Die ();
@@ -162,5 +166,10 @@ public class Player : Unit {
 		GameObject arrowInstance = Instantiate (arrow, new Vector3 (transform.position.x, transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
 		Аrrow arrowScript = arrowInstance.GetComponent<Аrrow> ();
 		arrowScript.SetDirection (direction);
+	}
+
+	void Impulse(float inputDirection) {
+		Debug.Log ("inputDirection = " + inputDirection);
+		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/3.5f), ForceMode2D.Impulse);
 	}
 }

@@ -43,12 +43,12 @@ public class ModifyAborigenFat : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction);
 		}
 	}
 
 	//Получить урон
-	public override void SetDamage (float damage) {
+	public override void SetDamage (float damage, float impulseDirection) {
 		anim.SetTrigger ("die");
 		Die ();
 	}

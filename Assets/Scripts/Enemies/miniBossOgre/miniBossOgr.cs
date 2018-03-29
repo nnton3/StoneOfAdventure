@@ -109,7 +109,7 @@ public class miniBossOgr : Unit {
 	}*/
 	public override void GetDamage (){}
 
-	public override void SetDamage (float damage){}
+	public override void SetDamage (float damage, float impulseDirection){}
 
 	public override void SetStun (){}
 

@@ -131,7 +131,7 @@ public class Level3Boss : Unit, IReaction<GameObject> {
 		}
 	}
 
-	public override void SetDamage (float damage) {
+	public override void SetDamage (float damage, float impulseDirection) {
 		
 		if ((BattlePhase == 1 && health <= 450f) || (BattlePhase == 2 && health <= 300f) || (BattlePhase == 3 && health <= 150f)) {
 			attackCheck = false;

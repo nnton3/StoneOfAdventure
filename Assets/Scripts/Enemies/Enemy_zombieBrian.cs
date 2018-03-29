@@ -14,6 +14,9 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	bool idle = true;
 
+	//Сила толчка во время получения урона
+	public float impulsePower = 1;
+
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
@@ -25,7 +28,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-		Debug.Log("attackCheck = " + attackCheck);
+
 		if (!idle) {
 			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < attackRange && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
@@ -83,7 +86,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction);
 		}
 	}
 
@@ -93,12 +96,13 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		StartCoroutine ("BlockTimer");
 	}
 
-	public override void SetDamage (float damage){
+	public override void SetDamage (float damage, float impulseDirection){
 		if (health <= damage && !invulnerability) {
 			Die ();
 			return;
 		}
 
+		Impulse (impulseDirection);
 		anim.SetTrigger ("attackable");
 
 		if (invulnerability) {
@@ -137,5 +141,9 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		yield return new WaitForSeconds (2f);
 		anim.SetTrigger ("block");
 		StartCoroutine ("ResetAttackCheck");
+	}
+
+	void Impulse(float inputDirection) {
+		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/3.5f), ForceMode2D.Impulse);
 	}
 }
