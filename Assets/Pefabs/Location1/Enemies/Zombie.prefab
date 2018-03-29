@@ -137,6 +137,7 @@ MonoBehaviour:
     m_Bits: 256
   runDistance: 7
   runSpeed: 5
+  impulsePower: 100
 --- !u!114 &114927335698607798
 MonoBehaviour:
   m_ObjectHideFlags: 1

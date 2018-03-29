@@ -15,7 +15,7 @@ public class Аrrow : Unit {
 
 	void OnTriggerEnter2D (Collider2D target) {
 		if (target.CompareTag ("Enemy")) {
-			target.GetComponent<Unit> ().SetDamage(attack);
+			target.GetComponent<Unit> ().SetDamage(attack, direction);
 			Destroy (gameObject);
 		}
 	}
@@ -26,7 +26,7 @@ public class Аrrow : Unit {
 
 	public override void GetDamage () {}
 
-	public override void SetDamage (float damage) {}
+	public override void SetDamage (float damage, float impulseDirection) {}
 
 	public override void SetStun () {}
 

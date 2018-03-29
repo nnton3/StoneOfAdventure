@@ -16,6 +16,9 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	public float runSpeed = 5f;
 	float zombySpeed;
 
+	//Сила толчка во время получения урона
+	public float impulsePower = 1;
+
 	bool idle = true;
 
 	void Awake() {
@@ -29,12 +32,14 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	}
 
 	void Update () {
-		if (Mathf.Abs (target.transform.position.x - transform.position.x) < runDistance) {
-			zombySpeed = runSpeed;
-		} else
-			zombySpeed = moveSpeed;
 
 		if (!idle) {
+			
+			if (Mathf.Abs (target.transform.position.x - transform.position.x) < runDistance) {
+				zombySpeed = runSpeed;
+			} else
+				zombySpeed = moveSpeed;
+			
 			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < attackRange && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
 				GetDamage ();
@@ -72,17 +77,18 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction);
 		}
 	}
 
 	//Получить урон
-	public override void SetDamage (float damage) {
+	public override void SetDamage (float damage, float impulseDirection) {
 		if (health <= damage) {
 			Die ();
 			return;
 		}
 
+		Impulse (impulseDirection);
 		health -= damage;
 	}
 
@@ -113,5 +119,9 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Остановить преследование
 	public void Idle () {
 
+	}
+
+	void Impulse(float inputDirection) {
+		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/3.5f), ForceMode2D.Impulse);
 	}
 }
