@@ -136,6 +136,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   arrow: {fileID: 1951276325018502, guid: b22afc43f0ba9407dab23ba81bdfda82, type: 2}
+  impulsePower: 100
 --- !u!114 &114901732494411922
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,6 +15,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	public float runDistance = 7f;
 	public float runSpeed = 5f;
 	float zombySpeed;
+	public float bornDelay = 0f;
 
 	//Сила толчка во время получения урона
 	public float impulsePower = 1;
@@ -109,7 +110,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Начать преследование
 	public void Chase (GameObject player) {
 		target = player;
-		anim.SetTrigger ("born");
+		StartCoroutine ("TimeToBorn");
 	}
 
 	public void StartChase() {
@@ -123,5 +124,11 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 
 	void Impulse(float inputDirection) {
 		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/3.5f), ForceMode2D.Impulse);
+	}
+
+	//Задержка перед воскрешением
+	IEnumerator TimeToBorn() {
+		yield return new WaitForSeconds (bornDelay);
+		anim.SetTrigger ("born");
 	}
 }
