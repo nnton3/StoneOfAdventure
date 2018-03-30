@@ -20,57 +20,57 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.14444445
+    - time: 0.15294118
       value: {fileID: 21300024, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.47777778
+    - time: 0.5058824
       value: {fileID: 21300026, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.5888889
+    - time: 0.62352943
       value: {fileID: 21300000, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.67777777
+    - time: 0.7176471
       value: {fileID: 21300002, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.74444443
+    - time: 0.7882353
       value: {fileID: 21300004, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.8
+    - time: 0.84705883
       value: {fileID: 21300006, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.9111111
+    - time: 0.9647059
       value: {fileID: 21300008, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.93333334
+    - time: 0.9882353
       value: {fileID: 21300032, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.0444444
+    - time: 1.1058824
       value: {fileID: 21300030, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.4333333
+    - time: 1.517647
       value: {fileID: 21300032, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.5111111
+    - time: 1.6
       value: {fileID: 21300034, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.6111112
+    - time: 1.7058823
       value: {fileID: 21300036, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.6666666
+    - time: 1.7647059
       value: {fileID: 21300010, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.7333333
+    - time: 1.8352941
       value: {fileID: 21300012, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.8
+    - time: 1.9058824
       value: {fileID: 21300014, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.8888888
+    - time: 2
       value: {fileID: 21300038, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 1.9777777
+    - time: 2.0941176
       value: {fileID: 21300020, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 2.0666666
+    - time: 2.1882353
       value: {fileID: 21300042, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 2.1777778
+    - time: 2.3058825
       value: {fileID: 21300044, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 2.288889
+    - time: 2.4235294
       value: {fileID: 21300048, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 2.6222222
+    - time: 2.7764707
       value: {fileID: 21300050, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 2.7555556
+    - time: 2.9176471
       value: {fileID: 21300052, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 2.8666666
+    - time: 3.035294
       value: {fileID: 21300000, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 90
+  m_SampleRate: 85
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -114,7 +114,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.8777778
+    m_StopTime: 3.0470588
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -135,21 +135,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.84444445
+  - time: 0.89411765
     functionName: CreateAttackVector
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.7222222
+  - time: 1.8235294
     functionName: ResetAttackCheck
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.8777778
+  - time: 3.0470588
     functionName: CreateAttackVector
     data: 
     objectReferenceParameter: {fileID: 0}
