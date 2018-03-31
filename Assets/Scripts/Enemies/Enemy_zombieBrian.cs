@@ -30,7 +30,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	void Update () {
 
 		if (!idle) {
-			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < attackRange && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
+			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
 				GetDamage ();
 			} else if (attackCheck && alive) {
@@ -49,19 +49,13 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		if (attackCheck) {
 			attackCheck = false;
 			float attackAnim = Random.Range (0f, 1f);
-			if (attackAnim <= 0.3f) {
+			if (attackAnim <= 0.5f) {
 				anim.SetTrigger ("attack1");
 				return;
 			}
 
-			if (attackAnim > 0.3f && attackAnim <= 0.6f) {
+			if (attackAnim > 0.5f) {
 				anim.SetTrigger ("attack2");
-				return;
-			}
-
-			if (attackAnim > 0.6f) {
-				anim.SetTrigger ("block");
-				InBlock ();
 				return;
 			}
 		}
@@ -97,15 +91,18 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	public override void SetDamage (float damage, float impulseDirection){
+		Impulse (impulseDirection);
+
 		if (health <= damage && !invulnerability) {
 			Die ();
 			return;
 		}
 
-		Impulse (impulseDirection);
-		anim.SetTrigger ("attackable");
+		if (attackCheck) {
+			anim.SetTrigger ("attackable");
+		}
 
-		if (invulnerability) {
+		if (invulnerability && impulseDirection == direction) {
 			return;
 		}
 
@@ -128,7 +125,14 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		StartCoroutine ("TimeToBorn");
 	}
 
+	//Задержка перед воскрешением
+	IEnumerator TimeToBorn() {
+		yield return new WaitForSeconds (bornDelay);
+		anim.SetTrigger ("born");
+	}
+
 	public void StartChase() {
+		gameObject.layer = 9;
 		idle = false;
 	}
 
@@ -144,12 +148,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	void Impulse(float inputDirection) {
-		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/3.5f), ForceMode2D.Impulse);
+		rb.AddForce (new Vector2 (inputDirection * impulsePower, 0f), ForceMode2D.Impulse);
 	}
 
-	//Задержка перед воскрешением
-	IEnumerator TimeToBorn() {
-		yield return new WaitForSeconds (bornDelay);
-		anim.SetTrigger ("born");
-	}
 }

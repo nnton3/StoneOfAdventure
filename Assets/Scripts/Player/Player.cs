@@ -96,6 +96,9 @@ public class Player : Unit {
 			} else
 				Die ();
 		} else if (inBlock) {
+			if (impulseDirection == direction) {
+				health -= damage;
+			}
 			anim.SetTrigger ("attackable");
 		}
 	}

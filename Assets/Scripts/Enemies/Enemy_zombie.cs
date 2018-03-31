@@ -41,7 +41,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 			} else
 				zombySpeed = moveSpeed;
 			
-			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < attackRange && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
+			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.3f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
 				GetDamage ();
 			} else if (attackCheck && alive) {
@@ -84,12 +84,12 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 
 	//Получить урон
 	public override void SetDamage (float damage, float impulseDirection) {
+		Impulse (impulseDirection);
 		if (health <= damage) {
 			Die ();
 			return;
 		}
 
-		Impulse (impulseDirection);
 		health -= damage;
 	}
 
@@ -103,8 +103,8 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 		anim.SetTrigger ("die");
 		start.AddCorpse ();
 		alive = false;
-		gameObject.layer = 2;
-		gameObject.tag = "Puddle";
+		/*gameObject.layer = 2;
+		gameObject.tag = "Puddle";*/
 	}
 
 	//Начать преследование
@@ -114,6 +114,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	}
 
 	public void StartChase() {
+		gameObject.layer = 9;
 		idle = false;
 	}
 
@@ -123,7 +124,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	}
 
 	void Impulse(float inputDirection) {
-		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/3.5f), ForceMode2D.Impulse);
+		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/10f), ForceMode2D.Impulse);
 	}
 
 	//Задержка перед воскрешением
