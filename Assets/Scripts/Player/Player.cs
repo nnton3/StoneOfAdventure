@@ -160,6 +160,11 @@ public class Player : Unit {
 
 	//Стрельба из лука
 	void PullBow () {
+
+		if (inBlock) {
+			StopBlock ();
+		}
+
 		attackCheck = false;
 		anim.SetTrigger ("pullBow");
 	}
