@@ -20,57 +20,57 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.05019305
+    - time: 0.123809524
       value: {fileID: 21300024, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.16602316
+    - time: 0.40952381
       value: {fileID: 21300026, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.2046332
+    - time: 0.50476193
       value: {fileID: 21300000, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.23552124
+    - time: 0.5809524
       value: {fileID: 21300002, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.25868726
+    - time: 0.63809526
       value: {fileID: 21300004, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.27799228
+    - time: 0.6857143
       value: {fileID: 21300006, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.31660232
+    - time: 0.7809524
       value: {fileID: 21300008, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.3243243
+    - time: 0.8
       value: {fileID: 21300032, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.36293435
+    - time: 0.8952381
       value: {fileID: 21300030, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.4980695
+    - time: 1.2285714
       value: {fileID: 21300032, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.52509654
+    - time: 1.2952381
       value: {fileID: 21300034, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.55984557
+    - time: 1.3809524
       value: {fileID: 21300036, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.57915056
+    - time: 1.4285715
       value: {fileID: 21300010, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.6023166
+    - time: 1.4857143
       value: {fileID: 21300012, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.6254826
+    - time: 1.5428572
       value: {fileID: 21300014, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.65637064
+    - time: 1.6190476
       value: {fileID: 21300038, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.68725866
+    - time: 1.6952381
       value: {fileID: 21300020, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.71814674
+    - time: 1.7714286
       value: {fileID: 21300042, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.7567568
+    - time: 1.8666667
       value: {fileID: 21300044, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.7953668
+    - time: 1.9619048
       value: {fileID: 21300048, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.9111969
+    - time: 2.2476192
       value: {fileID: 21300050, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.95752895
+    - time: 2.3619049
       value: {fileID: 21300052, guid: 274ebf3368a6ba84980fd3c6837cde2e, type: 3}
-    - time: 0.996139
+    - time: 2.4571428
       value: {fileID: 21300000, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 259
+  m_SampleRate: 105
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -114,7 +114,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 2.4666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -135,22 +135,22 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.2934363
+  - time: 0.72380954
     functionName: CreateAttackVector
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5984556
+  - time: 1.3809524
+    functionName: CreateAttackVector
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.4571428
     functionName: ResetAttackCheck
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1
-    functionName: CreateAttackVector
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -220,7 +220,11 @@ TextureImporter:
         width: 51
         height: 6
       alignment: 9
+<<<<<<< HEAD:Assets/Sprites/Location2Enemies/ZombieBraian/Dying.png.meta
       pivot: {x: 0.36, y: 0.17}
+=======
+      pivot: {x: 0.36, y: 0.16}
+>>>>>>> f380c263c421a7a5ea3af6855a3ada8bddaee223:Assets/Sprites/Location2Enemies/ZombieBraian/Diyng.png.meta
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,7 +238,11 @@ TextureImporter:
         width: 52
         height: 6
       alignment: 9
+<<<<<<< HEAD:Assets/Sprites/Location2Enemies/ZombieBraian/Dying.png.meta
       pivot: {x: 0.36, y: 0.17}
+=======
+      pivot: {x: 0.36, y: 0.16}
+>>>>>>> f380c263c421a7a5ea3af6855a3ada8bddaee223:Assets/Sprites/Location2Enemies/ZombieBraian/Diyng.png.meta
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
