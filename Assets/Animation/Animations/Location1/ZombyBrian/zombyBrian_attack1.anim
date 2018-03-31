@@ -20,35 +20,35 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.0125
+    - time: 0.01
       value: {fileID: 21300002, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.1625
+    - time: 0.13
       value: {fileID: 21300004, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.5375
+    - time: 0.43
       value: {fileID: 21300006, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.6625
+    - time: 0.53
       value: {fileID: 21300010, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.7375
+    - time: 0.59
       value: {fileID: 21300012, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.8
+    - time: 0.64
       value: {fileID: 21300014, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.925
+    - time: 0.74
       value: {fileID: 21300016, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 0.95
+    - time: 0.76
       value: {fileID: 21300018, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 1.075
+    - time: 0.86
       value: {fileID: 21300020, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 1.7
+    - time: 1.36
       value: {fileID: 21300022, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 1.85
+    - time: 1.48
       value: {fileID: 21300024, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
-    - time: 1.95
+    - time: 1.56
       value: {fileID: 21300000, guid: 86217f7c739f1254f85dfd68ef1be6c3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 80
+  m_SampleRate: 100
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -81,7 +81,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.9625001
+    m_StopTime: 1.5699999
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -102,14 +102,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.8
+  - time: 0.64
     functionName: CreateAttackVector
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.95
+  - time: 1.56
     functionName: ResetAttackCheck
     data: 
     objectReferenceParameter: {fileID: 0}
