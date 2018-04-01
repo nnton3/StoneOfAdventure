@@ -178,11 +178,8 @@
      <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />
      <Compile Include="Assets\Scripts\ThrustProgressBar.cs" />
      <Compile Include="Assets\Scripts\UISwap.cs" />
-     <Compile Include="Assets\Standart Assets\EndWindow.cs" />
      <Compile Include="Assets\Standart Assets\GameManager.cs" />
-     <Compile Include="Assets\Standart Assets\LoadScreen.cs" />
      <Compile Include="Assets\Standart Assets\Menu.cs" />
-     <Compile Include="Assets\Standart Assets\SaveSystem.cs" />
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />
      <None Include="Assets\AssetStore\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\AssetStore\Looader\Licence.txt" />
