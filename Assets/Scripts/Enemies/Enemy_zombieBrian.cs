@@ -13,6 +13,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	GameObject target;
 	public float bornDelay = 0f;
 	bool idle = true;
+	bool attackable = true;
 
 	//Сила толчка во время получения урона
 	public float impulsePower = 1;
@@ -51,7 +52,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 			if (invulnerability) {
 				anim.SetTrigger ("block");
 			}
-
+			attackable = false;
 			attackCheck = false;
 			float attackAnim = Random.Range (0f, 1f);
 			if (attackAnim <= 0.5f) {
@@ -68,7 +69,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	//Сбросить чек атаки
 	public IEnumerator ResetAttackCheck () {
-		
+		attackable = true;
 		//Перейти на блокировку
 		anim.SetTrigger ("block");
 		invulnerability = true;
@@ -104,7 +105,9 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 			return;
 		}
 
-		anim.SetTrigger ("attackable");
+		if (attackable) {
+			anim.SetTrigger ("attackable");
+		}
 
 		health -= damage;
 	}

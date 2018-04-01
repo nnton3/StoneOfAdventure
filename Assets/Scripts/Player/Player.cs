@@ -98,8 +98,10 @@ public class Player : Unit {
 		} else if (inBlock) {
 			if (impulseDirection == direction) {
 				health -= damage;
+				anim.SetTrigger ("attackable");
+				return;
 			}
-			anim.SetTrigger ("attackable");
+			anim.SetTrigger ("blocked");
 		}
 	}
 
