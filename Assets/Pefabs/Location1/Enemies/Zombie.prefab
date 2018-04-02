@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1531999292881766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.19, y: -4.05, z: 0}
+  m_LocalPosition: {x: -6.16, y: -3.86, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -137,8 +137,8 @@ MonoBehaviour:
     m_Bits: 256
   runDistance: 3.5
   runSpeed: 6
-  bornDelay: 0
-  impulsePower: 100
+  bornDelay: 1.5
+  impulsePower: 75
 --- !u!114 &114927335698607798
 MonoBehaviour:
   m_ObjectHideFlags: 1
