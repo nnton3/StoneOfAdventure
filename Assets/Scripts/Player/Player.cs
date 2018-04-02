@@ -12,7 +12,7 @@ public class Player : Unit {
 	Flip flip;
 
 	//Сила толчка во время получения урона
-	public float impulsePower = 1;
+	public float impulsePower = 3;
 
 	void Start () {
 		flip = GetComponent<Flip> ();
@@ -43,7 +43,7 @@ public class Player : Unit {
 
 		if (stunned || !alive) {
 			float step = 0.01f * Time.time;
-			moveSpeed = Mathf.MoveTowards (3f, 0f, step);
+			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
 		} else if (!invulnerability && !stunned || inBlock) {
 			input = Input.GetAxisRaw ("Horizontal");
 		} else {
@@ -96,7 +96,6 @@ public class Player : Unit {
 				anim.SetTrigger ("attackable");
 				SetStun ();
 				input = impulseDirection;
-				//Impulse (impulseDirection);
 				health -= damage;
 			} else
 				Die ();
@@ -106,6 +105,8 @@ public class Player : Unit {
 				anim.SetTrigger ("attackable");
 				return;
 			}
+			SetStun ();
+			input = impulseDirection;
 			anim.SetTrigger ("blocked");
 		}
 	}
@@ -185,9 +186,5 @@ public class Player : Unit {
 		GameObject arrowInstance = Instantiate (arrow, new Vector3 (transform.position.x, transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
 		Аrrow arrowScript = arrowInstance.GetComponent<Аrrow> ();
 		arrowScript.SetDirection (direction);
-	}
-
-	void Impulse(float inputDirection) {
-		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/3.5f), ForceMode2D.Impulse);
 	}
 }

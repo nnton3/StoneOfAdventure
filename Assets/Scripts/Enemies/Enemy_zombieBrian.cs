@@ -8,15 +8,15 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	public LayerMask attackCollision;
 	//Область агра
 	DangerArea start;
+	Flip flip;
 
 	//Ссылка на игрока
 	GameObject target;
 	public float bornDelay = 0f;
 	bool idle = true;
-	bool attackable = true;
 
 	//Сила толчка во время получения урона
-	public float impulsePower = 1;
+	public float impulsePower = 3;
 
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
@@ -24,21 +24,23 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	void Start () {
+		flip = GetComponent<Flip> ();
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
 	
 	void Update () {
 
-		if (!idle) {
-			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
+		if (!idle && alive && !stunned) {
+			if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
 				GetDamage ();
-			} else if (attackCheck && alive) {
+			} else if (attackCheck) {
 				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
-			} else if (!alive) {
-				input = 0f;
-			}
+			} 
+		} else if (!alive || stunned) {
+			float step = 0.01f * Time.time;
+			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
 		}
 
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
@@ -52,7 +54,6 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 			if (invulnerability) {
 				anim.SetTrigger ("block");
 			}
-			attackable = false;
 			attackCheck = false;
 			float attackAnim = Random.Range (0f, 1f);
 			if (attackAnim <= 0.5f) {
@@ -69,7 +70,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	//Сбросить чек атаки
 	public IEnumerator ResetAttackCheck () {
-		attackable = true;
+
 		//Перейти на блокировку
 		anim.SetTrigger ("block");
 		invulnerability = true;
@@ -94,25 +95,36 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	public override void SetDamage (float damage, float impulseDirection){
-		Impulse (impulseDirection);
 
 		if (health <= damage && !invulnerability) {
+			flip.enabled = false;
 			Die ();
 			return;
 		}
 
-		if (invulnerability && impulseDirection != direction) {
-			return;
-		}
-
-		if (attackable) {
+		if (invulnerability) {
 			anim.SetTrigger ("attackable");
+			SetStun ();
+			input = impulseDirection;
+			if (impulseDirection != direction) {
+				return;
+			} else
+				health -= damage;
 		}
-
-		health -= damage;
 	}
 
-	public override void SetStun (){}
+	public override void SetStun (){
+		flip.enabled = false;
+		stunned = true;
+	}
+
+	//Сбросить чек стана
+	public void ResetStunCheck () {
+		input = 0f;
+		flip.enabled = true;
+		moveSpeed = 2f;
+		stunned = false;
+	}
 
 	public override void Die (){
 		anim.SetTrigger ("die");
@@ -143,9 +155,4 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	public void Idle () {
 		
 	}
-
-	void Impulse(float inputDirection) {
-		rb.AddForce (new Vector2 (inputDirection * impulsePower, 0f), ForceMode2D.Impulse);
-	}
-
 }

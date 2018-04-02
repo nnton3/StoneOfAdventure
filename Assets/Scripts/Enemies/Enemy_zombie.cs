@@ -8,6 +8,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	public LayerMask attackCollision;
 	//Область агра
 	DangerArea start;
+	Flip flip;
 
 	//Ссылка на игрока
 	GameObject target;
@@ -18,7 +19,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	public float bornDelay = 0f;
 
 	//Сила толчка во время получения урона
-	public float impulsePower = 1;
+	public float impulsePower = 3;
 
 	bool idle = true;
 
@@ -28,6 +29,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	}
 
 	void Start () {
+		flip = GetComponent<Flip> ();
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
@@ -47,7 +49,8 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 			} else if (attackCheck && alive) {
 				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 			} else if (!alive) {
-				input = 0f;
+				float step = 0.01f * Time.time;
+				moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
 			}
 		}
 
@@ -84,8 +87,9 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 
 	//Получить урон
 	public override void SetDamage (float damage, float impulseDirection) {
-		Impulse (impulseDirection);
 		if (health <= damage) {
+			flip.enabled = false;
+			input = impulseDirection;
 			Die ();
 			return;
 		}
@@ -96,6 +100,11 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Получить стан
 	public override void SetStun () {
 
+	}
+
+	//Сбросить чек стана
+	public void ResetStunCheck () {
+		input = 0f;
 	}
 
 	//Умереть
@@ -121,10 +130,6 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Остановить преследование
 	public void Idle () {
 
-	}
-
-	void Impulse(float inputDirection) {
-		rb.AddForce (new Vector2 (inputDirection * impulsePower, impulsePower/10f), ForceMode2D.Impulse);
 	}
 
 	//Задержка перед воскрешением
