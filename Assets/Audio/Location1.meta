@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: e204f07f94afd471caa2539cd3227596
 folderAsset: yes
+<<<<<<< HEAD
 timeCreated: 1522755890
+=======
+timeCreated: 1522684908
+>>>>>>> parent of d7094c2... Merge branch 'ogre' of https://github.com/nnton3/StoneOfAdventure into ogre
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

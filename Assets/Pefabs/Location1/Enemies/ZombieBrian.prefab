@@ -39,11 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780096191958802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
   m_LocalPosition: {x: -6.1380954, y: -3.5199997, z: 0}
-=======
-  m_LocalPosition: {x: 2.54, y: -2.06, z: 0}
->>>>>>> 8b6ae74b415b489246e8b9f59e907bcfb01bd9b3
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -151,7 +147,7 @@ MonoBehaviour:
   attackCollision:
     serializedVersion: 2
     m_Bits: 256
-  bornDelay: 19
+  bornDelay: 10
   impulsePower: 1.8
 --- !u!212 &212163186509112466
 SpriteRenderer:
