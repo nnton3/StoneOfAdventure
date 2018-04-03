@@ -49,7 +49,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 			} else if (attackCheck && alive) {
 				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 			} else if (!alive) {
-				float step = 0.01f * Time.time;
+				float step = 1f * Time.time;
 				moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
 			}
 		}
@@ -129,7 +129,6 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 
 	//Остановить преследование
 	public void Idle () {
-
 	}
 
 	//Задержка перед воскрешением

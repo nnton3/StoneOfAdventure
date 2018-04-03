@@ -138,7 +138,7 @@ MonoBehaviour:
   runDistance: 3.5
   runSpeed: 6
   bornDelay: 1.5
-  impulsePower: 0
+  impulsePower: 0.1
 --- !u!114 &114927335698607798
 MonoBehaviour:
   m_ObjectHideFlags: 1
