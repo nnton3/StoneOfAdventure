@@ -11,6 +11,9 @@ public class Player : Unit {
 
 	Flip flip;
 
+	public float rollCD = 3f;
+	bool rollCheck = true;
+
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
 
@@ -154,12 +157,14 @@ public class Player : Unit {
 			StopBlock ();
 		}
 
-		if (!invulnerability) {
+		if (!stunned && rollCheck) {
+			rollCheck = false;
 			invulnerability = true;
 			Physics2D.IgnoreLayerCollision (9, 8, true);
 			attackCheck = false;
 			anim.SetTrigger ("roll");
 			input = Mathf.Sign (direction);
+			StartCoroutine ("RollCD");
 		}
 	}
 
@@ -186,5 +191,10 @@ public class Player : Unit {
 		GameObject arrowInstance = Instantiate (arrow, new Vector3 (transform.position.x, transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
 		Аrrow arrowScript = arrowInstance.GetComponent<Аrrow> ();
 		arrowScript.SetDirection (direction);
+	}
+
+	IEnumerator RollCD () {
+		yield return new WaitForSeconds (rollCD);
+		rollCheck = true;
 	}
 }
