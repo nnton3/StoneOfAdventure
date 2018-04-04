@@ -103,14 +103,17 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		}
 
 		if (invulnerability) {
-			anim.SetTrigger ("attackable");
 			SetStun ();
 			input = impulseDirection;
 			if (impulseDirection != direction) {
+				anim.SetTrigger ("attackableInBlock");
 				return;
-			} else
+			} else {
 				health -= damage;
-		}
+				anim.SetTrigger ("attackable");
+			}
+		} else 
+			health -= damage;
 	}
 
 	public override void SetStun (){
