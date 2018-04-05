@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7D1724C2-DFEC-A636-BE33-E16E28220447}</ProjectGuid>
+    <ProjectGuid>{E363D08A-F689-5288-4CCD-D4556AD4D830}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -98,6 +98,9 @@
      <Compile Include="Assets\AssetStore\Editor\ModernUI.cs" />
      <None Include="Assets\AssetStore\PlayServicesResolver\Editor\play-services-resolver_v1.2.48.0.txt" />
      <None Include="Assets\AssetStore\GoogleMobileAds\Editor\GoogleMobileAdsDependencies.xml" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -165,22 +168,22 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver_v1.2.48.0">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.48.0.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.48.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandlerImpl_v1.2.48.0">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.48.0.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.48.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.48.0">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.JarResolver_v1.2.48.0.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.JarResolver_v1.2.48.0.dll</HintPath>
  </Reference>
  <Reference Include="AssetStoreToolsExtra">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
  </Reference>
  <Reference Include="AssetStoreTools">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStoreTools/Editor/AssetStoreTools.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStoreTools/Editor/AssetStoreTools.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/Anton/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -206,7 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{81CA61DC-6152-DBFA-527D-18DFBC27050E}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{35E2B4C1-3759-1B56-33FF-48755F1A0430}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

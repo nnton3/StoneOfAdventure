@@ -22,10 +22,9 @@ GameObject:
   - component: {fileID: 61794520813580810}
   - component: {fileID: 50740070378084034}
   - component: {fileID: 212452993168379688}
-  - component: {fileID: 114107551412261366}
   - component: {fileID: 95531224517514778}
-  - component: {fileID: 114852518974925116}
-  - component: {fileID: 114677188968905432}
+  - component: {fileID: 114076057474806988}
+  - component: {fileID: 114882792286693966}
   m_Layer: 0
   m_Name: PlayerArrow2
   m_TagString: PlayerArrow
@@ -108,7 +107,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114107551412261366
+--- !u!114 &114076057474806988
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -116,17 +115,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1636138475281386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80be856b74ec74f49a1eaec2d034df8d, type: 3}
+  m_Script: {fileID: 11500000, guid: bdfcddd30cf924080bd262a395637026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 0
-  horizontalRayCount: 4
-  verticalRayCount: 4
-  directionX: 0
-  playerInput: {x: 0, y: 0}
---- !u!114 &114677188968905432
+  health: 0
+  armor: 0
+  attack: 0
+  attackSpeed: 0
+  attackRange: 1
+  invulnerability: 0
+  attackCheck: 1
+  stunned: 0
+  alive: 1
+  moveSpeed: 10
+  input: 0
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  direction: 1
+--- !u!114 &114882792286693966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -134,24 +140,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1636138475281386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a196e9e3da234a75b1e379e310c830c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bb95c67a77eb44b0af89cde00d4900e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 1
---- !u!114 &114852518974925116
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1636138475281386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5af2f08a8334bac8453de867d3a364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioFly: {fileID: 0}
-  audioHit: {fileID: 0}
-  moveSpeed: 0.4
 --- !u!212 &212452993168379688
 SpriteRenderer:
   m_ObjectHideFlags: 1

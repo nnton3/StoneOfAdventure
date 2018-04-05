@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{81CA61DC-6152-DBFA-527D-18DFBC27050E}</ProjectGuid>
+    <ProjectGuid>{35E2B4C1-3759-1B56-33FF-48755F1A0430}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -149,19 +149,19 @@
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\RatingSystem.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\SwitchAnim.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ToggleAnim.cs" />
-     <Compile Include="Assets\Scripts\AlertDetection.cs" />
-     <Compile Include="Assets\Scripts\DropItem.cs" />
      <Compile Include="Assets\Scripts\Effects\FadeEffect_En_Dis.cs" />
      <Compile Include="Assets\Scripts\Enemies\Aborigen.cs" />
      <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Arrow.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zombieBrian.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Invoker.cs" />
      <Compile Include="Assets\Scripts\Enemies\miniBossOgre\miniBossOgr.cs" />
      <Compile Include="Assets\Scripts\Enemies\ModifyAborigenFast.cs" />
      <Compile Include="Assets\Scripts\Enemies\ModifyAborigenFat.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\DangerArea.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\Flip.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\Interfaces.cs" />
+     <Compile Include="Assets\Scripts\General Mechanics\Transition.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\Unit.cs" />
      <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
@@ -169,24 +169,23 @@
      <Compile Include="Assets\Scripts\Level3Boss\Level3Boss.cs" />
      <Compile Include="Assets\Scripts\Level3Boss\Level3Portal.cs" />
      <Compile Include="Assets\Scripts\Level3Boss\Puddle.cs" />
-     <Compile Include="Assets\Scripts\LocationPortal.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\Аrrow.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
-     <Compile Include="Assets\Scripts\RaycastController.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\HomyReplics.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Laser.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />
      <Compile Include="Assets\Scripts\ThrustProgressBar.cs" />
      <Compile Include="Assets\Scripts\UISwap.cs" />
-     <Compile Include="Assets\Standart Assets\EndWindow.cs" />
      <Compile Include="Assets\Standart Assets\GameManager.cs" />
-     <Compile Include="Assets\Standart Assets\LoadScreen.cs" />
      <Compile Include="Assets\Standart Assets\Menu.cs" />
-     <Compile Include="Assets\Standart Assets\SaveSystem.cs" />
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />
      <None Include="Assets\AssetStore\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\AssetStore\Looader\Licence.txt" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -254,22 +253,22 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver_v1.2.48.0">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.48.0.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.48.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandlerImpl_v1.2.48.0">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.48.0.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.48.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.48.0">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStore/PlayServicesResolver/Editor/Google.JarResolver_v1.2.48.0.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStore/PlayServicesResolver/Editor/Google.JarResolver_v1.2.48.0.dll</HintPath>
  </Reference>
  <Reference Include="AssetStoreToolsExtra">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
  </Reference>
  <Reference Include="AssetStoreTools">
- <HintPath>/Users/Anton/Desktop/RPG_test_version/Assets/AssetStoreTools/Editor/AssetStoreTools.dll</HintPath>
+ <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Assets/AssetStoreTools/Editor/AssetStoreTools.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/Anton/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>

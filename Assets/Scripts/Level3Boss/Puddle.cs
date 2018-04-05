@@ -28,7 +28,7 @@ public class Puddle : MonoBehaviour {
 	void OnTriggerStay2D (Collider2D other) {
 		if (other.CompareTag ("Player") && AttackCheck) {
 			AttackCheck = false;
-			other.GetComponent<Unit> ().SetDamage(damage);
+			other.GetComponent<Unit> ().SetDamage(damage, 0f);
 		}
 	}
 

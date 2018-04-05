@@ -7,10 +7,16 @@ public class DangerArea : MonoBehaviour {
 	alert enemieAlert;
 	idle enemieIdle;
 	List<IReaction<GameObject>> enemies = new List<IReaction<GameObject>>();
+	bool check = true;
+	[HideInInspector]
+	public int deadEnemies = 0;
+	int allEnemies = 0;
+	public Transition transition;
 
 	void Start () {
 		foreach (IReaction<GameObject> enemy in enemies) {
 			enemieAlert += enemy.Chase;
+			allEnemies += 1;
 		}
 
 		foreach (IReaction<GameObject> enemy in enemies) {
@@ -24,13 +30,18 @@ public class DangerArea : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.CompareTag ("Player")) {
-			enemieAlert (other.gameObject);
+			if (check) {
+				enemieAlert (other.gameObject);
+				check = false;
+			}
 		}
 	}
 
-	void OnTriggerExit2D (Collider2D other) {
-		if (other.CompareTag ("Player")) {
-			enemieIdle ();
+	public void AddCorpse () {
+		deadEnemies += 1;
+		if (deadEnemies == allEnemies) {
+			transition.Activate ();
 		}
 	}
+
 }
