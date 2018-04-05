@@ -51,8 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
      <Compile Include="Assets\AssetStore\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
      <Compile Include="Assets\AssetStore\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
      <Compile Include="Assets\AssetStore\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -145,7 +143,6 @@
      <Compile Include="Assets\AssetStore\Looader\Scripts\LO_LoadSceneTrigger.cs" />
      <Compile Include="Assets\AssetStore\Looader\Scripts\LO_PressAnyKey.cs" />
      <Compile Include="Assets\AssetStore\Looader\Scripts\LO_SelectStyle.cs" />
->>>>>>> parent of b493f1a7... pls noo
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\LaunchURL.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\PBFilled.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ProgressBar.cs" />
@@ -184,11 +181,8 @@
      <Compile Include="Assets\Standart Assets\GameManager.cs" />
      <Compile Include="Assets\Standart Assets\Menu.cs" />
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />
-<<<<<<< HEAD
-=======
      <None Include="Assets\AssetStore\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\AssetStore\Looader\Licence.txt" />
->>>>>>> parent of b493f1a7... pls noo
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/Anton/Desktop/StoneOfAdventure/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
