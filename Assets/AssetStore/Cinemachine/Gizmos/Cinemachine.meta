@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: ca2168befea188b41a64ed01e777e286
 folderAsset: yes
@@ -8,3 +9,14 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: ca2168befea188b41a64ed01e777e286
+folderAsset: yes
+timeCreated: 1455580628
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> parent of b493f1a7... pls noo
