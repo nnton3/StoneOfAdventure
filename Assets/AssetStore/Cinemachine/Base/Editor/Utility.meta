@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+fileFormatVersion: 2
+guid: 29d58ccb958d24942bf23fafcec87c0b
+folderAsset: yes
+timeCreated: 1489096338
+licenseType: Store
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
 fileFormatVersion: 2
 guid: 29d58ccb958d24942bf23fafcec87c0b
 folderAsset: yes
@@ -7,3 +19,4 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>> parent of b493f1a7... pls noo

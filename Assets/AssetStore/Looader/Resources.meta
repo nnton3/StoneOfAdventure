@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 0b67bdd9a0992734298c54dfe6604a40
 folderAsset: yes
@@ -7,3 +8,18 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 0b67bdd9a0992734298c54dfe6604a40
+folderAsset: yes
+timeCreated: 1478713854
+licenseType: Free
+DefaultImporter:
+<<<<<<< HEAD
+  externalObjects: {}
+=======
+>>>>>>> parent of b493f1a7... pls noo
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> f7ebf42e83e9b71a1067b9b31dbdd5d2a7384f97
