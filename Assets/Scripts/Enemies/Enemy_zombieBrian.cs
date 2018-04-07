@@ -70,15 +70,21 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	//Сбросить чек атаки
 	public IEnumerator ResetAttackCheck () {
-
-		//Перейти на блокировку
-		anim.SetTrigger ("block");
-		invulnerability = true;
+		
+		if (!invulnerability) {
+			//Перейти на блокировку
+			anim.SetTrigger ("block");
+			invulnerability = true;
+		}
 		yield return new WaitForSeconds (attackSpeed);
 
 		//Перейти к Атаке/Преследованию
-		invulnerability = false;
-		anim.SetTrigger ("block");
+		//Если в блоке - снять блок
+		if (invulnerability) {
+			invulnerability = false;
+			anim.SetTrigger ("block");
+		}
+
 		attackCheck = true;
 	}
 
@@ -109,6 +115,12 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 				anim.SetTrigger ("attackableInBlock");
 				return;
 			} else {
+				if (health <= damage) {
+					flip.enabled = false;
+					Die ();
+					return;
+				}
+
 				health -= damage;
 				anim.SetTrigger ("attackable");
 			}
