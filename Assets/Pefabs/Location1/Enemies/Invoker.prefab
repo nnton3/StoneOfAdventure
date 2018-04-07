@@ -133,7 +133,7 @@ MonoBehaviour:
   health: 30
   armor: 0
   attack: 0
-  attackSpeed: 5
+  attackSpeed: 3
   attackRange: 1
   invulnerability: 0
   attackCheck: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
     m_Bits: 256
   bornDelay: 0
   impulsePower: 3
-  zomby: {fileID: 0}
+  zomby: {fileID: 1465211492427678, guid: 92bc2f8da001e41d5a55d452be8ceae3, type: 2}
 --- !u!212 &212826829360368474
 SpriteRenderer:
   m_ObjectHideFlags: 1

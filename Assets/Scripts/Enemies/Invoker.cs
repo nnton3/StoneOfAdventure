@@ -34,15 +34,20 @@ public class Invoker : Unit, IReaction<GameObject> {
 	
 	void Update () {
 
-		if (stunned || !alive) {
-			float step = 1f * Time.time;
-			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
+		if (!idle) {
+			if (attackCheck && alive && !stunned) {
+				GetDamage ();
+			} else if (stunned || !alive) {
+				float step = 1f * Time.time;
+				moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
+			}
 		}
 
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
 	}
 
 	public override void GetDamage (){
+		attackCheck = false;
 		anim.SetTrigger ("attack");
 	}
 
@@ -59,7 +64,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 			Die ();
 			return;
 		}
-
+		anim.SetTrigger ("attackable");
 		health -= damage;
 	}
 
@@ -71,6 +76,10 @@ public class Invoker : Unit, IReaction<GameObject> {
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
+	}
+
+	public void DestroyObject() {
+		Destroy (gameObject);
 	}
 
 	//Начать преследование
@@ -92,12 +101,14 @@ public class Invoker : Unit, IReaction<GameObject> {
 
 	//Призвать зомби
 	public void InvokeZomby() {
-		GameObject zombyInstance = Instantiate (zomby, new Vector3 (transform.position.x, transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
+		GameObject zombyInstance = Instantiate (zomby, new Vector3 (transform.position.x + Random.Range (-3, -15), transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
+		Enemy_invokedZomby zombyScript = zombyInstance.GetComponent<Enemy_invokedZomby> ();
+		zombyScript.target = target;
 	}
 
 	//Таймер на остановку
 	IEnumerator StopMovespeedTimer () {
-		yield return new WaitForSeconds (5f);
+		yield return new WaitForSeconds (3f);
 		input = 0f;
 		rb.gravityScale = 1f;
 		anim.SetTrigger ("stopFly");
