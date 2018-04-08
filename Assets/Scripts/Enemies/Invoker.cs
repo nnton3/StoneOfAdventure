@@ -57,7 +57,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 		attackCheck = true;
 	}
 
-	public override void SetDamage (float damage, float impulseDirection){
+	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){
 		if (health <= damage) {
 			flip.enabled = false;
 			input = impulseDirection;

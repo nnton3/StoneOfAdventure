@@ -17,7 +17,6 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
-
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
@@ -96,11 +95,11 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, false);
 		}
 	}
 
-	public override void SetDamage (float damage, float impulseDirection){
+	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){
 
 		if (health <= damage && !invulnerability) {
 			flip.enabled = false;
@@ -121,11 +120,11 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 					return;
 				}
 
-				health -= damage;
 				anim.SetTrigger ("attackable");
 			}
-		} else 
-			health -= damage;
+		} 
+
+		health -= damage;
 	}
 
 	public override void SetStun (){

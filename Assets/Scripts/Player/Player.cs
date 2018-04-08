@@ -88,12 +88,12 @@ public class Player : Unit {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, false);
 		}
 	}
 
 	//Получить урон
-	public override void SetDamage (float damage, float impulseDirection) {
+	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack) {
 		if (!invulnerability) {
 			if (health > damage) {
 				anim.SetTrigger ("attackable");
