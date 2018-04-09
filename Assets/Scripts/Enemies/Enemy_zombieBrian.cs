@@ -29,8 +29,8 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-
-		if (!idle && alive && !stunned) {
+		
+		if (!idle && alive && !stunned && !invulnerability) {
 			if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
 				GetDamage ();
@@ -48,6 +48,11 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	//Нанести урон
 	public override void GetDamage () {
+
+		if (stunned) {
+			ResetStunCheck ();
+		}
+
 		if (attackCheck) {
 
 			if (invulnerability) {
@@ -110,7 +115,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		if (invulnerability) {
 			SetStun ();
 			input = impulseDirection;
-			if (impulseDirection != direction) {
+			if (impulseDirection != direction && !piercing_attack) {
 				anim.SetTrigger ("attackableInBlock");
 				return;
 			} else {
