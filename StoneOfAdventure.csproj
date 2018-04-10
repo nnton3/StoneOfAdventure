@@ -441,15 +441,11 @@
     <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\SwitchAnim.cs" />
     <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ToggleAnim.cs" />
     <Compile Include="Assets\Scripts\Effects\FadeEffect_En_Dis.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Aborigen.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_invokedZomby.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombie.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombieBrian.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy_zombyKenny.cs" />
     <Compile Include="Assets\Scripts\Enemies\Invoker.cs" />
-    <Compile Include="Assets\Scripts\Enemies\miniBossOgre\miniBossOgr.cs" />
-    <Compile Include="Assets\Scripts\Enemies\ModifyAborigenFast.cs" />
-    <Compile Include="Assets\Scripts\Enemies\ModifyAborigenFat.cs" />
     <Compile Include="Assets\Scripts\General Mechanics\DangerArea.cs" />
     <Compile Include="Assets\Scripts\General Mechanics\Flip.cs" />
     <Compile Include="Assets\Scripts\General Mechanics\Interfaces.cs" />
@@ -458,9 +454,6 @@
     <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
     <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
     <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
-    <Compile Include="Assets\Scripts\Level3Boss\Level3Boss.cs" />
-    <Compile Include="Assets\Scripts\Level3Boss\Level3Portal.cs" />
-    <Compile Include="Assets\Scripts\Level3Boss\Puddle.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\Аrrow.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
@@ -468,8 +461,6 @@
     <Compile Include="Assets\Scripts\TestingScripts\HomyReplics.cs" />
     <Compile Include="Assets\Scripts\TestingScripts\Laser.cs" />
     <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />
-    <Compile Include="Assets\Scripts\ThrustProgressBar.cs" />
-    <Compile Include="Assets\Scripts\UISwap.cs" />
     <Compile Include="Assets\Standart Assets\GameManager.cs" />
     <Compile Include="Assets\Standart Assets\Menu.cs" />
   </ItemGroup>
