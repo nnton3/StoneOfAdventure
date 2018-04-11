@@ -154,6 +154,7 @@
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombieBrian.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombyKenny.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zombyZheron.cs" />
      <Compile Include="Assets\Scripts\Enemies\Invoker.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\DangerArea.cs" />
      <Compile Include="Assets\Scripts\General Mechanics\Flip.cs" />

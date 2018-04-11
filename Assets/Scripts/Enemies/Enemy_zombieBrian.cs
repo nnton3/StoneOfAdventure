@@ -17,6 +17,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
+
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
