@@ -56,11 +56,12 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		}
 	}
 
-	public void SecondAttack() {
-		if ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f)) {
-			anim.SetTrigger ("attack2");
-		} else
-			anim.SetTrigger ("attack3");
+	public IEnumerator SecondAttack() {
+		stunned = true;
+		input = (target.transform.position.x > transform.position.x && direction > 0f) ? 1 : -1;
+		yield return new WaitForSeconds (0.5f);
+		stunned = false;
+		input = 0f;
 	}
 
 	//Построить луч атаки
@@ -86,6 +87,11 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		}
 	}
 
+	public IEnumerator ResetAttackCheck () {
+		yield return new WaitForSeconds (attackSpeed);
+		attackCheck = true;
+	}
+
 	public override void SetStun (){
 		flip.enabled = false;
 		stunned = true;
@@ -109,6 +115,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	//Начать преследование
 	public void Chase (GameObject player) {
 		target = player;
+		Debug.Log ("work");
 		StartCoroutine ("TimeToBorn");
 	}
 
