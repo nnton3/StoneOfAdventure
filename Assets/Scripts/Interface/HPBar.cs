@@ -3,26 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HPBar : ProgressBar {
+public class HPBar : MonoBehaviour {
 
-	/*UnitParams playerParams;
+	public Unit unit;
+	Image image;
+	float maxHP;
+	Transform unitTransform;
+	Vector3 scale;
 
 	void Start () {
-		playerParams = GameManager.player.GetComponent<UnitParams> ();
+		image = GetComponent<Image> ();
+		maxHP = unit.health;
+		unitTransform = unit.transform.GetComponent<Transform> ();
+		scale = transform.localScale;
 	}
 	
-	void Update ()
-	{
-		if (playerParams.Health != currentPercent) {
-			isOn = true;
-			if (playerParams.Health < currentPercent && Mathf.Abs(playerParams.Health - currentPercent) > 3f) {
-				currentPercent -= speed * Time.deltaTime;
-			} else if (playerParams.Health > currentPercent && Mathf.Abs(playerParams.Health - currentPercent) > 3f) {
-				currentPercent += speed * Time.deltaTime;
-			}
-		} else {
-			isOn = false;
+	void Update () {
+
+		if (Mathf.Sign(scale.x) != Mathf.Sign(unitTransform.localScale.x)) {
+			scale.x *= -1f;
+			transform.localScale = scale;
 		}
-		loadingBar.GetComponent<Image> ().fillAmount = currentPercent / 100;
-	}*/
+
+		image.fillAmount = unit.health / maxHP;
+	}
 }

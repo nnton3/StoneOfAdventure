@@ -6,7 +6,7 @@ public class PBFilled : MonoBehaviour {
 	public ProgressBar proggresBar;
 
 	[Header("SETTINGS")]
-	public Animator barAnimatior;
+	public Animator barAnimator;
 	public string animText;
 	[Range(0, 100)] public int transitionAfter = 50;
 
@@ -14,7 +14,7 @@ public class PBFilled : MonoBehaviour {
 	{
 		if (proggresBar.currentPercent >= transitionAfter) 
 		{
-			barAnimatior.Play (animText);
+			barAnimator.Play (animText);
 		}
 	}
 }

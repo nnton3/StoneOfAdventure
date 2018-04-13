@@ -1,10 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/Enemy_zombyKenny.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/Enemy_zombyZheron.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombyKenny.cs" Line="66" Column="2" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombieBrian.cs" Line="76" Column="2" />
-      <File FileName="Assets/Scripts/General Mechanics/Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombyZheron.cs" Line="70" Column="1" />
+      <File FileName="Assets/Scripts/Interface/HPBar.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/General Mechanics/Flip.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombieBrian.cs" Line="103" Column="13" />
+      <File FileName="Assets/AssetStore/Modern UI Pack/Scripts/PBFilled.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

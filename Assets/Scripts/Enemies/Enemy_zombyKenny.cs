@@ -30,7 +30,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-
+		Debug.Log ("direction = " + direction);
 		if (!idle) {
 			if (alive) {
 				if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
@@ -58,7 +58,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 
 	public IEnumerator SecondAttack() {
 		stunned = true;
-		input = (target.transform.position.x > transform.position.x && direction > 0f) ? 1 : -1;
+		input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 		yield return new WaitForSeconds (0.5f);
 		stunned = false;
 		input = 0f;
@@ -83,6 +83,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		} else {
 			flip.enabled = false;
 			Die ();
+			health -= damage;
 			return;
 		}
 	}
@@ -115,7 +116,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	//Начать преследование
 	public void Chase (GameObject player) {
 		target = player;
-		Debug.Log ("work");
 		StartCoroutine ("TimeToBorn");
 	}
 

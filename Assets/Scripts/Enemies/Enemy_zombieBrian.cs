@@ -123,6 +123,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 				if (health <= damage) {
 					flip.enabled = false;
 					Die ();
+					health -= damage;
 					return;
 				}
 

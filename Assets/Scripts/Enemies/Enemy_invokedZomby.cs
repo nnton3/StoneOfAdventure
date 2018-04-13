@@ -85,6 +85,7 @@ public class Enemy_invokedZomby : Unit, IReaction<GameObject> {
 		if (health <= damage) {
 			flip.enabled = false;
 			input = impulseDirection;
+			health -= damage;
 			Die ();
 			return;
 		}

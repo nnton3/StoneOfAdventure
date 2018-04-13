@@ -90,6 +90,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 		if (health <= damage) {
 			flip.enabled = false;
 			input = impulseDirection;
+			health -= damage;
 			Die ();
 			return;
 		}

@@ -61,6 +61,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 		if (health <= damage) {
 			flip.enabled = false;
 			input = impulseDirection;
+			health -= damage;
 			Die ();
 			return;
 		}
