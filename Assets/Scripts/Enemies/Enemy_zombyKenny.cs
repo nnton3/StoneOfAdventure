@@ -40,6 +40,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 					input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 				} 
 			} else if (!alive || stunned) {
+				Debug.Log ("work");
 				float step = 0.01f * Time.time;
 				moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
 			}
