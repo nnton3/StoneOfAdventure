@@ -30,7 +30,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-		
+		Debug.Log ("input = " + input);
 		if (!idle && alive && !stunned && !invulnerability) {
 			if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
@@ -109,6 +109,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 		if (health <= damage && !invulnerability) {
 			flip.enabled = false;
+			input = impulseDirection;
 			Die ();
 			return;
 		}

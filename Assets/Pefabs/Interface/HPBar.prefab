@@ -38,7 +38,6 @@ GameObject:
   m_Component:
   - component: {fileID: 224856161307463706}
   - component: {fileID: 222203346270434112}
-  - component: {fileID: 114031850660593604}
   m_Layer: 5
   m_Name: Circle Pie(Clone)
   m_TagString: Untagged
@@ -81,18 +80,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114031850660593604
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1331588951323342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb95c67a77eb44b0af89cde00d4900e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFacingRight: 1
 --- !u!114 &114271699416452626
 MonoBehaviour:
   m_ObjectHideFlags: 1

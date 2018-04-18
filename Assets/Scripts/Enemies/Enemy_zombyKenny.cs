@@ -30,24 +30,22 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-		Debug.Log ("direction = " + direction);
-		if (!idle) {
-			if (alive) {
-				if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
-					input = 0f;
-					GetDamage ();
-				} else if (attackCheck) {
-					input = (target.transform.position.x > transform.position.x) ? 1 : -1;
-				} 
-			} else if (!alive || stunned) {
-				Debug.Log ("work");
-				float step = 0.01f * Time.time;
-				moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
-			}
+		Debug.Log ("input = " + input);
+		if (!idle && alive && !stunned) {
+			if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
+				input = 0f;
+				GetDamage ();
+			} else if (attackCheck) {
+				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
+			} 
+		} else if (!alive || stunned) {
+			float step = 0.01f * Time.time;
+			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
 		}
 
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
 		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
+		anim.SetBool ("stunned", stunned);
 	}
 
 	public override void GetDamage (){
@@ -61,8 +59,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		stunned = true;
 		input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 		yield return new WaitForSeconds (0.5f);
-		stunned = false;
-		input = 0f;
 	}
 
 	//Построить луч атаки
@@ -79,14 +75,17 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 
 	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){
 		if (health > damage) {
-			health -= damage;
+			SetStun ();
+			input = impulseDirection;
 			anim.SetTrigger ("attackable");
 		} else {
 			flip.enabled = false;
+			SetStun ();
+			input = impulseDirection;
 			Die ();
-			health -= damage;
-			return;
 		}
+
+		health -= damage;
 	}
 
 	public IEnumerator ResetAttackCheck () {
@@ -101,6 +100,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 
 	//Сбросить чек стана
 	public void ResetStunCheck () {
+		Debug.Log ("work");
 		input = 0f;
 		flip.enabled = true;
 		moveSpeed = 2f;

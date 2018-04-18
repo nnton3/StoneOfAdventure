@@ -3970,14 +3970,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1780096191958802, guid: 2d85d9c89a84c464c95a60dc66d559f8, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114599399488166144, guid: 2d85d9c89a84c464c95a60dc66d559f8,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114309644150261612, guid: 2d85d9c89a84c464c95a60dc66d559f8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2d85d9c89a84c464c95a60dc66d559f8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1837433964
