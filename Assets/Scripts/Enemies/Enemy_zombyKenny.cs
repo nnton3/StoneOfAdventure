@@ -14,6 +14,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	GameObject target;
 	public float bornDelay = 0f;
 	bool idle = true;
+	bool attackable = false;
 
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
@@ -56,9 +57,11 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	}
 
 	public IEnumerator SecondAttack() {
+		attackable = true;
 		stunned = true;
 		input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 		yield return new WaitForSeconds (0.5f);
+		attackable = false;
 	}
 
 	//Построить луч атаки
@@ -77,7 +80,9 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		if (health > damage) {
 			SetStun ();
 			input = impulseDirection;
-			anim.SetTrigger ("attackable");
+			if (attackable) {
+				anim.SetTrigger ("attackable");
+			}
 		} else {
 			flip.enabled = false;
 			SetStun ();

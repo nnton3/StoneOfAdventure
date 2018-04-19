@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 1241f3fd2e899410582194635bcc8e1c
+timeCreated: 1524120392
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jeron_attack_3
+    21300002: Jeron_attack_14
+    21300004: Jeron_attack_15
+    21300006: Jeron_attack_16
+    21300008: Jeron_attack_17
+    21300010: Jeron_attack_1
+    21300012: Jeron_attack_2
+    21300014: Jeron_attack_8
+    21300016: Jeron_attack_9
+    21300018: Jeron_attack_10
+    21300020: Jeron_attack_11
+    21300022: Jeron_attack_12
+    21300024: Jeron_attack_13
+    21300026: Jeron_attack_18
+    21300028: Jeron_attack_19
+    21300030: Jeron_attack_20
+    21300032: Jeron_attack_21
+    21300034: Jeron_attack_22
+    21300036: Jeron_attack_23
+    21300038: Jeron_attack_24
+    21300040: Jeron_attack_25
+    21300042: Jeron_attack_26
+    21300044: Jeron_attack_27
+    21300046: Jeron_attack_28
+    21300048: Jeron_attack_29
+    21300050: Jeron_attack_59
+    21300052: Jeron_attack_4
+    21300054: Jeron_attack_5
+    21300056: Jeron_attack_6
+    21300058: Jeron_attack_7
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jeron_attack_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 74
+        width: 24
+        height: 34
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_14
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 74
+        width: 41
+        height: 33
+      alignment: 9
+      pivot: {x: 0.86, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_15
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 74
+        width: 44
+        height: 51
+      alignment: 9
+      pivot: {x: 0.8, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_16
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 74
+        width: 78
+        height: 56
+      alignment: 9
+      pivot: {x: 0.46, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_17
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 74
+        width: 80
+        height: 56
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 74
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.74, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 74
+        width: 18
+        height: 20
+      alignment: 9
+      pivot: {x: 0.32, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_8
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 74
+        width: 71
+        height: 26
+      alignment: 9
+      pivot: {x: 0.23, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_9
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 74
+        width: 54
+        height: 26
+      alignment: 9
+      pivot: {x: 0.11, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_10
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 74
+        width: 55
+        height: 20
+      alignment: 9
+      pivot: {x: 0.09, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_11
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 74
+        width: 48
+        height: 20
+      alignment: 9
+      pivot: {x: 0.22, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_12
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 74
+        width: 43
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_13
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 74
+        width: 44
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_18
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 74
+        width: 74
+        height: 56
+      alignment: 9
+      pivot: {x: 0.18, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_19
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 74
+        width: 65
+        height: 40
+      alignment: 9
+      pivot: {x: 0.11, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_20
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 74
+        width: 62
+        height: 20
+      alignment: 9
+      pivot: {x: 0.08, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_21
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 74
+        width: 61
+        height: 20
+      alignment: 9
+      pivot: {x: 0.17, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_22
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 74
+        width: 68
+        height: 20
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_23
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 74
+        width: 60
+        height: 20
+      alignment: 9
+      pivot: {x: 0.68, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_24
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 74
+        width: 57
+        height: 20
+      alignment: 9
+      pivot: {x: 0.9, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_25
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 74
+        width: 62
+        height: 20
+      alignment: 9
+      pivot: {x: 0.9, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_26
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 74
+        width: 67
+        height: 20
+      alignment: 9
+      pivot: {x: 0.91, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_27
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 77
+        width: 50
+        height: 20
+      alignment: 9
+      pivot: {x: 0.89, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_28
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 77
+        width: 50
+        height: 20
+      alignment: 9
+      pivot: {x: 0.89, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_29
+      rect:
+        serializedVersion: 2
+        x: 2533
+        y: 77
+        width: 24
+        height: 20
+      alignment: 9
+      pivot: {x: 0.77, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_4
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 74
+        width: 42
+        height: 34
+      alignment: 9
+      pivot: {x: 0.54, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_5
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 74
+        width: 45
+        height: 35
+      alignment: 9
+      pivot: {x: 0.63, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_6
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 74
+        width: 42
+        height: 33
+      alignment: 9
+      pivot: {x: 0.66, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Jeron_attack_7
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 74
+        width: 44
+        height: 26
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
