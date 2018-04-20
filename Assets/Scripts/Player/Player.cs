@@ -55,7 +55,7 @@ public class Player : Unit {
 		}
 			
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
-
+		flipParam = input;
 		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
 	}
 

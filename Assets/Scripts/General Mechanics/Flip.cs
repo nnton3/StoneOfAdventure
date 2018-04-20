@@ -16,11 +16,11 @@ public class Flip : MonoBehaviour {
 	
 	void Update () {
 		
-		if(controller.input > 0 && !isFacingRight)
+		if(controller.flipParam > 0 && !isFacingRight)
 			//отражаем персонажа вправо
 			FlipObject();
 		//обратная ситуация. отражаем персонажа влево
-		else if (controller.input < 0 && isFacingRight)
+		else if (controller.flipParam < 0 && isFacingRight)
 			FlipObject();
 	}
 

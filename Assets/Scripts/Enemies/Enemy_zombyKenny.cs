@@ -47,6 +47,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
 		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
 		anim.SetBool ("stunned", stunned);
+		flipParam = input;
 	}
 
 	public override void GetDamage (){

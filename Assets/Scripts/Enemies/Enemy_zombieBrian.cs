@@ -45,6 +45,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
 		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
+		flipParam = input;
 	}
 
 	//Нанести урон

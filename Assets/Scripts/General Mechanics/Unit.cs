@@ -30,6 +30,7 @@ public abstract class Unit : MonoBehaviour {
 	public Animator anim;
 	[HideInInspector]
 	public float direction = 1f;
+	public float flipParam = 0f;
 
 	public abstract void GetDamage ();
 

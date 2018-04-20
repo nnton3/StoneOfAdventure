@@ -5,24 +5,27 @@ licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Kenny_born_0
-    21300002: Kenny_born_1
-    21300004: Kenny_born_2
-    21300006: Kenny_born_3
-    21300008: Kenny_born_4
-    21300010: Kenny_born_5
-    21300012: Kenny_born_6
-    21300014: Kenny_born_7
-    21300016: Kenny_born_8
-    21300018: Kenny_born_9
-    21300020: Kenny_born_10
-    21300022: Kenny_born_11
-    21300024: Kenny_born_12
-    21300026: Kenny_born_13
-    21300028: Kenny_born_14
-    21300030: Kenny_born_15
-    21300032: Kenny_born_16
+    21300002: Kenny_born_3
+    21300004: Kenny_born_4
+    21300006: Kenny_born_5
+    21300008: Kenny_born_6
+    21300010: Kenny_born_7
+    21300012: Kenny_born_8
+    21300014: Kenny_born_9
+    21300016: Kenny_born_10
+    21300018: Kenny_born_11
+    21300020: Kenny_born_12
+    21300022: Kenny_born_13
+    21300024: Kenny_born_14
+    21300026: Kenny_born_15
+    21300028: Kenny_born_16
+    21300030: Kenny_born_17
+    21300032: Kenny_born_18
     21300034: Kenny_born_17
     21300036: Kenny_born_18
+    21300038: Kenny_born_19
+    21300040: Kenny_born_1
+    21300042: Kenny_born_2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -123,7 +126,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_1
+      name: Kenny_born_3
       rect:
         serializedVersion: 2
         x: 125
@@ -137,35 +140,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_2
+      name: Kenny_born_4
       rect:
         serializedVersion: 2
         x: 160
         y: 36
         width: 14
         height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.29, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_3
+      name: Kenny_born_5
       rect:
         serializedVersion: 2
         x: 203
         y: 37
         width: 13
         height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.38, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_4
+      name: Kenny_born_6
       rect:
         serializedVersion: 2
         x: 255
@@ -179,21 +182,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_5
+      name: Kenny_born_7
       rect:
         serializedVersion: 2
         x: 299
         y: 37
         width: 17
         height: 8
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_6
+      name: Kenny_born_8
       rect:
         serializedVersion: 2
         x: 350
@@ -207,7 +210,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_7
+      name: Kenny_born_9
       rect:
         serializedVersion: 2
         x: 393
@@ -221,7 +224,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_8
+      name: Kenny_born_10
       rect:
         serializedVersion: 2
         x: 440
@@ -235,7 +238,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_9
+      name: Kenny_born_11
       rect:
         serializedVersion: 2
         x: 491
@@ -249,7 +252,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_10
+      name: Kenny_born_12
       rect:
         serializedVersion: 2
         x: 539
@@ -263,7 +266,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_11
+      name: Kenny_born_13
       rect:
         serializedVersion: 2
         x: 581
@@ -277,7 +280,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_12
+      name: Kenny_born_14
       rect:
         serializedVersion: 2
         x: 623
@@ -291,43 +294,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Kenny_born_13
+      name: Kenny_born_15
       rect:
         serializedVersion: 2
         x: 661
         y: 33
         width: 24
         height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Kenny_born_14
-      rect:
-        serializedVersion: 2
-        x: 713
-        y: 38
-        width: 22
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Kenny_born_15
-      rect:
-        serializedVersion: 2
-        x: 771
-        y: 38
-        width: 9
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.29, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +311,12 @@ TextureImporter:
       name: Kenny_born_16
       rect:
         serializedVersion: 2
-        x: 816
+        x: 713
         y: 38
-        width: 18
+        width: 22
         height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.29, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -350,12 +325,12 @@ TextureImporter:
       name: Kenny_born_17
       rect:
         serializedVersion: 2
-        x: 58
-        y: 36
-        width: 3
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 771
+        y: 38
+        width: 9
+        height: 18
+      alignment: 9
+      pivot: {x: 0.62, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,12 +339,54 @@ TextureImporter:
       name: Kenny_born_18
       rect:
         serializedVersion: 2
+        x: 816
+        y: 38
+        width: 18
+        height: 18
+      alignment: 9
+      pivot: {x: 0.76, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Kenny_born_19
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 44
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Kenny_born_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 36
+        width: 3
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Kenny_born_2
+      rect:
+        serializedVersion: 2
         x: 90
         y: 36
         width: 10
         height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

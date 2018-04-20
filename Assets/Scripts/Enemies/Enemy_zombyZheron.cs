@@ -39,14 +39,26 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 	
 	void Update () {
 
-		if (alive && !stunned) {
-			if (Mathf.Abs (transform.position.x - target.transform.position.x) > longDistance) {
-				input = (Mathf.Sign (transform.position.x - target.transform.position.x) < 0f) ? 1f : -1f;
-			} else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= longDistance && Mathf.Abs (transform.position.x - target.transform.position.x) > averageDistance) {
-				input = (Mathf.Sign (transform.position.x - target.transform.position.x) < 0f) ? -1f : 1f;
-			} else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= averageDistance) {
-				input = 0f;
-				GetDamage ();
+		if (alive && !stunned && !idle) {
+			anim.SetBool ("goForward", Mathf.Abs (transform.position.x - target.transform.position.x) > longDistance);
+			if (attackCheck) {
+				if (Mathf.Abs (transform.position.x - target.transform.position.x) <= averageDistance && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
+					input = 0f;
+					GetDamage ();
+				} else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= averageDistance && ((target.transform.position.x > transform.position.x && direction < 0f) || (target.transform.position.x < transform.position.x && direction > 0f))) {
+					flipParam = (Mathf.Sign (transform.position.x - target.transform.position.x) > 0f) ? -1f : 1f;
+					input = (Mathf.Sign (transform.position.x - target.transform.position.x) < 0f) ? -1f : 1f;
+				}
+				else if (Mathf.Abs (transform.position.x - target.transform.position.x) > longDistance) {
+					flipParam = (Mathf.Sign (transform.position.x - target.transform.position.x) > 0f) ? -1f : 1f;
+					input = (Mathf.Sign (transform.position.x - target.transform.position.x) < 0f) ? 1f : -1f;
+				} else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= longDistance && Mathf.Abs (transform.position.x - target.transform.position.x) > (longDistance - 0.5f)) {
+					flipParam = (Mathf.Sign (transform.position.x - target.transform.position.x) > 0f) ? -1f : 1f;
+					input = 0f; 
+				} else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= (longDistance - 0.5f) && Mathf.Abs (transform.position.x - target.transform.position.x) > averageDistance) {
+					flipParam = (Mathf.Sign (transform.position.x - target.transform.position.x) > 0f) ? -1f : 1f;
+					input = (Mathf.Sign (transform.position.x - target.transform.position.x) < 0f) ? -1f : 1f;
+				} 
 			}
 
 		} else if (!alive || stunned) {
@@ -81,6 +93,11 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 		}
 	}
 
+	public IEnumerator ResetAttackCheck () {
+		yield return new WaitForSeconds (attackSpeed);
+		attackCheck = true;
+	}
+		
 	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){}
 
 	public override void SetStun (){}
