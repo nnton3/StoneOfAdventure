@@ -8072,7 +8072,7 @@ Prefab:
     - target: {fileID: 114422357488255534, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}
       propertyPath: impulsePower
-      value: 10
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 50068229134190314, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}
@@ -8911,7 +8911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
-  m_XDamping: 1
+  m_XDamping: 5
   m_YDamping: 1
   m_ZDamping: 1
   m_ScreenX: 0.5

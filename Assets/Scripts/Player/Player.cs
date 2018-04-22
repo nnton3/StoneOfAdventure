@@ -118,7 +118,7 @@ public class Player : Unit {
 				return;
 			}
 			SetStun ();
-			input = impulseDirection;
+			//input = impulseDirection;
 			rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
 			Debug.Log ("work");
 			anim.SetTrigger ("blocked");
