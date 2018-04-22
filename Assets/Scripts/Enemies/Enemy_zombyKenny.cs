@@ -31,7 +31,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-		Debug.Log ("input = " + input);
 		if (!idle && alive && !stunned) {
 			if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 				input = 0f;
@@ -106,7 +105,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 
 	//Сбросить чек стана
 	public void ResetStunCheck () {
-		Debug.Log ("work");
 		input = 0f;
 		flip.enabled = true;
 		moveSpeed = 2f;

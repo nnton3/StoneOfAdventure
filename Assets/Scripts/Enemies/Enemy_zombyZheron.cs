@@ -25,10 +25,9 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 	public float midRange = 7f;
 	public float meleeRange = 3f;
 
-	//Переменные местоположения относительно игрока
-	bool atLongRange;
-	bool atMidRange;
-	bool atMeleeRange;
+	//Местоположения относительно игрока
+	float targetRange = 0f;
+	float targetDirection =0f;
 
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
@@ -44,41 +43,26 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 	
 	void Update () {
 
-		//Определение расстояния до игрока
-		//Игрок на большом расстоянии
-		if (Mathf.Abs (transform.position.x - target.transform.position.x) > longRange) {
-			atLongRange = true;
-			atMidRange = false;
-			atMeleeRange = false;
-		} 
-		//Игрок на нейтральном расстоянии
-		else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= longRange && Mathf.Abs (transform.position.x - target.transform.position.x) > (midRange + 2f)) {
-			atLongRange = false;
-			atMidRange = true;
-			atMeleeRange = false;
-		} 
-		//Игрок на близком расстоянии
-		else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= midRange) {
-			atLongRange = false;
-			atMidRange = false;
-			atMeleeRange = true;
-		}
-
 		if (alive && !stunned && !idle) {
-			anim.SetBool ("goForward", atLongRange);
+			
+			//Определение местоположения игрока
+			targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
+			targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
+
+			anim.SetBool ("goForward", targetRange > longRange);
 			if (attackCheck) {
-				if (atMeleeRange) {
+				if (targetRange < midRange) {
 					if (((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
 						input = 0f;
 						GetDamage ();
-					} else 
+					} else
 						MoveBackward ();
-				} else if (Mathf.Abs (transform.position.x - target.transform.position.x) > longRange) {
+				} else if (targetRange > longRange) {
 					MoveForward ();
-				} else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= longRange && Mathf.Abs (transform.position.x - target.transform.position.x) > midRange) {
-					flipParam = (Mathf.Sign (transform.position.x - target.transform.position.x) > 0f) ? -1f : 1f;
+				} else if (targetRange > (midRange + 2f) && targetRange < longRange) {
+					flipParam = (targetDirection > 0f) ? -1f : 1f;
 					input = 0f; 
-				} else if (Mathf.Abs (transform.position.x - target.transform.position.x) <= (longRange - 0.5f) && Mathf.Abs (transform.position.x - target.transform.position.x) > midRange) {
+				} else if (targetRange <= (midRange + 2f) && targetRange > midRange) {
 					MoveBackward ();
 				} 
 			}
@@ -96,7 +80,7 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 		
 		attackCheck = false;
 
-		if (Mathf.Abs (transform.position.x - target.transform.position.x) > meleeRange) {
+		if (targetRange > meleeRange) {
 			anim.SetTrigger ("attack");
 		} else {
 			anim.SetTrigger ("attack2");
@@ -163,12 +147,12 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 
 	//Методы движения
 	void MoveBackward () {
-		flipParam = (Mathf.Sign (transform.position.x - target.transform.position.x) > 0f) ? -1f : 1f;
-		input = (Mathf.Sign (transform.position.x - target.transform.position.x) < 0f) ? -1f : 1f;
+		flipParam = (targetDirection > 0f) ? -1f : 1f;
+		input = (targetDirection < 0f) ? -1f : 1f;
 	}
 
 	void MoveForward () {
-		flipParam = (Mathf.Sign (transform.position.x - target.transform.position.x) > 0f) ? -1f : 1f;
-		input = (Mathf.Sign (transform.position.x - target.transform.position.x) < 0f) ? 1f : -1f;
+		flipParam = (targetDirection > 0f) ? -1f : 1f;
+		input = (targetDirection < 0f) ? 1f : -1f;
 	}
 }
