@@ -8072,7 +8072,7 @@ Prefab:
     - target: {fileID: 114422357488255534, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}
       propertyPath: impulsePower
-      value: -300
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 50068229134190314, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}

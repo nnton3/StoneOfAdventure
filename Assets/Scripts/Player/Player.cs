@@ -45,9 +45,10 @@ public class Player : Unit {
 		}
 
 		if (stunned || !alive) {
-			/*float step = 0.01f * Time.time;
-			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
-			rb.AddForce (new Vector2 (input * impulsePower, 0f), ForceMode2D.Impulse);*/
+			//float step = 0.01f * Time.time;
+			moveSpeed = -Mathf.Sqrt(Time.deltaTime) * input * impulsePower;
+			Debug.Log ("moveSpeed = " + moveSpeed);
+			//rb.AddForce (new Vector2 (input * impulsePower, 0f), ForceMode2D.Impulse);*/
 		} else if (!invulnerability && !stunned || inBlock) {
 			input = Input.GetAxisRaw ("Horizontal");
 		}
@@ -106,8 +107,7 @@ public class Player : Unit {
 				anim.SetTrigger ("attackable");
 				SetStun ();
 				input = impulseDirection;
-				Debug.Log ("work");
-				rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
+				//rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
 				health -= damage;
 			} else
 				Die ();
@@ -118,9 +118,8 @@ public class Player : Unit {
 				return;
 			}
 			SetStun ();
-			//input = impulseDirection;
-			rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
-			Debug.Log ("work");
+			input = impulseDirection;
+			//rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
 			anim.SetTrigger ("blocked");
 		}
 	}
