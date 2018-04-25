@@ -45,13 +45,12 @@ public class Player : Unit {
 		}
 
 		if (stunned || !alive) {
-			float step = 0.01f * Time.time;
-			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
+			//float step = 0.01f * Time.time;
+			moveSpeed = -Mathf.Sqrt(Time.deltaTime) * input * impulsePower;
+			Debug.Log ("moveSpeed = " + moveSpeed);
+			//rb.AddForce (new Vector2 (input * impulsePower, 0f), ForceMode2D.Impulse);*/
 		} else if (!invulnerability && !stunned || inBlock) {
 			input = Input.GetAxisRaw ("Horizontal");
-		} else {
-				float step = 0.01f * Time.time;
-				moveSpeed = Mathf.MoveTowards (7f, 0f, step);
 		}
 			
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
@@ -102,11 +101,13 @@ public class Player : Unit {
 
 	//Получить урон
 	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack) {
+
 		if (!invulnerability) {
 			if (health > damage) {
 				anim.SetTrigger ("attackable");
 				SetStun ();
 				input = impulseDirection;
+				//rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
 				health -= damage;
 			} else
 				Die ();
@@ -118,6 +119,7 @@ public class Player : Unit {
 			}
 			SetStun ();
 			input = impulseDirection;
+			//rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
 			anim.SetTrigger ("blocked");
 		}
 	}
