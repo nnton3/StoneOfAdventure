@@ -45,11 +45,8 @@ public class Player : Unit {
 		}
 
 		if (stunned || !alive) {
-			//float step = 0.01f * Time.time;
-			moveSpeed = -Mathf.Sqrt(Time.deltaTime) * input * impulsePower;
-			Debug.Log ("moveSpeed = " + moveSpeed);
-			//rb.AddForce (new Vector2 (input * impulsePower, 0f), ForceMode2D.Impulse);*/
-		} else if (!invulnerability && !stunned || inBlock) {
+		Impulse ()
+		} else {
 			input = Input.GetAxisRaw ("Horizontal");
 		}
 			
@@ -206,5 +203,9 @@ public class Player : Unit {
 	IEnumerator RollCD () {
 		yield return new WaitForSeconds (rollCD);
 		rollCheck = true;
+	}
+
+	void Impulse () {
+		moveSpeed = -Mathf.Sqrt(Time.deltaTime) * input * impulsePower;
 	}
 }
