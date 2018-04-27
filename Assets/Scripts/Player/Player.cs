@@ -9,7 +9,6 @@ public class Player : Unit {
 
 	bool inBlock = false;
 
-	Flip flip;
 
 	public float rollCD = 3f;
 	bool rollCheck = true;
@@ -18,13 +17,12 @@ public class Player : Unit {
 	public float impulsePower = 3;
 
 	void Start () {
-		flip = GetComponent<Flip> ();
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
 	
 	void Update () {
-
+		
 		if (attackCheck) {
 			//Управление
 			if (Input.GetKeyDown (KeyCode.F)) {       //Атака мечом
@@ -36,7 +34,7 @@ public class Player : Unit {
 			}
 
 			if (Input.GetKeyDown (KeyCode.B)) {       //Блок
-				Block ();
+				UseShield ();
 			}
 
 			if (Input.GetKeyDown (KeyCode.P)) {       //Атака из лука
@@ -45,13 +43,13 @@ public class Player : Unit {
 		}
 
 		if (stunned || !alive) {
-		Impulse ()
+			Impulse ();
 		} else {
 			input = Input.GetAxisRaw ("Horizontal");
+			flipParam = input;
 		}
-			
+
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
-		flipParam = input;
 		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
 	}
 
@@ -59,7 +57,7 @@ public class Player : Unit {
 	public override void GetDamage () {
 
 		if (inBlock) {
-			StopBlock ();
+			RemoveShield ();
 		}
 
 		if (attackCheck && !stunned) {
@@ -90,46 +88,44 @@ public class Player : Unit {
 
 		if (hit) {
 			if (attackModifier == 1) {
-				hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, false);
-			} else 
-				hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, true);
+				hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
+			} else {
+				attackModify [0] = true;
+				hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
+				attackModify = null;
+			}
 		}
 	}
 
 	//Получить урон
-	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack) {
+	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify) {
 
-		if (!invulnerability) {
-			if (health > damage) {
+		bool backToTheEnemy = impulseDirection == direction;
+
+		if (inBlock) {
+			if (backToTheEnemy) {
+				ReduceHP (damage);
+				SetStun (impulseDirection);
 				anim.SetTrigger ("attackable");
-				SetStun ();
-				input = impulseDirection;
-				//rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
-				health -= damage;
-			} else
-				Die ();
-		} else if (inBlock) {
-			if (impulseDirection == direction) {
-				health -= damage;
-				anim.SetTrigger ("attackable");
-				return;
+			} else {
+				SetStun (impulseDirection);
+				anim.SetTrigger ("blocked");
 			}
-			SetStun ();
-			input = impulseDirection;
-			//rb.AddForce (new Vector2 (impulsePower, 0f), ForceMode2D.Impulse);
-			anim.SetTrigger ("blocked");
+		} else if (!invulnerability) {
+			ReduceHP (damage);
+			SetStun (impulseDirection);
+			anim.SetTrigger ("attackable");
 		}
 	}
 
 	//Получить стан
-	public override void SetStun () {
-		flip.enabled = false;
+	public override void SetStun (float direction) {
+		input = direction;
 		stunned = true;
 	}
 
 	//Сбросить чек стана
 	public void ResetStunCheck () {
-		flip.enabled = true;
 		input = 0f;
 		moveSpeed = 5f;
 		stunned = false;
@@ -141,17 +137,17 @@ public class Player : Unit {
 	}
 
 	//Использовать блок
-	void Block() {
+	void UseShield() {
 		if (!invulnerability && !inBlock) {
 			invulnerability = true;
 			inBlock = true;
 			anim.SetTrigger ("block");
 		} else
-			StopBlock ();
+			RemoveShield ();
 	}
 
 	//Завершить блок
-	public void StopBlock () {
+	public void RemoveShield () {
 		invulnerability = false;
 		inBlock = false;
 		anim.SetTrigger ("block");
@@ -161,7 +157,7 @@ public class Player : Unit {
 	void Roll() {
 
 		if (inBlock) {
-			StopBlock ();
+			RemoveShield ();
 		}
 
 		if (!stunned && rollCheck) {
@@ -186,7 +182,7 @@ public class Player : Unit {
 	void PullBow () {
 
 		if (inBlock) {
-			StopBlock ();
+			RemoveShield ();
 		}
 
 		attackCheck = false;
@@ -206,6 +202,14 @@ public class Player : Unit {
 	}
 
 	void Impulse () {
-		moveSpeed = -Mathf.Sqrt(Time.deltaTime) * input * impulsePower;
+		moveSpeed = Mathf.Sqrt(Time.deltaTime) * impulsePower;
+	}
+
+	//Уменьшить ХП + проверка на "смерть"
+	void ReduceHP (float damage) {
+		if (health <= damage) {
+			Die ();
+		}
+		health -= damage;
 	}
 }

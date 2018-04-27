@@ -17,7 +17,6 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
-	float impulseTime = 0.01f;
 
 	//Ключевые расстояния
 	[Header("Чеки по дальности")]
@@ -95,7 +94,7 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, false);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
 		}
 	}
 
@@ -104,9 +103,9 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 		attackCheck = true;
 	}
 		
-	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){}
+	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){}
 
-	public override void SetStun (){}
+	public override void SetStun (float direction){}
 
 	public override void Die (){
 		anim.SetTrigger ("die");
@@ -136,13 +135,6 @@ public class Enemy_zombyZheron : Unit, IReaction<GameObject> {
 	//Остановить преследование
 	public void Idle () {
 
-	}
-
-	void Impulse (float power, float direction, float time) {
-		stunned = true;
-		impulsePower = power;
-		input = direction;
-		impulseTime = time;
 	}
 
 	//Методы движения

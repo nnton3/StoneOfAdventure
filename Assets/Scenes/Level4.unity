@@ -8072,7 +8072,7 @@ Prefab:
     - target: {fileID: 114422357488255534, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}
       propertyPath: impulsePower
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 50068229134190314, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}
@@ -8373,7 +8373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1180843171045306, guid: 66101df8ad63a4df297d5b80999f7b20, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114334911621854238, guid: 66101df8ad63a4df297d5b80999f7b20,
         type: 2}
@@ -9545,7 +9545,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1531999292881766, guid: 00013717812324f7eb98fa0fdfc0f990, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114239565616695374, guid: 00013717812324f7eb98fa0fdfc0f990,
+        type: 2}
+      propertyPath: impulsePower
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00013717812324f7eb98fa0fdfc0f990, type: 2}

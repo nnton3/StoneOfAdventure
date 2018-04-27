@@ -72,20 +72,20 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, true);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
 		}
 	}
 
-	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){
+	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){
 		if (health > damage) {
-			SetStun ();
+			SetStun (impulseDirection);
 			input = impulseDirection;
 			if (attackable) {
 				anim.SetTrigger ("attackable");
 			}
 		} else {
 			flip.enabled = false;
-			SetStun ();
+			SetStun (impulseDirection);
 			input = impulseDirection;
 			Die ();
 		}
@@ -98,7 +98,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		attackCheck = true;
 	}
 
-	public override void SetStun (){
+	public override void SetStun (float direction){
 		flip.enabled = false;
 		stunned = true;
 	}

@@ -18,6 +18,10 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
 
+	//Местоположения относительно игрока
+	float targetRange = 0f;
+	float targetDirection =0f;
+
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
@@ -30,17 +34,24 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 	
 	void Update () {
-		Debug.Log ("input = " + input);
-		if (!idle && alive && !stunned && !invulnerability) {
-			if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
-				input = 0f;
-				GetDamage ();
-			} else if (attackCheck) {
-				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
-			} 
-		} else if (!alive || stunned) {
-			float step = 0.01f * Time.time;
-			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
+		
+		if (!idle) {
+			if (alive && !stunned) {
+
+				//Определение местоположения игрока
+				targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
+				targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
+				flipParam = input;
+
+				if (targetRange < (attackRange - 0.5f) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f))) {
+					input = 0f;
+					GetDamage ();
+				} else if (attackCheck) {
+					input = -targetDirection;
+				} 
+			} else if (!alive || stunned) {
+				Impulse ();
+			}
 		}
 
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
@@ -102,11 +113,11 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, false);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
 		}
 	}
 
-	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){
+	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){
 
 		if (health <= damage && !invulnerability) {
 			flip.enabled = false;
@@ -116,9 +127,9 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		}
 
 		if (invulnerability) {
-			SetStun ();
+			SetStun (impulseDirection);
 			input = impulseDirection;
-			if (impulseDirection != direction && !piercing_attack) {
+			if (impulseDirection != direction && attackModify[0]) {
 				anim.SetTrigger ("attackableInBlock");
 				return;
 			} else {
@@ -136,7 +147,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 		health -= damage;
 	}
 
-	public override void SetStun (){
+	public override void SetStun (float direction){
 		flip.enabled = false;
 		stunned = true;
 	}
@@ -175,7 +186,17 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	//Остановить преследование
-	public void Idle () {
-		
+	public void Idle () {}
+
+	void Impulse () {
+		moveSpeed = Mathf.Sqrt(Time.deltaTime) * impulsePower;
+	}
+
+	//Уменьшить ХП + проверка на "смерть"
+	void ReduceHP (float damage) {
+		if (health <= damage) {
+			Die ();
+		}
+		health -= damage;
 	}
 }

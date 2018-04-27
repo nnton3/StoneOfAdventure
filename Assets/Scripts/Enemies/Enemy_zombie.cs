@@ -8,7 +8,6 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	public LayerMask attackCollision;
 	//Область агра
 	DangerArea start;
-	Flip flip;
 
 	//Ссылка на игрока
 	GameObject target;
@@ -21,6 +20,10 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
 
+	//Местоположения относительно игрока
+	float targetRange = 0f;
+	float targetDirection =0f;
+
 	bool idle = true;
 
 	void Awake() {
@@ -29,7 +32,6 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	}
 
 	void Start () {
-		flip = GetComponent<Flip> ();
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
@@ -38,25 +40,33 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 
 		if (!idle) {
 			
-			if (Mathf.Abs (target.transform.position.x - transform.position.x) < runDistance) {
-				zombySpeed = runSpeed;
-			} else
-				zombySpeed = moveSpeed;
-			
-			if (alive && Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.3f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
-				input = 0f;
-				GetDamage ();
-			} else if (attackCheck && alive) {
-				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
-			} else if (!alive) {
-				float step = 1f * Time.time;
-				moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
+			if (alive && !stunned) {
+
+				//Определение местоположения игрока
+				targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
+				targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
+				flipParam = input;
+
+				if (attackCheck) {
+					if (targetRange < (attackRange - 0.3f) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f))) {
+						input = 0f;
+						GetDamage ();
+					} else {
+						if (targetRange < runDistance) {
+							zombySpeed = runSpeed;
+						} else
+							zombySpeed = moveSpeed;
+
+						input = -targetDirection;
+					}
+				}
+			} else {
+				Impulse ();
 			}
+			Debug.Log ("moveSpeed = " + moveSpeed);
+			rb.velocity = new Vector2 (input * zombySpeed, rb.velocity.y);
+			anim.SetFloat ("speed", Mathf.Abs (input * zombySpeed));
 		}
-
-		rb.velocity = new Vector2 (input * zombySpeed, rb.velocity.y);
-
-		anim.SetFloat ("speed", Mathf.Abs (input * zombySpeed));
 	}
 
 	//Нанести урон
@@ -81,30 +91,26 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, targetVector, attackRange, attackCollision);
 
 		if (hit) {
-			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, false);
+			hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
 		}
 	}
 
 	//Получить урон
-	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack) {
-		if (health <= damage) {
-			flip.enabled = false;
-			input = impulseDirection;
-			health -= damage;
-			Die ();
-			return;
-		}
-
+	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify) {
+		SetStun (impulseDirection);
 		health -= damage;
+		Die ();
 	}
 
 	//Получить стан
-	public override void SetStun () {
-
+	public override void SetStun (float direction) {
+		stunned = true;
+		input = direction;
 	}
 
 	//Сбросить чек стана
 	public void ResetStunCheck () {
+		stunned = false;
 		input = 0f;
 	}
 
@@ -136,5 +142,9 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	IEnumerator TimeToBorn() {
 		yield return new WaitForSeconds (bornDelay);
 		anim.SetTrigger ("born");
+	}
+
+	void Impulse () {
+		zombySpeed = Mathf.Sqrt(Time.deltaTime) * impulsePower;
 	}
 }

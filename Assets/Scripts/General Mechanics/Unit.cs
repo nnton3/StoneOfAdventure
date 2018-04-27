@@ -19,7 +19,7 @@ public abstract class Unit : MonoBehaviour {
 	[HideInInspector]
 	public bool alive = true;
 	[HideInInspector]
-	public bool piercing_attack;
+	public bool[] attackModify = new bool[2];
 
 	public float moveSpeed = 2f;
 	[HideInInspector]
@@ -34,9 +34,9 @@ public abstract class Unit : MonoBehaviour {
 
 	public abstract void GetDamage ();
 
-	public abstract void SetDamage (float damage, float impulseDirection, bool piercing_attack);
+	public abstract void SetDamage (float damage, float impulseDirection, bool[] attackModify);
 
-	public abstract void SetStun ();
+	public abstract void SetStun (float direction);
 
 	public abstract void Die ();
 }

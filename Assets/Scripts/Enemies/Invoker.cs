@@ -57,7 +57,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 		attackCheck = true;
 	}
 
-	public override void SetDamage (float damage, float impulseDirection, bool piercing_attack){
+	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){
 		if (health <= damage) {
 			flip.enabled = false;
 			input = impulseDirection;
@@ -69,7 +69,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 		health -= damage;
 	}
 
-	public override void SetStun (){}
+	public override void SetStun (float direction){}
 
 	public override void Die (){
 		anim.SetTrigger ("die");
