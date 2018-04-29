@@ -8072,7 +8072,7 @@ Prefab:
     - target: {fileID: 114422357488255534, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}
       propertyPath: impulsePower
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 50068229134190314, guid: b8ef3e26a68ff474d8761f85957cba24,
         type: 2}
@@ -8373,12 +8373,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1180843171045306, guid: 66101df8ad63a4df297d5b80999f7b20, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114334911621854238, guid: 66101df8ad63a4df297d5b80999f7b20,
         type: 2}
       propertyPath: impulsePower
-      value: 1.8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66101df8ad63a4df297d5b80999f7b20, type: 2}
@@ -8910,8 +8910,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LookaheadTime: 0
-  m_LookaheadSmoothing: 10
-  m_XDamping: 5
+  m_LookaheadSmoothing: 3
+  m_XDamping: 2
   m_YDamping: 1
   m_ZDamping: 1
   m_ScreenX: 0.5
@@ -9092,6 +9092,11 @@ Prefab:
         type: 2}
       propertyPath: health
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114599399488166144, guid: 2d85d9c89a84c464c95a60dc66d559f8,
+        type: 2}
+      propertyPath: impulsePower
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114309644150261612, guid: 2d85d9c89a84c464c95a60dc66d559f8, type: 2}
@@ -9545,7 +9550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1531999292881766, guid: 00013717812324f7eb98fa0fdfc0f990, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114239565616695374, guid: 00013717812324f7eb98fa0fdfc0f990,
         type: 2}

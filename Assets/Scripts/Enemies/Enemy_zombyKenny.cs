@@ -38,6 +38,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 			} else if (attackCheck) {
 				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 			} 
+			flipParam = input;
 		} else if (!alive || stunned) {
 			float step = 0.01f * Time.time;
 			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
@@ -46,7 +47,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
 		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
 		anim.SetBool ("stunned", stunned);
-		flipParam = input;
 	}
 
 	public override void GetDamage (){
@@ -77,20 +77,11 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	}
 
 	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){
-		if (health > damage) {
+		ReduceHP (damage);
+		if (attackable) {
 			SetStun (impulseDirection);
-			input = impulseDirection;
-			if (attackable) {
-				anim.SetTrigger ("attackable");
-			}
-		} else {
-			flip.enabled = false;
-			SetStun (impulseDirection);
-			input = impulseDirection;
-			Die ();
+			anim.SetTrigger ("attackable");
 		}
-
-		health -= damage;
 	}
 
 	public IEnumerator ResetAttackCheck () {
@@ -99,7 +90,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	}
 
 	public override void SetStun (float direction){
-		flip.enabled = false;
+		input = direction;
 		stunned = true;
 	}
 
@@ -137,4 +128,16 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 
 	//Остановить преследование
 	public void Idle () {}
+
+	void Impulse () {
+		moveSpeed = Mathf.Sqrt (Time.deltaTime) * impulsePower;
+	}
+
+	//Уменьшить ХП + проверка на "смерть"
+	void ReduceHP (float damage) {
+		if (health <= damage) {
+			Die ();
+		}
+		health -= damage;
+	}
 }

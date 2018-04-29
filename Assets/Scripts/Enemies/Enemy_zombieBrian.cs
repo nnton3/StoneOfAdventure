@@ -49,14 +49,13 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 				} else if (attackCheck) {
 					input = -targetDirection;
 				} 
+				anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
 			} else if (!alive || stunned) {
 				Impulse ();
 			}
 		}
 
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
-		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
-		flipParam = input;
 	}
 
 	//Нанести урон
@@ -119,37 +118,20 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){
 
-		if (health <= damage && !invulnerability) {
-			flip.enabled = false;
-			input = impulseDirection;
-			Die ();
-			return;
-		}
 
-		if (invulnerability) {
+		if (invulnerability && impulseDirection != direction) {
 			SetStun (impulseDirection);
-			input = impulseDirection;
-			if (impulseDirection != direction && attackModify[0]) {
-				anim.SetTrigger ("attackableInBlock");
-				return;
-			} else {
-				if (health <= damage) {
-					flip.enabled = false;
-					Die ();
-					health -= damage;
-					return;
-				}
-
-				anim.SetTrigger ("attackable");
-			}
-		} 
-
-		health -= damage;
+			anim.SetTrigger ("attackableInBlock");
+		} else {
+			SetStun (impulseDirection);
+			anim.SetTrigger ("attackable");
+			ReduceHP (damage);
+		}
 	}
 
 	public override void SetStun (float direction){
-		flip.enabled = false;
 		stunned = true;
+		input = direction;
 	}
 
 	//Сбросить чек стана

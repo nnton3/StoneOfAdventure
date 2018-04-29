@@ -90,9 +90,7 @@ public class Player : Unit {
 			if (attackModifier == 1) {
 				hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
 			} else {
-				attackModify [0] = true;
-				hit.transform.GetComponent<Unit> ().SetDamage (attack, direction, attackModify);
-				attackModify = null;
+				hit.transform.GetComponent<Unit> ().SetDamage (attack * 2f, direction, attackModify);
 			}
 		}
 	}
