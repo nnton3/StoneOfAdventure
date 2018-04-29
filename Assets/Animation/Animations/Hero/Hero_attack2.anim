@@ -20,29 +20,29 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.01
+    - time: 0.009090909
       value: {fileID: 21300002, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.09
+    - time: 0.08181818
       value: {fileID: 21300004, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.17
+    - time: 0.15454546
       value: {fileID: 21300006, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.52
+    - time: 0.47272727
       value: {fileID: 21300008, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.57
+    - time: 0.5181818
       value: {fileID: 21300010, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.6
+    - time: 0.54545456
       value: {fileID: 21300012, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.7
+    - time: 0.6363636
       value: {fileID: 21300014, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.78
+    - time: 0.7090909
       value: {fileID: 21300016, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.85
+    - time: 0.77272725
       value: {fileID: 21300018, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 100
+  m_SampleRate: 110
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -72,7 +72,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.86
+    m_StopTime: 0.7818182
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -93,14 +93,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.57
+  - time: 0.5181818
     functionName: CreateAttackVector
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
-  - time: 0.86
+  - time: 0.7818182
     functionName: ResetAttackCheck
     data: 
     objectReferenceParameter: {fileID: 0}
