@@ -63,7 +63,6 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 			} else {
 				Impulse ();
 			}
-			Debug.Log ("moveSpeed = " + moveSpeed);
 			rb.velocity = new Vector2 (input * zombySpeed, rb.velocity.y);
 			anim.SetFloat ("speed", Mathf.Abs (input * zombySpeed));
 		}
@@ -98,7 +97,7 @@ public class Enemy_zombie : Unit, IReaction<GameObject> {
 	//Получить урон
 	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify) {
 		SetStun (impulseDirection);
-		health -= damage;
+		health = 0f;
 		Die ();
 	}
 

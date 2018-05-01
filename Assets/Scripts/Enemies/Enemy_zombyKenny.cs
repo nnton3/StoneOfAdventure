@@ -8,7 +8,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	public LayerMask attackCollision;
 	//Область агра
 	DangerArea start;
-	Flip flip;
 
 	//Ссылка на игрока
 	GameObject target;
@@ -19,49 +18,58 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	//Сила толчка во время получения урона
 	public float impulsePower = 3;
 
+	//Местоположения относительно игрока
+	float targetRange = 0f;
+	float targetDirection =0f;
+
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
 	}
 
 	void Start () {
-		flip = GetComponent<Flip> ();
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
 	
 	void Update () {
-		if (!idle && alive && !stunned) {
-			if (Mathf.Abs (target.transform.position.x - transform.position.x) < (attackRange - 0.5f) && ((target.transform.position.x > transform.position.x && direction > 0f) || (target.transform.position.x < transform.position.x && direction < 0f))) {
-				input = 0f;
-				GetDamage ();
-			} else if (attackCheck) {
-				input = (target.transform.position.x > transform.position.x) ? 1 : -1;
-			} 
-			flipParam = input;
-		} else if (!alive || stunned) {
-			float step = 0.01f * Time.time;
-			moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
+		if (!idle) {
+			if (alive && !stunned) {
+				
+				//Определение местоположения игрока
+				targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
+				targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
+				flipParam = input;
+				anim.SetFloat ("run", Mathf.Abs (input * moveSpeed));
+
+				if (attackCheck) {
+					if (targetRange < (attackRange - 0.5f) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f))) {
+						input = 0f;
+						GetDamage ();
+					} else
+						input = (target.transform.position.x > transform.position.x) ? 1 : -1;
+				}
+			} else
+				Impulse ();
 		}
 
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
-		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
-		anim.SetBool ("stunned", stunned);
 	}
 
 	public override void GetDamage (){
 		if (attackCheck) {
 			attackCheck = false;
+			attackable = false;
 			anim.SetTrigger ("attack");
 		}
 	}
 
-	public IEnumerator SecondAttack() {
+	public void SecondAttack() {
+		StartCoroutine ("ResetAttackCheck");
 		attackable = true;
 		stunned = true;
 		input = (target.transform.position.x > transform.position.x) ? 1 : -1;
-		yield return new WaitForSeconds (0.5f);
-		attackable = false;
+		flipParam = input;
 	}
 
 	//Построить луч атаки
@@ -97,7 +105,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	//Сбросить чек стана
 	public void ResetStunCheck () {
 		input = 0f;
-		flip.enabled = true;
 		moveSpeed = 2f;
 		stunned = false;
 	}

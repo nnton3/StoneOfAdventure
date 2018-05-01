@@ -14,7 +14,8 @@ public class Player : Unit {
 	bool rollCheck = true;
 
 	//Сила толчка во время получения урона
-	public float impulsePower = 3;
+	public float defaultImpulsePower = 10f;
+	float impulsePower = 10f;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -127,6 +128,7 @@ public class Player : Unit {
 		input = 0f;
 		moveSpeed = 5f;
 		stunned = false;
+		SetImpulsePower (defaultImpulsePower);
 	}
 
 	//Умереть
@@ -161,6 +163,8 @@ public class Player : Unit {
 		if (!stunned && rollCheck) {
 			rollCheck = false;
 			invulnerability = true;
+			SetImpulsePower (50f);
+			stunned = true;
 			Physics2D.IgnoreLayerCollision (9, 8, true);
 			attackCheck = false;
 			anim.SetTrigger ("roll");
@@ -171,6 +175,7 @@ public class Player : Unit {
 
 	//Завершить перекат
 	public void StopRoll() {
+		ResetStunCheck ();
 		moveSpeed = 5f;
 		Physics2D.IgnoreLayerCollision (9, 8, false);
 		invulnerability = false;
@@ -209,5 +214,9 @@ public class Player : Unit {
 			Die ();
 		}
 		health -= damage;
+	}
+
+	public void SetImpulsePower (float value) {
+		impulsePower = value;
 	}
 }
