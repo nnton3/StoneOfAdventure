@@ -102,8 +102,9 @@ public class Player : Unit {
 		bool backToTheEnemy = impulseDirection == direction;
 
 		if (inBlock) {
-			if (backToTheEnemy) {
+			if (backToTheEnemy || attackModify[1]) {
 				ReduceHP (damage);
+				RemoveShield ();
 				SetStun (impulseDirection);
 				anim.SetTrigger ("attackable");
 			} else {

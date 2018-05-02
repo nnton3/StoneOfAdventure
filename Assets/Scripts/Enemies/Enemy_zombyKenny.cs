@@ -47,7 +47,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 						input = 0f;
 						GetDamage ();
 					} else
-						input = (target.transform.position.x > transform.position.x) ? 1 : -1;
+						input = -targetDirection;
 				}
 			} else
 				Impulse ();
@@ -67,8 +67,9 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	public void SecondAttack() {
 		StartCoroutine ("ResetAttackCheck");
 		attackable = true;
+		attackModify [1] = false;
 		stunned = true;
-		input = (target.transform.position.x > transform.position.x) ? 1 : -1;
+		input = -targetDirection;
 		flipParam = input;
 	}
 
@@ -95,6 +96,7 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	public IEnumerator ResetAttackCheck () {
 		yield return new WaitForSeconds (attackSpeed);
 		attackCheck = true;
+		attackModify [1] = true;
 	}
 
 	public override void SetStun (float direction){
