@@ -23,7 +23,7 @@ public class Player : Unit {
 	}
 	
 	void Update () {
-		
+
 		if (attackCheck) {
 			//Управление
 			if (Input.GetKeyDown (KeyCode.F)) {       //Атака мечом
@@ -102,15 +102,19 @@ public class Player : Unit {
 		bool backToTheEnemy = impulseDirection == direction;
 
 		if (inBlock) {
-			if (backToTheEnemy) {
+			if (backToTheEnemy || attackModify[1]) {
+				Debug.Log ("work1");
+				RemoveShield ();
 				ReduceHP (damage);
 				SetStun (impulseDirection);
 				anim.SetTrigger ("attackable");
 			} else {
+				Debug.Log ("work2");
 				SetStun (impulseDirection);
 				anim.SetTrigger ("blocked");
 			}
 		} else if (!invulnerability) {
+			Debug.Log ("work3");
 			ReduceHP (damage);
 			SetStun (impulseDirection);
 			anim.SetTrigger ("attackable");
