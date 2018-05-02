@@ -441,7 +441,6 @@
     <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\SwitchAnim.cs" />
     <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ToggleAnim.cs" />
     <Compile Include="Assets\Scripts\Effects\FadeEffect_En_Dis.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Enemy_creepyZomby.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_invokedZomby.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombie.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombieBrian.cs" />
