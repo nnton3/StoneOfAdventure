@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4230035513275596
 Transform:
   m_ObjectHideFlags: 1
@@ -245,18 +245,19 @@ MonoBehaviour:
   attackCheck: 1
   stunned: 0
   alive: 1
-  piercing_attack: 0
+  attackModify: 0000
   moveSpeed: 2
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   direction: 1
+  flipParam: 0
   attackCollision:
     serializedVersion: 2
     m_Bits: 256
   runDistance: 3.5
   runSpeed: 6
-  bornDelay: 0
+  bornDelay: 4
   impulsePower: 0.1
 --- !u!114 &114820428628603100
 MonoBehaviour:

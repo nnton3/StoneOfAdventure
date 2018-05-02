@@ -4,34 +4,39 @@ timeCreated: 1521878937
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: InvokerMagic_0
+    21300000: InvokerMagic_9
     21300002: InvokerMagic_1
-    21300004: InvokerMagic_12
-    21300006: InvokerMagic_13
-    21300008: InvokerMagic_14
-    21300010: InvokerMagic_15
-    21300012: InvokerMagic_17
-    21300014: InvokerMagic_18
-    21300016: InvokerMagic_19
-    21300018: InvokerMagic_20
-    21300020: InvokerMagic_21
-    21300022: InvokerMagic_22
-    21300024: InvokerMagic_23
-    21300026: InvokerMagic_24
-    21300028: InvokerMagic_25
-    21300030: InvokerMagic_26
-    21300032: InvokerMagic_27
-    21300034: InvokerMagic_28
-    21300036: InvokerMagic_29
-    21300038: InvokerMagic_30
-    21300040: InvokerMagic_31
-    21300042: InvokerMagic_32
-    21300044: InvokerMagic_33
-    21300046: InvokerMagic_34
-    21300048: InvokerMagic_35
-    21300050: InvokerMagic_36
-    21300052: InvokerMagic_37
+    21300004: InvokerMagic_17
+    21300006: InvokerMagic_18
+    21300008: InvokerMagic_7
+    21300010: InvokerMagic_8
+    21300012: InvokerMagic_22
+    21300014: InvokerMagic_23
+    21300016: InvokerMagic_24
+    21300018: InvokerMagic_16
+    21300020: InvokerMagic_13
+    21300022: InvokerMagic_14
+    21300024: InvokerMagic_7
+    21300026: InvokerMagic_8
+    21300028: InvokerMagic_9
+    21300030: InvokerMagic_10
+    21300032: InvokerMagic_11
+    21300034: InvokerMagic_21
+    21300036: InvokerMagic_15
+    21300038: InvokerMagic_16
+    21300040: InvokerMagic_10
+    21300042: InvokerMagic_3
+    21300044: InvokerMagic_4
+    21300046: InvokerMagic_5
+    21300048: InvokerMagic_6
+    21300050: InvokerMagic_1
+    21300052: InvokerMagic_2
     21300054: InvokerMagic_2
+    21300056: InvokerMagic_25
+    21300058: InvokerMagic_12
+    21300060: InvokerMagic_19
+    21300062: InvokerMagic_20
+    21300064: InvokerMagic_26
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -158,7 +163,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: InvokerMagic_0
+      name: InvokerMagic_25
       rect:
         serializedVersion: 2
         x: 2615
@@ -172,21 +177,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_1
-      rect:
-        serializedVersion: 2
-        x: 2825
-        y: 185
-        width: 4
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: InvokerMagic_12
+      name: InvokerMagic_21
       rect:
         serializedVersion: 2
         x: 1946
@@ -200,7 +191,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_13
+      name: InvokerMagic_22
       rect:
         serializedVersion: 2
         x: 2129
@@ -214,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_14
+      name: InvokerMagic_23
       rect:
         serializedVersion: 2
         x: 2278
@@ -228,7 +219,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_15
+      name: InvokerMagic_24
       rect:
         serializedVersion: 2
         x: 2451
@@ -242,7 +233,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_17
+      name: InvokerMagic_13
       rect:
         serializedVersion: 2
         x: 718
@@ -256,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_18
+      name: InvokerMagic_14
       rect:
         serializedVersion: 2
         x: 855
@@ -270,7 +261,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_19
+      name: InvokerMagic_15
       rect:
         serializedVersion: 2
         x: 1004
@@ -284,7 +275,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_20
+      name: InvokerMagic_16
       rect:
         serializedVersion: 2
         x: 1153
@@ -298,7 +289,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_21
+      name: InvokerMagic_17
       rect:
         serializedVersion: 2
         x: 1310
@@ -312,7 +303,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_22
+      name: InvokerMagic_18
       rect:
         serializedVersion: 2
         x: 1469
@@ -326,7 +317,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_23
+      name: InvokerMagic_7
       rect:
         serializedVersion: 2
         x: 243
@@ -340,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_24
+      name: InvokerMagic_8
       rect:
         serializedVersion: 2
         x: 281
@@ -354,7 +345,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_25
+      name: InvokerMagic_9
       rect:
         serializedVersion: 2
         x: 337
@@ -368,7 +359,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_26
+      name: InvokerMagic_10
       rect:
         serializedVersion: 2
         x: 398
@@ -382,7 +373,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_27
+      name: InvokerMagic_11
       rect:
         serializedVersion: 2
         x: 529
@@ -396,7 +387,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_28
+      name: InvokerMagic_12
       rect:
         serializedVersion: 2
         x: 615
@@ -410,7 +401,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_29
+      name: InvokerMagic_19
       rect:
         serializedVersion: 2
         x: 1628
@@ -424,7 +415,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_30
+      name: InvokerMagic_20
       rect:
         serializedVersion: 2
         x: 1787
@@ -438,7 +429,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_31
+      name: InvokerMagic_26
       rect:
         serializedVersion: 2
         x: 2797
@@ -452,7 +443,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_32
+      name: InvokerMagic_3
       rect:
         serializedVersion: 2
         x: 88
@@ -466,7 +457,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_33
+      name: InvokerMagic_4
       rect:
         serializedVersion: 2
         x: 127
@@ -480,7 +471,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_34
+      name: InvokerMagic_5
       rect:
         serializedVersion: 2
         x: 168
@@ -494,7 +485,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_35
+      name: InvokerMagic_6
       rect:
         serializedVersion: 2
         x: 209
@@ -508,7 +499,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_36
+      name: InvokerMagic_1
       rect:
         serializedVersion: 2
         x: 18
@@ -522,7 +513,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InvokerMagic_37
+      name: InvokerMagic_2
       rect:
         serializedVersion: 2
         x: 52
@@ -531,20 +522,6 @@ TextureImporter:
         height: 28
       alignment: 9
       pivot: {x: 0.76, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: InvokerMagic_2
-      rect:
-        serializedVersion: 2
-        x: 2811
-        y: 132
-        width: 2
-        height: 3
-      alignment: 0
-      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

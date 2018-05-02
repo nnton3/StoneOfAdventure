@@ -23,12 +23,15 @@ public class Enemy_creepyZomby : Unit, IReaction<GameObject> {
 
 	bool idle = true;
 
+	GameObject hpBar;
+
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
 	}
 
 	void Start () {
+		hpBar = transform.Find ("HPBar").gameObject;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
@@ -107,6 +110,7 @@ public class Enemy_creepyZomby : Unit, IReaction<GameObject> {
 
 	//Умереть
 	public override void Die () {
+		Destroy (hpBar);
 		anim.SetTrigger ("die");
 		start.AddCorpse ();
 		alive = false;
@@ -123,6 +127,7 @@ public class Enemy_creepyZomby : Unit, IReaction<GameObject> {
 	public void StartChase() {
 		gameObject.layer = 9;
 		idle = false;
+		hpBar.SetActive(true);
 	}
 
 	//Остановить преследование

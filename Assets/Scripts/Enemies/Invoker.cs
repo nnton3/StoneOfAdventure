@@ -8,7 +8,6 @@ public class Invoker : Unit, IReaction<GameObject> {
 	public LayerMask attackCollision;
 	//Область агра
 	DangerArea start;
-	Flip flip;
 
 	//Ссылка на игрока
 	GameObject target;
@@ -21,13 +20,15 @@ public class Invoker : Unit, IReaction<GameObject> {
 
 	public GameObject zomby;
 
+	GameObject hpBar;
+
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
 	}
 
 	void Start () {
-		flip = GetComponent<Flip> ();
+		hpBar = transform.Find ("HPBar").gameObject;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
@@ -38,8 +39,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 			if (attackCheck && alive && !stunned) {
 				GetDamage ();
 			} else if (stunned || !alive) {
-				float step = 1f * Time.time;
-				moveSpeed = Mathf.MoveTowards (impulsePower, 0f, step);
+				Impulse ();
 			}
 		}
 
@@ -47,6 +47,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 	}
 
 	public override void GetDamage (){
+		StartCoroutine ("ResetAttackCheck");
 		attackCheck = false;
 		anim.SetTrigger ("attack");
 	}
@@ -58,20 +59,24 @@ public class Invoker : Unit, IReaction<GameObject> {
 	}
 
 	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){
-		if (health <= damage) {
-			flip.enabled = false;
-			input = impulseDirection;
-			health -= damage;
-			Die ();
-			return;
-		}
+		ReduceHP (damage);
+		SetStun (impulseDirection);
 		anim.SetTrigger ("attackable");
-		health -= damage;
 	}
 
-	public override void SetStun (float direction){}
+	public override void SetStun (float direction){
+		stunned = true;
+		input = direction;
+	}
+
+	//Сбросить чек стана
+	public void ResetStunCheck () {
+		input = 0f;
+		stunned = false;
+	}
 
 	public override void Die (){
+		Destroy (hpBar);
 		anim.SetTrigger ("die");
 		start.AddCorpse ();
 		alive = false;
@@ -91,6 +96,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 		StartCoroutine("StopMovespeedTimer");	}
 
 	public void StartChase() {
+		hpBar.SetActive (true);
 		gameObject.layer = 9;
 		idle = false;
 	}
@@ -102,7 +108,7 @@ public class Invoker : Unit, IReaction<GameObject> {
 
 	//Призвать зомби
 	public void InvokeZomby() {
-		GameObject zombyInstance = Instantiate (zomby, new Vector3 (transform.position.x + Random.Range (-3, -15), transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
+		GameObject zombyInstance = Instantiate (zomby, new Vector3 (transform.position.x + Random.Range (-3, -15), transform.position.y + 0.125f, transform.position.z), Quaternion.identity);
 		Enemy_invokedZomby zombyScript = zombyInstance.GetComponent<Enemy_invokedZomby> ();
 		zombyScript.target = target;
 	}
@@ -113,5 +119,17 @@ public class Invoker : Unit, IReaction<GameObject> {
 		input = 0f;
 		rb.gravityScale = 1f;
 		anim.SetTrigger ("stopFly");
+	}
+
+	void Impulse () {
+		moveSpeed = Mathf.Sqrt(Time.deltaTime) * impulsePower;
+	}
+
+	//Уменьшить ХП + проверка на "смерть"
+	void ReduceHP (float damage) {
+		if (health <= damage) {
+			Die ();
+		}
+		health -= damage;
 	}
 }

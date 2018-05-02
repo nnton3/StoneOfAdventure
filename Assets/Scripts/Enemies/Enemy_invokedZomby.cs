@@ -24,7 +24,10 @@ public class Enemy_invokedZomby : Unit, IReaction<GameObject> {
 
 	bool idle = true;
 
+	GameObject hpBar;
+
 	void Start () {
+		hpBar = transform.Find ("HPBar").gameObject;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 
@@ -110,6 +113,7 @@ public class Enemy_invokedZomby : Unit, IReaction<GameObject> {
 
 	//Умереть
 	public override void Die () {
+		Destroy (hpBar);
 		anim.SetTrigger ("die");
 		alive = false;
 		gameObject.layer = 2;
@@ -123,6 +127,7 @@ public class Enemy_invokedZomby : Unit, IReaction<GameObject> {
 	}
 
 	public void StartChase() {
+		hpBar.SetActive (true);
 		gameObject.layer = 9;
 		idle = false;
 	}
