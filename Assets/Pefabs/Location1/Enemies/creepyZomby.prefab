@@ -247,7 +247,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   bornDelay: 0
-  impulsePower: 3
+  impulsePower: 10
 --- !u!114 &114378832034275542
 MonoBehaviour:
   m_ObjectHideFlags: 1

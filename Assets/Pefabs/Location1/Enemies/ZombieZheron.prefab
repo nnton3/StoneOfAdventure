@@ -150,7 +150,7 @@ BoxCollider2D:
   m_Offset: {x: 0.045, y: 0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.74, y: 0}
+    pivot: {x: 0.73, y: 0}
     oldSize: {x: 0.24, y: 0.21}
     newSize: {x: 0.1, y: 0.14}
     adaptiveTilingThreshold: 0.5
@@ -240,20 +240,21 @@ MonoBehaviour:
   attackCheck: 1
   stunned: 0
   alive: 1
-  piercing_attack: 0
+  attackModify: 0000
   moveSpeed: 2
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   direction: 1
+  flipParam: 0
   attackCollision:
     serializedVersion: 2
     m_Bits: 256
   bornDelay: 0
-  impulsePower: 3
-  longDistance: 10
-  averageDistance: 7
-  shortDistance: 3
+  impulsePower: 10
+  longRange: 10
+  midRange: 7
+  meleeRange: 3
 --- !u!114 &114357984525115096
 MonoBehaviour:
   m_ObjectHideFlags: 1

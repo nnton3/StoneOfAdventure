@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 224478216557148070}
   - component: {fileID: 222001094904088240}
-  - component: {fileID: 114309644150261612}
   m_Layer: 5
   m_Name: Circle Pie(Clone)
   m_TagString: Untagged
@@ -80,7 +79,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1780096191958802
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,18 +198,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114309644150261612
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1274967722258324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb95c67a77eb44b0af89cde00d4900e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFacingRight: 1
 --- !u!114 &114363401017919760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a98a216dd634263b886cf66fcc20a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 50
   armor: 0
   attack: 10
   attackSpeed: 1.5
@@ -259,17 +246,18 @@ MonoBehaviour:
   attackCheck: 1
   stunned: 0
   alive: 1
-  piercing_attack: 0
+  attackModify: 0000
   moveSpeed: 2
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   direction: 1
+  flipParam: 0
   attackCollision:
     serializedVersion: 2
     m_Bits: 256
-  bornDelay: 2
-  impulsePower: 1.8
+  bornDelay: 0
+  impulsePower: 10
 --- !u!114 &114782218745818584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf6892b264ea4ccb9a16f34d04baa7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 0}
+  unit: {fileID: 114599399488166144}
 --- !u!114 &114951836436850440
 MonoBehaviour:
   m_ObjectHideFlags: 1

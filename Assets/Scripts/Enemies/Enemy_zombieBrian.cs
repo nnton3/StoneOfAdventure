@@ -8,7 +8,6 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	public LayerMask attackCollision;
 	//Область агра
 	DangerArea start;
-	Flip flip;
 
 	//Ссылка на игрока
 	GameObject target;
@@ -22,13 +21,15 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	float targetRange = 0f;
 	float targetDirection =0f;
 
+	GameObject hpBar;
+
 	void Awake() {
 		start = GetComponentInParent<DangerArea> ();
 		start.AddEnemie (this);
 	}
 
 	void Start () {
-		flip = GetComponent<Flip> ();
+		hpBar = transform.Find ("HPBar").gameObject;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
@@ -118,15 +119,19 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 
 	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify){
 
+		bool backToTheEnemy = impulseDirection == direction;
 
-		if (invulnerability && impulseDirection != direction) {
-			SetStun (impulseDirection);
-			anim.SetTrigger ("attackableInBlock");
-		} else {
-			SetStun (impulseDirection);
-			anim.SetTrigger ("attackable");
+		if (invulnerability) {
+			if (backToTheEnemy) {
+				SetStun (impulseDirection);
+				anim.SetTrigger ("attackable");
+				ReduceHP (damage);
+			} else {
+				SetStun (impulseDirection);
+				anim.SetTrigger ("attackableInBlock");
+			}
+		} else 
 			ReduceHP (damage);
-		}
 	}
 
 	public override void SetStun (float direction){
@@ -137,12 +142,12 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	//Сбросить чек стана
 	public void ResetStunCheck () {
 		input = 0f;
-		flip.enabled = true;
 		moveSpeed = 2f;
 		stunned = false;
 	}
 
 	public override void Die (){
+		Destroy (hpBar);
 		anim.SetTrigger ("die");
 		start.AddCorpse ();
 		alive = false;
@@ -163,6 +168,7 @@ public class Enemy_zombieBrian : Unit, IReaction<GameObject> {
 	}
 
 	public void StartChase() {
+		hpBar.SetActive (true);
 		gameObject.layer = 9;
 		idle = false;
 	}
