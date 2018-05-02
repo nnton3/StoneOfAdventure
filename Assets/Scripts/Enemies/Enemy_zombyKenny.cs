@@ -60,13 +60,13 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 		if (attackCheck) {
 			attackCheck = false;
 			attackable = false;
-			attackModify [1] = true;
 			anim.SetTrigger ("attack");
 		}
 	}
 
 	public void SecondAttack() {
 		StartCoroutine ("ResetAttackCheck");
+		attackable = true;
 		stunned = true;
 		input = (target.transform.position.x > transform.position.x) ? 1 : -1;
 		flipParam = input;
@@ -93,8 +93,6 @@ public class Enemy_zombyKenny : Unit, IReaction<GameObject> {
 	}
 
 	public IEnumerator ResetAttackCheck () {
-		attackModify [1] = false;;
-		attackable = true;
 		yield return new WaitForSeconds (attackSpeed);
 		attackCheck = true;
 	}
