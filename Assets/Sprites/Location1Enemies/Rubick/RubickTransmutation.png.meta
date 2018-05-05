@@ -3,7 +3,23 @@ guid: dd931e97c6de94ef3b7516298ce042a0
 timeCreated: 1525155391
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: RubickTransmutation_0
+    21300002: RubickTransmutation_1
+    21300004: RubickTransmutation_2
+    21300006: RubickTransmutation_4
+    21300008: RubickTransmutation_6
+    21300010: RubickTransmutation_9
+    21300012: RubickTransmutation_11
+    21300014: RubickTransmutation_12
+    21300016: RubickTransmutation_13
+    21300018: RubickTransmutation_15
+    21300020: RubickTransmutation_17
+    21300022: RubickTransmutation_19
+    21300024: RubickTransmutation_20
+    21300026: RubickTransmutation_21
+    21300028: RubickTransmutation_22
+    21300030: RubickTransmutation_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -31,7 +47,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -40,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -60,7 +76,27 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -68,7 +104,231 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RubickTransmutation_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 9
+        width: 25
+        height: 26
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 9
+        width: 31
+        height: 27
+      alignment: 9
+      pivot: {x: 0.99, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 9
+        width: 26
+        height: 20
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 9
+        width: 48
+        height: 20
+      alignment: 9
+      pivot: {x: 0.62, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 11
+        width: 57
+        height: 20
+      alignment: 9
+      pivot: {x: 0.56, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_9
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 10
+        width: 74
+        height: 20
+      alignment: 9
+      pivot: {x: 0.525, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_11
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 13
+        width: 14
+        height: 20
+      alignment: 9
+      pivot: {x: 0.99, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_12
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 13
+        width: 11
+        height: 20
+      alignment: 9
+      pivot: {x: 0.96, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_13
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 12
+        width: 8
+        height: 22
+      alignment: 9
+      pivot: {x: 0.8, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_15
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 12
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.9, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_17
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 12
+        width: 20
+        height: 22
+      alignment: 9
+      pivot: {x: 0.93, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_19
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 11
+        width: 14
+        height: 22
+      alignment: 9
+      pivot: {x: 0.89, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_20
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 9
+        width: 16
+        height: 29
+      alignment: 9
+      pivot: {x: 0.91, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_21
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 11
+        width: 19
+        height: 31
+      alignment: 9
+      pivot: {x: 0.92, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_22
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 10
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.925, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RubickTransmutation_23
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 10
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.88, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
