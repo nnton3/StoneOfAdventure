@@ -24,7 +24,18 @@ public class HPBar : MonoBehaviour {
 			scale.x *= -1f;
 			transform.localScale = scale;
 		}
+		UpdateHP ();
+	}
 
+	void UpdateHP () {
 		image.fillAmount = unit.health / maxHP;
+	}
+
+	void AddHP() {
+
+	}
+
+	void RemoveHP () {
+
 	}
 }

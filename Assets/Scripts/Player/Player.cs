@@ -100,6 +100,7 @@ public class Player : Unit {
 	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify) {
 
 		bool backToTheEnemy = impulseDirection == direction;
+		Debug.Log("impulseDirection = " + impulseDirection);
 
 		if (inBlock) {
 			if (backToTheEnemy || attackModify[1]) {
