@@ -19,7 +19,6 @@ public class Rubick_patron : Unit {
 			anim.SetTrigger ("hit");
 			target.GetComponent<Unit> ().health += attack;
 		} else if (target.CompareTag ("Player")) {
-			Debug.Log ("attackModify[1] = " + attackModify [1]);
 			target.GetComponent<Unit> ().SetDamage(10f, direction, attackModify);
 			anim.SetTrigger ("hit");
 		}

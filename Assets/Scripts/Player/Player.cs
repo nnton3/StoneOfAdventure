@@ -23,7 +23,7 @@ public class Player : Unit {
 	}
 	
 	void Update () {
-		
+		Debug.Log ("stunned = " + stunned);
 		if (attackCheck) {
 			//Управление
 			if (Input.GetKeyDown (KeyCode.F)) {       //Атака мечом
@@ -44,7 +44,7 @@ public class Player : Unit {
 		}
 
 		if (stunned || !alive) {
-			Impulse ();
+			//Impulse ();
 		} else {
 			input = Input.GetAxisRaw ("Horizontal");
 			flipParam = input;
@@ -100,7 +100,6 @@ public class Player : Unit {
 	public override void SetDamage (float damage, float impulseDirection, bool[] attackModify) {
 
 		bool backToTheEnemy = impulseDirection == direction;
-		Debug.Log("impulseDirection = " + impulseDirection);
 
 		if (inBlock) {
 			if (backToTheEnemy || attackModify[1]) {
@@ -123,6 +122,7 @@ public class Player : Unit {
 	public override void SetStun (float direction) {
 		input = direction;
 		stunned = true;
+		StartCoroutine ("Impulse");
 	}
 
 	//Сбросить чек стана
@@ -206,8 +206,13 @@ public class Player : Unit {
 		rollCheck = true;
 	}
 
-	void Impulse () {
-		moveSpeed = Mathf.Sqrt(Time.deltaTime) * impulsePower;
+	IEnumerator Impulse () {
+		for (int i = -3; i < 3; i++) {
+			yield return new WaitForSeconds (0.1f);
+			moveSpeed = -Mathf.Sqrt (i) + 9;
+			Debug.Log ("moveSpeed = " + moveSpeed);
+		}
+		//ResetStunCheck ();
 	}
 
 	//Уменьшить ХП + проверка на "смерть"
