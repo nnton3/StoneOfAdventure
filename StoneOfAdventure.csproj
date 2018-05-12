@@ -448,6 +448,8 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombyKenny.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombyZheron.cs" />
     <Compile Include="Assets\Scripts\Enemies\Invoker.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Rubick\Rubick.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Rubick\Rubick_patron.cs" />
     <Compile Include="Assets\Scripts\General Mechanics\DangerArea.cs" />
     <Compile Include="Assets\Scripts\General Mechanics\Flip.cs" />
     <Compile Include="Assets\Scripts\General Mechanics\Interfaces.cs" />
@@ -456,6 +458,7 @@
     <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
     <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
     <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
+    <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\Аrrow.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
