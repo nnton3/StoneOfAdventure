@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1905435086076646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125.46, y: -4.05, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,16 +127,19 @@ MonoBehaviour:
   attackCheck: 1
   stunned: 0
   alive: 1
+  attackModify: 0000
   moveSpeed: 4
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   direction: 1
+  flipParam: 0
   attackCollision:
     serializedVersion: 2
     m_Bits: 512
   arrow: {fileID: 1951276325018502, guid: b22afc43f0ba9407dab23ba81bdfda82, type: 2}
-  impulsePower: 2
+  rollCD: 3
+  defaultImpulsePower: 10
 --- !u!114 &114901732494411922
 MonoBehaviour:
   m_ObjectHideFlags: 1
