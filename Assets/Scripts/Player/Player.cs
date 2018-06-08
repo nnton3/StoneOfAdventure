@@ -44,7 +44,7 @@ public class Player : Unit {
 		}
 
 		if (stunned || !alive) {
-			//Impulse ();
+			Impulse ();
 		} else {
 			input = Input.GetAxisRaw ("Horizontal");
 			flipParam = input;
@@ -206,21 +206,16 @@ public class Player : Unit {
 		rollCheck = true;
 	}
 
-	IEnumerator Impulse () {
-		for (int i = -3; i < 3; i++) {
-			yield return new WaitForSeconds (0.1f);
-			moveSpeed = -Mathf.Sqrt (i) + 9;
-			Debug.Log ("moveSpeed = " + moveSpeed);
-		}
-		//ResetStunCheck ();
-	}
-
 	//Уменьшить ХП + проверка на "смерть"
 	void ReduceHP (float damage) {
 		if (health <= damage) {
 			Die ();
 		}
 		health -= damage;
+	}
+
+	void Impulse () {
+		moveSpeed = Mathf.Sqrt(Time.deltaTime) * impulsePower;
 	}
 
 	public void SetImpulsePower (float value) {
