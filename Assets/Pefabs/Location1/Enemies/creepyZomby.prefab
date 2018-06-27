@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 50041933948665014}
   - component: {fileID: 114161035527346870}
   - component: {fileID: 114362364366001182}
+  - component: {fileID: 114167303337647556}
+  - component: {fileID: 114105719465542622}
   m_Layer: 4
   m_Name: creepyZomby
   m_TagString: Enemy
@@ -108,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273770020861940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.259, y: -0.007, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 224166210051298948}
@@ -150,7 +152,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.07}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.32, y: 0}
     oldSize: {x: 0.14, y: 0.06}
     newSize: {x: 0.1, y: 0.14}
     adaptiveTilingThreshold: 0.5
@@ -204,6 +206,30 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114105719465542622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273770020861940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f82bc380e158473ba357cd06c7a41c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  anim: {fileID: 0}
+  block: 0
+  invulnerability: 0
+  stun: 0
+  attack: 0
+  attackCollision:
+    serializedVersion: 2
+    m_Bits: 8
+  arrow: {fileID: 0}
+  defaultMovespeed: 5
+  defaultImpulsePower: 5
+  alive: 1
 --- !u!114 &114161035527346870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,6 +242,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 1
+--- !u!114 &114167303337647556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273770020861940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19903225939e44d508ca19489e5399f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  conditions: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &114362364366001182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,25 +269,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  attack: 10
+  attackPoints: 0
   attackSpeed: 0.7
   attackRange: 1.75
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  attackModify: 0000
   moveSpeed: 2
+  impulsePower: 10
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  damage: {fileID: 0}
+  conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  attackCollision:
-    serializedVersion: 2
-    m_Bits: 256
+  myStack: {fileID: 0}
+  target: {fileID: 0}
+  idle: 1
   bornDelay: 0
-  impulsePower: 10
+  runDistance: 7
+  runSpeed: 5
 --- !u!114 &114378832034275542
 MonoBehaviour:
   m_ObjectHideFlags: 1

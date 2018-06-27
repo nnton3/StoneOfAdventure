@@ -12,7 +12,6 @@ TextureImporter:
     21300010: Zombie_attack_5
     21300012: Zombie_attack_6
     21300014: Zombie_attack_7
-    21300016: Zombie_attack_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -206,20 +205,6 @@ TextureImporter:
         height: 14
       alignment: 9
       pivot: {x: 0.3, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Zombie_attack_8
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 18
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

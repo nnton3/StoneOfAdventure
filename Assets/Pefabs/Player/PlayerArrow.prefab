@@ -132,18 +132,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   armor: 0
-  attack: 50
+  attackPoints: 10
   attackSpeed: 0
   attackRange: 1
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
   moveSpeed: 15
+  impulsePower: 0
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  damage: {fileID: 0}
+  conditions: {fileID: 0}
   direction: 1
+  flipParam: 0
+  myStack: {fileID: 0}
 --- !u!212 &212228862097152372
 SpriteRenderer:
   m_ObjectHideFlags: 1
