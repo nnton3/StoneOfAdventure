@@ -58,7 +58,6 @@ public class Conditions : MonoBehaviour {
 	}
 
 	//АТАКА
-
 	[HideInInspector]
 	public bool attack = false;
 	public LayerMask attackCollision = 8;        //Атакуемый слой

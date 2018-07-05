@@ -60,6 +60,8 @@ GameObject:
   - component: {fileID: 50718043188832084}
   - component: {fileID: 114647494622224764}
   - component: {fileID: 114400056508594430}
+  - component: {fileID: 114107210959050864}
+  - component: {fileID: 114778314351476260}
   m_Layer: 4
   m_Name: InvokedZombie
   m_TagString: Enemy
@@ -210,6 +212,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 114400056508594430}
+--- !u!114 &114107210959050864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1465211492427678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5018e440e604091ade2391e3b8b3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  anim: {fileID: 0}
+  block: 0
+  invulnerability: 0
+  stun: 0
+  attack: 0
+  attackCollision:
+    serializedVersion: 2
+    m_Bits: 264
+  arrow: {fileID: 0}
+  defaultMovespeed: 5
+  defaultImpulsePower: 5
+  alive: 1
 --- !u!114 &114273723713875940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,27 +276,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  attack: 10
+  attackPoints: 0
   attackSpeed: 0.7
   attackRange: 1.5
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  attackModify: 0000
   moveSpeed: 2
+  impulsePower: 0.1
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  damage: {fileID: 0}
+  conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  attackCollision:
-    serializedVersion: 2
-    m_Bits: 256
+  myStack: {fileID: 0}
   target: {fileID: 0}
+  idle: 1
+  bornDelay: 0
   runDistance: 3.5
   runSpeed: 6
-  impulsePower: 0.1
 --- !u!114 &114647494622224764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -326,6 +349,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114778314351476260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1465211492427678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a5f22fdf0c84464a2fdf2661ffe90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  conditions: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!212 &212388473334780950
 SpriteRenderer:
   m_ObjectHideFlags: 1

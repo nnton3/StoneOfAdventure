@@ -77,6 +77,8 @@ GameObject:
   - component: {fileID: 50755876847491166}
   - component: {fileID: 114799849461193586}
   - component: {fileID: 114677841284993980}
+  - component: {fileID: 114498981090367328}
+  - component: {fileID: 114488439965812490}
   m_Layer: 4
   m_Name: Zombie2
   m_TagString: Enemy
@@ -150,7 +152,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.07}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.55, y: 0}
     oldSize: {x: 0.09, y: 0.16}
     newSize: {x: 0.1, y: 0.14}
     adaptiveTilingThreshold: 0.5
@@ -252,6 +254,44 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114488439965812490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986738832010054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df3d16a86905041d3979137f7a360882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  anim: {fileID: 0}
+  block: 0
+  invulnerability: 0
+  stun: 0
+  attack: 0
+  attackCollision:
+    serializedVersion: 2
+    m_Bits: 264
+  arrow: {fileID: 0}
+  defaultMovespeed: 5
+  defaultImpulsePower: 5
+  alive: 1
+--- !u!114 &114498981090367328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986738832010054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32953cdc508b412ba279535739c1903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  conditions: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &114677841284993980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,32 +300,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986738832010054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13a358750fbc24ae1b76f305dc238b5e, type: 3}
+  m_Script: {fileID: 11500000, guid: 914d18e7ba0954f68970c7c00e651f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  attack: 10
+  attackPoints: 0
   attackSpeed: 0.7
   attackRange: 1.75
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  attackModify: 0000
   moveSpeed: 2
+  impulsePower: 3
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  damage: {fileID: 0}
+  conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  attackCollision:
-    serializedVersion: 2
-    m_Bits: 256
-  runDistance: 3.5
-  runSpeed: 6
+  myStack: {fileID: 0}
+  target: {fileID: 0}
+  idle: 1
   bornDelay: 0
-  impulsePower: 10
+  runDistance: 7
+  runSpeed: 5
 --- !u!114 &114693800080469528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf6892b264ea4ccb9a16f34d04baa7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 114677841284993980}
+  unit: {fileID: 0}
 --- !u!114 &114702706318381882
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -22,6 +22,7 @@ public class Аrrow : Unit {
 
 	public void SetDirection (float direction) {
 		input = direction;
+		flipParam = direction;
 	}
 
 	IEnumerator Timer() {

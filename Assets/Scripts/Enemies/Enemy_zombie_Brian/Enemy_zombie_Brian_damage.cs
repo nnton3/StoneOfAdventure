@@ -9,15 +9,20 @@ public class Enemy_zombie_Brian_damage : Damage {
 		bool backToTheEnemy = BackToTheEnemyCheck (direction);
 
 		if (conditions.block) {
+			Debug.Log ("1");
 			if (backToTheEnemy) {
+				Debug.Log ("2");
 				conditions.EnableStun (direction);
 				anim.SetTrigger ("attackable");
 				ReduceHP (damage);
 			} else {
+				Debug.Log ("3");
 				conditions.EnableStun (direction);
 				anim.SetTrigger ("attackableInBlock");
 			}
-		} else 
+		} else {
+			Debug.Log ("4");
 			ReduceHP (damage);
+		}
 	}
 }

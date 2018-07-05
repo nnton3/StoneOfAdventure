@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 50905067943348638}
   - component: {fileID: 114462228187515302}
   - component: {fileID: 114599399488166144}
+  - component: {fileID: 114341512084975994}
+  - component: {fileID: 114058702772600102}
   m_Layer: 4
   m_Name: ZombieBrian
   m_TagString: Enemy
@@ -177,6 +179,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114058702772600102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780096191958802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be7729f20d7440eb94cc216ceb50f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  conditions: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &114267592734401906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,6 +214,30 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114341512084975994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780096191958802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e7c7ef0485d4932b2dd7465407dd16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  anim: {fileID: 0}
+  block: 0
+  invulnerability: 0
+  stun: 0
+  attack: 0
+  attackCollision:
+    serializedVersion: 2
+    m_Bits: 264
+  arrow: {fileID: 0}
+  defaultMovespeed: 5
+  defaultImpulsePower: 5
+  alive: 1
 --- !u!114 &114363401017919760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,25 +279,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   armor: 0
-  attack: 10
+  attackPoints: 0
   attackSpeed: 1.5
   attackRange: 2.1
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  attackModify: 0000
   moveSpeed: 2
+  impulsePower: 1.5
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  damage: {fileID: 0}
+  conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  attackCollision:
-    serializedVersion: 2
-    m_Bits: 256
+  myStack: {fileID: 0}
+  target: {fileID: 0}
+  idle: 1
   bornDelay: 0
-  impulsePower: 10
 --- !u!114 &114782218745818584
 MonoBehaviour:
   m_ObjectHideFlags: 1

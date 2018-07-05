@@ -71,9 +71,7 @@ public class PlayerConditions : Conditions {
 
 	//ВЫСТРЕЛ ИЗ ЛУКА
 	public override void Bow_Attack () {
-		GameObject arrowInstance = Instantiate (arrow, new Vector3 (transform.position.x, transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
-		Аrrow arrowScript = arrowInstance.GetComponent<Аrrow> ();
-		arrowScript.SetDirection (unit.direction);
+		base.Bow_Attack ();
 	}
 
 	//СМЕРТЬ

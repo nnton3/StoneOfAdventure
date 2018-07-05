@@ -14,8 +14,6 @@ public class PlayerDamage : Damage {
 			if (backToTheEnemy) {
 				//Нанести урон
 				ReduceHP (damage);
-				//Получить оглушение
-				conditions.EnableStun (stunDirection);
 				//Анимация получения урона
 				anim.SetTrigger ("attackable");
 			} else
@@ -27,6 +25,8 @@ public class PlayerDamage : Damage {
 			ReduceHP (damage);
 			anim.SetTrigger ("attackable");
 		}
+		//Получить оглушение
+		conditions.EnableStun (stunDirection);
 	}
 
 	public override void CriticalDamage (float damage, float stunDirection, float criticalScale) {
