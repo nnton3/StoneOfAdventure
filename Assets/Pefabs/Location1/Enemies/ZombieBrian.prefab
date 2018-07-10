@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4487533060849380
 Transform:
   m_ObjectHideFlags: 1
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   armor: 0
-  attackPoints: 0
+  attackPoints: 10
   attackSpeed: 1.5
   attackRange: 2.1
   moveSpeed: 2

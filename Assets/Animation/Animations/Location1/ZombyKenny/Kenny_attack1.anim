@@ -91,14 +91,14 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.2
-    functionName: CreateAttackVector
+    functionName: Default_Attack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.68421054
-    functionName: SecondAttack
+  - time: 0.67368424
+    functionName: GetDirectiOfHit
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -66,7 +66,6 @@ public class Conditions : MonoBehaviour {
 	public virtual void Default_Attack () {
 
 		RaycastHit2D hit = MeleeTargetCheck (unit.attackRange, unit.direction, attackCollision);
-
 		if (hit) {
 			hit.transform.GetComponent<Damage> ().DefaultDamage(unit.attackPoints, unit.direction);
 		}

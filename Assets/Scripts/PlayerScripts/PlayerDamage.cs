@@ -16,17 +16,20 @@ public class PlayerDamage : Damage {
 				ReduceHP (damage);
 				//Анимация получения урона
 				anim.SetTrigger ("attackable");
-			} else
+			} else {
 				//Если игрок стоит лицом к врагу
 				conditions.EnableStun (stunDirection);
-			anim.SetTrigger ("blocked");
+				anim.SetTrigger ("blocked");
+			}
 			//Если игрок не заблокировал и не использовал перекат
 		} else if (!conditions.invulnerability) {
 			ReduceHP (damage);
 			anim.SetTrigger ("attackable");
 		}
-		//Получить оглушение
-		conditions.EnableStun (stunDirection);
+		if (!conditions.invulnerability) {
+			//Получить оглушение
+			conditions.EnableStun (stunDirection);
+		}
 	}
 
 	public override void CriticalDamage (float damage, float stunDirection, float criticalScale) {
