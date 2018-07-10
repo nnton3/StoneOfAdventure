@@ -1,13 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/Enemy_zombie_Brian/Enemy_zombie_Brian_damage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerScripts/PlayerDamage.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerScripts/Аrrow.cs" Line="25" Column="25" />
-      <File FileName="Assets/Scripts/BaseScripts/Unit.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/Conditions.cs" Line="61" Column="1" />
+      <File FileName="Assets/Scripts/BaseScripts/Unit.cs" Line="76" Column="1" />
       <File FileName="Assets/Scripts/BaseScripts/Damage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Brian/Enemy_zombie_Brian_damage.cs" Line="26" Column="4" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Brian/Enemy_zombieBrian.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BaseScripts/Conditions.cs" Line="69" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Kenny/Enemy_zombie_Kenny_conditions.cs" Line="15" Column="19" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Kenny/Enemy_zombie_Kenny_damage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Kenny/Enemy_zombyKenny.cs" Line="54" Column="12" />
+      <File FileName="Assets/Scripts/Enemies/Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Zombie.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerScripts/PlayerDamage.cs" Line="32" Column="4" />
+      <File FileName="Assets/Scripts/PlayerScripts/Player.cs" Line="56" Column="27" />
+      <File FileName="Assets/Scripts/PlayerScripts/PlayerConditions.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
