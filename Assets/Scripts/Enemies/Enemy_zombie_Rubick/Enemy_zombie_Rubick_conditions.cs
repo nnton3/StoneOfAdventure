@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_zombie_Rubick_conditions : Conditions {
+	
 	//ОГЛУШЕНИЕ
 	public override void EnableStun (float stunDirection)
 	{
@@ -16,13 +17,9 @@ public class Enemy_zombie_Rubick_conditions : Conditions {
 
 	//АТАКА
 	//Выпустить снаряд
-	public GameObject patron;
-
-	public override void Default_Attack ()
+	public override void Bow_Attack ()
 	{
-		GameObject patronInstance = Instantiate (patron, new Vector3 (transform.position.x + 3f * unit.direction, transform.position.y + 1.2f, transform.position.z), Quaternion.identity);
-		Rubick_patron patronScript = patronInstance.GetComponent<Rubick_patron> ();
-		patronScript.SetDirection (unit.direction);
+		base.Bow_Attack ();
 	}
 
 	public override IEnumerator FinishAttack ()

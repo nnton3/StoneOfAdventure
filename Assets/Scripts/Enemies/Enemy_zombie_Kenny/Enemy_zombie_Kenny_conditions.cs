@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy_zombie_Kenny_conditions : Conditions {
 	
-	public override void HitThroughTheBlock ()
+	public override void Hit_Through_The_Block ()
 	{
-		base.HitThroughTheBlock ();
+		base.Hit_Through_The_Block ();
 	}
 
 	public override IEnumerator FinishAttack ()

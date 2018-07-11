@@ -25,8 +25,11 @@ public class Rubick : Zombie {
 		anim.SetTrigger ("attack");
 	}
 
-	public override void Alert (GameObject player)
-	{
-		base.Alert (player);
+	public override IEnumerator TimeToBorn () {
+		input = 1f;
+		anim.SetTrigger ("born");
+		yield return new WaitForSeconds (bornDelay);
+		input = 0f;
+		rb.gravityScale = 1f;
 	}
 }

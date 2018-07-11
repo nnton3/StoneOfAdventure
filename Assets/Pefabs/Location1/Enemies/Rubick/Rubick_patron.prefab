@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 50423643695809634}
   - component: {fileID: 212148668962943882}
   - component: {fileID: 95402589081792898}
-  - component: {fileID: 114695778056477396}
   - component: {fileID: 114548710559957578}
   m_Layer: 10
   m_Name: Rubick_patron
@@ -118,34 +117,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49dd906b2a684662bfea7eb39ed652c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  armor: 0
-  attack: 10
-  attackSpeed: 0
-  attackRange: 1
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  attackModify: 0000
-  moveSpeed: 5
-  input: 0
-  rb: {fileID: 0}
   anim: {fileID: 0}
-  direction: 1
-  flipParam: 0
---- !u!114 &114695778056477396
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1460168535850870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb95c67a77eb44b0af89cde00d4900e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFacingRight: 1
+  rb: {fileID: 0}
+  input: 0
+  moveSpeed: 5
+  attackPoints: 10
+  lifeTime: 3
 --- !u!212 &212148668962943882
 SpriteRenderer:
   m_ObjectHideFlags: 1
