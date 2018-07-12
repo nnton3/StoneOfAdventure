@@ -6,7 +6,6 @@ public class Enemy_invokedZomby : Zombie {
 
 	public float runDistance = 7f;
 	public float runSpeed = 5f;
-	//GameObject hpBar;
 
 	void Update () {
 		//Если зомби ожил
@@ -35,10 +34,8 @@ public class Enemy_invokedZomby : Zombie {
 	//Нанести урон
 	public override void Attack () {
 		input = 0f;
-		if (!conditions.attack) {
-			conditions.attack = true;
-			anim.SetTrigger ("attack");
-		}
+		conditions.attack = true;
+		anim.SetTrigger ("attack");
 	}
 
 	//Местоположения относительно игрока
@@ -62,5 +59,15 @@ public class Enemy_invokedZomby : Zombie {
 			conditions.SetMovespeed (conditions.defaultMovespeed);
 		//Двигаться в сторону игрока
 		input = -targetDirection;
+	}
+
+	public override void Alert (GameObject player)
+	{
+		base.Alert (player);
+	}
+
+	public override void RegistrationInStack ()
+	{
+		Debug.Log ("registration not need");
 	}
 }

@@ -28,8 +28,6 @@ public abstract class Unit : MonoBehaviour {
 	public float flipParam = 0f;
 
 	void Start () {
-		//hpBar = transform.Find ("HPBar").gameObject;
-
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		conditions = GetComponent<Conditions> ();

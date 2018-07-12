@@ -5,11 +5,6 @@ using UnityEngine;
 public class Enemy_zombie_invoker_conditions : Conditions {
 
 	//ОГЛУШЕНИЕ
-	public override void EnableStun (float stunDirection)
-	{
-		base.EnableStun (stunDirection);
-	}
-
 	public override void DisableStun ()
 	{
 		base.DisableStun ();
@@ -22,13 +17,7 @@ public class Enemy_zombie_invoker_conditions : Conditions {
 	{
 		GameObject zombyInstance = Instantiate (zombie, new Vector3 (transform.position.x + Random.Range (-3, -15), transform.position.y + 0.125f, transform.position.z), Quaternion.identity);
 		Enemy_invokedZomby zombyScript = zombyInstance.GetComponent<Enemy_invokedZomby> ();
-		zombyScript.target = GetComponent<Enemy>().target;
-	}
-
-	public override IEnumerator FinishAttack ()
-	{
-		yield return new WaitForSeconds (unit.attackSpeed);
-		attack = false;
+		zombyScript.Alert(GetComponent<Enemy>().target);
 	}
 
 	//СМЕРТЬ
