@@ -19,7 +19,9 @@ public class Enemy_zombie_Rubick_conditions : Conditions {
 	//Выпустить снаряд
 	public override void Bow_Attack ()
 	{
-		base.Bow_Attack ();
+		GameObject arrowInstance = Instantiate (patron, new Vector3 (transform.position.x + (1.75f * unit.direction), transform.position.y + 1.2f, transform.position.z), Quaternion.identity);
+		Patron arrowScript = arrowInstance.GetComponent<Patron> ();
+		arrowScript.SetDirection (unit.direction);
 	}
 
 	public override IEnumerator FinishAttack ()

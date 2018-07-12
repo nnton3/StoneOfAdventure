@@ -8,20 +8,30 @@ public class Enemy_zombie_Brian_damage : Damage {
 
 		bool backToTheEnemy = BackToTheEnemyCheck (direction);
 
+		//Если включен блок
 		if (conditions.block) {
-			Debug.Log ("1");
+			//Если герой бьет в спину
 			if (backToTheEnemy) {
-				Debug.Log ("2");
+				//Получить стан
 				conditions.EnableStun (direction);
+				//Получить урон
 				anim.SetTrigger ("attackable");
 				ReduceHP (damage);
+				//Если игрок бьет спереди
 			} else {
-				Debug.Log ("3");
+				//Получить стан
 				conditions.EnableStun (direction);
 				anim.SetTrigger ("attackableInBlock");
 			}
+			//Если не включен блок
 		} else {
-			Debug.Log ("4");
+			//Если не начата атака
+			if (unit.CanAttack()) {
+				//Получить стан
+				anim.SetTrigger ("attackable");
+				conditions.EnableStun (direction);
+			}
+			//Получить урон
 			ReduceHP (damage);
 		}
 	}

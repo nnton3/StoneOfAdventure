@@ -32,4 +32,8 @@ public class Rubick : Zombie {
 		input = 0f;
 		rb.gravityScale = 1f;
 	}
+
+	public void EnableGravity () {
+		rb.gravityScale = 1f;
+	}
 }
