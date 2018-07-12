@@ -23,9 +23,9 @@ public class Enemy_zombieBrian : Zombie {
 					} else
 						//Изменить направление движения
 						input = -targetDirection;
-				} 
+				}
+				Run ();
 			}
-			Run ();
 		}
 	}
 

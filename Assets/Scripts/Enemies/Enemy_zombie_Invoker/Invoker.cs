@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Invoker : Zombie {
-	
-	public GameObject zombie;
-
-	GameObject hpBar;
 
 	void Update () {
 		//Если зомби ожил
@@ -20,13 +16,11 @@ public class Invoker : Zombie {
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
 	}
 
-	public override void Attack (){
-		base.Attack ();
+	public override IEnumerator TimeToBorn () {
+		input = 1f;
+		anim.SetTrigger ("born");
+		yield return new WaitForSeconds (bornDelay);
+		input = 0f;
+		rb.gravityScale = 1f;
 	}
-
-	public override void Alert (GameObject player)
-	{
-		base.Alert (player);
-	}
-
 }

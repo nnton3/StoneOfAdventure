@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 50817673537310694}
   - component: {fileID: 212228862097152372}
   - component: {fileID: 95848480876829544}
-  - component: {fileID: 114044067048161718}
   - component: {fileID: 114920142325306624}
   m_Layer: 10
   m_Name: PlayerArrow
@@ -107,18 +106,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114044067048161718
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1951276325018502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb95c67a77eb44b0af89cde00d4900e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFacingRight: 1
 --- !u!114 &114920142325306624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,21 +117,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23a02c378c614595994d01e482a081e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  armor: 0
-  attackPoints: 10
-  attackSpeed: 0
-  attackRange: 1
-  moveSpeed: 15
-  impulsePower: 0
-  input: 0
-  rb: {fileID: 0}
   anim: {fileID: 0}
-  damage: {fileID: 0}
-  conditions: {fileID: 0}
-  direction: 1
-  flipParam: 0
-  myStack: {fileID: 0}
+  rb: {fileID: 0}
+  input: 0
+  moveSpeed: 15
+  attackPoints: 10
+  lifeTime: 3
 --- !u!212 &212228862097152372
 SpriteRenderer:
   m_ObjectHideFlags: 1

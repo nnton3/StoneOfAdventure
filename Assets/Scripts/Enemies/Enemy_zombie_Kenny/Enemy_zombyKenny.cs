@@ -2,12 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_zombyKenny : Zombie {
-
-	void Start () {
-		rb = GetComponent<Rigidbody2D> ();
-		anim = GetComponent<Animator> ();
-	}
+public class Enemy_zombyKenny: Zombie {
 	
 	void Update () {
 		//Если зомби ожил
@@ -17,7 +12,6 @@ public class Enemy_zombyKenny : Zombie {
 				//Найти цель
 				FindTarget();
 				flipParam = input;
-				anim.SetFloat ("run", Mathf.Abs (input * moveSpeed));
 
 				//Если зомби может атаковать
 				if (CanAttack ()) {
@@ -39,6 +33,7 @@ public class Enemy_zombyKenny : Zombie {
 	public override void Attack (){
 		//Остановиться
 		input = 0f;
+		conditions.attack = true;
 		//Ударить
 		anim.SetTrigger ("attack");
 	}
@@ -51,5 +46,11 @@ public class Enemy_zombyKenny : Zombie {
 	void FindTarget () {
 		targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
 		targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
+	}
+
+	//Передать направление атаки
+	public void GetDirectiOfHit () {
+		FindTarget ();
+		input = -targetDirection;
 	}
 }

@@ -58,7 +58,6 @@ public class Conditions : MonoBehaviour {
 	}
 
 	//АТАКА
-
 	[HideInInspector]
 	public bool attack = false;
 	public LayerMask attackCollision = 8;        //Атакуемый слой
@@ -67,14 +66,13 @@ public class Conditions : MonoBehaviour {
 	public virtual void Default_Attack () {
 
 		RaycastHit2D hit = MeleeTargetCheck (unit.attackRange, unit.direction, attackCollision);
-
 		if (hit) {
 			hit.transform.GetComponent<Damage> ().DefaultDamage(unit.attackPoints, unit.direction);
 		}
 	}
 
 	//Удар, игнорирующий блок
-	public virtual void HitThroughTheBlock () {
+	public virtual void Hit_Through_The_Block () {
 
 		RaycastHit2D hit = MeleeTargetCheck (unit.attackRange, unit.direction, attackCollision);
 
@@ -93,11 +91,11 @@ public class Conditions : MonoBehaviour {
 	}
 
 	//Выстрел из лука
-	public GameObject arrow;
+	public GameObject patron;
 
 	public virtual void Bow_Attack () {
-		GameObject arrowInstance = Instantiate (arrow, new Vector3 (transform.position.x, transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
-		Аrrow arrowScript = arrowInstance.GetComponent<Аrrow> ();
+		GameObject arrowInstance = Instantiate (patron, new Vector3 (transform.position.x, transform.position.y + 0.9f, transform.position.z), Quaternion.identity);
+		Patron arrowScript = arrowInstance.GetComponent<Patron> ();
 		arrowScript.SetDirection (unit.direction);
 	}
 	//Завершение атаки

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_zombie_Brian_conditions : Conditions {
-
+	
 	//БЛОК
 	public override void EnableBlock ()
 	{
@@ -42,6 +42,7 @@ public class Enemy_zombie_Brian_conditions : Conditions {
 		attack = false;	
 	}
 
+	//СМЕРТЬ
 	public override void UnitDie (){
 		anim.SetTrigger ("die");
 		unit.myStack.AddCorpse ();

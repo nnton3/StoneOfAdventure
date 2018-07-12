@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_zombie_Kenny_conditions : Conditions {
-
-	public override void Default_Attack ()
+	
+	public override void Hit_Through_The_Block ()
 	{
-		base.Default_Attack ();
+		base.Hit_Through_The_Block ();
 	}
 
-	public override void HitThroughTheBlock ()
+	public override IEnumerator FinishAttack ()
 	{
-		base.HitThroughTheBlock ();
+		return base.FinishAttack ();
+		unit.input = 0f;
 	}
 
 	public override void UnitDie (){

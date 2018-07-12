@@ -19,14 +19,11 @@ public class Rubick : Zombie {
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
 	}
 
-	public override void Attack ()
-	{
-		conditions.attack = true;
-		anim.SetTrigger ("attack");
-	}
-
-	public override void Alert (GameObject player)
-	{
-		base.Alert (player);
+	public override IEnumerator TimeToBorn () {
+		input = 1f;
+		anim.SetTrigger ("born");
+		yield return new WaitForSeconds (bornDelay);
+		input = 0f;
+		rb.gravityScale = 1f;
 	}
 }

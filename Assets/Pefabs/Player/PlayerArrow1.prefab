@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 212547552009599928}
   - component: {fileID: 95534101596395838}
   - component: {fileID: 114626432589806858}
-  - component: {fileID: 114940327533120992}
   m_Layer: 0
   m_Name: PlayerArrow1
   m_TagString: PlayerArrow
@@ -132,18 +131,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   anim: {fileID: 0}
   direction: 1
---- !u!114 &114940327533120992
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471557971877264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb95c67a77eb44b0af89cde00d4900e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFacingRight: 1
 --- !u!212 &212547552009599928
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -71,6 +71,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4907658976645404}
   - component: {fileID: 114923514754703760}
+  - component: {fileID: 114552732524824618}
+  - component: {fileID: 114653494677012174}
   - component: {fileID: 114416632485335896}
   - component: {fileID: 212826829360368474}
   - component: {fileID: 61164166050996650}
@@ -244,6 +246,45 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114552732524824618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444057776559996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4429efdab7a414818b0650a4f17180a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  conditions: {fileID: 0}
+  anim: {fileID: 0}
+--- !u!114 &114653494677012174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444057776559996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24812821ab62c4f49b3424a1032d9688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  anim: {fileID: 0}
+  block: 0
+  invulnerability: 0
+  stun: 0
+  attack: 0
+  attackCollision:
+    serializedVersion: 2
+    m_Bits: 264
+  patron: {fileID: 0}
+  defaultMovespeed: 5
+  defaultImpulsePower: 5
+  alive: 1
+  zombie: {fileID: 1465211492427678, guid: 92bc2f8da001e41d5a55d452be8ceae3, type: 2}
 --- !u!114 &114677581666641852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,26 +346,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   armor: 0
-  attack: 0
+  attackPoints: 0
   attackSpeed: 3
   attackRange: 1
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  attackModify: 0000
   moveSpeed: 7
+  impulsePower: 1.5
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  damage: {fileID: 0}
+  conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  attackCollision:
-    serializedVersion: 2
-    m_Bits: 256
+  myStack: {fileID: 0}
+  target: {fileID: 0}
+  idle: 1
   bornDelay: 0
-  impulsePower: 10
-  zomby: {fileID: 1465211492427678, guid: 92bc2f8da001e41d5a55d452be8ceae3, type: 2}
 --- !u!212 &212826829360368474
 SpriteRenderer:
   m_ObjectHideFlags: 1

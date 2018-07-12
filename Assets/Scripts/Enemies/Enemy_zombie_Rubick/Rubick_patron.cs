@@ -2,35 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rubick_patron : Unit {
+public class Rubick_patron : Patron {
 
-	void Start () {
-		anim = GetComponent<Animator> ();
-		rb = GetComponent<Rigidbody2D> ();
-		StartCoroutine ("Timer");
-	}
+	bool hit = false;
 
-	void Update () {
-		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
-	}
-
-	void OnTriggerEnter2D (Collider2D target) {
-		if (target.CompareTag ("Enemy")) {
-			anim.SetTrigger ("hit");
-			target.GetComponent<Damage> ().Healing(attackPoints);
-		} else if (target.CompareTag ("Player")) {
-			target.GetComponent<Damage> ().DefaultDamage(attackPoints, direction);
-			anim.SetTrigger ("hit");
+	public override void TrueHit (Collider2D target)
+	{
+		//Если еще не было попадания
+		if (!hit) {
+			//Если попало во врагов
+			if (target.CompareTag ("Enemy")) {
+				HitTheMark ();
+				//Восстановить здоровье
+				target.GetComponent<Damage> ().Healing (attackPoints);
+				//Если попало в героя
+			} else if (target.CompareTag ("Player")) {
+				if (!target.GetComponent<Conditions> ().invulnerability) {
+					HitTheMark ();
+					//Нанести урон
+					target.GetComponent<Damage> ().DefaultDamage (attackPoints, input);
+				}
+			}
 		}
 	}
 
-	public void SetDirection (float direction) {
-		input = direction;
-		flipParam = direction;
+	//Уничтожить патрон
+	public void DestroyPatron () {
+		Destroy (gameObject);
 	}
 
-	IEnumerator Timer() {
-		yield return new WaitForSeconds (3f);
-		Destroy (gameObject);
+	//Зафиксировать попадание в цель
+	void HitTheMark () {
+		hit = true;
+		anim.SetTrigger ("hit");
 	}
 }
