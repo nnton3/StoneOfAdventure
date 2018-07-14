@@ -24,12 +24,7 @@ public class Player : Unit {
 				PullBow ();
 			}
 		}	
-
-		//Проверка состояний
-		Debug.Log("attack - " + conditions.attack);
-		Debug.Log("stun - " + conditions.stun);
-		Debug.Log("block - " + conditions.block);
-
+			
 		if (CanMove()) {
 			input = Input.GetAxisRaw ("Horizontal");
 			flipParam = input;

@@ -65,7 +65,6 @@ public class PlayerConditions : Conditions {
 	//Сбросить чек атаки
 	public override IEnumerator FinishAttack () {
 		yield return new WaitForSeconds (0f);
-		Debug.Log ("work");
 		attack = false;
 		anim.speed = 1;
 	}

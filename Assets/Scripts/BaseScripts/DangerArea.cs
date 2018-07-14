@@ -46,7 +46,6 @@ public class DangerArea : MonoBehaviour {
 		if (corpses == allEnemies) {
 			//Зафиксировать уничтожение врагов в этом стаке
 			allEnemiesDead = true;
-			Debug.Log ("Бой завершен");
 		}
 	}
 }
