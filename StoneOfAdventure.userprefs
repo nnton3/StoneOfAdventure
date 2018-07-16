@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/DangerArea.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerScripts/PlayerConditions.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerScripts/Player.cs" Line="27" Column="4" />
       <File FileName="Assets/Scripts/BaseScripts/Unit.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/Damage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/Conditions.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Invoker/Enemy_zombie_invoker_conditions.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerScripts/PlayerConditions.cs" Line="68" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/DangerArea.cs" Line="49" Column="1" />
+      <File FileName="Assets/Scripts/BaseScripts/Damage.cs" Line="34" Column="29" />
+      <File FileName="Assets/Scripts/BaseScripts/Conditions.cs" Line="78" Column="3" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Zheron/Enemy_zombyZheron.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Zheron/Enemy_zombieZheron_damage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Zheron/Enemy_zombieZheron_conditions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerScripts/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerScripts/PlayerConditions.cs" Line="38" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -35,7 +35,6 @@ public class PlayerConditions : Conditions {
 	{
 		DisableStun ();
 		SetImpulse (defaultImpulsePower);
-		StartCoroutine ("FinishAttack");
 		base.DisableInvulnerability ();
 		Physics2D.IgnoreLayerCollision (9, 8, false);
 	}
@@ -64,7 +63,7 @@ public class PlayerConditions : Conditions {
 
 	//Сбросить чек атаки
 	public override IEnumerator FinishAttack () {
-		yield return new WaitForSeconds (0f);
+		yield return new WaitForSeconds (1f);
 		attack = false;
 		anim.speed = 1;
 	}

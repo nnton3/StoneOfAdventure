@@ -81,6 +81,16 @@ public class Conditions : MonoBehaviour {
 		}
 	}
 
+	//Удар игнорирующий перекат
+	public virtual void Hit_Ignores_The_Roll () {
+
+		RaycastHit2D hit = MeleeTargetCheck (unit.attackRange, unit.direction, attackCollision);
+
+		if (hit) {
+			hit.transform.GetComponent<Damage> ().DamageIgnoresTheRoll(unit.attackPoints, unit.direction);
+		}
+	}
+
 	//Построить луч атаки
 	public RaycastHit2D MeleeTargetCheck(float attackRange, float direction, LayerMask attackCollision) {
 		Vector2 targetVector = new Vector2 (direction, 0);

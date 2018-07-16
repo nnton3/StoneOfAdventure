@@ -31,6 +31,15 @@ public class Damage : MonoBehaviour {
 		}
 	}
 
+	//Удар игнорирующий перекат
+	public virtual void DamageIgnoresTheRoll (float damage, float direction) {
+		//Если игрок не поставил блок
+		if (!conditions.block) {
+			ReduceHP (damage);
+			anim.SetTrigger ("attackable");
+		}
+	}
+
 	//Критический урон
 	public virtual void CriticalDamage (float damage, float direction, float criticalScale) {
 		unit.health -= (damage * criticalScale);

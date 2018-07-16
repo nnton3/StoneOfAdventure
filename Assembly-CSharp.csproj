@@ -181,6 +181,8 @@
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Rubick\Enemy_zombie_Rubick_damage.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Rubick\Rubick.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Rubick\Rubick_patron.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombieZheron_conditions.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombieZheron_damage.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombyZheron.cs" />
      <Compile Include="Assets\Scripts\Enemies\Zombie.cs" />
      <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
