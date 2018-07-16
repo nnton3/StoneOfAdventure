@@ -54,6 +54,7 @@ public class Damage : MonoBehaviour {
 	//Сбит с ног
 	public virtual void KnockDown(float damage, float direction) {
 		if (!conditions.invulnerability) {
+			Debug.Log ("knock");
 			conditions.EnableStun (direction);
 			ReduceHP (damage);
 			anim.SetTrigger ("knock_down");

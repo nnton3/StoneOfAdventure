@@ -26,10 +26,11 @@ public class Enemy_zombieZheron_conditions : Conditions {
 		rage = false;
 	}
 
-	void OnTriggerEnter2D (Collider2D target) {
-		if (target.CompareTag ("Enemy") && rage) {
+	void OnCollisionStay2D (Collision2D target) {
+		if (target.gameObject.CompareTag ("Player") && rage) {
 			Debug.Log ("enter");
-			KnockDown (target);
+			KnockDown (target.collider);
+			DisableStun ();
 		}
-	}
+	} 
 }
