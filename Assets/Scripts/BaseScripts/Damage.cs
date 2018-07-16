@@ -51,6 +51,15 @@ public class Damage : MonoBehaviour {
 		unit.health += HP;
 	}
 
+	//Сбит с ног
+	public virtual void KnockDown(float damage, float direction) {
+		if (!conditions.invulnerability) {
+			conditions.EnableStun (direction);
+			ReduceHP (damage);
+			anim.SetTrigger ("knock_down");
+		}
+	}
+
 	//Проверка: игрок стоит спиной к врагу?
 	public bool BackToTheEnemyCheck (float direction) {
 		return unit.direction == direction;

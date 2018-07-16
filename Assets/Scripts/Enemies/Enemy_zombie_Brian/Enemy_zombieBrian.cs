@@ -56,14 +56,4 @@ public class Enemy_zombieBrian : Zombie {
 			return;
 		}
 	}
-
-	//Местоположения относительно игрока
-	float targetRange = 0f;
-	float targetDirection =0f;
-
-	//Определение местоположения игрока
-	void FindTarget () {
-		targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
-		targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
-	}
 }

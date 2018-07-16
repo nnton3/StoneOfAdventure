@@ -19,4 +19,16 @@ public class Enemy : Unit {
 	public virtual void Alert (GameObject player) {
 		target = player;
 	}
+
+	//Местоположения относительно игрока
+	[HideInInspector]
+	public float targetRange = 0f;
+	[HideInInspector]
+	public float targetDirection =0f;
+
+	//Определение местоположения игрока
+	public virtual void FindTarget () {
+		targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
+		targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
+	}
 }

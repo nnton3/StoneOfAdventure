@@ -108,6 +108,12 @@ public class Conditions : MonoBehaviour {
 		Patron arrowScript = arrowInstance.GetComponent<Patron> ();
 		arrowScript.SetDirection (unit.direction);
 	}
+
+	//Удар сбивающий с ног
+	public virtual void KnockDown (Collider2D target) {
+		target.GetComponent<Damage> ().KnockDown (unit.attackPoints, unit.direction);
+	}
+
 	//Завершение атаки
 	public virtual IEnumerator FinishAttack () {
 		yield return new WaitForSeconds (unit.attackSpeed);
@@ -118,7 +124,7 @@ public class Conditions : MonoBehaviour {
 
 	//Назначить скорость бега
 	[HideInInspector]
-	public float defaultMovespeed = 5f;      //Значение по умолчанию
+	public float defaultMovespeed = 1.5f;      //Значение по умолчанию
 
 	public void SetMovespeed (float value) {
 		if (value >= 0f) {	
@@ -128,7 +134,7 @@ public class Conditions : MonoBehaviour {
 
 	//Назначить силу импульса
 	[HideInInspector]
-	public float defaultImpulsePower = 5f;  //Значение по умолчанию
+	public float defaultImpulsePower = 1.5f;  //Значение по умолчанию
 
 	public void SetImpulse (float value) {
 		if (value >= 0f) {
