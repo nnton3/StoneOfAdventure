@@ -33,8 +33,18 @@ public class Damage : MonoBehaviour {
 
 	//Удар игнорирующий перекат
 	public virtual void DamageIgnoresTheRoll (float damage, float direction) {
-		//Если игрок не поставил блок
-		if (!conditions.block) {
+		
+		bool backToTheEnemy = BackToTheEnemyCheck (direction);
+
+		//Если игрок поставил блок
+		if (conditions.block) {
+			if (backToTheEnemy) {
+				ReduceHP (damage);
+				anim.SetTrigger ("attackable");
+			} else {
+				anim.SetTrigger ("blocked");
+			}
+		} else {
 			ReduceHP (damage);
 			anim.SetTrigger ("attackable");
 		}

@@ -15,6 +15,7 @@ public class Enemy_zombieZheron_conditions : Conditions {
 		target.GetComponent<Damage> ().KnockDown (unit.attackPoints, unit.direction);
 	}
 
+	//Включить ярость
 	bool rage = false;
 	public void EnableRage() {
 		rage = true;
@@ -22,15 +23,25 @@ public class Enemy_zombieZheron_conditions : Conditions {
 		SetMovespeed (15f);
 	}
 
+	//Отключить ярость
 	void DisableRage () {
 		rage = false;
 	}
 
+	//Фиксация столкновений с игроком во время ярости
 	void OnCollisionStay2D (Collision2D target) {
 		if (target.gameObject.CompareTag ("Player") && rage) {
-			Debug.Log ("enter");
 			KnockDown (target.collider);
 			DisableStun ();
 		}
 	} 
+
+	//СМЕРТЬ
+	public override void UnitDie (){
+		anim.SetTrigger ("die");
+		unit.myStack.AddCorpse ();
+		alive = false;
+		gameObject.layer = 2;
+		gameObject.tag = "Puddle";
+	}
 }

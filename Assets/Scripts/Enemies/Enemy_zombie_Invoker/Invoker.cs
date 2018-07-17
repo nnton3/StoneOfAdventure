@@ -18,6 +18,7 @@ public class Invoker : Zombie {
 
 	public override IEnumerator TimeToBorn () {
 		input = 1f;
+		flipParam = input;
 		anim.SetTrigger ("born");
 		yield return new WaitForSeconds (bornDelay);
 		input = 0f;

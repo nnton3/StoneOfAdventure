@@ -233,11 +233,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   armor: 0
-  attackPoints: 0
+  attackPoints: 10
   attackSpeed: 3
   attackRange: 1
   moveSpeed: 7
-  impulsePower: 10
+  impulsePower: 1.5
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
@@ -248,7 +248,9 @@ MonoBehaviour:
   myStack: {fileID: 0}
   target: {fileID: 0}
   idle: 1
-  bornDelay: 0
+  targetRange: 0
+  targetDirection: 0
+  bornDelay: 2.5
 --- !u!114 &114574922868970480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,7 +304,7 @@ MonoBehaviour:
   attackCollision:
     serializedVersion: 2
     m_Bits: 264
-  patron: {fileID: 0}
+  patron: {fileID: 1460168535850870, guid: f63cf894d43a049ac951e301ee9676a7, type: 2}
   defaultMovespeed: 5
   defaultImpulsePower: 5
   alive: 1

@@ -33,7 +33,7 @@ public class Enemy_zombie_Rubick_conditions : Conditions {
 	//СМЕРТЬ
 	public override void UnitDie ()
 	{
-		//Destroy (hpBar);
+		DisableStun ();
 		anim.SetTrigger ("die");
 		unit.myStack.AddCorpse ();
 		alive = false;

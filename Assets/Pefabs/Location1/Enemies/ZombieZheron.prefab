@@ -79,7 +79,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1945721886506690
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 114902521931659826}
   - component: {fileID: 61489746432093774}
   - component: {fileID: 114274269328154710}
+  - component: {fileID: 114869918459237296}
+  - component: {fileID: 114529647919436326}
   m_Layer: 4
   m_Name: ZombieZheron
   m_TagString: Enemy
@@ -147,7 +149,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045, y: 0.09}
+  m_Offset: {x: 0, y: 0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.73, y: 0}
@@ -169,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 1945721886506690}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 52f1a77f69e434ac4b84fd7843f170d7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 619f1e32160ab4869b76aea5542dc9bc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -233,28 +235,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   armor: 0
-  attack: 10
+  attackPoints: 10
   attackSpeed: 2
-  attackRange: 6
-  invulnerability: 0
-  attackCheck: 1
-  stunned: 0
-  alive: 1
-  attackModify: 0000
+  attackRange: 7
   moveSpeed: 2
+  impulsePower: 1.5
   input: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  damage: {fileID: 0}
+  conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  attackCollision:
-    serializedVersion: 2
-    m_Bits: 256
+  myStack: {fileID: 0}
+  target: {fileID: 0}
+  idle: 1
+  targetRange: 0
+  targetDirection: 0
   bornDelay: 0
-  impulsePower: 10
-  longRange: 10
-  midRange: 7
-  meleeRange: 3
+  morgenstern_MinimumAttackRange: 2
 --- !u!114 &114357984525115096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,6 +293,30 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114529647919436326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945721886506690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70bb387606626400ab8ac6e3de54799f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  anim: {fileID: 0}
+  block: 0
+  invulnerability: 0
+  stun: 0
+  attack: 0
+  attackCollision:
+    serializedVersion: 2
+    m_Bits: 264
+  patron: {fileID: 0}
+  defaultMovespeed: 1.5
+  defaultImpulsePower: 1.5
+  alive: 1
 --- !u!114 &114843488432095644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,6 +338,20 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114869918459237296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945721886506690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8c9c8a95d9c47d49fd740996e6c914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  conditions: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &114902521931659826
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -149,4 +149,9 @@ public class Conditions : MonoBehaviour {
 	public virtual void UnitDie () {
 		alive = false;
 	}
+
+	//Уничтожить объект
+	public void DestroyUnit () {
+		Destroy (gameObject);
+	}
 }
