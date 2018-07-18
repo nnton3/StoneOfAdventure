@@ -237,7 +237,7 @@ MonoBehaviour:
   armor: 0
   attackPoints: 10
   attackSpeed: 2
-  attackRange: 7
+  attackRange: 5
   moveSpeed: 2
   impulsePower: 1.5
   input: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
   targetRange: 0
   targetDirection: 0
   bornDelay: 0
-  morgenstern_MinimumAttackRange: 2
+  morgenstern_MinimumAttackRange: 3
 --- !u!114 &114357984525115096
 MonoBehaviour:
   m_ObjectHideFlags: 1
