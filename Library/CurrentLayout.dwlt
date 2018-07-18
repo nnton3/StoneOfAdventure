@@ -261,7 +261,7 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -492,19 +492,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Animation/Animations/Hero
+    - Assets/Sprites/Hero_sprites
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Animation/Animations/Hero
+  - Assets/Sprites/Hero_sprites
   m_LastFoldersGridSize: 16
   m_LastProjectPath: "C:\\Users\\\u0412\u043B\u0430\u0434\\Documents\\StoneOfAdventure"
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 623c0000
-    m_LastClickedID: 15458
-    m_ExpandedIDs: 00000000c62b0000c82c0000e82c0000342d0000682d0000762f0000f82f00006e31000068320000ce330000da3300001c350000b4350000b0380000b2380000fe380000dc390000663b00005a3c00006a4500006c4500006e45000070450000724500007445000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 840}
+    m_SelectedIDs: 34360000
+    m_LastClickedID: 13876
+    m_ExpandedIDs: 00000000ca2b0000cc2c0000ec2c0000382d00006c2d00007a2f0000fc2f0000723100006c320000d2330000de33000020350000b835000068370000b4380000b638000002390000e03900006a3b00005e3c00006c4500006e4500007045000072450000744500007645000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -532,7 +532,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c62b0000c82c0000e82c0000342d0000682d0000762f0000f82f00006e31000068320000ce330000da3300001c350000b4350000b0380000b2380000fe380000dc390000663b00005a3c00006a4500006c4500006e450000704500007245000074450000
+    m_ExpandedIDs: 00000000ca2b0000cc2c0000ec2c0000382d00006c2d00007a2f0000fc2f0000723100006c320000d2330000de33000020350000b8350000b4380000b638000002390000e03900006a3b00005e3c00006c4500006e45000070450000724500007445000076450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -557,10 +557,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 72440000
-    m_LastClickedInstanceID: 17522
+    m_SelectedInstanceIDs: dcf7ffff
+    m_LastClickedInstanceID: -2084
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300001e4400005235000050350000
+    m_ExpandedInstanceIDs: c62300001e4400005235000050350000783200004a310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -584,7 +584,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 340}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 213
 --- !u!114 &15
@@ -650,9 +650,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 72440000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 94fbffff00000000
+    m_SelectedIDs: dcf7ffff
+    m_LastClickedID: -2084
+    m_ExpandedIDs: fafaffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -708,9 +708,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -133.51297, y: 3.6563294, z: 0.016978426}
+    m_Target: {x: -133.9949, y: 4.52987, z: -0.019666696}
     speed: 2
-    m_Value: {x: -133.51297, y: 3.6563294, z: 0.016978426}
+    m_Value: {x: -133.9949, y: 4.52987, z: -0.019666696}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -738,9 +738,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.437722
+    m_Target: 14.620192
     speed: 2
-    m_Value: 4.437722
+    m_Value: 14.620192
   m_Ortho:
     m_Target: 1
     speed: 2

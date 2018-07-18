@@ -14,6 +14,9 @@ TextureImporter:
     21300014: Luchnik_attack_melee2_7
     21300016: Luchnik_attack_melee2_8
     21300018: Luchnik_attack_melee2_9
+    21300020: Luchnik_attack_melee2_10
+    21300022: Luchnik_attack_melee2_11
+    21300024: Luchnik_attack_melee2_12
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -143,12 +146,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 16
+        x: 30
+        y: 11
         width: 15
         height: 14
       alignment: 9
-      pivot: {x: 0.4, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,12 +160,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 16
+        x: 61
+        y: 11
         width: 15
         height: 14
       alignment: 9
-      pivot: {x: 0.4, y: 0}
+      pivot: {x: 0.4315, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,12 +174,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_2
       rect:
         serializedVersion: 2
-        x: 86
-        y: 16
-        width: 10
+        x: 94
+        y: 11
+        width: 15
         height: 21
       alignment: 9
-      pivot: {x: 0.4, y: 0}
+      pivot: {x: 0.232, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,12 +188,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_3
       rect:
         serializedVersion: 2
-        x: 116
-        y: 16
-        width: 16
-        height: 21
+        x: 127
+        y: 11
+        width: 11
+        height: 18
       alignment: 9
-      pivot: {x: 0.8, y: 0}
+      pivot: {x: 0.68, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +202,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_4
       rect:
         serializedVersion: 2
-        x: 155
-        y: 16
-        width: 20
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 158
+        y: 11
+        width: 17
+        height: 21
+      alignment: 9
+      pivot: {x: 0.852, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +216,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_5
       rect:
         serializedVersion: 2
-        x: 203
-        y: 16
-        width: 31
-        height: 26
+        x: 200
+        y: 11
+        width: 25
+        height: 29
       alignment: 9
-      pivot: {x: 0.36, y: 0}
+      pivot: {x: 0.539, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -227,12 +230,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_6
       rect:
         serializedVersion: 2
-        x: 257
-        y: 16
-        width: 31
-        height: 26
+        x: 247
+        y: 11
+        width: 35
+        height: 29
       alignment: 9
-      pivot: {x: 0.39, y: 0}
+      pivot: {x: 0.385, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +244,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_7
       rect:
         serializedVersion: 2
-        x: 320
-        y: 16
-        width: 31
-        height: 26
+        x: 302
+        y: 11
+        width: 35
+        height: 29
       alignment: 9
-      pivot: {x: 0.39, y: 0}
+      pivot: {x: 0.385, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +258,12 @@ TextureImporter:
       name: Luchnik_attack_melee2_8
       rect:
         serializedVersion: 2
-        x: 383
-        y: 16
-        width: 31
-        height: 26
+        x: 362
+        y: 11
+        width: 35
+        height: 29
       alignment: 9
-      pivot: {x: 0.39, y: 0}
+      pivot: {x: 0.385, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -269,12 +272,54 @@ TextureImporter:
       name: Luchnik_attack_melee2_9
       rect:
         serializedVersion: 2
-        x: 446
-        y: 16
-        width: 15
-        height: 14
+        x: 422
+        y: 11
+        width: 32
+        height: 29
       alignment: 9
-      pivot: {x: 0.4, y: 0}
+      pivot: {x: 0.3275, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Luchnik_attack_melee2_10
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 11
+        width: 25
+        height: 26
+      alignment: 9
+      pivot: {x: 0.1388, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Luchnik_attack_melee2_11
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 11
+        width: 25
+        height: 17
+      alignment: 9
+      pivot: {x: 0.1393, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Luchnik_attack_melee2_12
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 11
+        width: 23
+        height: 15
+      alignment: 9
+      pivot: {x: 0.1518, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

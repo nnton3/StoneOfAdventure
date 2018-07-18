@@ -20,29 +20,37 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.009090909
+    - time: 0.011764706
       value: {fileID: 21300002, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.08181818
+    - time: 0.105882354
       value: {fileID: 21300004, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.15454546
+    - time: 0.2
       value: {fileID: 21300006, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.47272727
+    - time: 0.5529412
       value: {fileID: 21300008, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.5181818
+    - time: 0.5882353
       value: {fileID: 21300010, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.54545456
+    - time: 0.62352943
       value: {fileID: 21300012, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.6363636
+    - time: 0.64705884
       value: {fileID: 21300014, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.7090909
+    - time: 0.69411767
       value: {fileID: 21300016, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
-    - time: 0.77272725
+    - time: 0.7411765
       value: {fileID: 21300018, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - time: 0.7882353
+      value: {fileID: 21300020, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - time: 0.8352941
+      value: {fileID: 21300022, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - time: 0.88235295
+      value: {fileID: 21300024, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 110
+  m_SampleRate: 85
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -67,12 +75,16 @@ AnimationClip:
     - {fileID: 21300014, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
     - {fileID: 21300016, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
     - {fileID: 21300018, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - {fileID: 21300020, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - {fileID: 21300022, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - {fileID: 21300024, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
+    - {fileID: 21300000, guid: fc5ca74f530572f499a45a1e266d1e68, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.7818182
+    m_StopTime: 1.0117648
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -93,14 +105,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.5181818
+  - time: 0.67058825
     functionName: CreateAttackVector
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
-  - time: 0.7818182
+  - time: 1.0117648
     functionName: ResetAttackCheck
     data: 
     objectReferenceParameter: {fileID: 0}
