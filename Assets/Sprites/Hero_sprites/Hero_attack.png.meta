@@ -13,6 +13,12 @@ TextureImporter:
     21300012: Hero_attack_6
     21300014: Hero_attack_7
     21300016: Hero_attack_8
+    21300018: Hero_attack_9
+    21300020: Hero_attack_10
+    21300022: Hero_attack_11
+    21300024: Hero_attack_12
+    21300026: Hero_attack_13
+    21300028: Hero_attack_14
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -102,12 +108,12 @@ TextureImporter:
       name: Hero_attack_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 15
+        x: 11
+        y: 13
         width: 15
         height: 14
       alignment: 9
-      pivot: {x: 0.4, y: 0}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -116,12 +122,12 @@ TextureImporter:
       name: Hero_attack_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 15
+        x: 37
+        y: 13
         width: 14
         height: 14
       alignment: 9
-      pivot: {x: 0.43, y: 0}
+      pivot: {x: 0.5355, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,12 +136,12 @@ TextureImporter:
       name: Hero_attack_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 15
-        width: 12
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 67
+        y: 13
+        width: 14
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5355, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,12 +150,12 @@ TextureImporter:
       name: Hero_attack_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 14
+        x: 98
+        y: 13
         width: 11
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 19
+      alignment: 9
+      pivot: {x: 0.683, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,12 +164,12 @@ TextureImporter:
       name: Hero_attack_4
       rect:
         serializedVersion: 2
-        x: 139
-        y: 15
-        width: 13
-        height: 19
+        x: 132
+        y: 13
+        width: 17
+        height: 20
       alignment: 9
-      pivot: {x: 0.43, y: 0}
+      pivot: {x: 0.559, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,12 +178,12 @@ TextureImporter:
       name: Hero_attack_5
       rect:
         serializedVersion: 2
-        x: 171
-        y: 15
-        width: 19
-        height: 19
+        x: 176
+        y: 13
+        width: 23
+        height: 20
       alignment: 9
-      pivot: {x: 0.3, y: 0}
+      pivot: {x: 0.413, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,12 +192,12 @@ TextureImporter:
       name: Hero_attack_6
       rect:
         serializedVersion: 2
-        x: 215
+        x: 223
         y: 13
-        width: 20
+        width: 23
         height: 20
       alignment: 9
-      pivot: {x: 0.3, y: 0}
+      pivot: {x: 0.413, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,12 +206,12 @@ TextureImporter:
       name: Hero_attack_7
       rect:
         serializedVersion: 2
-        x: 254
-        y: 12
-        width: 20
+        x: 264
+        y: 13
+        width: 32
         height: 20
       alignment: 9
-      pivot: {x: 0.3, y: 0}
+      pivot: {x: 0.578, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,12 +220,96 @@ TextureImporter:
       name: Hero_attack_8
       rect:
         serializedVersion: 2
-        x: 306
-        y: 12
-        width: 20
+        x: 314
+        y: 13
+        width: 32
         height: 20
       alignment: 9
-      pivot: {x: 0.3, y: 0}
+      pivot: {x: 0.578, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hero_attack_9
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 13
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.578, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hero_attack_10
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 13
+        width: 32
+        height: 14
+      alignment: 9
+      pivot: {x: 0.578, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hero_attack_11
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 13
+        width: 26
+        height: 14
+      alignment: 9
+      pivot: {x: 0.711, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hero_attack_12
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 13
+        width: 21
+        height: 14
+      alignment: 9
+      pivot: {x: 0.881, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hero_attack_13
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 13
+        width: 11
+        height: 14
+      alignment: 9
+      pivot: {x: 0.772, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hero_attack_14
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 13
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.536, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
