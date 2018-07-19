@@ -1,14 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/Conditions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerScripts/PlayerDamage.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Rubick/Rubick.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Invoker/Invoker.cs" Line="21" Column="21" />
+      <File FileName="Assets/Scripts/PlayerScripts/PlayerConditions.cs" Line="65" Column="40" />
       <File FileName="Assets/Scripts/BaseScripts/Unit.cs" Line="88" Column="3" />
-      <File FileName="Assets/Scripts/BaseScripts/Damage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/Conditions.cs" Line="155" Column="24" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Rubick/Enemy_zombie_Rubick_conditions.cs" Line="42" Column="3" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Invoker/Enemy_zombie_invoker_conditions.cs" Line="26" Column="18" />
+      <File FileName="Assets/Scripts/BaseScripts/Damage.cs" Line="90" Column="4" />
+      <File FileName="Assets/Scripts/BaseScripts/Conditions.cs" Line="68" Column="45" />
+      <File FileName="Assets/Scripts/PlayerScripts/PlayerDamage.cs" Line="16" Column="23" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Zheron/Enemy_zombieZheron_conditions.cs" Line="36" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Zheron/Enemy_zombieZheron_damage.cs" Line="33" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

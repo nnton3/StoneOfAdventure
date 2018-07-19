@@ -236,7 +236,7 @@ MonoBehaviour:
   health: 50
   armor: 0
   attackPoints: 10
-  attackSpeed: 2
+  attackSpeed: 3
   attackRange: 5
   moveSpeed: 2
   impulsePower: 1.5
@@ -314,6 +314,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 264
   patron: {fileID: 0}
+  knockDownPower: 5
   defaultMovespeed: 1.5
   defaultImpulsePower: 1.5
   alive: 1

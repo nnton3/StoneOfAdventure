@@ -34,7 +34,6 @@ public class PlayerConditions : Conditions {
 	public override void DisableInvulnerability ()
 	{
 		DisableStun ();
-		SetImpulse (defaultImpulsePower);
 		base.DisableInvulnerability ();
 		Physics2D.IgnoreLayerCollision (9, 8, false);
 	}
@@ -63,7 +62,7 @@ public class PlayerConditions : Conditions {
 
 	//Сбросить чек атаки
 	public override IEnumerator FinishAttack () {
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.75f);
 		attack = false;
 		anim.speed = 1;
 	}

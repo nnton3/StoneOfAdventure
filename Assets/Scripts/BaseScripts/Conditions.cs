@@ -110,8 +110,9 @@ public class Conditions : MonoBehaviour {
 	}
 
 	//Удар сбивающий с ног
+	public float knockDownPower = 5f;
 	public virtual void KnockDown (Collider2D target) {
-		target.GetComponent<Damage> ().KnockDown (unit.attackPoints, unit.direction);
+		target.GetComponent<Damage> ().KnockDown (unit.attackPoints, unit.direction, knockDownPower);
 	}
 
 	//Завершение атаки

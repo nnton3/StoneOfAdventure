@@ -3355,6 +3355,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114274269328154710, guid: 0df06295d691a4671af1f3581c997482,
+        type: 2}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0df06295d691a4671af1f3581c997482, type: 2}
   m_IsPrefabParent: 0
@@ -3406,7 +3411,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830222191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -133.652, y: 5.054881, z: -10}
+  m_LocalPosition: {x: -133.19, y: 3.415881, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1753739284}
@@ -4159,7 +4164,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4182,7 +4187,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1054637766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -133.19, y: 3.415881, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5885,26 +5890,6 @@ Prefab:
     - target: {fileID: 4565846800603532, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114422357488255534, guid: b8ef3e26a68ff474d8761f85957cba24,
-        type: 2}
-      propertyPath: moveSpeed
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114422357488255534, guid: b8ef3e26a68ff474d8761f85957cba24,
-        type: 2}
-      propertyPath: attackSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61482230359251940, guid: b8ef3e26a68ff474d8761f85957cba24,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 61482230359251940, guid: b8ef3e26a68ff474d8761f85957cba24,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}

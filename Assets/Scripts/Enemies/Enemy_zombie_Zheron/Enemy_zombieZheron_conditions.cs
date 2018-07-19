@@ -10,11 +10,6 @@ public class Enemy_zombieZheron_conditions : Conditions {
 		DisableRage ();
 	}
 
-	//Удар сбивающий с ног
-	public override void KnockDown (Collider2D target) {
-		target.GetComponent<Damage> ().KnockDown (unit.attackPoints, unit.direction);
-	}
-
 	//Включить ярость
 	bool rage = false;
 	public void EnableRage() {

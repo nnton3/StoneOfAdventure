@@ -158,14 +158,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.48181817
-    functionName: Default_Attack
+    functionName: Hit_Ignores_The_Roll
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.3272728
-    functionName: Default_Attack
+    functionName: Hit_Through_The_Block
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

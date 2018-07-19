@@ -26,6 +26,7 @@ public class Damage : MonoBehaviour {
 	public virtual void DamageThroughTheBlock (float damage, float direction) {
 		//Если игрок не сделал перекат
 		if (!conditions.invulnerability) {
+			conditions.EnableStun (direction);
 			ReduceHP (damage);
 			anim.SetTrigger ("attackable");
 		}
@@ -39,12 +40,16 @@ public class Damage : MonoBehaviour {
 		//Если игрок поставил блок
 		if (conditions.block) {
 			if (backToTheEnemy) {
+				conditions.EnableStun (direction);
 				ReduceHP (damage);
 				anim.SetTrigger ("attackable");
 			} else {
+				conditions.EnableStun (direction);
 				anim.SetTrigger ("blocked");
 			}
 		} else {
+			conditions.DisableInvulnerability ();
+			conditions.EnableStun (direction);
 			ReduceHP (damage);
 			anim.SetTrigger ("attackable");
 		}
@@ -62,9 +67,9 @@ public class Damage : MonoBehaviour {
 	}
 
 	//Сбит с ног
-	public virtual void KnockDown(float damage, float direction) {
+	public virtual void KnockDown(float damage, float direction, float impulsePower) {
 		if (!conditions.invulnerability) {
-			Debug.Log ("knock");
+			conditions.SetImpulse (impulsePower);
 			conditions.EnableStun (direction);
 			ReduceHP (damage);
 			anim.SetTrigger ("knock_down");
@@ -79,8 +84,13 @@ public class Damage : MonoBehaviour {
 	//Уменьшить ХП + проверка на "смерть"
 	public void ReduceHP (float damage) {
 		if (unit.health <= damage) {
+			Debug.Log ("1");
 			conditions.UnitDie ();
+			unit.health -= damage;
+			return;
 		}
+		Debug.Log ("2");
 		unit.health -= damage;
+		anim.SetTrigger ("attackable");
 	}
 }

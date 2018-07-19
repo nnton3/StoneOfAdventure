@@ -14,8 +14,6 @@ public class PlayerDamage : Damage {
 			if (backToTheEnemy) {
 				//Нанести урон
 				ReduceHP (damage);
-				//Анимация получения урона
-				anim.SetTrigger ("attackable");
 			} else {
 				//Если игрок стоит лицом к врагу
 				conditions.EnableStun (stunDirection);
@@ -24,7 +22,6 @@ public class PlayerDamage : Damage {
 			//Если игрок не заблокировал и не использовал перекат
 		} else if (!conditions.invulnerability) {
 			ReduceHP (damage);
-			anim.SetTrigger ("attackable");
 		}
 		if (!conditions.invulnerability) {
 			//Получить оглушение
@@ -46,7 +43,6 @@ public class PlayerDamage : Damage {
 				//Получить оглушение
 				conditions.EnableStun (stunDirection);
 				//Анимация получения урона
-				anim.SetTrigger ("attackable");
 			} else
 				//Если игрок стоит лицом к врагу
 				conditions.EnableStun (stunDirection);
@@ -54,7 +50,6 @@ public class PlayerDamage : Damage {
 			//Если игрок не заблокировал и не использовал перекат
 		} else if (!conditions.invulnerability) {
 			ReduceHP (criticalDamageValue);
-			anim.SetTrigger ("attackable");
 		}
 	}
 }
