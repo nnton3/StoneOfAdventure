@@ -3,7 +3,50 @@ guid: cc39a1dd126203b468e657a8531eb32a
 timeCreated: 1525444044
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ZombieBornThunder_0
+    21300002: ZombieBornThunder_1
+    21300004: ZombieBornThunder_2
+    21300006: ZombieBornThunder_3
+    21300008: ZombieBornThunder_4
+    21300010: ZombieBornThunder_5
+    21300012: ZombieBornThunder_6
+    21300014: ZombieBornThunder_7
+    21300016: ZombieBornThunder_8
+    21300018: ZombieBornThunder_9
+    21300020: ZombieBornThunder_10
+    21300022: ZombieBornThunder_11
+    21300024: ZombieBornThunder_12
+    21300026: ZombieBornThunder_13
+    21300028: ZombieBornThunder_14
+    21300030: ZombieBornThunder_15
+    21300032: ZombieBornThunder_16
+    21300034: ZombieBornThunder_17
+    21300036: ZombieBornThunder_18
+    21300038: ZombieBornThunder_19
+    21300040: ZombieBornThunder_20
+    21300042: ZombieBornThunder_21
+    21300044: ZombieBornThunder_22
+    21300046: ZombieBornThunder_23
+    21300048: ZombieBornThunder_24
+    21300050: ZombieBornThunder_25
+    21300052: ZombieBornThunder_26
+    21300054: ZombieBornThunder_27
+    21300056: ZombieBornThunder_28
+    21300058: ZombieBornThunder_29
+    21300060: ZombieBornThunder_30
+    21300062: ZombieBornThunder_31
+    21300064: ZombieBornThunder_32
+    21300066: ZombieBornThunder_33
+    21300068: ZombieBornThunder_34
+    21300070: ZombieBornThunder_35
+    21300072: ZombieBornThunder_36
+    21300074: ZombieBornThunder_37
+    21300076: ZombieBornThunder_38
+    21300078: ZombieBornThunder_39
+    21300080: ZombieBornThunder_40
+    21300082: ZombieBornThunder_41
+    21300084: ZombieBornThunder_42
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -31,7 +74,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -40,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,10 +100,30 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -68,7 +131,609 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ZombieBornThunder_0
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 3
+        width: 15
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_2
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 3
+        width: 15
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_3
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 3
+        width: 15
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 2
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_5
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 3
+        width: 15
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_6
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 3
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_7
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 3
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_8
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 2
+        width: 33
+        height: 162
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_9
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 3
+        width: 56
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_10
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3
+        width: 60
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_11
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 3
+        width: 60
+        height: 161
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_12
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 4
+        width: 60
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_13
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 4
+        width: 60
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_14
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 5
+        width: 60
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_15
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 4
+        width: 55
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_16
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 4
+        width: 55
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_17
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 4
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_18
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 4
+        width: 10
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_19
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 4
+        width: 1
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_20
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 4
+        width: 1
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_21
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 4
+        width: 3
+        height: 3
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_22
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 4
+        width: 4
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_23
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 4
+        width: 4
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_24
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 4
+        width: 4
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_25
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 4
+        width: 6
+        height: 3
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_26
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 4
+        width: 6
+        height: 2
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_27
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 4
+        width: 8
+        height: 3
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_28
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 4
+        width: 7
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_29
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 3
+        width: 9
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_30
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 3
+        width: 10
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_31
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 3
+        width: 11
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_32
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 3
+        width: 12
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_33
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 3
+        width: 12
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_34
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 3
+        width: 14
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_35
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 3
+        width: 15
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_36
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 3
+        width: 13
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_37
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 3
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_38
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 3
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_39
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 4
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_40
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 3
+        width: 13
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_41
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 3
+        width: 13
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ZombieBornThunder_42
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 3
+        width: 10
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

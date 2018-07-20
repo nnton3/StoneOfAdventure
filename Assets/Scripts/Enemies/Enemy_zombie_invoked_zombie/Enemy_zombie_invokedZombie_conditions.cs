@@ -35,6 +35,5 @@ public class Enemy_zombie_invokedZombie_conditions : Conditions {
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
-		unit.myStack.AddCorpse ();
 	}
 }

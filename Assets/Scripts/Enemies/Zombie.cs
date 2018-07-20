@@ -14,9 +14,9 @@ public class Zombie : Enemy {
 	}
 
 	public virtual void StartChase() {
+		Debug.Log ("alert");
 		gameObject.layer = 9;
 		idle = false;
-		//hpBar.SetActive (true);
 	}
 
 	//Задержка перед воскрешением

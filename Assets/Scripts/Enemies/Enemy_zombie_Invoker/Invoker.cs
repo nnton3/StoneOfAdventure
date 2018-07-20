@@ -21,6 +21,7 @@ public class Invoker : Zombie {
 		flipParam = input;
 		anim.SetTrigger ("born");
 		yield return new WaitForSeconds (bornDelay);
+		flipParam = -1;
 		input = 0f;
 		rb.gravityScale = 1f;
 	}

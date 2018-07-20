@@ -171,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 1465211492427678}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e2464f60b2fab40ff82f95558aab58b5, type: 2}
+  m_Controller: {fileID: 22100000, guid: 6b738cf6a80a14ef1a4eeefd9dfa20f0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -233,6 +233,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 264
   patron: {fileID: 0}
+  knockDownPower: 5
   defaultMovespeed: 5
   defaultImpulsePower: 5
   alive: 1
