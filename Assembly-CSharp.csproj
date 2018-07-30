@@ -159,6 +159,9 @@
      <Compile Include="Assets\Scripts\BaseScripts\Unit.cs" />
      <Compile Include="Assets\Scripts\Effects\FadeEffect_En_Dis.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_Paladin\Enemy_Paladin.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_Paladin\Enemy_Paladin_conditions.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_Paladin\Enemy_Paladin_damage.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Brian\Enemy_zombie_Brian_conditions.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Brian\Enemy_zombie_Brian_damage.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Brian\Enemy_zombieBrian.cs" />
