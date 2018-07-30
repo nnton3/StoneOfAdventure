@@ -4057,12 +4057,17 @@ Prefab:
     - target: {fileID: 114324456014934548, guid: aec31795760c7493199fd1fa17b7b45a,
         type: 2}
       propertyPath: moveSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114324456014934548, guid: aec31795760c7493199fd1fa17b7b45a,
         type: 2}
       propertyPath: impulsePower
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212663887212077630, guid: aec31795760c7493199fd1fa17b7b45a,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aec31795760c7493199fd1fa17b7b45a, type: 2}

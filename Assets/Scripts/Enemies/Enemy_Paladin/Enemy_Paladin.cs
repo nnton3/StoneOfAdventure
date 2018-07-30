@@ -92,6 +92,7 @@ public class Enemy_Paladin : Enemy {
 
 	//Тревога/Игрок замечен
 	public override void Alert (GameObject player) {
+		Debug.Log ("alert");
 		target = player;
 		idle = false;
 	}
