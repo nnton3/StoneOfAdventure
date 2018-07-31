@@ -5,7 +5,12 @@ using UnityEngine;
 public class Enemy_Paladin : Enemy {
 
 	void Update () {
-
+		Debug.Log ("number = " + number);
+		if (Input.GetKeyDown (KeyCode.K)) {
+			number = 0;
+			number ++;
+			PlayNextAnimation();
+		} 
 		//Если началась битва
 		if (!idle) {
 			//Если персонаж может двигаться
@@ -95,5 +100,60 @@ public class Enemy_Paladin : Enemy {
 		Debug.Log ("alert");
 		target = player;
 		idle = false;
+	}
+
+	public string attackName1 = "null";
+	public string attackName2 = "null";
+	public string attackName3 = "null";
+	public string attackName4 = "null";
+	public int number = 0;
+
+	public void StartFirstAttackAnimation () {
+		if (attackName1 != "null") {
+			anim.SetTrigger (attackName1);
+		} else
+			number = 0;
+	}
+
+	public void StartSecondAttackAnimation () {
+		if (attackName2 != "null") {
+			anim.SetTrigger (attackName2);
+		} else
+			number = 0;
+	}
+
+	public void StartThirdAttackAnimation () {
+		if (attackName3 != "null") {
+			anim.SetTrigger (attackName3);
+		} else
+			number = 0;
+	}
+
+	public void StartFourthAttackAnimation () {
+		if (attackName4 != "null") {
+			anim.SetTrigger (attackName4);
+		} else
+			number = 0;
+	}
+
+	public void PlayNextAnimation() {
+		switch (number) {
+		case 1:
+			StartFirstAttackAnimation ();
+			number++;
+			break;
+		case 2:
+			StartSecondAttackAnimation ();
+			number++;
+			break;
+		case 3:
+			StartThirdAttackAnimation ();
+			number++;
+			break;
+		case 4:
+			StartFourthAttackAnimation ();
+			number = 0;
+			break;
+		}
 	}
 }
