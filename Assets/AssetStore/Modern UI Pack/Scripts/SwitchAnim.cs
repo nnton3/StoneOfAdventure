@@ -19,7 +19,6 @@ public class SwitchAnim : MonoBehaviour {
 
 	void Start ()
 	{
-		Button btn = switchObject.GetComponent<Button>();
 		switchObject.onClick.AddListener(TaskOnClick);
 	}
 

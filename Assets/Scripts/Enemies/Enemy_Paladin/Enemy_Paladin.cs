@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy_Paladin : Enemy {
 
 	void Update () {
-		Debug.Log ("number = " + number);
 		if (Input.GetKeyDown (KeyCode.K)) {
 			number = 0;
 			number ++;

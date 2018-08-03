@@ -16,7 +16,6 @@ public class ToggleAnim : MonoBehaviour {
 
 	void Start ()
 	{
-		Toggle tgl = toggleObject.GetComponent<Toggle>();
 		toggleObject.onValueChanged.AddListener(TaskOnClick);
 	}
 

@@ -37,17 +37,7 @@ public class Enemy_zombyKenny: Zombie {
 		//Ударить
 		anim.SetTrigger ("attack");
 	}
-
-	//Местоположения относительно игрока
-	float targetRange = 0f;
-	float targetDirection =0f;
-
-	//Определение местоположения игрока
-	void FindTarget () {
-		targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
-		targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
-	}
-
+		
 	//Передать направление атаки
 	public void GetDirectiOfHit () {
 		FindTarget ();

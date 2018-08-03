@@ -150,6 +150,7 @@
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\SwitchAnim.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ToggleAnim.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\AudioController.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\BackgroundController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Conditions.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Damage.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\DangerArea.cs" />
@@ -193,6 +194,7 @@
      <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
      <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
+     <Compile Include="Assets\Scripts\NPCs\Location1_Level1_Blacksmith.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerConditions.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerDamage.cs" />
