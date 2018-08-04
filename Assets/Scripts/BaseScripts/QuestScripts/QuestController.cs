@@ -19,11 +19,12 @@ public class QuestController : MonoBehaviour {
 		}
 	}
 
+	//Удалить квест из массива квестов
 	public void DeleteActiveQuest (Quest quest) {
 		int count = 0;
 		foreach (Quest currentQuest in quests) {
 			if (currentQuest == quest) {
-				currentQuest = null;
+				//currentQuest = null;
 			}
 		}
 	}
@@ -34,5 +35,16 @@ public class QuestController : MonoBehaviour {
 			questBarIsFull = true;
 		} else
 			questBarIsFull = false;
+	}
+
+	//Создать описание квеста в QuestBar
+	public Transform questBar;
+	public GameObject questBarElement;
+
+	void CreateQuestBarElement (string questInfo, string objectives, int currentProgress, int targetProgress) {
+		GameObject questBarElementInstance = Instantiate (questBarElement, new Vector3 (0f, 0f, 0f), Quaternion.identity);
+		QuestBarElements questBarElementScript = questBarElementInstance.GetComponent<QuestBarElements> ();
+		questBarElementInstance.transform.SetParent (questBar);
+		questBarElementScript.EditQuestInfo (questInfo, objectives, currentProgress, targetProgress);
 	}
 }
