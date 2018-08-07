@@ -1,13 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Quests/Level1/Quest_wagon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/TransitionToQuest.cs">
     <Files>
-      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/Quest.cs" Line="12" Column="36" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs" Line="8" Column="61" />
-      <File FileName="Assets/Scripts/NPCs/Location1_Level1_Blacksmith.cs" Line="12" Column="44" />
-      <File FileName="Assets/Scripts/Interface/QuestBar.cs" Line="11" Column="1" />
-      <File FileName="Assets/Standart Assets/QuestController.cs" Line="51" Column="30" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_wagon.cs" Line="17" Column="6" />
+      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BaseScripts/TransitionToQuest.cs" Line="19" Column="3" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_Paladin/Enemy_Paladin.cs" Line="94" Column="6" />
+      <File FileName="Assets/Scripts/Backstage.cs" Line="31" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

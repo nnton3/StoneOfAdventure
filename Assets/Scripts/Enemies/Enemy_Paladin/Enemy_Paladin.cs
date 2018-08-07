@@ -72,7 +72,7 @@ public class Enemy_Paladin : Enemy {
 		int numberOfAttack = 0;
 		numberOfAttack = Random.Range (0, 5);
 
-		switch (numberOfAttack) {
+		/*switch (numberOfAttack) {
 		case 0:
 			Debug.Log ("case 0");
 			break;
@@ -91,12 +91,11 @@ public class Enemy_Paladin : Enemy {
 		case 5:
 			Debug.Log ("case 5");
 			break;
-		}
+		}*/
 	}
 
 	//Тревога/Игрок замечен
 	public override void Alert (GameObject player) {
-		Debug.Log ("alert");
 		target = player;
 		idle = false;
 	}

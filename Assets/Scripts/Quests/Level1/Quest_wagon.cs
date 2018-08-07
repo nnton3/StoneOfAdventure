@@ -6,13 +6,15 @@ public class Quest_wagon : MonoBehaviour {
 
 	public GameObject replica1;
 	int ID = 1;
+	int oreNumber = 1;
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		//Если пришел игрок
 		if (targetObject.CompareTag("Player")) {
 			//Если у него есть квест от кузнеца
 			if (QuestController.FindActiveQuest(ID) != QuestController.nullQuest) {
-				if (QuestController.FindActiveQuest (ID).progress != QuestController.FindActiveQuest (ID).target) {
+				//Если в тележке есть руда
+				if (oreNumber>0) {
 					replica1.SetActive (true);
 				}
 			}
@@ -23,5 +25,11 @@ public class Quest_wagon : MonoBehaviour {
 		if (targetObject.CompareTag ("Player")) {
 			replica1.SetActive (false);
 		}
+	}
+
+	public void PlayerTakeOre() {
+		QuestController.AddQuestProgress (ID);
+		oreNumber--;
+		replica1.SetActive (false);
 	}
 }

@@ -149,16 +149,18 @@
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\RatingSystem.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\SwitchAnim.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ToggleAnim.cs" />
+     <Compile Include="Assets\Scripts\Backstage.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\AudioController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\BackgroundController.cs" />
-     <Compile Include="Assets\Scripts\BaseScripts\CanvasInterface\QuestBarElements.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\DangerArea.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Flip.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Interfaces.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Patron.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest.cs" />
-     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest_objectives.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestController.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestList.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Transition.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\TransitionToQuest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Conditions.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Damage.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Unit.cs" />
@@ -197,6 +199,7 @@
      <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
      <Compile Include="Assets\Scripts\Interface\QuestBar.cs" />
+     <Compile Include="Assets\Scripts\Interface\QuestBarElements.cs" />
      <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
      <Compile Include="Assets\Scripts\NPCs\Location1_Level1_Blacksmith.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
@@ -212,7 +215,6 @@
      <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />
      <Compile Include="Assets\Standart Assets\GameManager.cs" />
      <Compile Include="Assets\Standart Assets\Menu.cs" />
-     <Compile Include="Assets\Standart Assets\QuestController.cs" />
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />
      <None Include="Assets\AssetStore\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\AssetStore\Looader\Licence.txt" />
