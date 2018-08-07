@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class QuestBarElements : MonoBehaviour {
 
 	Text questDiscription;
+	public int ID = 0;
 
-	public void EditQuestInfo (string questInfo, string objectives, int currentProgress, int targetProgress) {
+	void Update () {
+
+	}
+
+	public void EditQuestBarElement (string questInfo, string objectives, int currentProgress, int targetProgress) {
 		questDiscription = GetComponent<Text> ();
 		questDiscription.text = questInfo + "\n" + objectives + " " + currentProgress + " of " + targetProgress;
 	}
@@ -16,4 +21,7 @@ public class QuestBarElements : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
+	public void SaveQuestID (int id) {
+		ID = id;
+	}
 }

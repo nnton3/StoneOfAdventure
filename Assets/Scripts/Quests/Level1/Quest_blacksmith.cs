@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Quest_blacksmith : Quest {
 
-	void Start() {
-		GetQuestID (1);
+	public void AddThisQuest () {
+		QuestController.AddActiveQuest (this.GetComponent<Quest>());
 	}
-
 
 }

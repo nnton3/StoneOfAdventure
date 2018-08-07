@@ -158,7 +158,6 @@
      <Compile Include="Assets\Scripts\BaseScripts\Patron.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest_objectives.cs" />
-     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Transition.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Conditions.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Damage.cs" />
@@ -197,6 +196,7 @@
      <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
+     <Compile Include="Assets\Scripts\Interface\QuestBar.cs" />
      <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
      <Compile Include="Assets\Scripts\NPCs\Location1_Level1_Blacksmith.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
@@ -205,13 +205,14 @@
      <Compile Include="Assets\Scripts\PlayerScripts\Аrrow.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_blacksmith.cs" />
-     <Compile Include="Assets\Scripts\Quests\Level1\Quest_blacksmith_objectives.cs" />
+     <Compile Include="Assets\Scripts\Quests\Level1\Quest_wagon.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\HomyReplics.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Laser.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />
      <Compile Include="Assets\Standart Assets\GameManager.cs" />
      <Compile Include="Assets\Standart Assets\Menu.cs" />
+     <Compile Include="Assets\Standart Assets\QuestController.cs" />
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />
      <None Include="Assets\AssetStore\Cinemachine\ReleaseNotes.txt" />
      <None Include="Assets\AssetStore\Looader\Licence.txt" />
