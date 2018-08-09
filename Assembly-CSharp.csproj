@@ -149,7 +149,6 @@
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\RatingSystem.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\SwitchAnim.cs" />
      <Compile Include="Assets\AssetStore\Modern UI Pack\Scripts\ToggleAnim.cs" />
-     <Compile Include="Assets\Scripts\Backstage.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\AudioController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\BackgroundController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\DangerArea.cs" />
@@ -195,11 +194,13 @@
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombieZheron_damage.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombyZheron.cs" />
      <Compile Include="Assets\Scripts\Enemies\Zombie.cs" />
+     <Compile Include="Assets\Scripts\Interface\Backstage.cs" />
      <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
      <Compile Include="Assets\Scripts\Interface\QuestBar.cs" />
      <Compile Include="Assets\Scripts\Interface\QuestBarElements.cs" />
+     <Compile Include="Assets\Scripts\Interface\TransitionController.cs" />
      <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
      <Compile Include="Assets\Scripts\NPCs\Location1_Level1_Blacksmith.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />

@@ -33,21 +33,26 @@ public class QuestController: MonoBehaviour {
 	public static void DeleteActiveQuest (int ID) {
 		questBarScript.DeleteQuestBarElements (ID);
 		for (int i = 0; i < quests.Length; i++) {
-			if (quests [i] != null) {
+			try {
 				if (quests [i].ID == ID) {
 					quests [i] = null;
 					return;
 				}
+			} catch {
+				continue;
 			}
 		}
 	}
 
 	public static Quest FindActiveQuest (int ID) {
 		foreach (Quest quest in quests) {
-			if (quest != null) {
+			try {
 				if (quest.ID == ID) {
 					return quest;
 				}
+			} catch {
+				Debug.Log ("null");
+				continue;
 			}
 		}
 		return nullQuest;
