@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class TransitionController : MonoBehaviour {
 
-	public GameObject mainBG;
-	public GameObject sideBG;
+	static GameObject mainBG;
+	static GameObject sideBG;
 	static bool mainBGisActive = true;
+	GameObject backstage;
 
-	public static void Transition (GameObject mainBG, GameObject sideBG) {
+	void Start () {
+		mainBG = GameObject.Find ("MainBackground");
+		backstage = GameObject.Find ("Backstage");
+		EnableBackstage (false);
+	}
+
+	public static void Transition () {
 		if (mainBGisActive) {
 			sideBG.SetActive (true);
 			mainBG.SetActive (false);
@@ -18,5 +25,13 @@ public class TransitionController : MonoBehaviour {
 			sideBG.SetActive (false);
 			mainBGisActive = true;
 		}
+	}
+
+	public static void SetSideBG (GameObject inputSideBG) {
+		sideBG = inputSideBG;
+	}
+
+	public void EnableBackstage (bool enable) {
+		backstage.SetActive (enable);
 	}
 }
