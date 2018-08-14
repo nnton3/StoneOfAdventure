@@ -14,20 +14,19 @@ public class DangerArea : MonoBehaviour {
 
 	public void FindUnits () {
 		foreach (Enemy enemy in enemies) {
-			Debug.Log ("find player");
 			enemieAlert += enemy.Alert;
 			allEnemies += 1;
 		}
 	}
 
 	public void AddEnemie(Unit newEnemie) {
-		Debug.Log ("add enemie");
 		enemies.Add (newEnemie);
 	}
 
 	//Если игрок вошел в зону видимости
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.CompareTag ("Player")) {
+			Debug.Log ("enter");
 			if (!stackActivated) {
 				enemieAlert (other.gameObject);
 				stackActivated = true;

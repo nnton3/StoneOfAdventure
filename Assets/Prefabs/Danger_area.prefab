@@ -49,8 +49,8 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128479967697488}
-  m_BodyType: 1
-  m_Simulated: 0
+  m_BodyType: 2
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -98,3 +98,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22f8986ea20d4643943db1dbb73d1ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadEnemies: 0
+  allEnemiesDead: 0
