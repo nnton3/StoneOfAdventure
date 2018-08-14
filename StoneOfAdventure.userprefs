@@ -1,6 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/InteractiveTransitions/Elevator.cs">
+    <Files>
+      <File FileName="Assets/Scripts/BaseScripts/InteractiveTransitions/Ladder.cs" Line="58" Column="80" />
+      <File FileName="Assets/Scripts/PlayerScripts/Player.cs" Line="32" Column="23" />
+      <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Unit.cs" Line="18" Column="21" />
+      <File FileName="Assets/Scripts/BaseScripts/InteractiveTransitions/Elevator.cs" Line="38" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

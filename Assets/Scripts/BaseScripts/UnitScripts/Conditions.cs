@@ -46,12 +46,12 @@ public class Conditions : MonoBehaviour {
 
 	public virtual void EnableStun (float direction) {
 		stun = true;
-		unit.input = direction;
+		unit.inputX = direction;
 		SetMovespeed (unit.impulsePower);
 	}
 
 	public virtual void DisableStun () {
-		unit.input = 0f;
+		unit.inputX = 0f;
 		stun = false;
 		SetImpulse (defaultImpulsePower);
 		SetMovespeed (defaultMovespeed);

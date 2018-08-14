@@ -11,7 +11,7 @@ public class Enemy_zombyKenny: Zombie {
 			if (CanMove()) {
 				//Найти цель
 				FindTarget();
-				flipParam = input;
+				flipParam = inputX;
 
 				//Если зомби может атаковать
 				if (CanAttack ()) {
@@ -22,7 +22,7 @@ public class Enemy_zombyKenny: Zombie {
 						//Если цель не найдена
 					} else
 						//Изменить направление движения
-						input = -targetDirection;
+						inputX = -targetDirection;
 				}
 			}
 			Run ();
@@ -32,7 +32,7 @@ public class Enemy_zombyKenny: Zombie {
 	//Атаковать
 	public override void Attack (){
 		//Остановиться
-		input = 0f;
+		inputX = 0f;
 		conditions.attack = true;
 		//Ударить
 		anim.SetTrigger ("attack");
@@ -41,6 +41,6 @@ public class Enemy_zombyKenny: Zombie {
 	//Передать направление атаки
 	public void GetDirectiOfHit () {
 		FindTarget ();
-		input = -targetDirection;
+		inputX = -targetDirection;
 	}
 }

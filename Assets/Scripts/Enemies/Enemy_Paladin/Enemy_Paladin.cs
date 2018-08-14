@@ -16,7 +16,7 @@ public class Enemy_Paladin : Enemy {
 			if (CanMove()) {
 				//Определить местоположение противника
 				FindTarget ();
-				flipParam = input;
+				flipParam = inputX;
 				if (CanAttack()) {
 					//Если лицом к персонажу
 					if ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f)) {
@@ -31,7 +31,7 @@ public class Enemy_Paladin : Enemy {
 						}
 					//Иначе развернуться
 					} else {
-						input = -targetDirection;
+						inputX = -targetDirection;
 					}
 				}
 				Run ();

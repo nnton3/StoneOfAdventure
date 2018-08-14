@@ -14,7 +14,7 @@ public class Enemy_zombyZheron : Zombie {
 			
 				//Определение местоположения игрока
 				FindTarget ();
-				flipParam = input;
+				flipParam = inputX;
 
 				//Если можно атаковать
 				if (CanAttack ()) {
@@ -31,7 +31,7 @@ public class Enemy_zombyZheron : Zombie {
 							JerkWithShield ();
 					} else 
 						//Изменить направление движения
-						input = -targetDirection;
+						inputX = -targetDirection;
 				}
 			}
 			Run ();
@@ -42,7 +42,7 @@ public class Enemy_zombyZheron : Zombie {
 	//Атака
 	public override void Attack() {
 		//Остановиться
-		input = 0f;
+		inputX = 0f;
 		//Выйти из стана
 		conditions.DisableStun();
 		//Убрать блок если юнит в блоке

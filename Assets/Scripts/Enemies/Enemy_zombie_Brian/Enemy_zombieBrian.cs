@@ -11,7 +11,7 @@ public class Enemy_zombieBrian : Zombie {
 			if (CanMove ()) {
 				//Найти цель
 				FindTarget ();
-				flipParam = input;
+				flipParam = inputX;
 
 				//Если зомби может атаковать
 				if (CanAttack ()) {
@@ -22,7 +22,7 @@ public class Enemy_zombieBrian : Zombie {
 						//Если цель не найдена
 					} else
 						//Изменить направление движения
-						input = -targetDirection;
+						inputX = -targetDirection;
 				}
 				Run ();
 			}
@@ -32,7 +32,7 @@ public class Enemy_zombieBrian : Zombie {
 	//Нанести урон
 	public override void Attack () {
 		//Остановиться
-		input = 0f;
+		inputX = 0f;
 		//Выйти из стана
 		conditions.DisableStun();
 		//Убрать блок если юнит в блоке

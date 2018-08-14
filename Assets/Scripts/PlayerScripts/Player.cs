@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : Unit {
 
+
+
 	void Update () {
 		//Если игрок не находится в состоянии атаки или оглушения
 		if (CanAttack()) {
@@ -26,12 +28,12 @@ public class Player : Unit {
 		}	
 			
 		if (CanMove()) {
-			input = Input.GetAxisRaw ("Horizontal");
-			flipParam = input;
+			inputX = Input.GetAxisRaw ("Horizontal");
+			flipParam = inputX;
 		}
 
-		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
-		anim.SetBool ("run", Mathf.Abs (input) > 0.1f);
+		rb.velocity = new Vector2 (inputX * moveSpeed, inputY * moveSpeed);
+		anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
 	}
 
 	//Атака

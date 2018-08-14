@@ -14,7 +14,7 @@ public class Enemy_zombieZheron_conditions : Conditions {
 	bool rage = false;
 	public void EnableRage() {
 		rage = true;
-		unit.input = unit.direction;
+		unit.inputX = unit.direction;
 		SetMovespeed (15f);
 	}
 

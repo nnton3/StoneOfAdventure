@@ -15,7 +15,7 @@ public class Enemy_creepyZomby : Zombie {
 			if (CanMove()) {
 				//Найти цель
 				FindTarget ();
-				flipParam = input;
+				flipParam = inputX;
 
 				//Если юнит не находится в состоянии атаки
 				if (CanAttack()) {
@@ -25,7 +25,7 @@ public class Enemy_creepyZomby : Zombie {
 						Attack ();
 					} else {
 						//Двигаться в сторону игрока
-						input = -targetDirection;
+						inputX = -targetDirection;
 					}
 				}
 			}
@@ -35,7 +35,7 @@ public class Enemy_creepyZomby : Zombie {
 
 	//Нанести урон
 	public override void Attack () {
-		input = 0f;
+		inputX = 0f;
 		if (!conditions.attack) {
 			conditions.attack = true;
 			anim.SetTrigger ("attack");

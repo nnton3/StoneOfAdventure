@@ -16,14 +16,14 @@ public class Rubick : Zombie {
 				Attack ();
 			} 
 		}
-		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
+		rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
 	}
 
 	public override IEnumerator TimeToBorn () {
-		input = 1f;
+		inputX = 1f;
 		anim.SetTrigger ("born");
 		yield return new WaitForSeconds (bornDelay);
-		input = 0f;
+		inputX = 0f;
 		rb.gravityScale = 1f;
 	}
 }

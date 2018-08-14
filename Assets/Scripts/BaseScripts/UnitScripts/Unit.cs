@@ -13,7 +13,9 @@ public abstract class Unit : MonoBehaviour {
 	public float moveSpeed;
 	public float impulsePower;
 	[HideInInspector]
-	public float input = 0f;
+	public float inputX = 0f;
+	[HideInInspector]
+	public float inputY = 0f;
 	[HideInInspector]
 	public Rigidbody2D rb;
 	[HideInInspector]
@@ -63,9 +65,9 @@ public abstract class Unit : MonoBehaviour {
 	}
 
 	public virtual void Run () {
-		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
+		rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
 		if (CanMove ()) {
-			anim.SetFloat ("speed", Mathf.Abs (input * moveSpeed));
+			anim.SetFloat ("speed", Mathf.Abs (inputX * moveSpeed));
 		}
 	}
 

@@ -14,7 +14,7 @@ public class Enemy_invokedZomby : Zombie {
 			if (CanMove()) {
 				//Найти цель
 				FindTarget ();
-				flipParam = input;
+				flipParam = inputX;
 
 				//Если юнит не находится в состоянии атаки
 				if (CanAttack()) {
@@ -33,7 +33,7 @@ public class Enemy_invokedZomby : Zombie {
 
 	//Нанести урон
 	public override void Attack () {
-		input = 0f;
+		inputX = 0f;
 		conditions.attack = true;
 		anim.SetTrigger ("attack");
 	}
@@ -48,7 +48,7 @@ public class Enemy_invokedZomby : Zombie {
 			//Иначе - идти пешком
 			conditions.SetMovespeed (conditions.defaultMovespeed);
 		//Двигаться в сторону игрока
-		input = -targetDirection;
+		inputX = -targetDirection;
 	}
 
 	public override void Alert (GameObject player)

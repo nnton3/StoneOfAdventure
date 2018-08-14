@@ -153,13 +153,15 @@
      <Compile Include="Assets\Scripts\BaseScripts\BackgroundController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\DangerArea.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Flip.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Elevator.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Ladder.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Transition.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\TransitionToQuest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Interfaces.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Patron.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestList.cs" />
-     <Compile Include="Assets\Scripts\BaseScripts\Transition.cs" />
-     <Compile Include="Assets\Scripts\BaseScripts\TransitionToQuest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Conditions.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Damage.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Unit.cs" />

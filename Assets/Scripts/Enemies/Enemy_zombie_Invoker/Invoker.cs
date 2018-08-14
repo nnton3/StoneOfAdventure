@@ -13,16 +13,16 @@ public class Invoker : Zombie {
 				Attack ();
 			} 
 		}
-		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
+		rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
 	}
 
 	public override IEnumerator TimeToBorn () {
-		input = 1f;
-		flipParam = input;
+		inputX = 1f;
+		flipParam = inputX;
 		anim.SetTrigger ("born");
 		yield return new WaitForSeconds (bornDelay);
 		flipParam = -1;
-		input = 0f;
+		inputX = 0f;
 		rb.gravityScale = 1f;
 	}
 }

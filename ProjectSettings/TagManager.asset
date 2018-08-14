@@ -15,6 +15,8 @@ TagManager:
   - Puddle
   - PlayerArrow
   - NPC
+  - ElevatorStart
+  - ElevatorEnd
   layers:
   - Default
   - TransparentFX
