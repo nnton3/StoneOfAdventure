@@ -216,6 +216,8 @@
      <Compile Include="Assets\Scripts\TestingScripts\HomyReplics.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Laser.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />
+     <Compile Include="Assets\Sprites\TutorialAnturage\Tile.cs" />
+     <Compile Include="Assets\Sprites\TutorialAnturage\TileGenerator.cs" />
      <Compile Include="Assets\Standart Assets\GameManager.cs" />
      <Compile Include="Assets\Standart Assets\Menu.cs" />
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />
