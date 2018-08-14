@@ -162,6 +162,8 @@
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestList.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\Tiles\Tile.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\Tiles\TileGenerator.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Conditions.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Damage.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Unit.cs" />
@@ -216,8 +218,6 @@
      <Compile Include="Assets\Scripts\TestingScripts\HomyReplics.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Laser.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />
-     <Compile Include="Assets\Sprites\TutorialAnturage\Tile.cs" />
-     <Compile Include="Assets\Sprites\TutorialAnturage\TileGenerator.cs" />
      <Compile Include="Assets\Standart Assets\GameManager.cs" />
      <Compile Include="Assets\Standart Assets\Menu.cs" />
      <None Include="Assets\AssetStore\Modern UI Pack\Read Me.txt" />

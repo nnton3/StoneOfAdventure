@@ -25,7 +25,7 @@ public class Enemy_zombie_invoker_conditions : Conditions {
 	{
 		DisableStun ();
 		anim.SetTrigger ("die");
-		unit.myStack.AddCorpse ();
+		//unit.myStack.AddCorpse ();
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";

@@ -83,8 +83,8 @@ public abstract class Unit : MonoBehaviour {
 
 	//Зарегистрироваться в родительском стаке врагов
 	[HideInInspector]
-	public DangerArea myStack;
-	public virtual void RegistrationInStack () {
+	//public DangerArea myStack;
+	public virtual void RegistrationInStack (DangerArea myStack) {
 		myStack = GetComponentInParent<DangerArea> ();
 		myStack.AddEnemie (this);
 	}

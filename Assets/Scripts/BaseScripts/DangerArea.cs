@@ -12,14 +12,16 @@ public class DangerArea : MonoBehaviour {
 	int allEnemies = 0;
 	public bool allEnemiesDead = false;
 
-	void Start () {
+	public void FindUnits () {
 		foreach (Enemy enemy in enemies) {
+			Debug.Log ("find player");
 			enemieAlert += enemy.Alert;
 			allEnemies += 1;
 		}
 	}
 
 	public void AddEnemie(Unit newEnemie) {
+		Debug.Log ("add enemie");
 		enemies.Add (newEnemie);
 	}
 

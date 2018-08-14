@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class QuestController: MonoBehaviour {
 
-	static int maxActiveQuests = 3;
 	static Quest[] quests = new Quest[3];
 	public static int questEnumerator = 1;
 	public static QuestBar questBarScript;

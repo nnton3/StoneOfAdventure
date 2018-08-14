@@ -11,9 +11,9 @@ public class Enemy : Unit {
 	[HideInInspector]
 	public bool idle = true;
 
-	void Awake() {
+	/*void Awake() {
 		RegistrationInStack ();
-	}
+	}*/
 
 	//Тревога/Игрок замечен
 	public virtual void Alert (GameObject player) {

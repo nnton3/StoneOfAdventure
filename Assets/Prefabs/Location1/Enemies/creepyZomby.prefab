@@ -109,8 +109,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273770020861940}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.259, y: -0.007, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 224166210051298948}
@@ -225,8 +225,9 @@ MonoBehaviour:
   attack: 0
   attackCollision:
     serializedVersion: 2
-    m_Bits: 8
-  arrow: {fileID: 0}
+    m_Bits: 264
+  patron: {fileID: 0}
+  knockDownPower: 5
   defaultMovespeed: 5
   defaultImpulsePower: 5
   alive: 1
@@ -274,16 +275,18 @@ MonoBehaviour:
   attackRange: 1.75
   moveSpeed: 2
   impulsePower: 10
-  input: 0
+  inputX: 0
+  inputY: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   damage: {fileID: 0}
   conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  myStack: {fileID: 0}
   target: {fileID: 0}
   idle: 1
+  targetRange: 0
+  targetDirection: 0
   bornDelay: 0
   runDistance: 7
   runSpeed: 5

@@ -45,7 +45,7 @@ public class Enemy_zombie_Brian_conditions : Conditions {
 	//СМЕРТЬ
 	public override void UnitDie (){
 		anim.SetTrigger ("die");
-		unit.myStack.AddCorpse ();
+		//unit.myStack.AddCorpse ();
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
