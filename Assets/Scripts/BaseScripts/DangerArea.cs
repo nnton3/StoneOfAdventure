@@ -26,7 +26,6 @@ public class DangerArea : MonoBehaviour {
 	//Если игрок вошел в зону видимости
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.CompareTag ("Player")) {
-			Debug.Log ("enter");
 			if (!stackActivated) {
 				enemieAlert (other.gameObject);
 				stackActivated = true;

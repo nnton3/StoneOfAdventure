@@ -17,6 +17,7 @@ TagManager:
   - NPC
   - ElevatorStart
   - ElevatorEnd
+  - Indicator
   layers:
   - Default
   - TransparentFX

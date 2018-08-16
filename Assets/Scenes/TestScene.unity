@@ -144,12 +144,12 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 4
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1381157857}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10
+    OrthographicSize: 5
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -161,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 444058535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9572866, y: 8.9, z: -10}
+  m_LocalPosition: {x: -17.192743, y: 1.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1873834623}
@@ -182,11 +182,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4565846800603532, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.9572866
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 4565846800603532, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4565846800603532, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
       propertyPath: m_LocalPosition.z
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dc33de33bcd472d91aca9e2fbe659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileNumber: 10
+  TileNumber: 5
   tilesSheet:
   - {fileID: 1718424841415036, guid: c2e10c1aca2524ebc9a63f6eaa71ec9e, type: 2}
   - {fileID: 1568156843246824, guid: 17b93e2e47ca140fc863c28381978cb4, type: 2}
@@ -317,6 +317,9 @@ MonoBehaviour:
   - {fileID: 1273770020861940, guid: b5f2b13a2bb5d44f7a204aa72912d2ab, type: 2}
   - {fileID: 1531999292881766, guid: 00013717812324f7eb98fa0fdfc0f990, type: 2}
   - {fileID: 1986738832010054, guid: acb80937c7d8f4c639fa04c0b4f2cbdc, type: 2}
+  - {fileID: 1780096191958802, guid: 2d85d9c89a84c464c95a60dc66d559f8, type: 2}
+  - {fileID: 1180843171045306, guid: 66101df8ad63a4df297d5b80999f7b20, type: 2}
+  - {fileID: 1945721886506690, guid: 0df06295d691a4671af1f3581c997482, type: 2}
   wayPosition: {x: 0, y: 0}
 --- !u!4 &1871752476
 Transform:
@@ -377,8 +380,8 @@ MonoBehaviour:
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenX: 0.4
+  m_ScreenY: 0.69
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.1
   m_DeadZoneHeight: 0.1

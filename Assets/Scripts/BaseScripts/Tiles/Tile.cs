@@ -29,8 +29,8 @@ public class Tile : MonoBehaviour {
 
 	void CreateEnemies () {
 		int randomIntNumber = Random.Range (0, tileGenerator.enemiesSheet.Length);
-
-		GameObject enemie = Instantiate (tileGenerator.enemiesSheet [randomIntNumber], new Vector2 (transform.position.x, transform.position.y + 5f), Quaternion.identity);
+		float randomEnemiePosition = Random.Range (-5f, 5f);
+		GameObject enemie = Instantiate (tileGenerator.enemiesSheet [randomIntNumber], new Vector2 (transform.position.x + randomEnemiePosition, transform.position.y + 5f), Quaternion.identity);
 		enemie.transform.SetParent (dangerArea);
 		Unit enemieScript = enemie.GetComponent<Unit> ();
 		enemieScript.RegistrationInStack (dangerAreaScript);

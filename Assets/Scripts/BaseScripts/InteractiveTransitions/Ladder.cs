@@ -24,7 +24,7 @@ public class Ladder : MonoBehaviour {
 				return;
 			}
 
-			if (Input.GetKeyDown (KeyCode.DownArrow)) {
+			if (Input.GetKeyUp (KeyCode.DownArrow)) {
 				StopMove ();
 				return;
 			}
@@ -47,6 +47,7 @@ public class Ladder : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		if (targetObject.CompareTag ("Player")) {
+			Debug.Log ("enter");
 			targetObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Kinematic;
 			playerEnter = true;
 			player = targetObject.GetComponent<Unit> ();
