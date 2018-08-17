@@ -431,7 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: -12.8, y: 0}
   endPosition: {x: 12.8, y: 3.8}
-  enemiesNumber: 3
+  enemiesNumber: 2
 --- !u!114 &114180352068521740
 MonoBehaviour:
   m_ObjectHideFlags: 1

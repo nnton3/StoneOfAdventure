@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: -12.8, y: 0}
   endPosition: {x: 12.8, y: 0}
-  enemiesNumber: 3
+  enemiesNumber: 2
 --- !u!212 &212249101774162032
 SpriteRenderer:
   m_ObjectHideFlags: 1
