@@ -166,6 +166,7 @@
      <Compile Include="Assets\Scripts\BaseScripts\Tiles\TileGenerator.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Conditions.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Damage.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\EnemiesList.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Unit.cs" />
      <Compile Include="Assets\Scripts\Effects\FadeEffect_En_Dis.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />

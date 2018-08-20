@@ -8,29 +8,31 @@ public class Tile : MonoBehaviour {
 	public Vector2 endPosition;
 
 	void Start () {
-		tileGenerator = GameObject.Find ("TileGenerator").GetComponent<TileGenerator> ();
 		dangerArea = transform.Find ("Danger_area");
 		dangerAreaScript = dangerArea.GetComponent<DangerArea> ();
+		enemieListScript = GameObject.Find ("TileGenerator").GetComponent<EnemiesList> ();
 		GenerateEnemies ();
 	}
 
+	//Сгенерировать врагов
 	public int enemiesNumber = 3;
-
+	EnemiesList enemieListScript;
 	void GenerateEnemies () {
-		for (int i = 0; i < enemiesNumber; i++) {
-			CreateEnemies ();
+		//Выбрать случайный стак мобов в соответствии с текущей сложностью
+		int[] chosenPattern = enemieListScript.ChooseEnemieStackPattern ();
+
+		for (int i = 0; i < chosenPattern.Length; i++) {
+			CreateEnemies (enemieListScript.GetRandomEnemieFromTier(chosenPattern[i]));
 		}
 		dangerAreaScript.FindUnits ();
 	}
 
-	TileGenerator tileGenerator;
 	Transform dangerArea;
 	DangerArea dangerAreaScript;
 
-	void CreateEnemies () {
-		int randomIntNumber = Random.Range (0, tileGenerator.enemiesSheet.Length);
+	void CreateEnemies (GameObject chosenEnemie) {
 		float randomEnemiePosition = Random.Range (-5f, 5f);
-		GameObject enemie = Instantiate (tileGenerator.enemiesSheet [randomIntNumber], new Vector2 (transform.position.x + randomEnemiePosition, transform.position.y + 5f), Quaternion.identity);
+		GameObject enemie = Instantiate (chosenEnemie, new Vector2 (transform.position.x + randomEnemiePosition, transform.position.y + 5f), Quaternion.identity);
 		enemie.transform.SetParent (dangerArea);
 		Unit enemieScript = enemie.GetComponent<Unit> ();
 		enemieScript.RegistrationInStack (dangerAreaScript);

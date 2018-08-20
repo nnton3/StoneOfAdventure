@@ -6,7 +6,6 @@ public class TileGenerator : MonoBehaviour {
 
 	public int TileNumber = 5;
 	public GameObject[] tilesSheet;
-	public GameObject[] enemiesSheet;
 	public Vector2 wayPosition = new Vector2 (0f, 0f);
 
 	void Start () {
