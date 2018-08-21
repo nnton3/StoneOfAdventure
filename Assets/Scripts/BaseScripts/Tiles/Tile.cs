@@ -6,8 +6,14 @@ public class Tile : MonoBehaviour {
 
 	public Vector2 startPosition;
 	public Vector2 endPosition;
+	public bool startTile;
+	public bool endTile;
 
 	void Start () {
+		//Если тайл стартовый - ничего не делать
+		if (startTile || endTile) {
+			return;
+		}
 		dangerArea = transform.Find ("Danger_area");
 		dangerAreaScript = dangerArea.GetComponent<DangerArea> ();
 		enemieListScript = GameObject.Find ("TileGenerator").GetComponent<EnemiesList> ();

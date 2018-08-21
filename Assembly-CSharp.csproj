@@ -155,6 +155,7 @@
      <Compile Include="Assets\Scripts\BaseScripts\Flip.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Elevator.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Ladder.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Lever.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Transition.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\TransitionToQuest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Interfaces.cs" />

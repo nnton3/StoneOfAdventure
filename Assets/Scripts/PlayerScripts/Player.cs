@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : Unit {
 
-
-
 	void Update () {
 		//Если игрок не находится в состоянии атаки или оглушения
 		if (CanAttack()) {

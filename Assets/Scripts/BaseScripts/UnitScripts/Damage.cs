@@ -84,12 +84,10 @@ public class Damage : MonoBehaviour {
 	//Уменьшить ХП + проверка на "смерть"
 	public void ReduceHP (float damage) {
 		if (unit.health <= damage) {
-			Debug.Log ("1");
 			conditions.UnitDie ();
 			unit.health -= damage;
 			return;
 		}
-		Debug.Log ("2");
 		unit.health -= damage;
 		anim.SetTrigger ("attackable");
 	}

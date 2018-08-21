@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1905435086076646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -133.19, y: 1.96, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,9 +58,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -141,14 +141,14 @@ MonoBehaviour:
   attackRange: 1.5
   moveSpeed: 4.5
   impulsePower: 1.5
-  input: 0
+  inputX: 0
+  inputY: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   damage: {fileID: 0}
   conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  myStack: {fileID: 0}
   invulnerabilityIsRedy: 1
   rollCD: 0.5
 --- !u!114 &114839566982050010
