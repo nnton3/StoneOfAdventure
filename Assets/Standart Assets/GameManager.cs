@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+	void Update () {
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit();
+		}
+	}
+
 	//Сложность игры
-	public static int complexity = 3;    //Сложность игры: определяет сложность мобов
+	public static int complexity = 2;    //Сложность игры: определяет сложность мобов
 	//Увеличить сложность
 	public static void IncreaseCombplexity (int dx) {
 		complexity += dx;
