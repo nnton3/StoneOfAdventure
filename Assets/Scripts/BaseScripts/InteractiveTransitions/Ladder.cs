@@ -5,52 +5,22 @@ using UnityEngine;
 public class Ladder : MonoBehaviour {
 
 	bool playerEnter = false;
+	Player player;
+
+	void Start () {
+		player = GameObject.Find ("Player").GetComponent<Player> ();
+	}
 
 	void Update () {
-
-		if (playerEnter) {
-			if (Input.GetKeyDown (KeyCode.UpArrow)) {
-				MoveUp ();
-				return;
-			}
-
-			if (Input.GetKeyUp (KeyCode.UpArrow)) {
-				StopMove ();
-				return;
-			}
-
-			if (Input.GetKeyDown (KeyCode.DownArrow)) {
-				MoveDown ();
-				return;
-			}
-
-			if (Input.GetKeyUp (KeyCode.DownArrow)) {
-				StopMove ();
-				return;
-			}
+		if (playerEnter && Input.GetAxisRaw("Vertical") != 0f) {
+			player.onLadder = true;
 		}
 	}
 
-	void MoveUp () {
-		player.inputY = 1;
-	}
-
-	void MoveDown () {
-		player.inputY = -1;
-	}
-
-	void StopMove () {
-		player.inputY = 0;
-	}
-
-	Unit player;
-
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		if (targetObject.CompareTag ("Player")) {
-			Debug.Log ("enter");
 			targetObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Kinematic;
 			playerEnter = true;
-			player = targetObject.GetComponent<Unit> ();
 		}
 	}
 
@@ -58,7 +28,7 @@ public class Ladder : MonoBehaviour {
 		if (targetObject.CompareTag ("Player")) {
 			targetObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
 			playerEnter = false;
-			player.inputY = 0;
+			player.onLadder = false;
 		}
 	}
 }

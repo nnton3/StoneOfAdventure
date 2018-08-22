@@ -35,10 +35,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700319307991464}
-  - component: {fileID: 61181959419573088}
   - component: {fileID: 212706743177662642}
   - component: {fileID: 114226646228200272}
   - component: {fileID: 50806739638197172}
+  - component: {fileID: 68464041702462824}
   m_Layer: 0
   m_Name: Ladder
   m_TagString: Untagged
@@ -273,8 +273,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61181959419573088
-BoxCollider2D:
+--- !u!68 &68464041702462824
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -285,19 +285,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: 0.05}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.08, y: 0.06}
-    newSize: {x: 0.08, y: 0.06}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7, y: 3.5}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.0062505007, y: -1.4545593}
+  - {x: -0.0070942044, y: 1.5346265}
 --- !u!114 &114226646228200272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,7 +535,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fc71e20b60ed24e49b5ab0721fad6235, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

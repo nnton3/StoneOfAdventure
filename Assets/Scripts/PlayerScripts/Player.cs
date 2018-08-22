@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : Unit {
 
+	public bool onLadder = false;
+
 	void Update () {
 		//Если игрок не находится в состоянии атаки или оглушения
 		if (CanAttack()) {
@@ -27,11 +29,16 @@ public class Player : Unit {
 			
 		if (CanMove()) {
 			inputX = Input.GetAxisRaw ("Horizontal");
+			inputY = Input.GetAxisRaw ("Vertical");
 			flipParam = inputX;
 		}
-
-		rb.velocity = new Vector2 (inputX * moveSpeed, inputY * moveSpeed);
-		anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
+		if (!onLadder) {
+			rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
+			anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
+		} else {
+			rb.velocity = new Vector2 (0, inputY * moveSpeed);
+			anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
+		}
 	}
 
 	//Атака

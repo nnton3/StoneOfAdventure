@@ -8,10 +8,11 @@ public class Tile : MonoBehaviour {
 	public Vector2 endPosition;
 	public bool startTile;
 	public bool endTile;
+	public bool transitionTile;
 
 	void Start () {
 		//Если тайл стартовый - ничего не делать
-		if (startTile || endTile) {
+		if (startTile || endTile || transitionTile) {
 			return;
 		}
 		dangerArea = transform.Find ("Danger_area");
@@ -20,8 +21,15 @@ public class Tile : MonoBehaviour {
 		GenerateEnemies ();
 	}
 
+	//Тайл обычный или нет?
+	bool DefaultTile () {
+		if (startTile || endTile || transitionTile) {
+			return false;
+		} else
+			return true;
+	}
+
 	//Сгенерировать врагов
-	public int enemiesNumber = 3;
 	EnemiesList enemieListScript;
 	void GenerateEnemies () {
 		//Выбрать случайный стак мобов в соответствии с текущей сложностью
