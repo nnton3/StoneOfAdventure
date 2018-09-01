@@ -6,9 +6,6 @@ public class Tile : MonoBehaviour {
 
 	public Vector2 startPosition;
 	public Vector2 endPosition;
-	public bool startTile;
-	public bool endTile;
-	public bool transitionTile;
 
 	void Start () {
 		//Если тайл стартовый - ничего не делать
@@ -22,6 +19,10 @@ public class Tile : MonoBehaviour {
 	}
 
 	//Тайл обычный или нет?
+	public bool startTile;
+	public bool endTile;
+	public bool transitionTile;
+
 	bool DefaultTile () {
 		if (startTile || endTile || transitionTile) {
 			return false;
