@@ -5,9 +5,7 @@ using UnityEngine;
 public class TileGenerator : MonoBehaviour {
 
 	public int TileNumber = 5;
-	public GameObject[] tilesSheet;
-	public GameObject startTile;
-	public GameObject endTile;
+	public GameObject[] specialTilesSheet;
 	public Vector2 wayPosition = new Vector2 (0f, 0f);
 
 	void Start () {
@@ -15,21 +13,20 @@ public class TileGenerator : MonoBehaviour {
 	}
 
 	void GenerateLevel () {
+		//Создать начальный тайл
+		CreateStartTile ();
+		//Создатьтайлы уровня
 		for (int i = 0; i < TileNumber; i++) {
-			if (i != 0 && i != (TileNumber - 1)) {
-				CreateTile ();
-				continue;
-			} else if (i == 0) {
-				CreateStartTile ();
-				continue;
-			} else if (i == (TileNumber - 1)) {
-				CreateEndTile ();
-				continue;
-			}
+			CreateDefaultTile ();
+			CreateTransitionTile ();
 		}
+		//Создать конечный спрайт
+		CreateEndTile ();
 	}
 
 	//Создать начальный тайл
+	public GameObject startTile;
+
 	void CreateStartTile () {
 		Tile tileScript = startTile.GetComponent<Tile> ();
 
@@ -40,21 +37,39 @@ public class TileGenerator : MonoBehaviour {
 		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
 	}
 
-	//Создать случайный тайл
-	void CreateTile () {
-		int randomNumber = Random.Range (0, tilesSheet.Length);
+	//Создать тайл с врагами
+	public GameObject[] defaultTilesSheet;
 
-		Tile tileScript = tilesSheet [randomNumber].GetComponent<Tile> ();
+	void CreateDefaultTile () {
+		int randomNumber = Random.Range (0, defaultTilesSheet.Length);
+
+		Tile tileScript = defaultTilesSheet [randomNumber].GetComponent<Tile> ();
 
 		Vector2 start = tileScript.startPosition;
 		Vector2 end = tileScript.endPosition;
 
-		Instantiate (tilesSheet [randomNumber], new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity);
+		Instantiate (defaultTilesSheet [randomNumber], new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity);
 		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
+	}
 
+	//Создать тайл переход
+	public GameObject[] transitionTilesSheet;
+
+	void CreateTransitionTile () {
+		int randomNumber = Random.Range (0, transitionTilesSheet.Length);
+
+		Tile tileScript = defaultTilesSheet [randomNumber].GetComponent<Tile> ();
+
+		Vector2 start = tileScript.startPosition;
+		Vector2 end = tileScript.endPosition;
+
+		Instantiate (transitionTilesSheet [randomNumber], new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity);
+		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
 	}
 
 	//Создать последний тайл
+	public GameObject endTile;
+
 	void CreateEndTile () {
 		Tile tileScript = endTile.GetComponent<Tile> ();
 
