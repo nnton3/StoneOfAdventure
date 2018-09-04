@@ -8,6 +8,5 @@ public class Enemy_zombie_Kenny_damage : Damage {
 	{
 		ReduceHP (damage);
 		conditions.EnableStun (direction);
-		anim.SetTrigger ("attackable");
 	}
 }
