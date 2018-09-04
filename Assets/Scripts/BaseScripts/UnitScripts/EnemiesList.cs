@@ -48,6 +48,4 @@ public class EnemiesList : MonoBehaviour {
 		}
 		return enemiesPatternArray [chosenPattern];
 	}
-
-
 }

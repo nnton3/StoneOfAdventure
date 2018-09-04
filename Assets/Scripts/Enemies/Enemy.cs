@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : Unit {
 
 	//Ссылка на игрока
-	[HideInInspector]
+	//[HideInInspector]
 	public GameObject target;
 	//Состояния врага
 	[HideInInspector]

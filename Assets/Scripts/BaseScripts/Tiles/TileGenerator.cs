@@ -58,7 +58,7 @@ public class TileGenerator : MonoBehaviour {
 	void CreateTransitionTile () {
 		int randomNumber = Random.Range (0, transitionTilesSheet.Length);
 
-		Tile tileScript = defaultTilesSheet [randomNumber].GetComponent<Tile> ();
+		Tile tileScript = transitionTilesSheet [randomNumber].GetComponent<Tile> ();
 
 		Vector2 start = tileScript.startPosition;
 		Vector2 end = tileScript.endPosition;

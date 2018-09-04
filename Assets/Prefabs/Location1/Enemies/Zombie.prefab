@@ -274,6 +274,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 264
   patron: {fileID: 0}
+  knockDownPower: 5
   defaultMovespeed: 5
   defaultImpulsePower: 5
   alive: 1
@@ -306,21 +307,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  attackPoints: 0
+  attackPoints: 10
   attackSpeed: 0.7
   attackRange: 1.75
   moveSpeed: 2
   impulsePower: 1.5
-  input: 0
+  inputX: 0
+  inputY: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   damage: {fileID: 0}
   conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  myStack: {fileID: 0}
   target: {fileID: 0}
   idle: 1
+  targetRange: 0
+  targetDirection: 0
   bornDelay: 0
   runDistance: 7
   runSpeed: 5

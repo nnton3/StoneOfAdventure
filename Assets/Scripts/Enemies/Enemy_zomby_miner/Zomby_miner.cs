@@ -5,6 +5,7 @@ using UnityEngine;
 public class Zomby_miner : Zombie {
 
 	void Update () {
+		Debug.Log ("скорость бега = " + moveSpeed + " и направление = " + inputX);
 		//Если зомби ожил
 		if (!idle) {
 			//Если он может двигаться

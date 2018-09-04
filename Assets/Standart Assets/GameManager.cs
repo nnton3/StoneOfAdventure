@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	//Сложность игры
-	public static int complexity = 2;    //Сложность игры: определяет сложность мобов
+	public static int complexity = 0;    //Сложность игры: определяет сложность мобов
 	//Увеличить сложность
 	public static void IncreaseCombplexity (int dx) {
 		complexity += dx;

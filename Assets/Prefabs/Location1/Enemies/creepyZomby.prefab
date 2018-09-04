@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  attackPoints: 0
+  attackPoints: 10
   attackSpeed: 0.7
   attackRange: 1.75
   moveSpeed: 2

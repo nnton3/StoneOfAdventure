@@ -199,10 +199,10 @@
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombieZheron_conditions.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombieZheron_damage.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombyZheron.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zomby_miner\Zomby_miner.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zomby_miner\Zomby_miner_conditions.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy_zomby_miner\Zomby_miner_damage.cs" />
      <Compile Include="Assets\Scripts\Enemies\Zombie.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Zomby_miner\Zomby_miner.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Zomby_miner\Zomby_miner_conditions.cs" />
-     <Compile Include="Assets\Scripts\Enemies\Zomby_miner\Zomby_miner_damage.cs" />
      <Compile Include="Assets\Scripts\Interface\Backstage.cs" />
      <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
      <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
