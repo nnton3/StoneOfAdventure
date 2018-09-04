@@ -387,9 +387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: -12.8, y: -3.8}
   endPosition: {x: 12.8, y: -3.8}
-  startTile: 0
-  endTile: 0
-  transitionTile: 1
 --- !u!212 &212250577322279162
 SpriteRenderer:
   m_ObjectHideFlags: 1
