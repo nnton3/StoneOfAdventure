@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/Tiles/TileGenerator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/GameLevel.cs">
     <Files>
-      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileGenerator.cs" Line="30" Column="81" />
+      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileGenerator.cs" Line="22" Column="72" />
       <File FileName="Assets/Scripts/BaseScripts/Tiles/Tile.cs" Line="8" Column="29" />
-      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileWithDefaultEnemy.cs" Line="28" Column="34" />
-      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileCrossroads.cs" Line="5" Column="28" />
+      <File FileName="Assets/Scripts/Levels/Level1.cs" Line="5" Column="32" />
+      <File FileName="Assets/Scripts/BaseScripts/GameLevel.cs" Line="81" Column="58" />
+      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileCrossroads.cs" Line="14" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

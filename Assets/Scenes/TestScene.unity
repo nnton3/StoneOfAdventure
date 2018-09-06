@@ -113,6 +113,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &251695589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 251695590}
+  m_Layer: 0
+  m_Name: Backgrounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &251695590
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251695589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -112.634605, y: 18.963594, z: 16.254353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 759556890}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &444058535
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +196,34 @@ Transform:
   - {fileID: 1873834623}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &759556889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 759556890}
+  m_Layer: 0
+  m_Name: MainBG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &759556890
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 759556889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 251695590}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1564577483
 Prefab:
@@ -315,8 +372,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1871752476}
-  - component: {fileID: 1871752475}
   - component: {fileID: 1871752477}
+  - component: {fileID: 1871752475}
   m_Layer: 0
   m_Name: TileGenerator
   m_TagString: Untagged
@@ -332,15 +389,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1871752474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9dc33de33bcd472d91aca9e2fbe659b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1863a6737132c46418c3a98b716399b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentObject: {fileID: 759556890}
   TileNumber: 5
-  specialTilesSheet: []
-  wayPosition: {x: 0, y: 0}
   startTile: {fileID: 1477445171484838, guid: 6672ec9c349ab469f8541e03915085b1, type: 2}
   defaultTilesSheet:
   - {fileID: 1718424841415036, guid: c2e10c1aca2524ebc9a63f6eaa71ec9e, type: 2}
+  specialTilesSheet:
+  - {fileID: 1976071415555488, guid: 24f4d4ebc1ad34c77a719ab1b7453cc3, type: 2}
   transitionTilesSheet:
   - {fileID: 1568156843246824, guid: 17b93e2e47ca140fc863c28381978cb4, type: 2}
   - {fileID: 1660639881064552, guid: 12cfd1eae535747d1918b8d5a31ce1a1, type: 2}
