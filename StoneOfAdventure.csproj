@@ -444,6 +444,7 @@
     <Compile Include="Assets\Scripts\BaseScripts\BackgroundController.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\DangerArea.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\Flip.cs" />
+    <Compile Include="Assets\Scripts\BaseScripts\GameLevel.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Elevator.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Ladder.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Lever.cs" />
@@ -455,7 +456,9 @@
     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestController.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestList.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\Tiles\Tile.cs" />
+    <Compile Include="Assets\Scripts\BaseScripts\Tiles\TileCrossroads.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\Tiles\TileGenerator.cs" />
+    <Compile Include="Assets\Scripts\BaseScripts\Tiles\TileWithDefaultEnemy.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Conditions.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Damage.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\EnemiesList.cs" />
@@ -490,6 +493,9 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombieZheron_conditions.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombieZheron_damage.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_zombie_Zheron\Enemy_zombyZheron.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy_zomby_miner\Zomby_miner.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy_zomby_miner\Zomby_miner_conditions.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy_zomby_miner\Zomby_miner_damage.cs" />
     <Compile Include="Assets\Scripts\Enemies\Zombie.cs" />
     <Compile Include="Assets\Scripts\Interface\Backstage.cs" />
     <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
@@ -499,6 +505,7 @@
     <Compile Include="Assets\Scripts\Interface\QuestBarElements.cs" />
     <Compile Include="Assets\Scripts\Interface\TransitionController.cs" />
     <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level1.cs" />
     <Compile Include="Assets\Scripts\NPCs\Location1_Level1_Blacksmith.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerConditions.cs" />
