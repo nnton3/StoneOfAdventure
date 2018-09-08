@@ -221,6 +221,7 @@
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerDamage.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Аrrow.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
+     <Compile Include="Assets\Scripts\Quests\Level1\GenerateBlacksmithTiles.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_blacksmith.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_wagon.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />

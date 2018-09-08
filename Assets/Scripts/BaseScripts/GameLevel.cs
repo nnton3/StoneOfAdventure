@@ -8,6 +8,7 @@ public class GameLevel : MonoBehaviour {
 	public Transform parentObject;
 
 	void Start () {
+		tileGeneratorInstance.SetStartPosition (transform.position);
 		GenerateLevel ();
 	}
 
@@ -50,34 +51,44 @@ public class GameLevel : MonoBehaviour {
 	public GameObject startTile;
 
 	public virtual void CreateStartTile () {
-		tileGeneratorInstance.CreateTile (startTile, parentObject);
+		if (startTile != null) {
+			tileGeneratorInstance.CreateTile (startTile, parentObject);
+		}
 	}
 
 	//Создать тайл с врагами
 	public GameObject[] defaultTilesSheet;
 
 	public virtual void CreateDefaultTile () {
-		tileGeneratorInstance.CreateRandomTile (defaultTilesSheet, parentObject);
+		if (defaultTilesSheet [0] != null) {
+			tileGeneratorInstance.CreateRandomTile (defaultTilesSheet, parentObject);
+		}
 	}
 
 	//Создать спец тайл
 	public GameObject[] specialTilesSheet;
 
 	public virtual void CreateSpecialTile () {
-		tileGeneratorInstance.CreateRandomTile (specialTilesSheet, parentObject);
+		if (specialTilesSheet [0] != null) {
+			tileGeneratorInstance.CreateRandomTile (specialTilesSheet, parentObject);
+		}
 	}
 
 	//Создать тайл переход
 	public GameObject[] transitionTilesSheet;
 
 	public virtual void CreateTransitionTile () {
-		tileGeneratorInstance.CreateRandomTile (transitionTilesSheet, parentObject);
+		if (transitionTilesSheet[0] != null) {
+			tileGeneratorInstance.CreateRandomTile (transitionTilesSheet, parentObject);
+		}
 	}
 
 	//Создать последний тайл
 	public GameObject endTile;
 
 	public virtual void CreateEndTile () {
-		tileGeneratorInstance.CreateTile (endTile, parentObject);
+		if (endTile != null) {
+			tileGeneratorInstance.CreateTile (endTile, parentObject);
+		}
 	}
 }

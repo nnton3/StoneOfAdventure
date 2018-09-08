@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 28
+  controlID: 524
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 29
+  controlID: 525
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 30
+  controlID: 526
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,14 +291,14 @@ MonoBehaviour:
     height: 410
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4697.707183122635
+  lastFramingTime: 1901.462138056755
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 91.14075, y: -28.853178, z: -0.18677245}
+    m_Target: {x: 107.9965, y: 12.641459, z: -2.9606366}
     speed: 2
-    m_Value: {x: 91.14075, y: -28.853178, z: -0.18677245}
+    m_Value: {x: 107.9965, y: 12.641459, z: -2.9606366}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -326,9 +326,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 212.37541
+    m_Target: 160.23671
     speed: 2
-    m_Value: 212.37541
+    m_Value: 160.23671
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -369,9 +369,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 783c0000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 82b1fdff22b1ffff7afbffff000000002640000034400000
+    m_ExpandedIDs: 5c0cfdffde0cfdff265dfdffb805feffeacdfefffecdfeff7ecefeff38dafeff1e23ffff8c23ffff0639ffffec3fffff70fbffff9cfbffff00000000a64e0000d0520000a2560000f8560000e0580000645b0000c25b0000d25b0000de5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -742,10 +742,10 @@ MonoBehaviour:
   m_LastProjectPath: /Users/Anton/Desktop/StoneOfAdventure
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 94.997986}
-    m_SelectedIDs: a22f0000
-    m_LastClickedID: 12194
-    m_ExpandedIDs: 000000003c2a0000662b0000d42b0000442d0000f82e000050330000d234000074350000fa3800007c3a0000363c0000843c00002e3d0000923d0000e8440000ea440000ec440000ee440000f0440000f244000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 184.99933}
+    m_SelectedIDs: 7e2f0000
+    m_LastClickedID: 12158
+    m_ExpandedIDs: 000000001a2a0000422b0000b02b0000202d0000d42e00002c330000ae34000064370000d6380000523a00005e3c0000083d00006c3d00003a3e00004c4400004e4400005044000052440000544400005644000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -773,7 +773,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c2a0000662b0000d42b0000442d0000f82e000050330000d234000074350000fa3800007c3a0000363c0000843c00002e3d0000923d0000e8440000ea440000ec440000ee440000f0440000f2440000
+    m_ExpandedIDs: 000000001a2a0000422b0000b02b0000202d0000d42e00002c330000ae34000050350000d6380000523a0000103c00005e3c0000083d00006c3d00004c4400004e4400005044000052440000544400005644000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
