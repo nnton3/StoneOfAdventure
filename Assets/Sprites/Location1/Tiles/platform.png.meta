@@ -3,7 +3,8 @@ guid: 7862044009ad7004096d655754ab1547
 timeCreated: 1536355108
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: platform_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 372, y: 20, z: 372, w: 102}
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -88,7 +89,21 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: platform_0
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 20
+        width: 256
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
