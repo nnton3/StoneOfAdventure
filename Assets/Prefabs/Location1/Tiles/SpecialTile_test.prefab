@@ -95,6 +95,7 @@ MonoBehaviour:
   startPosition: {x: -12.8, y: 0}
   endPosition: {x: 12.8, y: 0}
   tilePositionOnLevel: 2
+  TileNumber: 5
 --- !u!212 &212031341834019978
 SpriteRenderer:
   m_ObjectHideFlags: 1
