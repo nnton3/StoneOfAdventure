@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Quest_blacksmith : Quest {
 
+	void Start () {
+		SetReplics ();
+	}
+
 	public void AddThisQuest () {
 		QuestController.AddActiveQuest (this.GetComponent<Quest>());
 	}
@@ -14,9 +18,7 @@ public class Quest_blacksmith : Quest {
 		replica3.SetActive (false);
 	}
 
-	public GameObject replica1;
-	public GameObject replica2;
-	public GameObject replica3;
+
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		//Если пришел не игрок
@@ -45,5 +47,18 @@ public class Quest_blacksmith : Quest {
 			replica2.SetActive (false);
 			replica3.SetActive (false);
 		}
+	}
+
+	//Получить ссылки на диалоги
+	GameObject replica1;
+	GameObject replica2;
+	GameObject replica3;
+	void SetReplics () {
+		replica1 = GameObject.Find ("Blacksmith_replica1");
+		replica1.SetActive (false);
+		replica2 = GameObject.Find ("Blacksmith_replica2");
+		replica2.SetActive (false);
+		replica3 = GameObject.Find ("Blacksmith_replica3");
+		replica3.SetActive (false);
 	}
 }

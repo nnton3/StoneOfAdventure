@@ -113,6 +113,10 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0}
   endPosition: {x: 25.6, y: 0}
   tilePositionOnLevel: 2
+  transition: {fileID: 1642391422343584, guid: 614d8aa176e9e48d087e39fcb0a7d113, type: 2}
+  position: {x: 7.5, y: 0}
+  roadSignText: Road to Blacksmith
+  deadlockName: BlacksmithBG
 --- !u!212 &212729597921043304
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,8 +148,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1199028967
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d20518ea3ec444caeaae36667e8f913a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

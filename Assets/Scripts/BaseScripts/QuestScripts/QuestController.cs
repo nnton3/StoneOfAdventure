@@ -50,7 +50,6 @@ public class QuestController: MonoBehaviour {
 					return quest;
 				}
 			} catch {
-				Debug.Log ("null");
 				continue;
 			}
 		}

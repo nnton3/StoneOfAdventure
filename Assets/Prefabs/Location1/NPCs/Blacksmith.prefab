@@ -39,12 +39,12 @@ GameObject:
   - component: {fileID: 222023047429484400}
   - component: {fileID: 114816276821074176}
   m_Layer: 0
-  m_Name: Replica3
+  m_Name: Blacksmith_replica3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1302454895329250
 GameObject:
   m_ObjectHideFlags: 1
@@ -74,12 +74,12 @@ GameObject:
   - component: {fileID: 222013833381023806}
   - component: {fileID: 114891907676147396}
   m_Layer: 0
-  m_Name: Replica1
+  m_Name: Blacksmith_replica1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1373439398748600
 GameObject:
   m_ObjectHideFlags: 1
@@ -91,12 +91,12 @@ GameObject:
   - component: {fileID: 222533411797407138}
   - component: {fileID: 114069361907933538}
   m_Layer: 0
-  m_Name: Replica2
+  m_Name: Blacksmith_replica2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1403834378021032
 GameObject:
   m_ObjectHideFlags: 1
@@ -394,9 +394,6 @@ MonoBehaviour:
   target: 3
   objectivesComplete: 0
   questFinish: 0
-  replica1: {fileID: 0}
-  replica2: {fileID: 0}
-  replica3: {fileID: 0}
 --- !u!114 &114091533119497250
 MonoBehaviour:
   m_ObjectHideFlags: 1

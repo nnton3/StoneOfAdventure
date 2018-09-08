@@ -27,7 +27,7 @@ public class TileWithDefaultEnemy : Tile {
 	DangerArea dangerAreaScript;
 	//Сгенерировать случайного врага
 	void CreateEnemies (GameObject chosenEnemie) {
-		float randomEnemiePosition = Random.Range (-5f, 5f);
+		float randomEnemiePosition = Random.Range (5f, 15f);
 		GameObject enemie = Instantiate (chosenEnemie, new Vector2 (transform.position.x + randomEnemiePosition, transform.position.y + 5f), Quaternion.identity);
 		enemie.transform.SetParent (dangerArea);
 		Unit enemieScript = enemie.GetComponent<Unit> ();

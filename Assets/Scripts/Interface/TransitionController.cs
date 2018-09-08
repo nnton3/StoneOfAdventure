@@ -6,15 +6,15 @@ public class TransitionController : MonoBehaviour {
 
 	static GameObject mainBG;
 	static GameObject sideBG;
-	static bool mainBGisActive = true;
-	GameObject backstage;
 
 	void Start () {
-		mainBG = GameObject.Find ("MainBackground");
+		mainBG = GameObject.Find ("MainBG");
 		backstage = GameObject.Find ("Backstage");
 		EnableBackstage (false);
 	}
 
+	//Осуществить переход
+	static bool mainBGisActive = true;
 	public static void Transition () {
 		if (mainBGisActive) {
 			sideBG.SetActive (true);
@@ -27,11 +27,15 @@ public class TransitionController : MonoBehaviour {
 		}
 	}
 
-	public static void SetSideBG (GameObject inputSideBG) {
+	//Запомнить побочный уровень, на который будет идти переход
+	public void SetSideBG (GameObject inputSideBG) {
 		sideBG = inputSideBG;
 	}
 
+	//Включить затемнение экрана при переходе
+	GameObject backstage;
 	public void EnableBackstage (bool enable) {
 		backstage.SetActive (enable);
+		backstage.GetComponent<Backstage> ().StartAnimation ();
 	}
 }

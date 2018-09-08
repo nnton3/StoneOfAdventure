@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interface/TransitionController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/Tiles/TileWithDefaultEnemy.cs">
     <Files>
-      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileGenerator.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/GameLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileCrossroads.cs" Line="10" Column="20" />
-      <File FileName="Assets/Scripts/Quests/Level1/GenerateBlacksmithTiles.cs" Line="11" Column="3" />
-      <File FileName="Assets/Scripts/Interface/TransitionController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Interface/TransitionController.cs" Line="11" Column="36" />
+      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileCrossroads.cs" Line="27" Column="46" />
+      <File FileName="Assets/Scripts/BaseScripts/InteractiveTransitions/TransitionToQuest.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/Interface/Backstage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs" Line="58" Column="1" />
+      <File FileName="Assets/Scripts/BaseScripts/Tiles/TileWithDefaultEnemy.cs" Line="30" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
