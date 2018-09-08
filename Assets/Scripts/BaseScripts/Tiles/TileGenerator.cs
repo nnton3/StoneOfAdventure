@@ -21,7 +21,6 @@ public class TileGenerator : MonoBehaviour {
 
 		Instantiate (tile, new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity).transform.SetParent(parent);
 		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
-		Debug.Log ("wayPosition = " + wayPosition);
 	}
 
 	//Создать случайный тайл из массива
@@ -35,6 +34,5 @@ public class TileGenerator : MonoBehaviour {
 
 		Instantiate (tileSheet [randomNumber], new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity).transform.SetParent(parent);
 		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
-		Debug.Log ("wayPosition = " + wayPosition);
 	}
 }
