@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 114072661643323376}
   - component: {fileID: 61647114619065592}
   - component: {fileID: 50240237643881768}
+  - component: {fileID: 95760377824157554}
   m_Layer: 11
   m_Name: Blacksmith
   m_TagString: NPC
@@ -263,7 +264,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993852997408838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.01, y: -7.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 224147977822674022}
@@ -305,9 +306,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.72, y: 0.35}
+    newSize: {x: 0.72, y: 0.35}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -315,6 +316,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!95 &95760377824157554
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993852997408838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16957526a5e9c4399b4edc44fd93edc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114036699204464892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,7 +392,11 @@ MonoBehaviour:
   ID: 1
   progress: 0
   target: 3
-  questComplete: 0
+  objectivesComplete: 0
+  questFinish: 0
+  replica1: {fileID: 0}
+  replica2: {fileID: 0}
+  replica3: {fileID: 0}
 --- !u!114 &114091533119497250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -649,9 +671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7d6e2cf10fc4f248fd67bc70fac9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replica1: {fileID: 1348641775518076}
-  replica2: {fileID: 1373439398748600}
-  replica3: {fileID: 1190682683949746}
 --- !u!114 &114712744229212766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -944,12 +963,12 @@ SpriteRenderer:
   m_SortingLayerID: -1262227759
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91010895dcda84e18907d243ce7eade1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71532f399f950aa4dbf35d69b95e6883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.72, y: 0.35}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
