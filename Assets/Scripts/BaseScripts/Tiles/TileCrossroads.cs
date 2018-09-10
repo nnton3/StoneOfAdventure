@@ -13,13 +13,13 @@ public class TileCrossroads : Tile {
 
 	//Создать переход
 	public GameObject transition;
-	public Vector2 position;
+	public Vector2 transitionPosition;
 	//Указатель: куда переход
 	public string roadSignText;
 	//Ссылка на уровень, куда будет сделан переход
 	public string deadlockName;
 	void CreateTransition () {
-		Vector2 positionToInstance = new Vector2 (transform.position.x + position.x, transform.position.y + position.y);
+		Vector2 positionToInstance = new Vector2 (transform.position.x + transitionPosition.x, transform.position.y + transitionPosition.y);
 		//Создать переход
 		GameObject transitionObj = Instantiate (transition, positionToInstance, Quaternion.identity);
 		TransitionToQuest transitionScript = transitionObj.GetComponent<TransitionToQuest> ();

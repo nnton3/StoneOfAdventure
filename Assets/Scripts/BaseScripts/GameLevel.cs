@@ -29,22 +29,25 @@ public class GameLevel : MonoBehaviour {
 
 	//Проверка: позиция зарезервирована под спец тайл или нет
 	public virtual void SelectTile (int position) {
+		//Если спец тайлов нет
 		if (specialTilesSheet.Length == 0) {
 			CreateDefaultTile ();
 			return;
 		}
-		for (int i = 0; i < specialTilesSheet.Length; i++) {
-			TileCrossroads tileScript = specialTilesSheet [i].GetComponent<TileCrossroads> ();
+		for (int tileNumber = 0; tileNumber < specialTilesSheet.Length; tileNumber++) {
+			TileCrossroads tileScript = specialTilesSheet [tileNumber].GetComponent<TileCrossroads> ();
+			Debug.Log ("spec pos = " + tileScript.tilePositionOnLevel + " and tile pos = " + position);
 			//Если спец тайл должен находиться на этой позиции
-			if (position != tileScript.tilePositionOnLevel) {
-				CreateDefaultTile ();
+			if (position == tileScript.tilePositionOnLevel) {
+				CreateSpecialTile (tileNumber);
+				Debug.Log ("special create");
 				return;
-			} else {
-				//Иначе сгенерировать тайл с врагами
-				CreateSpecialTile ();
-				return;
-			}
+			} 
 		}
+		//Иначе сгенерировать тайл с врагами
+		CreateDefaultTile ();
+		Debug.Log ("default create");
+		return;
 	}
 
 	//Создать начальный тайл
@@ -68,9 +71,9 @@ public class GameLevel : MonoBehaviour {
 	//Создать спец тайл
 	public GameObject[] specialTilesSheet;
 
-	public virtual void CreateSpecialTile () {
+	public virtual void CreateSpecialTile (int tileNumber) {
 		if (specialTilesSheet [0] != null) {
-			tileGeneratorInstance.CreateRandomTile (specialTilesSheet, parentObject);
+			tileGeneratorInstance.CreateTile (specialTilesSheet[tileNumber], parentObject);
 		}
 	}
 
