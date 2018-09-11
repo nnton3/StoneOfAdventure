@@ -7,29 +7,29 @@ TextureImporter:
     21300000: kuznec anim_0
     21300002: kuznec anim_1
     21300004: kuznec anim_2
-    21300006: kuznec anim_3
-    21300008: kuznec anim_4
-    21300010: kuznec anim_5
-    21300012: kuznec anim_6
-    21300014: kuznec anim_7
+    21300006: kuznec anim_1
+    21300008: kuznec anim_2
+    21300010: kuznec anim_3
+    21300012: kuznec anim_4
+    21300014: kuznec anim_5
     21300016: kuznec anim_8
     21300018: kuznec anim_9
-    21300020: kuznec anim_10
+    21300020: kuznec anim_6
     21300022: kuznec anim_11
     21300024: kuznec anim_12
-    21300026: kuznec anim_13
+    21300026: kuznec anim_7
     21300028: kuznec anim_14
-    21300030: kuznec anim_15
-    21300032: kuznec anim_16
-    21300034: kuznec anim_17
-    21300036: kuznec anim_18
-    21300038: kuznec anim_19
-    21300040: kuznec anim_20
-    21300042: kuznec anim_21
-    21300044: kuznec anim_22
-    21300046: kuznec anim_23
-    21300048: kuznec anim_24
-    21300050: kuznec anim_25
+    21300030: kuznec anim_8
+    21300032: kuznec anim_9
+    21300034: kuznec anim_10
+    21300036: kuznec anim_11
+    21300038: kuznec anim_12
+    21300040: kuznec anim_13
+    21300042: kuznec anim_14
+    21300044: kuznec anim_15
+    21300046: kuznec anim_16
+    21300048: kuznec anim_17
+    21300050: kuznec anim_18
     21300052: kuznec anim_26
     21300054: kuznec anim_27
     21300056: kuznec anim_28
@@ -179,34 +179,6 @@ TextureImporter:
       name: kuznec anim_1
       rect:
         serializedVersion: 2
-        x: 165
-        y: 199
-        width: 10
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_2
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 202
-        width: 4
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_3
-      rect:
-        serializedVersion: 2
         x: 395
         y: 150
         width: 100
@@ -218,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_4
+      name: kuznec anim_2
       rect:
         serializedVersion: 2
         x: 649
@@ -232,7 +204,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_5
+      name: kuznec anim_3
       rect:
         serializedVersion: 2
         x: 903
@@ -246,7 +218,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_6
+      name: kuznec anim_4
       rect:
         serializedVersion: 2
         x: 1157
@@ -260,7 +232,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_7
+      name: kuznec anim_5
       rect:
         serializedVersion: 2
         x: 1411
@@ -274,35 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_8
-      rect:
-        serializedVersion: 2
-        x: 1435
-        y: 199
-        width: 10
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_9
-      rect:
-        serializedVersion: 2
-        x: 1458
-        y: 202
-        width: 4
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_10
+      name: kuznec anim_6
       rect:
         serializedVersion: 2
         x: 1665
@@ -316,35 +260,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_11
-      rect:
-        serializedVersion: 2
-        x: 1689
-        y: 199
-        width: 10
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_12
-      rect:
-        serializedVersion: 2
-        x: 1712
-        y: 202
-        width: 4
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_13
+      name: kuznec anim_7
       rect:
         serializedVersion: 2
         x: 1919
@@ -358,21 +274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_14
-      rect:
-        serializedVersion: 2
-        x: 1966
-        y: 202
-        width: 4
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_15
+      name: kuznec anim_8
       rect:
         serializedVersion: 2
         x: 2173
@@ -386,7 +288,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_16
+      name: kuznec anim_9
       rect:
         serializedVersion: 2
         x: 2427
@@ -400,7 +302,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_17
+      name: kuznec anim_10
       rect:
         serializedVersion: 2
         x: 2681
@@ -414,7 +316,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_18
+      name: kuznec anim_11
       rect:
         serializedVersion: 2
         x: 2935
@@ -428,7 +330,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_19
+      name: kuznec anim_12
       rect:
         serializedVersion: 2
         x: 3189
@@ -442,7 +344,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_20
+      name: kuznec anim_13
       rect:
         serializedVersion: 2
         x: 3443
@@ -456,7 +358,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_21
+      name: kuznec anim_14
       rect:
         serializedVersion: 2
         x: 3697
@@ -470,7 +372,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_22
+      name: kuznec anim_15
       rect:
         serializedVersion: 2
         x: 3951
@@ -484,7 +386,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_23
+      name: kuznec anim_16
       rect:
         serializedVersion: 2
         x: 4205
@@ -498,7 +400,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_24
+      name: kuznec anim_17
       rect:
         serializedVersion: 2
         x: 4459
@@ -512,97 +414,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: kuznec anim_25
+      name: kuznec anim_18
       rect:
         serializedVersion: 2
         x: 4713
         y: 150
         width: 100
         height: 100
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_26
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 182
-        width: 7
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_27
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 189
-        width: 6
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_28
-      rect:
-        serializedVersion: 2
-        x: 659
-        y: 182
-        width: 7
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_29
-      rect:
-        serializedVersion: 2
-        x: 913
-        y: 182
-        width: 7
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_30
-      rect:
-        serializedVersion: 2
-        x: 914
-        y: 189
-        width: 6
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: kuznec anim_31
-      rect:
-        serializedVersion: 2
-        x: 1422
-        y: 189
-        width: 6
-        height: 11
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
