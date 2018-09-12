@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099027685614498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.772, y: -0.346, z: 0}
+  m_LocalPosition: {x: 0.772, y: 0.68, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4053352234162802}
@@ -145,11 +145,11 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6}
+  m_Offset: {x: 0, y: 0.42}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.000033721328, y: -0.010022938}
-  - {x: 0.9685635, y: -0.009378135}
+  - {x: -0.00027931036, y: -0.0000061392784}
+  - {x: 0.97012913, y: 0.000015348196}
   - {x: 0.946927, y: 0.2680426}
   - {x: 0.5809027, y: 0.2705258}
   - {x: 0.58078, y: 0.4102571}
@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4842aeda50274f3abf21c7fb17a7c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: 3.9}
-  endPosition: {x: 18.8, y: 4.2}
+  startPosition: {x: 0, y: 0}
+  endPosition: {x: 18.8, y: 4.1}
 --- !u!114 &114927518291064266
 MonoBehaviour:
   m_ObjectHideFlags: 1

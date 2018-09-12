@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1540306907943594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.475, y: 0.139, z: 0}
+  m_LocalPosition: {x: -0.499, y: 0.77, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4816448488770354}
@@ -128,7 +128,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.99, y: -0.22}
+  m_Offset: {x: -0.99, y: 0.42}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.99000037, y: 0.6600652}
@@ -151,7 +151,7 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 9.9, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.07581025, y: -2.1147718}
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4842aeda50274f3abf21c7fb17a7c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: -6.6}
+  startPosition: {x: 19.8, y: -6.6}
   endPosition: {x: 19.8, y: -6.6}
 --- !u!212 &212463872289693130
 SpriteRenderer:

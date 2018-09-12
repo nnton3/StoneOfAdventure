@@ -76,11 +76,11 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.185, y: -0.22}
+  m_Offset: {x: 0, y: -0.22}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.1850063, y: 0.0000037401915}
-  - {x: 1.3749702, y: 0.000031769276}
+  - {x: 0, y: 0.64}
+  - {x: 2.56, y: 0.64}
 --- !u!114 &114283029334669782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,7 +114,7 @@ MonoBehaviour:
   endPosition: {x: 25.6, y: 0}
   tilePositionOnLevel: 2
   transition: {fileID: 1642391422343584, guid: 614d8aa176e9e48d087e39fcb0a7d113, type: 2}
-  transitionPosition: {x: 10, y: -1}
+  transitionPosition: {x: 10, y: 5.5}
   roadSignText: Road to Blacksmith
   deadlockName: BlacksmithBG
 --- !u!212 &212729597921043304
