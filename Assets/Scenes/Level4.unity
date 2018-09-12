@@ -378,6 +378,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114078400145201944, guid: 5838c40d0b45142ecbec8fef6f51901f,
+        type: 2}
+      propertyPath: Tier1Enemie.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 114137270160968298, guid: 5838c40d0b45142ecbec8fef6f51901f,
         type: 2}
       propertyPath: specialTilesSheet.Array.size
@@ -452,6 +457,12 @@ Prefab:
       propertyPath: transitionTilesSheet.Array.data[1]
       value: 
       objectReference: {fileID: 1660639881064552, guid: 12cfd1eae535747d1918b8d5a31ce1a1,
+        type: 2}
+    - target: {fileID: 114078400145201944, guid: 5838c40d0b45142ecbec8fef6f51901f,
+        type: 2}
+      propertyPath: Tier1Enemie.Array.data[3]
+      value: 
+      objectReference: {fileID: 1154866833855728, guid: 3f251b138d6a34e8c90b509822eb1203,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5838c40d0b45142ecbec8fef6f51901f, type: 2}
@@ -699,10 +710,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  far clip plane: 7000
+  field of view: 50
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -725,7 +736,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1054637766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 8.865231, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
