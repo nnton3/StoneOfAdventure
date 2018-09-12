@@ -78,8 +78,8 @@ EdgeCollider2D:
   m_Offset: {x: 1.185, y: -0.22}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.1857598, y: 0.012065306}
-  - {x: 1.3742261, y: -0.0007123053}
+  - {x: -1.1849998, y: -0.4499993}
+  - {x: 2.205002, y: -0.45001557}
 --- !u!114 &114816376130024320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
   endPosition: {x: 33.9, y: 0}
   tilePositionOnLevel: 4
   transition: {fileID: 1642391422343584, guid: 614d8aa176e9e48d087e39fcb0a7d113, type: 2}
-  transitionPosition: {x: 0, y: 0}
+  transitionPosition: {x: 24.5, y: -5.5}
   roadSignText: Enter to mine
   deadlockName: MineBG
 --- !u!212 &212505410778212104
