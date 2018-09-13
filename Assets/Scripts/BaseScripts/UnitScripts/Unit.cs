@@ -1,33 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*!
+\brief Этот класс является родительским для всех юнитов в игре, в нем содержатся общие для всех свойства и методы
+	   
+	   Данный класс содержит общие параметры юнитов, такие как здоровье, урон, броня и др.,
+	   а также некоторые часто используемые методы, такие как "Атака", "Достать/Убрать щит" и др.
+*/
 public abstract class Unit : MonoBehaviour {
 
-	public float health = 0f;
-	public float armor = 0f;
-	public float attackPoints = 0f;
-	public float attackSpeed = 0f;
-	public float attackRange = 1f;
+	public float health = 0f;   ///< Общий запас здоровья юнита в данный момент
+	public float armor = 0f;   ///< Показатель брони  
+	public float attackPoints = 0f;   ///< Количество урона наносимого за один удар
+	public float attackSpeed = 0f;   ///< Количество секунд до возможности снова произвести атаку
+	public float attackRange = 1f;   ///< Дальность атаки
 
-	public float moveSpeed;
-	public float impulsePower;
+	public float moveSpeed;   ///< Скорость бега
+	public float impulsePower;   ///< Силы с которой юнит будет отброшен при получении урона
 	[HideInInspector]
-	public float inputX = 0f;
+	public float inputX = 0f;   ///< Направление движения по Х
 	[HideInInspector]
-	public float inputY = 0f;
+	public float inputY = 0f;   ///< Направление движения по Y
 	[HideInInspector]
-	public Rigidbody2D rb;
+	public Rigidbody2D rb;   ///< Ссылка на компонент Rigidbody2D
 	[HideInInspector]
-	public Animator anim;
+	public Animator anim;   ///< Ссылка на Animator
 	[HideInInspector]
-	public Damage damage;
+	public Damage damage;   ///< Ссылка на контроллер входящего урона
 	[HideInInspector]
-	public Conditions conditions;
+	public Conditions conditions;   ///< Ссылка на контроллер состояний юнита
 	[HideInInspector]
-	public float direction = 1f;
+	public float direction = 1f;   ///< Переменная в которой хранится текущее направление юнита
 	[HideInInspector]
-	public float flipParam = 0f;
+	public float flipParam = 0f;   ///< Переменная в которой записан параметр от которого зависит направление игрока
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -36,14 +41,14 @@ public abstract class Unit : MonoBehaviour {
 		damage = GetComponent<Damage> ();
 	}
 
-	//Атаковать
+	///Запускает анимацию атаки и переход в состояние "Атака"
 	public virtual void Attack () {
 		CheckBlock ();
 		conditions.attack = true;
 		anim.SetTrigger ("attack");
 	}
 
-	//Использовать щит
+	///Запускает анимацию "достать/убрать щит" и переход в/из состояния "Блок"
 	public void UseShield () {
 		//Если блок не включен
 		if (!conditions.block) {
@@ -55,7 +60,7 @@ public abstract class Unit : MonoBehaviour {
 		anim.SetTrigger ("block");
 	}
 
-	//Проверка на блок
+	///Проверяет, находится ли юнит в состоянии блока
 	public void CheckBlock() {
 		//Если игрок в блоке
 		if (conditions.block) {
@@ -64,6 +69,7 @@ public abstract class Unit : MonoBehaviour {
 		}
 	}
 
+	///Отвечает за передвижение юнита и включение/выключение анимации бега
 	public virtual void Run () {
 		rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
 		if (CanMove ()) {
@@ -71,19 +77,21 @@ public abstract class Unit : MonoBehaviour {
 		}
 	}
 
-	//Проверка на возможность двигаться
+	///Проверка на возможность двигаться
 	public virtual bool CanMove() {
 		return (conditions.alive && !conditions.stun);
 	}
 
-	//Проверка на возможность атаковать
+	///Проверка на возможность атаковать
 	public virtual bool CanAttack() {
 		return (!conditions.attack && !conditions.stun);
 	}
 
-	//Зарегистрироваться в родительском стаке врагов
+	/*! Используется только для вражеских юнитов для помещения их в триггер,
+		при срабатывании которого они начинают преследовать и атаковать игрока
+		\param[in] myStack ссылка на триггер в котором будет находиться юнит
+	*/
 	[HideInInspector]
-	//public DangerArea myStack;
 	public virtual void RegistrationInStack (DangerArea myStack) {
 		myStack = GetComponentInParent<DangerArea> ();
 		myStack.AddEnemie (this);
