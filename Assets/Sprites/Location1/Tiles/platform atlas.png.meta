@@ -34,6 +34,12 @@ TextureImporter:
     21300054: ground_1
     21300056: ground_2
     21300058: ground_3
+    21300060: trava_0
+    21300062: trava_1
+    21300064: trava_2
+    21300066: trava_dark_2
+    21300068: trava_dark_1
+    21300070: trava_dark_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -575,6 +581,90 @@ TextureImporter:
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trava_0
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 504
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trava_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 477
+        width: 43
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trava_2
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 503
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trava_dark_2
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 451
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trava_dark_1
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 527
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trava_dark_0
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 528
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
