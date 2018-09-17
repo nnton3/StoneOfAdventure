@@ -120,12 +120,31 @@ public class Damage : MonoBehaviour {
 		\param[in] damage величина входящего урона
 	*/ 
 	public void ReduceHP (float damage) {
-		if (unit.health <= damage) {
+		//Если урон больше, чем сумма брони и здоровья
+		if ((unit.health + unit.armor) <= damage) {
 			conditions.UnitDie ();
+			//Юнит погибает
 			unit.health -= damage;
 			return;
 		}
-		unit.health -= damage;
-		anim.SetTrigger ("attackable");
+		//Иначе если есть броня, то вычесть урон сначала из брони
+		if (unit.armor != 0f) {
+			//Если брони достаточно, чтобы, блокировать весь урон, то из здоровья ничего не вычитаем
+			if (unit.armor >= damage) {
+				unit.armor -= damage;
+				anim.SetTrigger ("attackable");
+				return;
+				//Иначе блокировать часть урона за счет брони, а остаток вычесть из здоровья
+			} else {
+				damage -= unit.armor;
+				unit.armor = 0f;
+				unit.health -= damage;
+				anim.SetTrigger ("attackable");
+			}
+		} else {
+			damage -= unit.armor;
+			unit.health -= damage;
+			anim.SetTrigger ("attackable");
+		}
 	}
 }

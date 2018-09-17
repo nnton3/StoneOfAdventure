@@ -19,7 +19,10 @@ public class TileGenerator : MonoBehaviour {
 		Vector2 start = tileScript.startPosition;
 		Vector2 end = tileScript.endPosition;
 
-		Instantiate (tile, new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity).transform.SetParent(parent);
+		GameObject tileInstance = Instantiate (tile, new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity);
+		tileInstance.transform.SetParent (parent);
+		Tile tileInstanceScript = tileInstance.GetComponent<Tile>();
+		tileInstanceScript.complexity = GameManager.complexity;
 		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
 	}
 
@@ -32,7 +35,10 @@ public class TileGenerator : MonoBehaviour {
 		Vector2 start = tileScript.startPosition;
 		Vector2 end = tileScript.endPosition;
 
-		Instantiate (tileSheet [randomNumber], new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity).transform.SetParent(parent);
+		GameObject tileInstance = Instantiate (tileSheet [randomNumber], new Vector2 (wayPosition.x + start.x, wayPosition.y + start.y), Quaternion.identity);
+		tileInstance.transform.SetParent (parent);
+		Tile tileInstanceScript = tileInstance.GetComponent<Tile>();
+		tileInstanceScript.complexity = GameManager.complexity;
 		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
 	}
 }

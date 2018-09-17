@@ -9,22 +9,53 @@ public class GameLevel : MonoBehaviour {
 
 	void Start () {
 		tileGeneratorInstance.SetStartPosition (transform.position);
+		SetStartComplexity ();
+		CalculatePeriodToIncreaseComplexity ();
 		GenerateLevel ();
 	}
 
 	//Сколько всего будет тайлов без учета тайлов-переходом
-	public int TileNumber = 5;
+	public int tileNumber = 5;
 	public virtual void GenerateLevel () {
 		//Создать начальный тайл
 		CreateStartTile ();
 		//Создатьтайлы уровня
-		for (int i = 0; i < TileNumber; i++) {
+		for (int i = 0; i < tileNumber; i++) {
+			//Задать сложность мобов
+			SetComplexity ();
+			Debug.Log ("complexity = " + GameManager.complexity);
 			//Сгенерировать тайл для i-ой позиции
 			SelectTile (i);
 			CreateTransitionTile ();
 		}
 		//Создать конечный спрайт
 		CreateEndTile ();
+	}
+
+	//Распределение сложности мобов по уровню
+	public int minComplexity;   ///< Минимальная сложность на генерируемом уровне
+	public int maxComplexity;   ///< Максимальная сложность на генерируемом уровне
+	public int periodToIncreaseComplexity; ///< Сколько тайлов сгенерируется до следующего увеличения сложности
+	/// Метод вычисляет количество тайлов с одинаковой сложностью, после генерации которых будет произведено увеличение сложности
+	void CalculatePeriodToIncreaseComplexity () {
+		periodToIncreaseComplexity = tileNumber / (maxComplexity - minComplexity);
+		tilesToIncreaseComplexity = periodToIncreaseComplexity;
+	}
+	/// Задать начальную сложность мобов на уровне
+	void SetStartComplexity () {
+		while (GameManager.complexity != minComplexity) {
+			Debug.Log ("start complexity increase");
+			GameManager.IncreaseCombplexity (1);
+		}
+	}
+	int tilesToIncreaseComplexity;   ///< Количество тайлов, которые осталось сгенерировать до увеличения сложности
+	void SetComplexity () {
+		if (tilesToIncreaseComplexity != 0) {
+			tilesToIncreaseComplexity -= 1;
+		} else {
+			GameManager.IncreaseCombplexity (1);
+			tilesToIncreaseComplexity = periodToIncreaseComplexity;
+		}
 	}
 
 	//Проверка: позиция зарезервирована под спец тайл или нет

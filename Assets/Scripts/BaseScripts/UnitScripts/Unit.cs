@@ -91,7 +91,6 @@ public abstract class Unit : MonoBehaviour {
 		при срабатывании которого они начинают преследовать и атаковать игрока
 		\param[in] myStack ссылка на триггер в котором будет находиться юнит
 	*/
-	[HideInInspector]
 	public virtual void RegistrationInStack (DangerArea myStack) {
 		myStack = GetComponentInParent<DangerArea> ();
 		myStack.AddEnemie (this);

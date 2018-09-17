@@ -40,8 +40,7 @@ public class EnemiesList : MonoBehaviour {
 	};
 
 	//Выбрать паттерн
-	public int[] ChooseEnemieStackPattern () {
-		int complexityIndex = GameManager.complexity;
+	public int[] ChooseEnemieStackPattern (int complexityIndex) {
 		int chosenPattern = Random.Range ((0 + complexityIndex), (2 + complexityIndex));
 		if (chosenPattern > 6) {
 			return enemiesPatternArray [6];

@@ -22,6 +22,4 @@ public class GameManager : MonoBehaviour {
 	public static void ComplexitySetToZero () {
 		complexity = 0;
 	}
-
-
 }

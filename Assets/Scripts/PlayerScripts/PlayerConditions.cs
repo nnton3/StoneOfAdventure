@@ -4,19 +4,7 @@ using UnityEngine;
 
 public class PlayerConditions : Conditions {
 
-	//БЛОК
-	public override void EnableBlock ()
-	{
-		base.EnableBlock ();
-	}
-
-	public override void DisableBlock ()
-	{
-		base.DisableBlock ();
-	}
-
 	//ПЕРЕКАТ
-
 	//Параметры "Переката"
 	public float rollImpulsePower = 10f;
 
@@ -38,17 +26,6 @@ public class PlayerConditions : Conditions {
 		Physics2D.IgnoreLayerCollision (9, 8, false);
 	}
 
-	//ОГЛУШЕНИЕ
-	public override void EnableStun (float stunDirection)
-	{
-		base.EnableStun (stunDirection);
-	}
-
-	public override void DisableStun ()
-	{
-		base.DisableStun ();
-	}
-
 	//АТАКА МЕЧОМ
 
 	public override void Default_Attack ()
@@ -58,18 +35,11 @@ public class PlayerConditions : Conditions {
 		anim.speed = 1 / unit.attackSpeed;
 	}
 
-
-
 	//Сбросить чек атаки
 	public override IEnumerator FinishAttack () {
 		yield return new WaitForSeconds (0.75f);
 		attack = false;
 		anim.speed = 1;
-	}
-
-	//ВЫСТРЕЛ ИЗ ЛУКА
-	public override void Bow_Attack () {
-		base.Bow_Attack ();
 	}
 
 	//СМЕРТЬ

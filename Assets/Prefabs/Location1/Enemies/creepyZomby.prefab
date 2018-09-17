@@ -274,7 +274,7 @@ MonoBehaviour:
   attackSpeed: 0.7
   attackRange: 1.75
   moveSpeed: 2
-  impulsePower: 10
+  impulsePower: 1.5
   inputX: 0
   inputY: 0
   rb: {fileID: 0}

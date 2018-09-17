@@ -15,7 +15,7 @@ public class TileWithDefaultEnemy : Tile {
 	EnemiesList enemieListScript;
 	void GenerateEnemies () {
 		//Выбрать случайный стак мобов в соответствии с текущей сложностью
-		int[] chosenPattern = enemieListScript.ChooseEnemieStackPattern ();
+		int[] chosenPattern = enemieListScript.ChooseEnemieStackPattern (complexity);
 
 		for (int i = 0; i < chosenPattern.Length; i++) {
 			CreateEnemies (enemieListScript.GetRandomEnemieFromTier(chosenPattern[i]));
