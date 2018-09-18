@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*! 
+\brief Класс объекта "лестница"
 
+	   Отслеживает проникновение игрока в триггер "лестница", в котором он может двигаться по вертикали
+*/
 public class Ladder : MonoBehaviour {
 
-	bool playerEnter = false;
-	Player player;
+	bool playerEnter = false;   ///< Игрок находится в триггере "лестница" или нет
+	Player player;   ///< Ссылка на объект "игрок"
 
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<Player> ();

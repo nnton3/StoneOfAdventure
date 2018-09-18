@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*!
+\brief Абстрактный класс, используемый генераторами уровня для создания тайлов.
+	   
+	   Содержит методы для создания конкретных тайлов и создания случайного тайла из списка.
+*/
 public class TileGenerator : MonoBehaviour {
 	
-	//Ориентир для следующего тайла в очереди создания обычных тайлов
-	public Vector2 wayPosition = new Vector2 (0f, 0f);
+	public Vector2 wayPosition = new Vector2 (0f, 0f);   ///< Координаты создания тайла. Обновляется после создания очередного тайла.
 
-	//Задать начальную точку
+	///Задает конкретное значение для wayPosition. Используется для ручного задания начальной точки создания уровня
 	public void SetStartPosition (Vector2 startPosition) {
 		wayPosition = startPosition;
 	}
 
-	//Создать конкретный тайл
+	/*! Создание конкретного тайла
+		
+		\param[in] tile Ссылка на префаб тайла, который необходимо создать
+		\param[in] parent Ссылка на родительский объект, в котором в данный момент генерируются тайлы
+	*/
 	public void CreateTile (GameObject tile, Transform parent) {
 		Tile tileScript = tile.GetComponent<Tile> ();
 
@@ -26,7 +33,11 @@ public class TileGenerator : MonoBehaviour {
 		wayPosition = new Vector2 (wayPosition.x + end.x, wayPosition.y + end.y);
 	}
 
-	//Создать случайный тайл из массива
+	/*! Создание случайного тайла из списка
+		
+		\param[in] tileSheet Список доступных тайлов, из которого выбирается один случайным образом
+		\param[in] parent Ссылка на родительский объект, в котором в данный момент генерируются тайлы
+	*/
 	public void CreateRandomTile (GameObject[] tileSheet, Transform parent) {
 		int randomNumber = Random.Range (0, tileSheet.Length);
 

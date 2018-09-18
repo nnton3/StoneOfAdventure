@@ -93,7 +93,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 0}
-  TileNumber: 0
+  tileNumber: 5
+  minComplexity: 0
+  maxComplexity: 0
+  periodToIncreaseComplexity: 0
   startTile: {fileID: 1400938549535026, guid: 530180ef945fa4d34b974900b2bf4171, type: 2}
   defaultTilesSheet: []
   specialTilesSheet: []
@@ -112,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0}
   endPosition: {x: 25.6, y: 0}
+  complexity: 0
   tilePositionOnLevel: 2
   transition: {fileID: 1642391422343584, guid: 614d8aa176e9e48d087e39fcb0a7d113, type: 2}
   transitionPosition: {x: 10, y: 5.5}

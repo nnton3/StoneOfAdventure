@@ -1,23 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*!
+\brief Дочерний класс от класса Tile. Используется при создании тайлов-перекрестков
+	   
+	   Тайлы-перекрестки содержат переходы в отдельные зоны уровня. Ими могут быть зоны с квестовыми NPC, участками с квестовыми мобами и предметами.
+	   Местоположение тайлов на уровне задается вручную, по-умолчанию на уровне генерируются тайлы с врагами в соответствии с текущим уровнем сложности.
+	   На тайлах-перекрестках имеется объект "переход" (transition). Это интерактивный объект, ведущий в отельную игровую зону. 
+*/
 public class TileCrossroads : Tile {
-	//Позиция тайла на уровне
-	public int tilePositionOnLevel = 0;
 
+	public int tilePositionOnLevel = 0;   ///< Позиция тайла-перекрестка в очереди создания обычных тайлов
 
 	void Start () {
 		CreateTransition ();
 	}
 
-	//Создать переход
-	public GameObject transition;
-	public Vector2 transitionPosition;
-	//Указатель: куда переход
-	public string roadSignText;
-	//Ссылка на уровень, куда будет сделан переход
-	public string deadlockName;
+	public GameObject transition;   ///< Ссылка на префаб "переход"
+	public Vector2 transitionPosition;   ///< Координаты относительно данного тайла, в которых создается "переход"
+	public string roadSignText;   ///< Текст на указателе, который говорит игроку, в какую зону будет выполнен переход
+	public string deadlockName;   ///< Родительский объект, в которой будет помещена сгенерированная зона, в которую будет выполнен переход
+
+	/*!
+		Создание перехода по заданным параметрам
+	*/
 	void CreateTransition () {
 		Vector2 positionToInstance = new Vector2 (transform.position.x + transitionPosition.x, transform.position.y + transitionPosition.y);
 		//Создать переход
