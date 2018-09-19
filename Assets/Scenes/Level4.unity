@@ -386,7 +386,7 @@ Prefab:
     - target: {fileID: 114137270160968298, guid: 5838c40d0b45142ecbec8fef6f51901f,
         type: 2}
       propertyPath: specialTilesSheet.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4468736163185854, guid: 5838c40d0b45142ecbec8fef6f51901f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -429,7 +429,7 @@ Prefab:
         type: 2}
       propertyPath: specialTilesSheet.Array.data[1]
       value: 
-      objectReference: {fileID: 1113859418197814, guid: f365b72f2c96949e3a7a6d2e48ed1ec6,
+      objectReference: {fileID: 1994440319224816, guid: 7cea321ece3c64163808dd76fae6962e,
         type: 2}
     - target: {fileID: 114137270160968298, guid: 5838c40d0b45142ecbec8fef6f51901f,
         type: 2}
@@ -440,7 +440,7 @@ Prefab:
         type: 2}
       propertyPath: specialTilesSheet.Array.data[0]
       value: 
-      objectReference: {fileID: 1994440319224816, guid: 7cea321ece3c64163808dd76fae6962e,
+      objectReference: {fileID: 1113859418197814, guid: f365b72f2c96949e3a7a6d2e48ed1ec6,
         type: 2}
     - target: {fileID: 1683341481410008, guid: 5838c40d0b45142ecbec8fef6f51901f, type: 2}
       propertyPath: m_IsActive
@@ -725,10 +725,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  far clip plane: 7000
+  field of view: 50
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -751,7 +751,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1054637766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.51, y: 8.875231, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

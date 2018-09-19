@@ -36,6 +36,7 @@ public class GameLevel : MonoBehaviour {
 	}
 
 	//Распределение сложности мобов по уровню
+	int currentComplexity;   ///< Текущая сложность на генерируемом уровне
 	public int minComplexity;   ///< Минимальная сложность на генерируемом уровне
 	public int maxComplexity;   ///< Максимальная сложность на генерируемом уровне
 	public int periodToIncreaseComplexity; ///< Интервал (в тайлах) увеличения сложности
@@ -50,8 +51,7 @@ public class GameLevel : MonoBehaviour {
 	/// Задать начальную сложность мобов на уровне
 	void SetStartComplexity () {
 		while (GameManager.complexity != minComplexity) {
-			Debug.Log ("start complexity increase");
-			GameManager.IncreaseCombplexity (1);
+			currentComplexity += 1;
 		}
 	}
 
@@ -60,7 +60,7 @@ public class GameLevel : MonoBehaviour {
 		if (tilesToIncreaseComplexity != 0) {
 			tilesToIncreaseComplexity -= 1;
 		} else {
-			GameManager.IncreaseCombplexity (1);
+			currentComplexity += 1;
 			tilesToIncreaseComplexity = periodToIncreaseComplexity;
 		}
 	}
