@@ -26,7 +26,7 @@ public class GameLevel : MonoBehaviour {
 		for (int i = 0; i < tileNumber; i++) {
 			//Задать сложность мобов
 			SetComplexity ();
-			Debug.Log ("complexity = " + GameManager.complexity);
+			Debug.Log ("complexity = " + currentComplexity);
 			//Сгенерировать тайл для i-ой позиции
 			SelectTile (i);
 			CreateTransitionTile ();
@@ -50,7 +50,7 @@ public class GameLevel : MonoBehaviour {
 	}
 	/// Задать начальную сложность мобов на уровне
 	void SetStartComplexity () {
-		while (GameManager.complexity != minComplexity) {
+		while (currentComplexity != minComplexity) {
 			currentComplexity += 1;
 		}
 	}
@@ -74,17 +74,14 @@ public class GameLevel : MonoBehaviour {
 		}
 		for (int tileNumber = 0; tileNumber < specialTilesSheet.Length; tileNumber++) {
 			TileCrossroads tileScript = specialTilesSheet [tileNumber].GetComponent<TileCrossroads> ();
-			Debug.Log ("spec pos = " + tileScript.tilePositionOnLevel + " and tile pos = " + position);
 			//Если спец тайл должен находиться на этой позиции
 			if (position == tileScript.tilePositionOnLevel) {
 				CreateSpecialTile (tileNumber);
-				Debug.Log ("special create");
 				return;
 			} 
 		}
 		//Иначе сгенерировать тайл с врагами
 		CreateDefaultTile ();
-		Debug.Log ("default create");
 		return;
 	}
 
@@ -92,7 +89,7 @@ public class GameLevel : MonoBehaviour {
 	///Создание стартового тайла
 	public virtual void CreateStartTile () {
 		if (startTile != null) {
-			tileGeneratorInstance.CreateTile (startTile, parentObject);
+			tileGeneratorInstance.CreateTile (startTile, parentObject, currentComplexity);
 		}
 	}
 
@@ -100,7 +97,7 @@ public class GameLevel : MonoBehaviour {
 	///Создание стандартного тайла с врагами
 	public virtual void CreateDefaultTile () {
 		if (defaultTilesSheet [0] != null) {
-			tileGeneratorInstance.CreateRandomTile (defaultTilesSheet, parentObject);
+			tileGeneratorInstance.CreateRandomTile (defaultTilesSheet, parentObject, currentComplexity);
 		}
 	}
 
@@ -108,7 +105,7 @@ public class GameLevel : MonoBehaviour {
 	///Создать спец тайл
 	public virtual void CreateSpecialTile (int tileNumber) {
 		if (specialTilesSheet [0] != null) {
-			tileGeneratorInstance.CreateTile (specialTilesSheet[tileNumber], parentObject);
+			tileGeneratorInstance.CreateTile (specialTilesSheet[tileNumber], parentObject, currentComplexity);
 		}
 	}
 
@@ -117,7 +114,7 @@ public class GameLevel : MonoBehaviour {
 
 	public virtual void CreateTransitionTile () {
 		if (transitionTilesSheet[0] != null) {
-			tileGeneratorInstance.CreateRandomTile (transitionTilesSheet, parentObject);
+			tileGeneratorInstance.CreateRandomTile (transitionTilesSheet, parentObject, currentComplexity);
 		}
 	}
 
@@ -125,7 +122,7 @@ public class GameLevel : MonoBehaviour {
 	///Создание конечного тайла
 	public virtual void CreateEndTile () {
 		if (endTile != null) {
-			tileGeneratorInstance.CreateTile (endTile, parentObject);
+			tileGeneratorInstance.CreateTile (endTile, parentObject, currentComplexity);
 		}
 	}
 }
