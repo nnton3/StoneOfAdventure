@@ -16,7 +16,7 @@ public class Ladder : MonoBehaviour {
 	}
 
 	void Update () {
-		if (playerEnter && Input.GetAxisRaw("Vertical") != 0f) {
+		if (playerEnter && player.inputY != 0f) {
 			player.onLadder = true;
 		}
 	}

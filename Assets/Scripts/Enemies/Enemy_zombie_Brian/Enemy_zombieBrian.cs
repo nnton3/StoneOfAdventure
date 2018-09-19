@@ -32,7 +32,7 @@ public class Enemy_zombieBrian : Zombie {
 	//Нанести урон
 	public override void Attack () {
 		//Остановиться
-		inputX = 0f;
+		inputX = 0;
 		//Выйти из стана
 		conditions.DisableStun();
 		//Убрать блок если юнит в блоке

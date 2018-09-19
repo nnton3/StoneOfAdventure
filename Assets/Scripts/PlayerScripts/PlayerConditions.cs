@@ -16,7 +16,7 @@ public class PlayerConditions : Conditions {
 		EnableStun (unit.direction);
 		Physics2D.IgnoreLayerCollision (9, 8, true);
 		attack = true;
-		unit.inputX = Mathf.Sign (unit.direction);
+		unit.inputX = (int)Mathf.Sign (unit.direction);
 	}
 
 	public override void DisableInvulnerability ()

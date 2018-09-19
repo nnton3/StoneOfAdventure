@@ -42,7 +42,7 @@ public class Enemy_zombyZheron : Zombie {
 	//Атака
 	public override void Attack() {
 		//Остановиться
-		inputX = 0f;
+		inputX = 0;
 		//Выйти из стана
 		conditions.DisableStun();
 		//Убрать блок если юнит в блоке

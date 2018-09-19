@@ -3,17 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_zombie_Rubick_conditions : Conditions {
-	
-	//ОГЛУШЕНИЕ
-	public override void EnableStun (float stunDirection)
-	{
-		base.EnableStun (stunDirection);
-	}
-
-	public override void DisableStun ()
-	{
-		base.DisableStun ();
-	}
 
 	//АТАКА
 	//Выпустить снаряд

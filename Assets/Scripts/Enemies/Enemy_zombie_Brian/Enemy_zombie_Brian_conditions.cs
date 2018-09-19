@@ -4,34 +4,6 @@ using UnityEngine;
 
 public class Enemy_zombie_Brian_conditions : Conditions {
 	
-	//БЛОК
-	public override void EnableBlock ()
-	{
-		base.EnableBlock ();
-	}
-
-	public override void DisableBlock ()
-	{
-		base.DisableBlock ();
-	}
-
-	//ОГЛУШЕНИЕ
-	public override void EnableStun (float direction)
-	{
-		base.EnableStun (direction);
-	}
-
-	public override void DisableStun ()
-	{
-		base.DisableStun ();
-	}
-
-	//АТАКА
-	public override void Default_Attack ()
-	{
-		base.Default_Attack ();
-	}
-
 	//Завершить атаку
 	public override IEnumerator FinishAttack ()
 	{

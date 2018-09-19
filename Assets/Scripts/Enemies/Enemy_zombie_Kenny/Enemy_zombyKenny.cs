@@ -32,7 +32,7 @@ public class Enemy_zombyKenny: Zombie {
 	//Атаковать
 	public override void Attack (){
 		//Остановиться
-		inputX = 0f;
+		inputX = 0;
 		conditions.attack = true;
 		//Ударить
 		anim.SetTrigger ("attack");

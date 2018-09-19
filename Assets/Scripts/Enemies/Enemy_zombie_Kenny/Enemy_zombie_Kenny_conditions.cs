@@ -12,7 +12,7 @@ public class Enemy_zombie_Kenny_conditions : Conditions {
 	public override IEnumerator FinishAttack ()
 	{
 		return base.FinishAttack ();
-		unit.inputX = 0f;
+		unit.inputX = 0;
 	}
 
 	public override void UnitDie (){

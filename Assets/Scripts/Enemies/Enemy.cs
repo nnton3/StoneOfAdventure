@@ -24,11 +24,11 @@ public class Enemy : Unit {
 	[HideInInspector]
 	public float targetRange = 0f;
 	[HideInInspector]
-	public float targetDirection =0f;
+	public int targetDirection =0;
 
 	//Определение местоположения игрока
 	public virtual void FindTarget () {
 		targetRange = Mathf.Abs (transform.position.x - target.transform.position.x);
-		targetDirection = Mathf.Sign (transform.position.x - target.transform.position.x);
+		targetDirection = (int)Mathf.Sign (transform.position.x - target.transform.position.x);
 	}
 }

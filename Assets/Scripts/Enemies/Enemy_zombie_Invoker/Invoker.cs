@@ -17,12 +17,12 @@ public class Invoker : Zombie {
 	}
 
 	public override IEnumerator TimeToBorn () {
-		inputX = 1f;
+		inputX = 1;
 		flipParam = inputX;
 		anim.SetTrigger ("born");
 		yield return new WaitForSeconds (bornDelay);
 		flipParam = -1;
-		inputX = 0f;
+		inputX = 0;
 		rb.gravityScale = 1f;
 	}
 }

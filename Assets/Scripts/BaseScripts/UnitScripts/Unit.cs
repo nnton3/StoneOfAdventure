@@ -18,9 +18,9 @@ public abstract class Unit : MonoBehaviour {
 	public float moveSpeed;   ///< Скорость бега
 	public float impulsePower;   ///< Силы с которой юнит будет отброшен при получении урона
 	[HideInInspector]
-	public float inputX = 0f;   ///< Направление движения по Х
-	[HideInInspector]
-	public float inputY = 0f;   ///< Направление движения по Y
+	public int inputX = 0;   ///< Направление движения по Х
+	//[HideInInspector]
+	public int inputY = 0;   ///< Направление движения по Y
 	[HideInInspector]
 	public Rigidbody2D rb;   ///< Ссылка на компонент Rigidbody2D
 	[HideInInspector]
@@ -30,9 +30,9 @@ public abstract class Unit : MonoBehaviour {
 	[HideInInspector]
 	public Conditions conditions;   ///< Ссылка на контроллер состояний юнита
 	[HideInInspector]
-	public float direction = 1f;   ///< Переменная в которой хранится текущее направление юнита
+	public int direction = 1;   ///< Переменная в которой хранится текущее направление юнита
 	[HideInInspector]
-	public float flipParam = 0f;   ///< Переменная в которой записан параметр от которого зависит направление игрока
+	public int flipParam = 0;   ///< Переменная в которой записан параметр от которого зависит направление игрока
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();

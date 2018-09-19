@@ -33,7 +33,7 @@ public class Enemy_invokedZomby : Zombie {
 
 	//Нанести урон
 	public override void Attack () {
-		inputX = 0f;
+		inputX = 0;
 		conditions.attack = true;
 		anim.SetTrigger ("attack");
 	}

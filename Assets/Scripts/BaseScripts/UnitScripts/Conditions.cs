@@ -50,14 +50,14 @@ public class Conditions : MonoBehaviour {
 		
 		\param[in] direction направление атаки
 	*/
-	public virtual void EnableStun (float direction) {
+	public virtual void EnableStun (int direction) {
 		stun = true;
 		unit.inputX = direction;
 		SetMovespeed (unit.impulsePower);
 	}
 	///Выключение состояния "Оглушение"
 	public virtual void DisableStun () {
-		unit.inputX = 0f;
+		unit.inputX = 0;
 		stun = false;
 		SetImpulse (defaultImpulsePower);
 		SetMovespeed (defaultMovespeed);

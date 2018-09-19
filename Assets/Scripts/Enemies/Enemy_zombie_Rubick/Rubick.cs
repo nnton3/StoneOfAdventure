@@ -20,10 +20,10 @@ public class Rubick : Zombie {
 	}
 
 	public override IEnumerator TimeToBorn () {
-		inputX = 1f;
+		inputX = 1;
 		anim.SetTrigger ("born");
 		yield return new WaitForSeconds (bornDelay);
-		inputX = 0f;
+		inputX = 0;
 		rb.gravityScale = 1f;
 	}
 }

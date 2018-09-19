@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy_zombie_Brian_damage : Damage {
 
-	public override void DefaultDamage(float damage, float direction) {
+	public override void DefaultDamage(float damage, int direction) {
 
 		bool backToTheEnemy = BackToTheEnemyCheck (direction);
 

@@ -26,7 +26,6 @@ public class GameLevel : MonoBehaviour {
 		for (int i = 0; i < tileNumber; i++) {
 			//Задать сложность мобов
 			SetComplexity ();
-			Debug.Log ("complexity = " + currentComplexity);
 			//Сгенерировать тайл для i-ой позиции
 			SelectTile (i);
 			CreateTransitionTile ();

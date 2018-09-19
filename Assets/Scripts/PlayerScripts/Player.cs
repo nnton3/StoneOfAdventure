@@ -26,12 +26,13 @@ public class Player : Unit {
 				PullBow ();
 			}
 		}	
-			
+		//Управление для ПК
 		if (CanMove()) {
-			inputX = Input.GetAxisRaw ("Horizontal");
-			inputY = Input.GetAxisRaw ("Vertical");
+			//inputX = Input.GetAxisRaw ("Horizontal");
+			//inputY = (int)Input.GetAxisRaw ("Vertical");
 			flipParam = inputX;
 		}
+
 		if (!onLadder) {
 			rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
 			anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
@@ -39,6 +40,16 @@ public class Player : Unit {
 			rb.velocity = new Vector2 (0, inputY * moveSpeed);
 			anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
 		}
+	}
+
+	///Управление для Android
+	public void HorizontalMoves (int input) {
+		inputX = input;
+	}
+
+	///Управление для Android
+	public void VerticalMoves (int input) {
+		inputY = input;
 	}
 
 	//Атака
@@ -52,7 +63,7 @@ public class Player : Unit {
 	public bool invulnerabilityIsRedy = true;
 	public float rollCD = 3f;
 
-	void Roll() {
+	public void Roll() {
 		//Если игрок не выполняет перекат
 		if (!conditions.invulnerability && invulnerabilityIsRedy) {
 			//Проверить на использование щита

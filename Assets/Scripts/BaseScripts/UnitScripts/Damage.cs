@@ -26,7 +26,7 @@ public class Damage : MonoBehaviour {
 		\param[in] damage величина входящего урона
 		\param[in] direction направление удара (с какой стороны ударили слева или справа)
 	*/
-	public virtual void DefaultDamage(float damage, float direction) {
+	public virtual void DefaultDamage(float damage, int direction) {
 		unit.health -= damage;
 	}
 
@@ -35,7 +35,7 @@ public class Damage : MonoBehaviour {
 		\param[in] damage величина входящего урона
 		\param[in] direction направление удара (с какой стороны ударили слева или справа)
 	*/
-	public virtual void DamageThroughTheBlock (float damage, float direction) {
+	public virtual void DamageThroughTheBlock (float damage, int direction) {
 		//Если игрок не сделал перекат
 		if (!conditions.invulnerability) {
 			conditions.EnableStun (direction);
@@ -49,7 +49,7 @@ public class Damage : MonoBehaviour {
 		\param[in] damage величина входящего урона
 		\param[in] direction направление удара (с какой стороны ударили слева или справа)
 	*/
-	public virtual void DamageIgnoresTheRoll (float damage, float direction) {
+	public virtual void DamageIgnoresTheRoll (float damage, int direction) {
 		
 		bool backToTheEnemy = BackToTheEnemyCheck (direction);
 
@@ -77,7 +77,7 @@ public class Damage : MonoBehaviour {
 		\param[in] direction направление удара (с какой стороны ударили слева или справа)
 		\param[in] criticalScale множитель атаки
 	*/
-	public virtual void CriticalDamage (float damage, float direction, float criticalScale) {
+	public virtual void CriticalDamage (float damage, int direction, float criticalScale) {
 		unit.health -= (damage * criticalScale);
 	}
 
@@ -96,7 +96,7 @@ public class Damage : MonoBehaviour {
 		\param[in] direction направление удара (с какой стороны ударили слева или справа)
 		\param[in] impulsePower сила отталкивания, определяет насколько далеко улетит юнит
 	*/
-	public virtual void KnockDown(float damage, float direction, float impulsePower) {
+	public virtual void KnockDown(float damage, int direction, float impulsePower) {
 		if (!conditions.invulnerability) {
 			conditions.SetImpulse (impulsePower);
 			conditions.EnableStun (direction);
@@ -110,7 +110,7 @@ public class Damage : MonoBehaviour {
 		\param[in] direction направление удара
 		\return удар был в спину или нет
 	*/
-	public bool BackToTheEnemyCheck (float direction) {
+	public bool BackToTheEnemyCheck (int direction) {
 		return unit.direction == direction;
 	}
 

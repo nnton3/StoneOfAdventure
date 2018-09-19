@@ -4,23 +4,6 @@ using UnityEngine;
 
 public class Enemy_zombie_creepyZombie_conditions : Conditions {
 
-	//ОГЛУШЕНИЕ
-	public override void EnableStun (float stunDirection)
-	{
-		base.EnableStun (stunDirection);
-	}
-
-	public override void DisableStun ()
-	{
-		base.DisableStun ();
-	}
-
-	//АТАКА
-	public override void Default_Attack ()
-	{
-		base.Default_Attack ();
-	}
-
 	public override IEnumerator FinishAttack ()
 	{
 		yield return new WaitForSeconds (unit.attackSpeed);

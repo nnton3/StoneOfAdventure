@@ -34,7 +34,7 @@ public class Default_zombie : Zombie {
 
 	//Нанести урон
 	public override void Attack () {
-		inputX = 0f;
+		inputX = 0;
 		if (!conditions.attack) {
 			conditions.attack = true;
 			anim.SetTrigger ("attack");

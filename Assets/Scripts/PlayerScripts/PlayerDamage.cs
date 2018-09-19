@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDamage : Damage {
 
-	public override void DefaultDamage(float damage, float stunDirection) {
+	public override void DefaultDamage(float damage, int stunDirection) {
 
 		bool backToTheEnemy = BackToTheEnemyCheck (stunDirection);
 
@@ -29,7 +29,7 @@ public class PlayerDamage : Damage {
 		}
 	}
 
-	public override void CriticalDamage (float damage, float stunDirection, float criticalScale) {
+	public override void CriticalDamage (float damage, int stunDirection, float criticalScale) {
 		
 		bool backToTheEnemy = BackToTheEnemyCheck (stunDirection);
 		float criticalDamageValue = (damage * criticalScale);

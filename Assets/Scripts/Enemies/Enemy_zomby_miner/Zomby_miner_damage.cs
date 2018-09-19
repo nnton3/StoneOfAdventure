@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Zomby_miner_damage : Damage {
 
-	public override void DefaultDamage (float damage, float direction) {
+	public override void DefaultDamage (float damage, int direction) {
 		ReduceHP (damage);
 		conditions.EnableStun (direction);
 	}

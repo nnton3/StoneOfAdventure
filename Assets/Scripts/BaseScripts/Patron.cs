@@ -16,7 +16,7 @@ public class Patron : MonoBehaviour {
 	}
 
 	[HideInInspector]
-	public float input = 0f;
+	public int input = 0;
 	public float moveSpeed = 0f;
 
 	void Update () {
@@ -35,7 +35,7 @@ public class Patron : MonoBehaviour {
 		}
 	}
 
-	public virtual void SetDirection (float direction) {
+	public virtual void SetDirection (int direction) {
 		input = direction;
 		if (direction < 0f) {
 			FlipObject();
