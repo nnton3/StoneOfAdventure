@@ -42,7 +42,7 @@ public class GameLevel : MonoBehaviour {
 	/// Метод вычисляет количество тайлов с одинаковой сложностью, после генерации которых будет произведено увеличение сложности
 	void CalculatePeriodToIncreaseComplexity () {
 		if ((maxComplexity - minComplexity) != 0) {
-			periodToIncreaseComplexity = tileNumber / (maxComplexity - minComplexity);
+			periodToIncreaseComplexity = tileNumber / (maxComplexity + 1 - minComplexity);
 			tilesToIncreaseComplexity = periodToIncreaseComplexity;
 		} else
 			periodToIncreaseComplexity = 500;
@@ -56,12 +56,11 @@ public class GameLevel : MonoBehaviour {
 
 	int tilesToIncreaseComplexity;   ///< Количество тайлов, которые осталось сгенерировать до увеличения сложности
 	void SetComplexity () {
-		if (tilesToIncreaseComplexity != 0) {
-			tilesToIncreaseComplexity -= 1;
-		} else {
+		if (tilesToIncreaseComplexity == 0) {
 			currentComplexity += 1;
 			tilesToIncreaseComplexity = periodToIncreaseComplexity;
 		}
+		tilesToIncreaseComplexity -= 1;
 	}
 
 	///Проверка: позиция зарезервирована под спец тайл или нет
