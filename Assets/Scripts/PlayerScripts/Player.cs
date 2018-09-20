@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Unit {
 
 	public bool onLadder = false;
-
+	public bool onPC = false;
 	void Update () {
 		//Если игрок не находится в состоянии атаки или оглушения
 		if (CanAttack()) {
@@ -28,8 +28,10 @@ public class Player : Unit {
 		}	
 		//Управление для ПК
 		if (CanMove()) {
-			//inputX = Input.GetAxisRaw ("Horizontal");
-			//inputY = (int)Input.GetAxisRaw ("Vertical");
+			if (onPC) {
+				inputX = (int)Input.GetAxisRaw ("Horizontal");
+				inputY = (int)Input.GetAxisRaw ("Vertical");
+			}
 			flipParam = inputX;
 		}
 
@@ -94,7 +96,7 @@ public class Player : Unit {
 	void PullBow () {
 		CheckBlock ();
 		//Игрок в режиме атаки
-		conditions.attack = false;
+		conditions.attack = true;
 		anim.SetTrigger ("pullBow");
 	}
 }
