@@ -44,19 +44,25 @@ public class Player : Unit {
 
 	///Управление для Android
 	public void HorizontalMoves (int input) {
-		inputX = input;
+		if (CanMove ()) {
+			inputX = input;
+		}
 	}
 
 	///Управление для Android
 	public void VerticalMoves (int input) {
-		inputY = input;
+		if (CanMove ()) {
+			inputY = input;
+		}
 	}
 
 	//Атака
 	public override void Attack () {
-		CheckBlock ();
-		conditions.attack = true;
-		anim.SetTrigger ("attack");
+		if (CanAttack ()) {
+			CheckBlock ();
+			conditions.attack = true;
+			anim.SetTrigger ("attack");
+		}
 	}
 
 	//Использовать перекат
@@ -64,14 +70,16 @@ public class Player : Unit {
 	public float rollCD = 3f;
 
 	public void Roll() {
-		//Если игрок не выполняет перекат
-		if (!conditions.invulnerability && invulnerabilityIsRedy) {
-			//Проверить на использование щита
-			CheckBlock ();
-			//Сделать перекат
-			anim.SetTrigger ("roll");
-			StartCoroutine ("ResetRollCheck");	
-			conditions.EnableInvulnerability ();
+		if (CanAttack ()) {
+			//Если игрок не выполняет перекат
+			if (!conditions.invulnerability && invulnerabilityIsRedy) {
+				//Проверить на использование щита
+				CheckBlock ();
+				//Сделать перекат
+				anim.SetTrigger ("roll");
+				StartCoroutine ("ResetRollCheck");	
+				conditions.EnableInvulnerability ();
+			}
 		}
 	}
 
@@ -88,16 +96,5 @@ public class Player : Unit {
 		//Игрок в режиме атаки
 		conditions.attack = false;
 		anim.SetTrigger ("pullBow");
-	}
-		
-	//Проверка на возможность что-либо делать
-	public override bool CanMove ()
-	{
-		return base.CanMove ();
-	}
-
-	public override bool CanAttack ()
-	{
-		return base.CanAttack ();
 	}
 }
