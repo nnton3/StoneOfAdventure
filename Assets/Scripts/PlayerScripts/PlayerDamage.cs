@@ -16,8 +16,10 @@ public class PlayerDamage : Damage {
 				ReduceHP (damage);
 			} else {
 				//Если игрок стоит лицом к врагу
-				conditions.EnableStun (stunDirection);
-				anim.SetTrigger ("blocked");
+				if (!conditions.stun) {
+					conditions.EnableStun (stunDirection);
+					anim.SetTrigger ("blocked");
+				}
 			}
 			//Если игрок не заблокировал и не использовал перекат
 		} else if (!conditions.invulnerability) {
@@ -25,7 +27,9 @@ public class PlayerDamage : Damage {
 		}
 		if (!conditions.invulnerability) {
 			//Получить оглушение
-			conditions.EnableStun (stunDirection);
+			if (!conditions.stun) {
+				conditions.EnableStun (stunDirection);
+			}
 		}
 	}
 
@@ -41,13 +45,19 @@ public class PlayerDamage : Damage {
 				//Нанести урон
 				ReduceHP (criticalDamageValue);
 				//Получить оглушение
-				conditions.EnableStun (stunDirection);
+				if (!conditions.stun) {
+					conditions.EnableStun (stunDirection);
+				}
 				//Анимация получения урона
-			} else
+			} else {
 				//Если игрок стоит лицом к врагу
-				conditions.EnableStun (stunDirection);
-			anim.SetTrigger ("blocked");
-			//Если игрок не заблокировал и не использовал перекат
+				if (!conditions.stun) {
+					conditions.EnableStun (stunDirection);
+				
+					anim.SetTrigger ("blocked");
+				}
+			}
+		//Если игрок не заблокировал и не использовал перекат
 		} else if (!conditions.invulnerability) {
 			ReduceHP (criticalDamageValue);
 		}

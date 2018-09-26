@@ -18,12 +18,12 @@ public class Ladder : MonoBehaviour {
 	void Update () {
 		if (playerEnter && player.inputY != 0f) {
 			player.onLadder = true;
+			player.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Kinematic;
 		}
 	}
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		if (targetObject.CompareTag ("Player")) {
-			targetObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Kinematic;
 			playerEnter = true;
 		}
 	}

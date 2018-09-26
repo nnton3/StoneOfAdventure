@@ -69,7 +69,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1778306702508318
 GameObject:
   m_ObjectHideFlags: 1
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045, y: 0.09}
+  m_Offset: {x: 0, y: 0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.75, y: 0}
@@ -226,7 +226,8 @@ MonoBehaviour:
   attackCollision:
     serializedVersion: 2
     m_Bits: 264
-  arrow: {fileID: 0}
+  patron: {fileID: 0}
+  knockDownPower: 5
   defaultMovespeed: 5
   defaultImpulsePower: 5
   alive: 1
@@ -274,16 +275,18 @@ MonoBehaviour:
   attackRange: 2.5
   moveSpeed: 2
   impulsePower: 1.5
-  input: 0
+  inputX: 0
+  inputY: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
   damage: {fileID: 0}
   conditions: {fileID: 0}
   direction: 1
   flipParam: 0
-  myStack: {fileID: 0}
   target: {fileID: 0}
   idle: 1
+  targetRange: 0
+  targetDirection: 0
   bornDelay: 0
 --- !u!114 &114384131617170850
 MonoBehaviour:

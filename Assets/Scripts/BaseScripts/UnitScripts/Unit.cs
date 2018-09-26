@@ -65,7 +65,7 @@ public abstract class Unit : MonoBehaviour {
 		//Если игрок в блоке
 		if (conditions.block) {
 			//Убрать щит
-			UseShield();
+			conditions.DisableBlock ();
 		}
 	}
 

@@ -98,7 +98,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.2
-    functionName: Default_Attack
+    functionName: Hit_Ignores_The_Roll
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

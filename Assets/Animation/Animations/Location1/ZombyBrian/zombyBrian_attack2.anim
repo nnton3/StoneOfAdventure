@@ -136,14 +136,14 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.72380954
-    functionName: Default_Attack
+    functionName: Hit_Through_The_Block
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.3809524
-    functionName: Default_Attack
+    functionName: Hit_Ignores_The_Roll
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
