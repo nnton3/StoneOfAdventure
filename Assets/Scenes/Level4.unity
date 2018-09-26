@@ -957,6 +957,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114152501767654006, guid: b8ef3e26a68ff474d8761f85957cba24,
+        type: 2}
+      propertyPath: effects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4565846800603532, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -1298,7 +1303,14 @@ Prefab:
       propertyPath: m_AnchorMax.x
       value: 0.89
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114152501767654006, guid: b8ef3e26a68ff474d8761f85957cba24,
+        type: 2}
+      propertyPath: effects.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f09ba7e16b3dc043abcab3bcc5823fb, type: 3}
+    m_RemovedComponents:
+    - {fileID: 82618235085391586, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
+    - {fileID: 114152501767654006, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1398616542
@@ -1493,20 +1505,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1905435086076646, guid: b8ef3e26a68ff474d8761f85957cba24,
     type: 2}
   m_PrefabInternal: {fileID: 1369525743}
---- !u!114 &1776166743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1776166734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e52e62ac7214048abcdbd43a9d2ed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effects:
-  - {fileID: 8300000, guid: f630c8222be7c4e6b93dae692a67f43e, type: 3}
---- !u!82 &1776166744
+--- !u!82 &1776166735
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1586,6 +1585,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1776166736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1776166734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e52e62ac7214048abcdbd43a9d2ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 8300000, guid: f831466472474bb4896e36bf0f9c4a26, type: 3}
+  - {fileID: 8300000, guid: d1256636b10306449b7a8bf6f5295a0c, type: 3}
 --- !u!4 &1776166745 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4565846800603532, guid: b8ef3e26a68ff474d8761f85957cba24,
