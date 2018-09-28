@@ -226,6 +226,8 @@
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_blacksmith.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_wagon.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />
+     <Compile Include="Assets\Scripts\TestingScripts\Euler\EulerGeneration.cs" />
+     <Compile Include="Assets\Scripts\TestingScripts\Euler\EulerTile.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\HomyReplics.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Laser.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\VideoAd.cs" />

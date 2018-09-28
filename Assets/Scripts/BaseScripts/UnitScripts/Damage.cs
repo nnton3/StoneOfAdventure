@@ -40,6 +40,7 @@ public class Damage : MonoBehaviour {
 		if (!conditions.invulnerability) {
 			if (!conditions.stun) {
 				conditions.EnableStun (direction);
+				conditions.DisableBlock ();
 				anim.SetTrigger ("attackable");
 			}
 			ReduceHP (damage);

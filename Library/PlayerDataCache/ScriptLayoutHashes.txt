@@ -92,7 +92,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 5ded6dc5d569db3f510cf56b077fd8e5 Assembly-CSharp.dll:.Quest_blacksmith
 5b07546f9d94bec00f41fcea5ce0bb2b Assembly-CSharp.dll:.HomyReplics
 ca3ac0b37762af0a2124a1fd6e4bfbed Assembly-CSharp.dll:Cinemachine.CinemachineExternalCamera
-08e99e381605e4ba94b4f2dcd3aa2e52 Assembly-CSharp.dll:.Player
+4f7b0504abbb1fd3be2063544b2e5bc5 Assembly-CSharp.dll:.Player
 21481916854a28fa9678638d60d27d28 Assembly-CSharp.dll:.AudioController
 cace2fcf768fba4eb7e133e439712ca1 Assembly-CSharp.dll:.Zomby_miner
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Transition

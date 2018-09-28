@@ -1,14 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/UnitScripts/Conditions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TestingScripts/Euler/EulerGeneration.cs">
     <Files>
-      <File FileName="Assets/Scripts/BaseScripts/InteractiveTransitions/Ladder.cs" Line="21" Column="10" />
-      <File FileName="Assets/Scripts/PlayerScripts/Player.cs" Line="64" Column="12" />
-      <File FileName="Assets/Scripts/PlayerScripts/PlayerConditions.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Unit.cs" Line="69" Column="3" />
-      <File FileName="Assets/Scripts/PlayerScripts/PlayerDamage.cs" Line="59" Column="5" />
-      <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Damage.cs" Line="14" Column="14" />
-      <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Conditions.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/TestingScripts/Euler/EulerGeneration.cs" Line="35" Column="47" />
+      <File FileName="Assets/Scripts/TestingScripts/Euler/EulerTile.cs" Line="12" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
