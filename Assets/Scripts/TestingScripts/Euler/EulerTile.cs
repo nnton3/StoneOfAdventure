@@ -9,5 +9,6 @@ public class EulerTile : MonoBehaviour {
 	public bool leftBound;
 	public bool rightBound;
 
-	public int massiveNumber = 0;
+	public int arrayNumber = 0;
+	public Vector2 positionInTable;
 }
