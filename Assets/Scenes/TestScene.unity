@@ -140,10 +140,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28db7a6212e342df93ac6afed80ade4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineNumber: 5
+  lineNumber: 15
   columnNumber: 15
   tileDx: 12.8
   tileDy: 12.8
+  lineArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  workingArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   leftBound: {fileID: 1039836777241580, guid: 76b2333abb94c4ba7bd058fdaeb21e7b, type: 2}
   topBound: {fileID: 1218425270768946, guid: fb86232047154483cb9e5c2f36ce02a3, type: 2}
   bottomBound: {fileID: 1494564498453088, guid: 92829262f67454493ac4f77b34252cda,
@@ -201,7 +233,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 30
+    OrthographicSize: 65
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -213,7 +245,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 444058535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.7, y: -0.1, z: -10}
+  m_LocalPosition: {x: 90, y: -0.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1873834623}
@@ -499,7 +531,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 30
+  orthographic size: 65
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -522,7 +554,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2044863857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.7, y: -0.1, z: -10}
+  m_LocalPosition: {x: 90, y: -0.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
