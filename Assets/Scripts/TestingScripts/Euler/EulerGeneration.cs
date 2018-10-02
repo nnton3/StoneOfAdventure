@@ -14,10 +14,7 @@ public class EulerGeneration : MonoBehaviour {
 	void Start () {
 		
 		CreateFirstLine ();
-		CreateRightBound ();
-		CreateBottomBoundsWithinOneLine ();
-		wayPoint.x = startPoint.x;
-		wayPoint.y -= tileDy;
+
 		StartCoroutine ("CreateDefaultLine");
 	}
 
@@ -46,6 +43,7 @@ public class EulerGeneration : MonoBehaviour {
 		ClearArrayForNextIteration (workingArray);
 	}
 
+	//СОЗДАНИЕ ПЕРВОЙ СТРОКИ
 	public GameObject[] lineArray = new GameObject[15];
 	void CreateFirstLine () {
 		currentLine = 1;
@@ -53,7 +51,135 @@ public class EulerGeneration : MonoBehaviour {
 			lineArray [currentColumn - 1] = CreateTile (defaultTile, new Vector2 (currentColumn, currentLine), currentColumn);
 			wayPoint.x += tileDx;
 		}
+		CreateRightBound ();
+		CreateBottomBoundsWithinOneLine ();
 		wayPoint.x = startPoint.x;
+		wayPoint.y -= tileDy;
+	}
+
+
+	public GameObject leftBound;
+	public GameObject topBound;
+	public GameObject bottomBound;
+
+	///Создание тайла с учетом его позиции на уровне и номером множества к которому он принадлежит
+	GameObject CreateTile (GameObject tile, Vector2 tilePosition, int arrayNumber) {
+		GameObject tileInstance = Instantiate (tile, wayPoint, Quaternion.identity);
+		EulerTile tileScript = tileInstance.GetComponent<EulerTile> ();
+		tileScript.arrayNumber = arrayNumber;
+		tileScript.positionInTable = tilePosition;
+		if (tileScript.positionInTable.x == 1) {
+			Instantiate (leftBound, tileInstance.transform);
+			tileInstance.GetComponent<EulerTile> ().leftBound = true;
+		} else if (tileScript.positionInTable.x == columnNumber) {
+			Instantiate (rightBound, tileInstance.transform);
+			tileInstance.GetComponent<EulerTile> ().rightBound = true;
+		}
+		if (tileScript.positionInTable.y == 1) {
+			Instantiate (topBound, tileInstance.transform);
+			tileInstance.GetComponent<EulerTile> ().topBound = true;
+		} else if (tileScript.positionInTable.x == lineNumber) {
+			Instantiate (bottomBound, tileInstance.transform);
+			tileInstance.GetComponent<EulerTile> ().bottomBound = true;
+		}
+		return tileInstance;
+	}
+
+	public GameObject rightBound;
+	///Правило создания правой границы тайла
+	void CreateRightBound () {
+		//Применяется ко всем тайлам, кроме крайнего правого
+		for (int i = 1; i < columnNumber; i++) {
+			int chance = Random.Range (0, 2);   ///< Принимаем решение создавать границу или нет
+			EulerTile tileScript = lineArray [i - 1].GetComponent<EulerTile> ();   ///< Ссылка на текущий тайл
+			EulerTile NeighborTileScript = lineArray [i].GetComponent<EulerTile> ();   ///< Ссылка на соседний справа тайл
+			//Если тайлы принадлежат к одному множеству
+			if (tileScript.arrayNumber == NeighborTileScript.arrayNumber) {
+				//Создать правую границу
+				Instantiate (rightBound, lineArray [i - 1].transform);
+				tileScript.rightBound = true;
+			} else {
+				if (chance > 0.5) {
+					//Создать правую границу
+					Instantiate (rightBound, lineArray [i - 1].transform);
+					tileScript.rightBound = true;
+				} else
+					NeighborTileScript.arrayNumber = tileScript.arrayNumber;
+			}
+		}
+	}
+
+	///Создание нижней границы
+	void CreateBottomBoundsWithinOneLine () {
+		int tilesNumberInOneArray = 0;   //Счетчик тайлов в одном множестве
+		GameObject[] arrayOfTiles = new GameObject[15];   // Отдельное множество тайлов
+		//Просматриваем все тайлы в строке поочереди
+		for (int i = 1; i <= columnNumber; i++) {
+			EulerTile tileScript = lineArray [i - 1].GetComponent<EulerTile> ();
+			tilesNumberInOneArray++;   //Увеличить счетчик количества тайлов в множестве
+			//Если тайл является последним в строке
+			if (LastColumns (i)) {
+				//Если тайл входит в множество, содержащее больше одного тайла
+				if (tilesNumberInOneArray > 1) {
+					//Случайным образом создать нижние границы тайлам множества
+					arrayOfTiles [tilesNumberInOneArray] = lineArray [i - 1];
+					CreateBottomBoundsWithinOneArray (arrayOfTiles, tilesNumberInOneArray, i);
+					tilesNumberInOneArray = 0;   // Обнулить счетчик тайлов
+				} else
+					Debug.Log ("Не добавлять границу, т.к. в множестве всего 1 элемент");
+				//Если тайл не является последним в строке
+			} else {
+				EulerTile NeighborTileScript = lineArray [i].GetComponent<EulerTile> ();
+				//Если следующий за этим тайл принадлежит к другому множеству
+				if (TilesNotFromOneArray (tileScript, NeighborTileScript)) {
+					//Если тайл входит в множество, содержащее больше одного тайла
+					if (tilesNumberInOneArray > 1) {
+						//Случайным образом создать нижние границы тайлам множества
+						arrayOfTiles [tilesNumberInOneArray] = lineArray [i - 1];
+						CreateBottomBoundsWithinOneArray (arrayOfTiles, tilesNumberInOneArray, i);
+						tilesNumberInOneArray = 0;   // Обнулить счетчик тайлов
+					} else
+						Debug.Log ("Не добавлять границу, т.к. в множестве всего 1 элемент");
+					//Если соседний тайл принадлежит к тому же множеству, что и текущий
+				} else {
+					Debug.Log ("Это не последний тайл в множестве");
+					//Добавить текущий тайл к текущему множеству
+					arrayOfTiles [tilesNumberInOneArray] = lineArray [i - 1];
+				}
+			}
+		}
+	}
+
+	void CreateBottomBoundsWithinOneArray (GameObject[] arrayOfTiles, int tilesNumberInOneArray, int NumberOfTileInLine) {
+		arrayOfTiles [tilesNumberInOneArray] = lineArray [NumberOfTileInLine - 1];
+		int numberOfTilesWithBottomBound = 0;   // Счетчик тайлов, имеющих нижнюю границу
+		//Решаем каким тайлам одного множества создать нижнюю границу
+		for (int j = 0; j < tilesNumberInOneArray; j++) {
+			//Если элемент множества не нулевой
+			if (NullCheck (arrayOfTiles [j])) {
+				int chance = Random.Range (0, 100);   ///< От этого значения зависит будем создавать нижнюю границу или нет. Если больше 0.5 то создаем, если меньше, то нет
+				//Если выпал шанс на создание нижней границы
+				if (chance > 10) {
+					arrayOfTiles [j].GetComponent<EulerTile> ().bottomBound = true;   //Занести тайл в список тайлов, которым будет создана нижняя граница
+					numberOfTilesWithBottomBound++;   //Увеличить счетчик тайлов с нижней границей
+				}
+			}
+		}
+		Debug.Log ("Число тайлов с нижней границей " + numberOfTilesWithBottomBound + ". Число тайлов в множестве " + tilesNumberInOneArray);
+		//Если все тайлы множества находятся в списке на добавление нижней границы
+		if (numberOfTilesWithBottomBound == tilesNumberInOneArray) {
+			Debug.Log ("Убрать нижнбъюю границу у первого элемента");
+			arrayOfTiles [0].GetComponent<EulerTile> ().bottomBound = false;   //Убрать первый тайл множества из списка и не добавлят ему нижнюю границу
+		}
+		//Добавить нижнюю границу тайлам множества, которым выпал шанс
+		for (int j = 0; j < tilesNumberInOneArray; j++) {
+			if (arrayOfTiles [j] != null && arrayOfTiles [j].GetComponent<EulerTile> ().bottomBound == true) {
+				Debug.Log ("Добавить нижнюю границу " + arrayOfTiles [j].GetComponent<EulerTile> ().positionInTable.x + " тайлу множества");
+				Instantiate (bottomBound, arrayOfTiles [j].transform);
+			}
+		}
+		//Очистить массив, содержащий текущее множество тайлов, для последующего использования
+		ClearArrayForNextIteration (arrayOfTiles);
 	}
 
 	public GameObject[] workingArray = new GameObject[15];
@@ -71,6 +197,7 @@ public class EulerGeneration : MonoBehaviour {
 					yield return new WaitForSeconds (0.1f);
 					DeleteBottomBound (lineArray [i]);
 				}
+				yield return new WaitForSeconds (2f);
 				CreateRightBound ();
 				CreateBottomBoundsWithinOneLine ();
 			}
@@ -119,6 +246,7 @@ public class EulerGeneration : MonoBehaviour {
 		if (tileScript.bottomBound) {
 			GameObject bottomBoundInstance = currentTile.transform.Find ("Tile_bottom_platform(Clone)").gameObject;
 			Destroy (bottomBoundInstance);
+			Debug.Log ("Удалена нижняя граница тайла " + tileScript.positionInTable.x);
 			tileScript.bottomBound = false;
 		}
 	}
@@ -159,47 +287,7 @@ public class EulerGeneration : MonoBehaviour {
 		}
 		return 0;
 	}
-
-	public GameObject leftBound;
-	public GameObject topBound;
-	public GameObject bottomBound;
-	GameObject CreateTile (GameObject tile, Vector2 tilePosition, int arrayNumber) {
-		GameObject tileInstance = Instantiate (tile, wayPoint, Quaternion.identity);
-		EulerTile tileScript = tileInstance.GetComponent<EulerTile> ();
-		tileScript.arrayNumber = arrayNumber;
-		tileScript.positionInTable = tilePosition;
-		if (tileScript.positionInTable.x == 1) {
-			Instantiate (leftBound, tileInstance.transform);
-			tileInstance.GetComponent<EulerTile> ().leftBound = true;
-		} else if (tileScript.positionInTable.x == columnNumber) {
-			Instantiate (rightBound, tileInstance.transform);
-			tileInstance.GetComponent<EulerTile> ().rightBound = true;
-		}
-		if (tileScript.positionInTable.y == 1) {
-			Instantiate (topBound, tileInstance.transform);
-			tileInstance.GetComponent<EulerTile> ().topBound = true;
-		} else if (tileScript.positionInTable.x == lineNumber) {
-			Instantiate (bottomBound, tileInstance.transform);
-			tileInstance.GetComponent<EulerTile> ().bottomBound = true;
-		}
-		return tileInstance;
-	}
-
-	public GameObject rightBound;
-	void CreateRightBound () {
-		for (int i = 1; i < columnNumber; i++) {
-			int chance = Random.Range (0, 2);
-			EulerTile tileScript = lineArray [i - 1].GetComponent<EulerTile> ();
-			EulerTile NeighborTileScript = lineArray [i].GetComponent<EulerTile> ();
-			if (tileScript.arrayNumber == NeighborTileScript.arrayNumber || chance > 0.5) {
-				Instantiate (rightBound, lineArray [i - 1].transform);
-				tileScript.rightBound = true;
-			} else {
-				NeighborTileScript.arrayNumber = tileScript.arrayNumber;
-			}
-		}
-	}
-
+		
 	void CreateBottomBound () {
 		for (int i = 0; i < columnNumber; i++) {
 			EulerTile tileScript = lineArray [i].GetComponent<EulerTile> ();
@@ -210,60 +298,7 @@ public class EulerGeneration : MonoBehaviour {
 		}
 	}
 
-	void CreateBottomBoundsWithinOneLine () {
-		int timer = 0;
-		GameObject[] arrayOfTiles = new GameObject[15];
-		for (int i = 1; i <= columnNumber; i++) {
-			EulerTile tileScript = lineArray [i - 1].GetComponent<EulerTile> ();
-			if (LastColumns (i)) {
-				CreateBottomBoundsWithinOneArray (arrayOfTiles, timer, i);
-				timer = 0;
-			} else {
-				EulerTile NeighborTileScript = lineArray [i].GetComponent<EulerTile> ();
-				if (TilesNotFromOneArray (tileScript, NeighborTileScript)) {
-					CreateBottomBoundsWithinOneArray (arrayOfTiles, timer, i);
-					timer = 0;
-					continue;
-				} else {
-					arrayOfTiles [timer] = lineArray [i - 1];
-					timer++;
-					continue;
-				}
-			}
-		}
-	}
-
-	void CreateBottomBoundsWithinOneArray (GameObject[] arrayOfTiles, int tilesNumberInOneArray, int NumberOfTileInLine) {
-		arrayOfTiles [tilesNumberInOneArray] = lineArray [NumberOfTileInLine - 1];
-		//Если в множестве более одного тайла
-		if (NullCheck(arrayOfTiles [1])) {
-			int numberOfTilesWithBottomBound = 0;   ///< Счетчик тайлов, имеющих нижнюю границу
-			int tilesInArray = 0;   ///< Счетчик тайлов в пределах одного множества
-
-			for (int j = 0; j < arrayOfTiles.Length; j++) {
-				if (NullCheck(arrayOfTiles [j])) {
-					tilesInArray++;
-					int chance = Random.Range (0, 2);   ///< От этого значения зависит будем создавать нижнюю границу или нет. Если больше 0.5 то создаем, если меньше, то нет
-					if (chance > 0.5) {
-						arrayOfTiles [j].GetComponent<EulerTile> ().bottomBound = true;
-						numberOfTilesWithBottomBound++;
-					}
-				}
-			}
-
-			if (numberOfTilesWithBottomBound == tilesInArray) {
-				arrayOfTiles [0].GetComponent<EulerTile> ().bottomBound = false;
-			}
-
-			for (int j = 0; j < arrayOfTiles.Length; j++) {
-				if (arrayOfTiles [j] != null && arrayOfTiles [j].GetComponent<EulerTile> ().bottomBound == true) {
-					Instantiate (bottomBound, arrayOfTiles [j].transform);
-				}
-			}
-			ClearArrayForNextIteration (arrayOfTiles);
-		}
-	}
-	///Проверка: тайл я вляется последним в строке?
+	///Проверка: тайл является последним в строке?
 	bool LastColumns (int tileNumber) {
 		if (tileNumber == columnNumber) {
 			return true;
