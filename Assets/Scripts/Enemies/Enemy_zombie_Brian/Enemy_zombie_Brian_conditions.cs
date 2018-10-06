@@ -7,11 +7,9 @@ public class Enemy_zombie_Brian_conditions : Conditions {
 	//Завершить атаку
 	public override IEnumerator FinishAttack ()
 	{
-		unit.UseShield ();
 		yield return new WaitForSeconds (unit.attackSpeed);
-		unit.UseShield ();
-
 		attack = false;	
+		unit.UseShield ();
 	}
 
 	//СМЕРТЬ

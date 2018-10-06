@@ -55,9 +55,4 @@ public class Enemy_invokedZomby : Zombie {
 	{
 		base.Alert (player);
 	}
-
-	public override void RegistrationInStack (DangerArea myStack)
-	{
-		Debug.Log ("registration not need");
-	}
 }

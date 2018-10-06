@@ -122,7 +122,7 @@ public class Damage : MonoBehaviour {
 
 		\param[in] damage величина входящего урона
 	*/ 
-	public void ReduceHP (float damage) {
+	public virtual void ReduceHP (float damage) {
 		//Если урон больше, чем сумма брони и здоровья
 		if ((unit.health + unit.armor) <= damage) {
 			conditions.UnitDie ();

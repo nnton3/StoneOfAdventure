@@ -19,7 +19,7 @@ public abstract class Unit : MonoBehaviour {
 	public float impulsePower;   ///< Силы с которой юнит будет отброшен при получении урона
 	[HideInInspector]
 	public int inputX = 0;   ///< Направление движения по Х
-	//[HideInInspector]
+	[HideInInspector]
 	public int inputY = 0;   ///< Направление движения по Y
 	[HideInInspector]
 	public Rigidbody2D rb;   ///< Ссылка на компонент Rigidbody2D
@@ -39,6 +39,7 @@ public abstract class Unit : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		conditions = GetComponent<Conditions> ();
 		damage = GetComponent<Damage> ();
+		spRender = GetComponent<SpriteRenderer> ();
 	}
 
 	///Запускает анимацию атаки и переход в состояние "Атака"
@@ -91,8 +92,40 @@ public abstract class Unit : MonoBehaviour {
 		при срабатывании которого они начинают преследовать и атаковать игрока
 		\param[in] myStack ссылка на триггер в котором будет находиться юнит
 	*/
-	public virtual void RegistrationInStack (DangerArea myStack) {
-		myStack = GetComponentInParent<DangerArea> ();
-		myStack.AddEnemie (this);
+	DangerArea enemieTriggerScript;
+	public virtual void RegistrationInStack () {
+		enemieTriggerScript = GetComponentInParent<DangerArea> ();
+		enemieTriggerScript = GetComponentInParent<DangerArea> ();
+		enemieTriggerScript.AddEnemie (this);
+	}
+
+	public void StartChangeColor () {
+		StopCoroutine ("ChangeColor");
+		spRender.color = Color.white;
+		StartCoroutine ("ChangeColor");
+	}
+	///Изменение цвета при получении урона
+	SpriteRenderer spRender;
+	IEnumerator ChangeColor () {
+		Color currentColor = spRender.color;
+		for (int i = 1; i <= 10; i++) {
+			if (i <= 5) {
+				currentColor.g -= 0.2f;
+				currentColor.b -= 0.2f;
+				spRender.color = currentColor;
+			} else {
+				currentColor.g += 0.2f;
+				currentColor.b += 0.2f;
+				spRender.color = currentColor;
+			}
+			yield return new WaitForSeconds (0.02f);
+		}
+	}
+
+	public GameObject bloodPref;
+	public void CreateOutputBlood (int direction) {
+		GameObject blood = Instantiate (bloodPref, transform);
+		Blood bloodScript = blood.GetComponent<Blood> ();
+		bloodScript.Impulse (direction);
 	}
 }

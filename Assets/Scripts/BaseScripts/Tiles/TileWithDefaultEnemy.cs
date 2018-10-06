@@ -35,6 +35,6 @@ public class TileWithDefaultEnemy : Tile {
 		GameObject enemie = Instantiate (chosenEnemie, new Vector2 (transform.position.x + randomEnemiePosition, transform.position.y + 5f), Quaternion.identity);
 		enemie.transform.SetParent (dangerArea);
 		Unit enemieScript = enemie.GetComponent<Unit> ();
-		enemieScript.RegistrationInStack (dangerAreaScript);
+		//enemieScript.RegistrationInStack (dangerAreaScript);
 	}
 }

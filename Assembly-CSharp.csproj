@@ -172,6 +172,7 @@
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Damage.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\EnemiesList.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\UnitScripts\Unit.cs" />
+     <Compile Include="Assets\Scripts\Effects\Blood.cs" />
      <Compile Include="Assets\Scripts\Effects\FadeEffect_En_Dis.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_Paladin\Enemy_Paladin.cs" />
