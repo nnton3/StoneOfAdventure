@@ -216,7 +216,6 @@
      <Compile Include="Assets\Scripts\Interface\TransitionController.cs" />
      <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
      <Compile Include="Assets\Scripts\Levels\Level1.cs" />
-     <Compile Include="Assets\Scripts\NPCs\Location1_Level1_Blacksmith.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerConditions.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerDamage.cs" />
@@ -225,6 +224,7 @@
      <Compile Include="Assets\Scripts\Quests\Level1\GenerateBlacksmithTiles.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\GenerateMineTiles.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_blacksmith.cs" />
+     <Compile Include="Assets\Scripts\Quests\Level1\Quest_littleGirl.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_wagon.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Euler\EulerGeneration.cs" />

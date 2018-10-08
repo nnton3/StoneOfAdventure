@@ -22,10 +22,10 @@ public class Quest_blacksmith : Quest {
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		//Если пришел не игрок
-		if (!targetObject.CompareTag ("Player")) {
+		/*if (!targetObject.CompareTag ("Player")) {
 			//Не реагировать
 			return;
-		}
+		}*/
 		//Если у него нет этого квеста
 		if (QuestController.FindActiveQuest (ID) == QuestController.nullQuest) {
 			//Если этот квест еще не выполнялся

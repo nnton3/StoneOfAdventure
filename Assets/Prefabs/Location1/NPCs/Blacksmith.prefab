@@ -245,7 +245,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4066634433688588}
   - component: {fileID: 212413124878020010}
-  - component: {fileID: 114573952538785468}
   - component: {fileID: 114072661643323376}
   - component: {fileID: 61647114619065592}
   - component: {fileID: 50240237643881768}
@@ -657,17 +656,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114573952538785468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1993852997408838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a7d6e2cf10fc4f248fd67bc70fac9d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114712744229212766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -968,7 +956,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!222 &222013833381023806
 CanvasRenderer:

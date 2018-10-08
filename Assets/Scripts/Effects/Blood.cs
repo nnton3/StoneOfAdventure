@@ -9,6 +9,7 @@ public class Blood : MonoBehaviour {
 	public Vector2 directVector;
 	public void Impulse (int direction) {
 		rb = GetComponent<Rigidbody2D> ();
+		direction *= -1;
 		rb.AddForce (new Vector2 (300f * direction, 500f));
 	}
 
