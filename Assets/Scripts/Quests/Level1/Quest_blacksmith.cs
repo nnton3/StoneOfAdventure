@@ -14,7 +14,7 @@ public class Quest_blacksmith : Quest {
 
 	public void FinishQuest () {
 		QuestController.DeleteActiveQuest (ID);
-		QuestList.quest1_blacksmith_finish = true;
+		QuestList.quest1_blacksmith = true;
 		replica3.SetActive (false);
 	}
 
@@ -22,14 +22,14 @@ public class Quest_blacksmith : Quest {
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		//Если пришел не игрок
-		/*if (!targetObject.CompareTag ("Player")) {
+		if (!targetObject.CompareTag ("Player")) {
 			//Не реагировать
 			return;
-		}*/
+		}
 		//Если у него нет этого квеста
 		if (QuestController.FindActiveQuest (ID) == QuestController.nullQuest) {
 			//Если этот квест еще не выполнялся
-			if (!QuestList.quest1_blacksmith_finish) {
+			if (!QuestList.quest1_blacksmith) {
 				replica1.SetActive (true);
 			}
 			//Если у него есть этот квест

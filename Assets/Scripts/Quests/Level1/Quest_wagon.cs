@@ -10,11 +10,11 @@ public class Quest_wagon : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		//Если пришел игрок
-		if (targetObject.CompareTag("Player")) {
+		if (targetObject.CompareTag ("Player")) {
 			//Если у него есть квест от кузнеца
-			if (QuestController.FindActiveQuest(ID) != QuestController.nullQuest) {
+			if (QuestController.FindActiveQuest (ID) != QuestController.nullQuest) {
 				//Если в тележке есть руда
-				if (oreNumber>0) {
+				if (oreNumber > 0) {
 					replica1.SetActive (true);
 				}
 			}

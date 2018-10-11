@@ -224,6 +224,7 @@
      <Compile Include="Assets\Scripts\Quests\Level1\GenerateBlacksmithTiles.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\GenerateMineTiles.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_blacksmith.cs" />
+     <Compile Include="Assets\Scripts\Quests\Level1\Quest_chillMan.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_littleGirl.cs" />
      <Compile Include="Assets\Scripts\Quests\Level1\Quest_wagon.cs" />
      <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />

@@ -9,11 +9,9 @@ public class Quest_littleGirl : Quest {
 	}
 
 	void OnTriggerEnter2D (Collider2D targetObject) {
-		Debug.Log ("Enter");
 		//Если пришел не игрок
 		if (!targetObject.CompareTag ("Player")) {
 			//Не реагировать
-			Debug.Log("Не реагировать");
 			return;
 		}
 
@@ -24,14 +22,12 @@ public class Quest_littleGirl : Quest {
 		}
 
 		if (!QuestList.quest4_little_girl) {
-			Debug.Log ("Показать диалоговое окно");
 			replica1.SetActive (true);
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D targetObject) {
 		if (targetObject.CompareTag ("Player")) {
-			Debug.Log ("Вышел из триггера");
 			replica1.SetActive (false);
 			replica2.SetActive (false);
 			replica3.SetActive (false);
@@ -43,7 +39,6 @@ public class Quest_littleGirl : Quest {
 	GameObject replica2;
 	GameObject replica3;
 	void SetReplics () {
-		Debug.Log ("Записать ссылки");
 		replica1 = GameObject.Find ("LittleGirl_replica1");
 		replica1.SetActive (false);
 		replica2 = GameObject.Find ("LittleGirl_replica2");

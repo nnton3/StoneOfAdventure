@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780096191958802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.08, y: -3.02, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 224093052596756466}
@@ -293,6 +293,7 @@ MonoBehaviour:
   conditions: {fileID: 0}
   direction: 1
   flipParam: 0
+  bloodPref: {fileID: 1926372787531924, guid: ab1215920bd9d4052a97a82f08d85f09, type: 2}
   target: {fileID: 0}
   idle: 1
   targetRange: 0
