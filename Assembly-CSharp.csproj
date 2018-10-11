@@ -161,6 +161,7 @@
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\TransitionToQuest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Interfaces.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\Patron.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Drop.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestController.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestList.cs" />
