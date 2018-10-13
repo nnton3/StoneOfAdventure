@@ -1,15 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseScripts/QuestScripts/Drop.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Quests/Level1/Quest_chillMan_sword.cs">
     <Files>
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan.cs" Line="70" Column="42" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_littleGirl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestController.cs" Line="61" Column="1" />
       <File FileName="Assets/Scripts/BaseScripts/QuestScripts/Quest.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestList.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_wagon.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/Drop.cs" Line="25" Column="48" />
+      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestObject.cs" Line="17" Column="1" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan_sword.cs" Line="17" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

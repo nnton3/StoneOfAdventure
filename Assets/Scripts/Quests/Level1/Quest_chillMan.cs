@@ -57,17 +57,8 @@ public class Quest_chillMan : Quest {
 		replica4.SetActive (false);
 	}
 
-	public List<Conditions> zombieList;
 	bool CheckProgress () {
-		int currentProgress = 0;
-		foreach (Conditions zombie in zombieList) {
-			if (!zombie.alive) {
-				currentProgress++;
-			}
-		}
-		progress = currentProgress;
 		if (target == progress) {
-			QuestController.AddQuestProgress (ID);
 			return true;
 		} else
 			return false;
