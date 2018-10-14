@@ -27,7 +27,7 @@ public class Quest_chillMan : Quest {
 			//Если у него есть этот квест
 		} else {
 			//Если цели выполнены
-			if (QuestController.FindActiveQuest (ID).objectivesComplete) {
+			if (QuestController.FindActiveQuest (ID).objectivesComplete || QuestController.FindQuestItem (ID, target)) {
 				replica4.SetActive (true);
 			}
 		}

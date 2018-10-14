@@ -5,7 +5,7 @@ using UnityEngine;
 public class QuestController: MonoBehaviour {
 
 	static Quest[] quests = new Quest[3];
-	public static int questEnumerator = 1;
+	public static int questEnumerator = 0;
 	public static QuestBar questBarScript;
 	public static Quest nullQuest;
 
@@ -63,5 +63,42 @@ public class QuestController: MonoBehaviour {
 		if (targetQuest.progress == targetQuest.target) {
 			targetQuest.objectivesComplete = true;
 		}
+	}
+
+	public static GameObject[] questItems = new GameObject[20];
+	public static void PickUpQuestItem (GameObject questItem) {
+		for (int i = 0; i < questItems.Length; i++) {
+			if (questItems [i] == null) {
+				questItems [i] = questItem;
+				return;
+			} else
+				continue;
+		}
+	}
+
+	public static void DropQuestItem (GameObject questItem) {
+		for (int i = 0; i < questItems.Length; i++) {
+			if (questItems [i] == questItem) {
+				questItems [i] = null;
+			} else
+				continue;
+		}
+	}
+
+	public static bool FindQuestItem (int ID, int numberOfItems) {
+		int currentItemNumber = 0;
+		for (int i = 0; i < questItems.Length; i++) {
+			try{
+				if (questItems [i].GetComponent<QuestObject> ().ID == ID) {
+					currentItemNumber++;
+				}
+			} catch {
+				continue;
+			}
+		}
+		if (currentItemNumber == numberOfItems) {
+			return true;
+		} else
+			return false;
 	}
 }

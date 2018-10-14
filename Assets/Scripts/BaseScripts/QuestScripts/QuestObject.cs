@@ -14,10 +14,10 @@ public class QuestObject : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D player) {
 		if (player.CompareTag ("Player")) {
-			if (QuestController.FindActiveQuest (ID) != QuestController.nullQuest) {
-				QuestController.AddQuestProgress (ID);
-			} else {
+			if (QuestController.FindActiveQuest (ID) == QuestController.nullQuest) {
 				quest.enabled = true;
+			} else {
+
 			}
 		}
 	}

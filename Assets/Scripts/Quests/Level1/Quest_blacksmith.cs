@@ -18,18 +18,19 @@ public class Quest_blacksmith : Quest {
 		replica3.SetActive (false);
 	}
 
-
-
 	void OnTriggerEnter2D (Collider2D targetObject) {
 		//Если пришел не игрок
 		if (!targetObject.CompareTag ("Player")) {
+			Debug.Log ("Пришел не игрок");
 			//Не реагировать
 			return;
 		}
 		//Если у него нет этого квеста
 		if (QuestController.FindActiveQuest (ID) == QuestController.nullQuest) {
+			Debug.Log ("Такого квеста еще нет");
 			//Если этот квест еще не выполнялся
 			if (!QuestList.quest1_blacksmith) {
+				Debug.Log ("Квест еще не выполнялся");
 				replica1.SetActive (true);
 			}
 			//Если у него есть этот квест
