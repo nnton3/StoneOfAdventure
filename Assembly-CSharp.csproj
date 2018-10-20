@@ -156,6 +156,7 @@
      <Compile Include="Assets\Scripts\BaseScripts\GameLevel.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Elevator.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Ladder.cs" />
+     <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Ladder_bottomTrigger.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Lever.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\Transition.cs" />
      <Compile Include="Assets\Scripts\BaseScripts\InteractiveTransitions\TransitionToQuest.cs" />
