@@ -18,6 +18,6 @@ public class Enemy_zombie_creepyZombie_conditions : Conditions {
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
-		//unit.myStack.AddCorpse ();
+		unit.enemieTriggerScript.AddCorpse ();
 	}
 }

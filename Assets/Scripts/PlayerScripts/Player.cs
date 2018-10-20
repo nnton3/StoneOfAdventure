@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : Unit {
 
 	public bool onLadder = false;
+	public bool ladderBottomLine = false;
 	public bool onPC = false;
 	void Update () {
 		//Если игрок не находится в состоянии атаки или оглушения
@@ -39,8 +40,13 @@ public class Player : Unit {
 			rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
 			anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
 		} else {
-			rb.velocity = new Vector2 (0, inputY * moveSpeed);
-			anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
+			if (ladderBottomLine) {
+				rb.velocity = new Vector2 (inputX * moveSpeed, (Mathf.Clamp (inputY, 0, 1)) * moveSpeed);
+				anim.SetBool ("run", Mathf.Abs (inputY) > 0.1f);
+			} else {
+				rb.velocity = new Vector2 (0f, inputY * moveSpeed);
+				anim.SetBool ("run", Mathf.Abs (inputY) > 0.1f);
+			}
 		}
 	}
 

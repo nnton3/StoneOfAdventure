@@ -17,8 +17,10 @@ public class Ladder : MonoBehaviour {
 
 	void Update () {
 		if (playerEnter && player.inputY != 0f) {
-			player.onLadder = true;
-			player.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Kinematic;
+			if (!GameManager.battleMode) {
+				player.onLadder = true;
+				player.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Kinematic;
+			}
 		}
 	}
 

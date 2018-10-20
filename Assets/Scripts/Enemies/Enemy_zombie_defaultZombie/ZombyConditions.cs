@@ -18,6 +18,6 @@ public class ZombyConditions : Conditions {
 		alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
-		//unit.myStack.AddCorpse ();
+		unit.enemieTriggerScript.AddCorpse ();
 	}
 }

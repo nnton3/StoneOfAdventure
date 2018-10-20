@@ -92,7 +92,7 @@ public abstract class Unit : MonoBehaviour {
 		при срабатывании которого они начинают преследовать и атаковать игрока
 		\param[in] myStack ссылка на триггер в котором будет находиться юнит
 	*/
-	DangerArea enemieTriggerScript;
+	public DangerArea enemieTriggerScript;
 	public virtual void RegistrationInStack () {
 		enemieTriggerScript = GetComponentInParent<DangerArea> ();
 		enemieTriggerScript = GetComponentInParent<DangerArea> ();

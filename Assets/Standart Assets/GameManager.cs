@@ -22,4 +22,14 @@ public class GameManager : MonoBehaviour {
 	public static void ComplexitySetToZero () {
 		complexity = 0;
 	}
+
+	//Режим боя
+	public static bool battleMode = false;
+	public static void EnableBattleMode () {
+		battleMode = true;
+	}
+
+	public static void DisableBattleMode () {
+		battleMode = false;
+	}
 }
