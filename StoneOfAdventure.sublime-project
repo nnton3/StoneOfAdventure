@@ -1,0 +1,10 @@
+{
+    "folders":
+    [
+        {
+            "path": "/Users/Anton/Desktop/StoneOfAdventure/Assets",
+            "file_exclude_patterns": ["*.meta"],
+        },
+    ],
+    "solution_file": "./StoneOfAdventure.sln"
+}
