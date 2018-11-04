@@ -14,7 +14,7 @@ public class Ladder : MonoBehaviour {
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<Player> ();
 	}
-
+	
 	void Update () {
 		if (playerEnter && player.inputY != 0f) {
 			if (!GameManager.battleMode) {

@@ -219,6 +219,8 @@
      <Compile Include="Assets\Scripts\Interface\TransitionController.cs" />
      <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
      <Compile Include="Assets\Scripts\Levels\Level1.cs" />
+     <Compile Include="Assets\Scripts\Objects\Chest.cs" />
+     <Compile Include="Assets\Scripts\Objects\ChestTrigger.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerConditions.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerDamage.cs" />
