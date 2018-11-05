@@ -42,10 +42,10 @@ public class Player : Unit {
 		} else {
 			if (ladderBottomLine) {
 				rb.velocity = new Vector2 (inputX * moveSpeed, (Mathf.Clamp (inputY, 0, 1)) * moveSpeed);
-				anim.SetBool ("run", Mathf.Abs (inputY) > 0.1f);
+				anim.SetBool ("up_down", false);
 			} else {
 				rb.velocity = new Vector2 (0f, inputY * moveSpeed);
-				anim.SetBool ("run", Mathf.Abs (inputY) > 0.1f);
+				anim.SetBool ("up_down", Mathf.Abs (inputY) > 0.1f);
 			}
 		}
 	}
