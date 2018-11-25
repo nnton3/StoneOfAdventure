@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 480800148eeb042f485350f778af6f6a
-timeCreated: 1540021608
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: chillMan_tree_0
@@ -17,7 +15,7 @@ TextureImporter:
     21300020: chillMan_tree_10
     21300022: chillMan_tree_11
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -35,6 +33,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -45,7 +45,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -57,18 +57,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
@@ -78,7 +81,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
@@ -88,7 +92,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
+  - serializedVersion: 2
+    buildTarget: Android
     maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
@@ -105,173 +110,253 @@ TextureImporter:
       name: chillMan_tree_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 63
-        width: 180
-        height: 154
+        x: 118
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa4f988ceba150c419416991046dcc91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_1
       rect:
         serializedVersion: 2
-        x: 350
-        y: 63
-        width: 180
-        height: 154
+        x: 382
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 3e141f68a82703d40bb3309b2d3f9d15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_2
       rect:
         serializedVersion: 2
-        x: 619
-        y: 63
-        width: 180
-        height: 154
+        x: 645
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 9f8ae9b6787fd344ba1f6d3be2aec0b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_3
       rect:
         serializedVersion: 2
-        x: 889
-        y: 63
-        width: 181
-        height: 154
+        x: 909
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: bfef73bd2c3bce44cb63c603a799fea8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_4
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 63
-        width: 180
-        height: 154
+        x: 1173
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 509f18c7fd8113d4c9e3fda89dce71b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_5
       rect:
         serializedVersion: 2
-        x: 1429
-        y: 63
-        width: 181
-        height: 154
+        x: 1437
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4e71090a53d6e794e8ba8aa2497aa4a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_6
       rect:
         serializedVersion: 2
         x: 1700
-        y: 63
-        width: 180
-        height: 154
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5b0e3f7a023eb5b45985b8f2758137fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_7
       rect:
         serializedVersion: 2
-        x: 1969
-        y: 63
-        width: 181
-        height: 154
+        x: 1964
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4fb5cc6bf42ebe4429b831fc6fa80134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_8
       rect:
         serializedVersion: 2
-        x: 2240
-        y: 63
-        width: 180
-        height: 154
+        x: 2228
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc2d8504982bd5a48a70eedbea174654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_9
       rect:
         serializedVersion: 2
-        x: 2509
-        y: 63
-        width: 180
-        height: 154
+        x: 2492
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5d97c9c750d3e1441a1c6170233d7fb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_10
       rect:
         serializedVersion: 2
-        x: 2780
-        y: 63
-        width: 180
-        height: 154
+        x: 2755
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2fa2ca96c081af42a6f24dce7874099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: chillMan_tree_11
       rect:
         serializedVersion: 2
-        x: 3049
-        y: 63
-        width: 180
-        height: 154
+        x: 3019
+        y: 77
+        width: 204
+        height: 165
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cfccc8fef1c5777408ffe67be4f3dfe6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 22839b014ec3b9d418ea7135d669fed9
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
