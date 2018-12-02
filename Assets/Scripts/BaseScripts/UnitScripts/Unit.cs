@@ -74,7 +74,7 @@ public abstract class Unit : MonoBehaviour {
 	public virtual void Run () {
 		rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
 		if (CanMove ()) {
-			anim.SetFloat ("speed", Mathf.Abs (inputX * moveSpeed));
+			anim.SetBool ("run", Mathf.Abs (inputX * moveSpeed) > 0.1f);
 		}
 	}
 

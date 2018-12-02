@@ -9,7 +9,7 @@ public class Player : Unit {
 	public bool onPC = false;
 	void Update () {
 		//Если игрок не находится в состоянии атаки или оглушения
-		if (CanAttack()) {
+		if (CanAttack ()) {
 			//Управление
 			if (Input.GetKeyDown (KeyCode.F)) {       //Атака мечом
 				Attack ();
@@ -27,50 +27,56 @@ public class Player : Unit {
 				PullBow ();
 			}
 		}	
-		//Управление для ПК
-		if (CanMove()) {
+
+		Debug.Log (rb.velocity.x);
+		if (CanMove ()) {
+			//Управление для ПК
 			if (onPC) {
 				inputX = (int)Input.GetAxisRaw ("Horizontal");
 				inputY = (int)Input.GetAxisRaw ("Vertical");
 			}
-			flipParam = inputX;
-		}
 
-		if (!onLadder) {
-			rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
-			anim.SetBool ("run", Mathf.Abs (inputX) > 0.1f);
-		} else {
-			if (ladderBottomLine) {
-				rb.velocity = new Vector2 (inputX * moveSpeed, (Mathf.Clamp (inputY, 0, 1)) * moveSpeed);
-				anim.SetBool ("up_down", false);
+			flipParam = inputX;
+
+			if (!onLadder) {
+				Run ();
 			} else {
-				rb.velocity = new Vector2 (0f, inputY * moveSpeed);
-				anim.SetBool ("up_down", Mathf.Abs (inputY) > 0.1f);
+				CrawlUp ();
 			}
-		}
+		} else
+			Run ();
 	}
 
 	///Управление для Android
-	public void HorizontalMoves (int input) {
+	public void SetHorizontalMoves (int input) {
 		if (CanMove ()) {
 			inputX = input;
 		}
 	}
 
 	///Управление для Android
-	public void VerticalMoves (int input) {
+	public void SetVerticalMoves (int input) {
 		if (CanMove ()) {
 			inputY = input;
 		}
 	}
 
+	//Ползти вверх
+	void CrawlUp () {
+		if (ladderBottomLine) {
+			rb.velocity = new Vector2 (inputX * moveSpeed, (Mathf.Clamp (inputY, 0, 1)) * moveSpeed);
+			anim.SetBool ("up_down", false);
+		} else {
+			rb.velocity = new Vector2 (0f, inputY * moveSpeed);
+			anim.SetBool ("up_down", Mathf.Abs (inputY) > 0.1f);
+		}
+	}
+
 	//Атака
 	public override void Attack () {
-		if (CanAttack ()) {
-			CheckBlock ();
-			conditions.attack = true;
-			anim.SetTrigger ("attack");
-		}
+		CheckBlock ();
+		conditions.attack = true;
+		anim.SetTrigger ("attack");
 	}
 
 	//Использовать перекат
@@ -101,7 +107,6 @@ public class Player : Unit {
 	//Стрельба из лука
 	void PullBow () {
 		CheckBlock ();
-		//Игрок в режиме атаки
 		conditions.attack = true;
 		anim.SetTrigger ("pullBow");
 	}

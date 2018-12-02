@@ -53,4 +53,11 @@ public class Default_zombie : Zombie {
 		//Двигаться в сторону игрока
 		inputX = -targetDirection;
 	}
+
+	public override void Run() {
+		rb.velocity = new Vector2 (inputX * moveSpeed, rb.velocity.y);
+		if (CanMove ()) {
+			anim.SetFloat ("speed", Mathf.Abs (inputX * moveSpeed));
+		}
+	}
 }

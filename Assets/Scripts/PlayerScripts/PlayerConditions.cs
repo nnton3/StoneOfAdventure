@@ -10,7 +10,6 @@ public class PlayerConditions : Conditions {
 
 	public override void EnableInvulnerability ()
 	{
-		//Если игрок не находится в стане и КД на перекат прошел
 		SetImpulse (rollImpulsePower);
 		base.EnableInvulnerability ();
 		EnableStun (unit.direction);
@@ -27,7 +26,6 @@ public class PlayerConditions : Conditions {
 	}
 
 	//АТАКА МЕЧОМ
-
 	public override void Default_Attack ()
 	{
 		base.Default_Attack ();
