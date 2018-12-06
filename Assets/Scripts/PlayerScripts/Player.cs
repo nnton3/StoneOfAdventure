@@ -28,6 +28,7 @@ public class Player : Unit {
 			}
 		}	
 
+		Debug.Log (rb.velocity.x);
 		if (CanMove ()) {
 			//Управление для ПК
 			if (onPC) {
