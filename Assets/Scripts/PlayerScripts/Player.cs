@@ -7,6 +7,7 @@ public class Player : Unit {
 	public bool onLadder = false;
 	public bool ladderBottomLine = false;
 	public bool onPC = false;
+
 	void Update () {
 		//Если игрок не находится в состоянии атаки или оглушения
 		if (CanAttack ()) {
@@ -28,7 +29,6 @@ public class Player : Unit {
 			}
 		}	
 
-		Debug.Log (rb.velocity.x);
 		if (CanMove ()) {
 			//Управление для ПК
 			if (onPC) {
@@ -77,6 +77,15 @@ public class Player : Unit {
 		CheckBlock ();
 		conditions.attack = true;
 		anim.SetTrigger ("attack");
+	}
+
+	public GameObject attackTrigger;
+	//Детектирование врагов
+	public IEnumerator EnableAttackTrigger () {
+		Debug.Log ("enter");
+		attackTrigger.SetActive (true);
+		yield return new WaitForSeconds (.1f);
+		attackTrigger.SetActive (false);
 	}
 
 	//Использовать перекат
