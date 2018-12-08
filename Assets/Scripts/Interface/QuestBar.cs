@@ -5,7 +5,6 @@ using UnityEngine;
 public class QuestBar: MonoBehaviour {
 
 	QuestBarElements[] questBarElements = new QuestBarElements[3];
-	QuestBarElements nullElement;
 
 	//Создать описание квеста в QuestBar
 	public GameObject questBarElement;
@@ -34,7 +33,7 @@ public class QuestBar: MonoBehaviour {
 				}
 			}
 		}
-		return nullElement;
+        return null;
 	}
 
 	//Удалить квест из квест-бара

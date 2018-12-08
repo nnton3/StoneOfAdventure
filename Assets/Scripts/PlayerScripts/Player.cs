@@ -2,121 +2,163 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Unit {
+public class Player : Unit
+{
 
-	public bool onLadder = false;
-	public bool ladderBottomLine = false;
-	public bool onPC = false;
+    public bool onLadder = false;
+    public bool ladderBottomLine = false;
+    public bool onPC = false;
 
-	void Update () {
-		//Если игрок не находится в состоянии атаки или оглушения
-		if (CanAttack ()) {
-			//Управление
-			if (Input.GetKeyDown (KeyCode.F)) {       //Атака мечом
-				Attack ();
-			}
+    void Update()
+    {
+        //Если игрок не находится в состоянии атаки или оглушения
+        if (CanAttack())
+        {
+            //Управление
+            if (Input.GetKeyDown(KeyCode.F))
+            {       //Атака мечом
+                Attack();
+            }
 
-			if (Input.GetKeyDown (KeyCode.R)) {       //Перекат
-				Roll ();
-			}
+            if (Input.GetKeyDown(KeyCode.R))
+            {       //Перекат
+                Roll();
+            }
 
-			if (Input.GetKeyDown (KeyCode.B)) {       //Блок
-				UseShield ();
-			}
+            if (Input.GetKeyDown(KeyCode.B))
+            {       //Блок
+                UseShield();
+            }
 
-			if (Input.GetKeyDown (KeyCode.P)) {       //Атака из лука
-				PullBow ();
-			}
-		}	
+            if (Input.GetKeyDown(KeyCode.P))
+            {       //Атака из лука
+                PullBow();
+            }
+        }
 
-		if (CanMove ()) {
-			//Управление для ПК
-			if (onPC) {
-				inputX = (int)Input.GetAxisRaw ("Horizontal");
-				inputY = (int)Input.GetAxisRaw ("Vertical");
-			}
+        if (CanMove())
+        {
+            //Управление для ПК
+            if (onPC)
+            {
+                inputX = (int)Input.GetAxisRaw("Horizontal");
+                inputY = (int)Input.GetAxisRaw("Vertical");
+            }
+            else
+            {
+                if (joystick.Horizontal != 0f)
+                {
+                    SetHorizontalMoves((joystick.Horizontal > 0) ? 1 : -1);
+                }
+                else SetHorizontalMoves(0);
 
-			flipParam = inputX;
+                if (joystick.Vertical != 0f)
+                {
+                    SetVerticalMoves((joystick.Vertical > 0) ? 1 : -1);
+                }
+                else SetVerticalMoves(0);
+            }
 
-			if (!onLadder) {
-				Run ();
-			} else {
-				CrawlUp ();
-			}
-		} else
-			Run ();
-	}
+            flipParam = inputX;
 
-	///Управление для Android
-	public void SetHorizontalMoves (int input) {
-		if (CanMove ()) {
-			inputX = input;
-		}
-	}
+            if (!onLadder)
+            {
+                Run();
+            }
+            else
+            {
+                CrawlUp();
+            }
+        }
+        else
+            Run();
+    }
 
-	///Управление для Android
-	public void SetVerticalMoves (int input) {
-		if (CanMove ()) {
-			inputY = input;
-		}
-	}
+    public Joystick joystick;
+    ///Управление для Android
+    public void SetHorizontalMoves(int input)
+    {
+        if (CanMove())
+        {
+            inputX = input;
+        }
+    }
 
-	//Ползти вверх
-	void CrawlUp () {
-		if (ladderBottomLine) {
-			rb.velocity = new Vector2 (inputX * moveSpeed, (Mathf.Clamp (inputY, 0, 1)) * moveSpeed);
-			anim.SetBool ("up_down", false);
-		} else {
-			rb.velocity = new Vector2 (0f, inputY * moveSpeed);
-			anim.SetBool ("up_down", Mathf.Abs (inputY) > 0.1f);
-		}
-	}
+    ///Управление для Android
+    public void SetVerticalMoves(int input)
+    {
+        if (CanMove())
+        {
+            inputY = input;
+        }
+    }
 
-	//Атака
-	public override void Attack () {
-		CheckBlock ();
-		conditions.attack = true;
-		anim.SetTrigger ("attack");
-	}
+    //Ползти вверх
+    void CrawlUp()
+    {
+        if (ladderBottomLine)
+        {
+            rb.velocity = new Vector2(inputX * moveSpeed, (Mathf.Clamp(inputY, 0, 1)) * moveSpeed);
+            anim.SetBool("up_down", false);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0f, inputY * moveSpeed);
+            anim.SetBool("up_down", Mathf.Abs(inputY) > 0.1f);
+        }
+    }
 
-	public GameObject attackTrigger;
-	//Детектирование врагов
-	public IEnumerator EnableAttackTrigger () {
-		Debug.Log ("enter");
-		attackTrigger.SetActive (true);
-		yield return new WaitForSeconds (.1f);
-		attackTrigger.SetActive (false);
-	}
+    //Атака
+    public override void Attack()
+    {
+        CheckBlock();
+        conditions.attack = true;
+        anim.SetTrigger("attack");
+    }
 
-	//Использовать перекат
-	public bool invulnerabilityIsRedy = true;
-	public float rollCD = 3f;
+    public GameObject attackTrigger;
+    //Детектирование врагов
+    public IEnumerator EnableAttackTrigger()
+    {
+        attackTrigger.SetActive(true);
+        yield return new WaitForSeconds(.1f);
+        attackTrigger.SetActive(false);
+    }
 
-	public void Roll() {
-		if (CanAttack ()) {
-			//Если игрок не выполняет перекат
-			if (!conditions.invulnerability && invulnerabilityIsRedy) {
-				//Проверить на использование щита
-				CheckBlock ();
-				//Сделать перекат
-				anim.SetTrigger ("roll");
-				StartCoroutine ("ResetRollCheck");	
-				conditions.EnableInvulnerability ();
-			}
-		}
-	}
+    //Использовать перекат
+    public bool invulnerabilityIsRedy = true;
+    public float rollCD = 3f;
 
-	//КД на использование "Переката"
-	IEnumerator ResetRollCheck () {
-		invulnerabilityIsRedy = false;
-		yield return new WaitForSeconds (rollCD);
-		invulnerabilityIsRedy = true;
-	}
+    public void Roll()
+    {
+        if (CanAttack())
+        {
+            //Если игрок не выполняет перекат
+            if (!conditions.invulnerability && invulnerabilityIsRedy)
+            {
+                //Проверить на использование щита
+                CheckBlock();
+                //Сделать перекат
+                anim.SetTrigger("roll");
+                StartCoroutine("ResetRollCheck");
+                conditions.EnableInvulnerability();
+            }
+        }
+    }
 
-	//Стрельба из лука
-	void PullBow () {
-		CheckBlock ();
-		conditions.attack = true;
-		anim.SetTrigger ("pullBow");
-	}
+    //КД на использование "Переката"
+    IEnumerator ResetRollCheck()
+    {
+        invulnerabilityIsRedy = false;
+        yield return new WaitForSeconds(rollCD);
+        invulnerabilityIsRedy = true;
+    }
+
+    //Стрельба из лука
+    void PullBow()
+    {
+        CheckBlock();
+        conditions.attack = true;
+        anim.SetTrigger("pullBow");
+    }
 }

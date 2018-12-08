@@ -31,7 +31,7 @@ public class DangerArea : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.CompareTag ("Player")) {
 			if (!stackActivated) {
-				GameManager.battleMode = true;
+				GameManager.EnableBattleMode(true);
 				enemieAlert (other.gameObject);
 				stackActivated = true;
 			}
@@ -51,7 +51,7 @@ public class DangerArea : MonoBehaviour {
 		if (corpses == allEnemies) {
 			//Зафиксировать уничтожение врагов в этом стаке
 			allEnemiesDead = true;
-			GameManager.battleMode = false;
-		}
-	}
+            GameManager.EnableBattleMode(false);
+        }
+    }
 }

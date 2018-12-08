@@ -24,12 +24,13 @@ public class GameManager : MonoBehaviour {
 	}
 
 	//Режим боя
-	public static bool battleMode = false;
-	public static void EnableBattleMode () {
-		battleMode = true;
+	private static bool battleMode = false;
+	public static void EnableBattleMode (bool enable) {
+		battleMode = enable;
 	}
 
-	public static void DisableBattleMode () {
-		battleMode = false;
-	}
+    public static bool GetBattleMode ()
+    {
+        return battleMode;
+    }
 }

@@ -17,7 +17,7 @@ public class Ladder : MonoBehaviour {
 	
 	void Update () {
 		if (!player.onLadder && playerEnter && player.inputY != 0f) {
-			if (!GameManager.battleMode && player.CanAttack() && player.CanMove()) {
+			if (!GameManager.GetBattleMode() && player.CanAttack() && player.CanMove()) {
 				Debug.Log ("enter");
 				player.onLadder = true;
 				player.anim.SetBool ("on_ladder", player.onLadder);
