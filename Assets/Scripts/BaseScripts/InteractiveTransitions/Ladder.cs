@@ -37,7 +37,6 @@ public class Ladder : MonoBehaviour {
 			targetObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
 			playerEnter = false;
 			player.onLadder = false;
-			Debug.Log ("exit");
 			player.anim.SetBool ("on_ladder", player.onLadder);
 		}
 	}

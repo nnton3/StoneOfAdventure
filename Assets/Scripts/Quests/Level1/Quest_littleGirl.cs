@@ -37,9 +37,6 @@ public class Quest_littleGirl : Quest {
 				progress++;
 			}
 		}
-		if (target == progress) {
-			return true;
-		} else
-			return false;
+        return target == progress;
 	}
 }

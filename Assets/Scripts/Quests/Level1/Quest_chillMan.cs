@@ -5,7 +5,10 @@ using UnityEngine.Events;
 
 public class Quest_chillMan : Quest
 {
-
+    private void Update()
+    {
+        Debug.Log(GameManager.GetBattleMode());
+    }
     DialogueWindow dialogueWindow;
 
     private void Start()
@@ -18,6 +21,8 @@ public class Quest_chillMan : Quest
     public string player_hello = "Здравствуй, хорошо я помогу тебе";
     public string not_complete_replic = "И где мой меч парень?";
     public string player_not_complete_answer = "Ща все буит паринь";
+    public string quest_complete = "О, спасибо";
+    public string player_quest_complete = "Да не за что";
     public void StartDialogue()
     {
         if (!QuestComplete())
@@ -27,15 +32,22 @@ public class Quest_chillMan : Quest
             {
                 if (CheckProgress())
                 {
+                    dialogueWindow.CreateTextMessage(quest_complete);
+                    dialogueWindow.CreateButton(player_quest_complete, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
+                    QuestController.DeleteActiveQuest(2);
+                    Destroy(indicator.gameObject);
+                }
+                else
+                {
                     dialogueWindow.CreateTextMessage(not_complete_replic);
                     dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
                 }
             }
-        }
-        else
-        {
-            dialogueWindow.CreateTextMessage(hello_replic);
-            dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
+            else
+            {
+                dialogueWindow.CreateTextMessage(hello_replic);
+                dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
+            }
         }
     }
 
@@ -46,7 +58,7 @@ public class Quest_chillMan : Quest
 
     bool QuestInProgress ()
     {
-        return QuestController.FindActiveQuest(ID) == QuestController.nullQuest;
+        return QuestController.FindActiveQuest(ID) != QuestController.nullQuest;
     }
     /*void OnTriggerEnter2D (Collider2D targetObject) {
         //Если пришел не игрок
@@ -95,15 +107,23 @@ public class Quest_chillMan : Quest
 
     bool CheckProgress()
     {
-        if (target == progress)
-        {
-            return true;
-        }
-        return false;
+        return target == progress;
     }
 
     public void AddThisQuest()
     {
         QuestController.AddActiveQuest(GetComponent<Quest>());
+    }
+
+    void EndQuest()
+    {
+        Destroy(indicator);
+        objectivesComplete = true;
+        QuestList.quest4_little_girl = true;
+    }
+
+   public void AddProgress ()
+    {
+        progress++;
     }
 }

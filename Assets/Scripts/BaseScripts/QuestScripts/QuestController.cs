@@ -75,30 +75,4 @@ public class QuestController: MonoBehaviour {
 				continue;
 		}
 	}
-
-	public static void DropQuestItem (GameObject questItem) {
-		for (int i = 0; i < questItems.Length; i++) {
-			if (questItems [i] == questItem) {
-				questItems [i] = null;
-			} else
-				continue;
-		}
-	}
-
-	public static bool FindQuestItem (int ID, int numberOfItems) {
-		int currentItemNumber = 0;
-		for (int i = 0; i < questItems.Length; i++) {
-			try{
-				if (questItems [i].GetComponent<QuestObject> ().ID == ID) {
-					currentItemNumber++;
-				}
-			} catch {
-				continue;
-			}
-		}
-		if (currentItemNumber == numberOfItems) {
-			return true;
-		} else
-			return false;
-	}
 }

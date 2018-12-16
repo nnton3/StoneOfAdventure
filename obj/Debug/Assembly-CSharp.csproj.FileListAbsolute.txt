@@ -248,3 +248,5 @@
 /Users/Anton/Desktop/StoneOfAdventure/obj/Debug/Assembly-CSharp.csproj.CopyComplete
 /Users/Anton/Desktop/StoneOfAdventure/obj/Debug/Assembly-CSharp.dll
 /Users/Anton/Desktop/StoneOfAdventure/obj/Debug/Assembly-CSharp.pdb
+/Users/Anton/Desktop/StoneOfAdventure/Temp/bin/Debug/UnityEditor.StandardEvents.dll
+/Users/Anton/Desktop/StoneOfAdventure/Temp/bin/Debug/UnityEditor.StandardEvents.dll.mdb

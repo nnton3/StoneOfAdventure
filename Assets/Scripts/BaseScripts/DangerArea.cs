@@ -6,11 +6,11 @@ public class DangerArea : MonoBehaviour {
 
 	alert enemieAlert;
 	List<Unit> enemies = new List<Unit>();
-	bool stackActivated = false;
-	[HideInInspector]
-	public int deadEnemies = 0;
-	int allEnemies = 0;
-	public bool allEnemiesDead = false;
+	bool stackActivated;
+    [SerializeField]
+    int deadEnemies = 0;
+    [SerializeField]
+    int allEnemies = 0;
 
 	void Start () {
 		FindUnits ();
@@ -46,11 +46,10 @@ public class DangerArea : MonoBehaviour {
 	}
 
 	//Проверить остались ли живые враги 
-	void StackIsDead (float corpses) {
+	void StackIsDead (int corpses) {
 		//Сравнить количество трупов с исходным количеством врагов в стаке
 		if (corpses == allEnemies) {
 			//Зафиксировать уничтожение врагов в этом стаке
-			allEnemiesDead = true;
             GameManager.EnableBattleMode(false);
         }
     }
