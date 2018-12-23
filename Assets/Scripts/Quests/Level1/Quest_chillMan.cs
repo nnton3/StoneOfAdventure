@@ -5,12 +5,7 @@ using UnityEngine.Events;
 
 public class Quest_chillMan : Quest
 {
-    private void Update()
-    {
-        Debug.Log(GameManager.GetBattleMode());
-    }
     DialogueWindow dialogueWindow;
-
     private void Start()
     {
         dialogueWindow = (DialogueWindow)FindObjectOfType(typeof(DialogueWindow));
@@ -23,30 +18,39 @@ public class Quest_chillMan : Quest
     public string player_not_complete_answer = "Ща все буит паринь";
     public string quest_complete = "О, спасибо";
     public string player_quest_complete = "Да не за что";
+    public string player_have_sword = "Отдать меч";
     public void StartDialogue()
     {
         if (!QuestComplete())
         {
             dialogueWindow.Enable(true);
+            Debug.Log(QuestController.FindActiveQuest(ID));
             if (QuestInProgress())
             {
-                if (CheckProgress())
+                Debug.Log("Квест в процессе выполнения");
+                if (QuestController.CheckProgress(ID))
                 {
-                    dialogueWindow.CreateTextMessage(quest_complete);
-                    dialogueWindow.CreateButton(player_quest_complete, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
-                    QuestController.DeleteActiveQuest(2);
-                    Destroy(indicator.gameObject);
+                    Debug.Log("Квест таки выполнен");
+                    TakeSword();
+                    QuestController.DeleteActiveQuest(ID);
                 }
                 else
                 {
+                    Debug.Log("Квест не выполнен");
                     dialogueWindow.CreateTextMessage(not_complete_replic);
                     dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
                 }
             }
             else
             {
+                Debug.Log("work");
                 dialogueWindow.CreateTextMessage(hello_replic);
-                dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
+                if (QuestController.FindActiveQuest(3) == null)
+                {
+                    dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
+                }
+                else
+                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { TakeSword, delegate { QuestController.DeleteActiveQuest(3); } });
             }
         }
     }
@@ -58,58 +62,9 @@ public class Quest_chillMan : Quest
 
     bool QuestInProgress ()
     {
-        return QuestController.FindActiveQuest(ID) != QuestController.nullQuest;
+        return QuestController.FindActiveQuest(ID) != null;
     }
-    /*void OnTriggerEnter2D (Collider2D targetObject) {
-        //Если пришел не игрок
-        if (!targetObject.CompareTag ("Player")) {
-            //Не реагировать
-            return;
-        }
-        //Если у него нет этого квеста
-        if (QuestController.FindActiveQuest (ID) == QuestController.nullQuest) {
-            //Если этот квест еще не выполнялся
-            if (!QuestList.quest2_chill_man) {
-                replica1.SetActive (true);
-            }
-            //Если у него есть этот квест
-        } else {
-            //Если цели выполнены
-            if (QuestController.FindActiveQuest (ID).objectivesComplete || QuestController.FindQuestItem (ID, target)) {
-                replica4.SetActive (true);
-            }
-        }
-    }
-
-    void OnTriggerExit2D (Collider2D targetObject) {
-        if (targetObject.CompareTag ("Player")) {
-            replica1.SetActive (false);
-            replica2.SetActive (false);
-            replica3.SetActive (false);
-        }
-    }
-
-    //Получить ссылки на диалоги
-    GameObject replica1;
-    GameObject replica2;
-    GameObject replica3;
-    GameObject replica4;
-    void SetReplics () {
-        replica1 = GameObject.Find ("ChillMan_replica1");
-        replica1.SetActive (false);
-        replica2 = GameObject.Find ("ChillMan_replica2");
-        replica2.SetActive (false);
-        replica3 = GameObject.Find ("ChillMan_replica3");
-        replica3.SetActive (false);
-        replica4 = GameObject.Find ("ChillMan_replica4");
-        replica4.SetActive (false);
-    }*/
-
-    bool CheckProgress()
-    {
-        return target == progress;
-    }
-
+   
     public void AddThisQuest()
     {
         QuestController.AddActiveQuest(GetComponent<Quest>());
@@ -122,8 +77,12 @@ public class Quest_chillMan : Quest
         QuestList.quest4_little_girl = true;
     }
 
-   public void AddProgress ()
+    void TakeSword ()
     {
-        progress++;
+        dialogueWindow.CreateTextMessage(quest_complete);
+        dialogueWindow.CreateButton(player_quest_complete, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
+        QuestList.quest2_chill_man = true;
+        QuestList.quest3_chill_man_sword = true;
+        Destroy(indicator.gameObject);
     }
 }

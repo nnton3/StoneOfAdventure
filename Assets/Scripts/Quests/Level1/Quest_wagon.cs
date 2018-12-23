@@ -12,7 +12,7 @@ public class Quest_wagon : MonoBehaviour {
 		//Если пришел игрок
 		if (targetObject.CompareTag ("Player")) {
 			//Если у него есть квест от кузнеца
-			if (QuestController.FindActiveQuest (ID) != QuestController.nullQuest) {
+			if (QuestController.FindActiveQuest (ID) != null) {
 				//Если в тележке есть руда
 				if (oreNumber > 0) {
 					replica1.SetActive (true);

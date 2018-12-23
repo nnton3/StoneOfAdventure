@@ -26,7 +26,7 @@ public class Quest_blacksmith : Quest {
 			return;
 		}
 		//Если у него нет этого квеста
-		if (QuestController.FindActiveQuest (ID) == QuestController.nullQuest) {
+		if (QuestController.FindActiveQuest (ID) == null) {
 			Debug.Log ("Такого квеста еще нет");
 			//Если этот квест еще не выполнялся
 			if (!QuestList.quest1_blacksmith) {

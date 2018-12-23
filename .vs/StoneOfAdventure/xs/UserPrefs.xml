@@ -1,12 +1,35 @@
 ﻿<Properties StartupConfiguration="{35E2B4C1-3759-1B56-33FF-48755F1A0430}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/Enemy_zombie_Brian/Enemy_zombie_Brian_conditions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Quests/Level1/Quest_chillMan.cs">
     <Files>
-      <File FileName="Assets/Scripts/BaseScripts/DangerArea.cs" Line="53" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_defaultZombie/Default_zombie.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Brian/Enemy_zombieBrian.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Brian/Enemy_zombie_Brian_conditions.cs" Line="19" Column="9" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_defaultZombie/ZombyConditions.cs" Line="21" Column="41" />
+      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestController.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan_sword.cs" Line="35" Column="9" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan.cs" Line="85" Column="49" />
+      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/I_QuestObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Interface/DialogueWindow.cs" Line="21" Column="12" />
+      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestList.cs" Line="9" Column="47" />
+      <File FileName="Assets/Scripts/Interface/QuestBar.cs" Line="41" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StoneOfAdventure" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="BaseScripts" expanded="True">
+                  <Node name="QuestScripts" expanded="True" />
+                </Node>
+                <Node name="Interface" expanded="True" />
+                <Node name="Quests" expanded="True">
+                  <Node name="Level1" expanded="True">
+                    <Node name="Quest_chillMan.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class QuestList : MonoBehaviour {
 
-	public static bool quest1_blacksmith = false;
-	public static bool quest2_chill_man = false;
-	public static bool quest4_little_girl = false;
+	public static bool quest1_blacksmith;
+	public static bool quest2_chill_man;
+    public static bool quest3_chill_man_sword;
+	public static bool quest4_little_girl;
 }

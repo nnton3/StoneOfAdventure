@@ -13,8 +13,8 @@ public class QuestController: MonoBehaviour {
 		FindQuestBar ();
 	}
 
-	//Получить ссылку на квест бар
-	public static void FindQuestBar () {
+    //Получить ссылку на квест бар
+    public static void FindQuestBar () {
 		questBarScript = GameObject.Find ("QuestBar").GetComponent<QuestBar> ();
 	}
 
@@ -53,7 +53,7 @@ public class QuestController: MonoBehaviour {
 				continue;
 			}
 		}
-		return nullQuest;
+		return null;
 	}
 
 	public static void AddQuestProgress (int ID) {
@@ -65,14 +65,9 @@ public class QuestController: MonoBehaviour {
 		}
 	}
 
-	public static GameObject[] questItems = new GameObject[20];
-	public static void PickUpQuestItem (GameObject questItem) {
-		for (int i = 0; i < questItems.Length; i++) {
-			if (questItems [i] == null) {
-				questItems [i] = questItem;
-				return;
-			} else
-				continue;
-		}
-	}
+    public static bool CheckProgress (int ID)
+    {
+        Quest _quest = FindActiveQuest(ID);
+        return _quest.target == _quest.progress;
+    }
 }

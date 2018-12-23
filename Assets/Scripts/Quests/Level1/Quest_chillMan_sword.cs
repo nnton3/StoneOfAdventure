@@ -2,43 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest_chillMan_sword : Quest {
+public class Quest_chillMan_sword : Quest, I_QuestObject {
 
-	void Start () {
-		if (this.transform.lossyScale.x < 0) {
-			Vector3 currentScale;
-			currentScale = this.transform.localScale;
-			currentScale.x *= -1f;
-			this.transform.localScale = currentScale;
-		}
-	}
+    public void AddProgress()
+    {
+        QuestController.AddQuestProgress(ID);
+    }
 
-	public GameObject replica1;
-	void OnTriggerEnter2D (Collider2D player) {
-		if (player.CompareTag ("Player")) {
-			if (QuestController.FindActiveQuest (ID) == QuestController.nullQuest) {
-				replica1.SetActive (true);
-			} else {
-				AddItemToChest ();
-			}
-		}
-	}
+    public GameObject indicator;
+    void Start () {
+        dialogueWindow = (DialogueWindow)FindObjectOfType(typeof(DialogueWindow));
+        if (QuestController.FindActiveQuest(ID) == null)
+        indicator.SetActive(true);
+    }
 
-	void OnTriggerExit2D (Collider2D player) {
-		if (player.CompareTag ("Player")) {
-				replica1.SetActive (false);
-		}
-	}
-		
-	public void AddThisQuest () {
-		QuestController.AddActiveQuest (this.GetComponent<Quest>());
-		AddItemToChest ();
-	}
+    DialogueWindow dialogueWindow;
+    public string object_discription = "Вы видит меч, сталь переливается в лучах лунного света, выглядит завораживающе";
+    public string player_do = "Взять";
+    public void StartDialogue()
+    {
+        if (QuestController.FindActiveQuest(ID) == null)
+        {
+            dialogueWindow.Enable(true);
+            dialogueWindow.CreateTextMessage(object_discription);
+            dialogueWindow.CreateButton(player_do, new UnityEngine.Events.UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
+        }
+    }
 
-	void AddItemToChest () {
-		QuestController.PickUpQuestItem (this.gameObject);
-		GameObject itemChest = GameObject.Find ("ItemChest");
-		this.transform.SetParent (itemChest.transform);
-		transform.position = itemChest.transform.position;
-	}
+    public void AddThisQuest () {
+        Debug.Log("work");
+		QuestController.AddActiveQuest (GetComponent<Quest>());
+        transform.position = new Vector3(-100, 100, 0);
+  	}
 }

@@ -179,10 +179,10 @@
     <Compile Include="Assets\Scripts\BaseScripts\Interfaces.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\Patron.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Drop.cs" />
+    <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\I_QuestObject.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\Quest.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestController.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestList.cs" />
-    <Compile Include="Assets\Scripts\BaseScripts\QuestScripts\QuestObject.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\Tiles\Tile.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\Tiles\TileCrossroads.cs" />
     <Compile Include="Assets\Scripts\BaseScripts\Tiles\TileGenerator.cs" />
@@ -251,7 +251,6 @@
     <Compile Include="Assets\Scripts\Quests\Level1\Quest_chillMan_sword.cs" />
     <Compile Include="Assets\Scripts\Quests\Level1\Quest_littleGirl.cs" />
     <Compile Include="Assets\Scripts\Quests\Level1\Quest_wagon.cs" />
-    <Compile Include="Assets\Scripts\Quests\Level1\QuestObjects\QuestObject_chillMan_sword.cs" />
     <Compile Include="Assets\Scripts\TestingScripts\Banner.cs" />
     <Compile Include="Assets\Scripts\TestingScripts\Euler\EulerGeneration.cs" />
     <Compile Include="Assets\Scripts\TestingScripts\Euler\EulerTile.cs" />
