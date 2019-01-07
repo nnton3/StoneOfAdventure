@@ -24,26 +24,21 @@ public class Quest_chillMan : Quest
         if (!QuestComplete())
         {
             dialogueWindow.Enable(true);
-            Debug.Log(QuestController.FindActiveQuest(ID));
             if (QuestInProgress())
             {
-                Debug.Log("Квест в процессе выполнения");
                 if (QuestController.CheckProgress(ID))
                 {
-                    Debug.Log("Квест таки выполнен");
                     TakeSword();
                     QuestController.DeleteActiveQuest(ID);
                 }
                 else
                 {
-                    Debug.Log("Квест не выполнен");
                     dialogueWindow.CreateTextMessage(not_complete_replic);
                     dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
                 }
             }
             else
             {
-                Debug.Log("work");
                 dialogueWindow.CreateTextMessage(hello_replic);
                 if (QuestController.FindActiveQuest(3) == null)
                 {
