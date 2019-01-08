@@ -673,15 +673,6 @@ Prefab:
       propertyPath: rightBound
       value: 
       objectReference: {fileID: 1677952335}
-    - target: {fileID: 1448505467614326, guid: c6cba582da13a4993ba95012ff01708b, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 50100775211945988, guid: c6cba582da13a4993ba95012ff01708b,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6cba582da13a4993ba95012ff01708b, type: 2}
   m_IsPrefabAsset: 0
@@ -1390,6 +1381,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114839566982050010, guid: b8ef3e26a68ff474d8761f85957cba24,
+        type: 2}
+      propertyPath: attackCollision.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8ef3e26a68ff474d8761f85957cba24, type: 2}
   m_IsPrefabAsset: 0
@@ -1444,6 +1440,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1780096191958802, guid: 2d85d9c89a84c464c95a60dc66d559f8, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114599399488166144, guid: 2d85d9c89a84c464c95a60dc66d559f8,
+        type: 2}
+      propertyPath: attackRange
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212163186509112466, guid: 2d85d9c89a84c464c95a60dc66d559f8,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212163186509112466, guid: 2d85d9c89a84c464c95a60dc66d559f8,
+        type: 2}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

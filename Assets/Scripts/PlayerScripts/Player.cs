@@ -121,7 +121,7 @@ public class Player : Unit
     public IEnumerator EnableAttackTrigger()
     {
         attackTrigger.SetActive(true);
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(Time.deltaTime);
         attackTrigger.SetActive(false);
     }
 

@@ -19,15 +19,18 @@ public class Enemy_Astofena : Enemy {
                 //Если юнит может атаковать
                 if (CanAttack())
                 {
+                    Debug.Log("can attack");
                     if (targetRange < (attackRange - 0.5f) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f)))
                     {
+                        Debug.Log("attack");
                         //Атаковать вблизи
                         Attack();
-                    } else if (targetRange > (attackRange + 1f) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f)))
+                    } /*else if (targetRange > (attackRange + 1f) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f)))
                     {
+                        Debug.Log("range attack");
                         //Дальняя атака
                         RangeAttack();
-                    }
+                    }*/
                     else
                         //Изменить направление движения
                         inputX = -targetDirection;
@@ -37,10 +40,20 @@ public class Enemy_Astofena : Enemy {
         }
     }
 
+    public override void Attack()
+    {
+        conditions.attack = true;
+        //Остановиться
+        inputX = 0;
+        anim.SetTrigger("attack");
+    }
+
     void RangeAttack()
     {
         conditions.attack = true;
-        anim.SetTrigger("rangeAttack");
+        //Остановиться
+        inputX = 0;
+        anim.SetTrigger("attack2");
     }
 
     public override void Alert(GameObject player)

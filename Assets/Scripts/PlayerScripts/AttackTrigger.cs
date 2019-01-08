@@ -12,6 +12,7 @@ public class AttackTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D enemy) {
 		if (enemy.CompareTag("Enemy")) {
+            Debug.Log("Set damage");
 			enemy.GetComponent<Damage> ().DefaultDamage (player.attackPoints, player.direction);
 		}
 	}
