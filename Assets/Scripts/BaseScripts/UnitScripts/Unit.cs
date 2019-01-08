@@ -80,13 +80,13 @@ public abstract class Unit : MonoBehaviour {
 
 	///Проверка на возможность двигаться
 	public virtual bool CanMove() {
-		return (conditions.alive && !conditions.stun);
-	}
+        return conditions.alive && !conditions.stun;
+    }
 
 	///Проверка на возможность атаковать
 	public virtual bool CanAttack() {
-		return (!conditions.attack && !conditions.stun);
-	}
+        return !conditions.attack && !conditions.stun;
+    }
 
 	/*! Используется только для вражеских юнитов для помещения их в триггер,
 		при срабатывании которого они начинают преследовать и атаковать игрока
@@ -95,11 +95,15 @@ public abstract class Unit : MonoBehaviour {
 	public DangerArea enemieTriggerScript;
 	public virtual void RegistrationInStack () {
 		enemieTriggerScript = GetComponentInParent<DangerArea> ();
-		enemieTriggerScript = GetComponentInParent<DangerArea> ();
 		enemieTriggerScript.AddEnemie (this);
 	}
 
-	public void StartChangeColor () {
+    public void RegistrationCorpse ()
+    {
+        enemieTriggerScript.AddCorpse();
+    }
+
+    public void StartChangeColor () {
 		StopCoroutine ("ChangeColor");
 		spRender.color = Color.white;
 		StartCoroutine ("ChangeColor");

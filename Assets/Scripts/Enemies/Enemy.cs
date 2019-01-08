@@ -11,7 +11,7 @@ public class Enemy : Unit {
 	[HideInInspector]
 	public bool idle = true;
 
-	void Awake() {
+	public virtual void Awake() {
 		RegistrationInStack ();
 	}
 

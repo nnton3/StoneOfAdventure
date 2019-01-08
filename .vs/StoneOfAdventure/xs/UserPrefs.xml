@@ -1,14 +1,11 @@
 ﻿<Properties StartupConfiguration="{35E2B4C1-3759-1B56-33FF-48755F1A0430}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Quests/Level1/Quest_chillMan.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/Enemy_Astofena/Enemy_Astofena_spiders.cs">
     <Files>
-      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestController.cs" Line="15" Column="1" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan_sword.cs" Line="35" Column="9" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan.cs" Line="46" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/I_QuestObject.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Interface/DialogueWindow.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scripts/Interface/QuestBar.cs" Line="41" Column="1" />
-      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestList.cs" Line="5" Column="8" />
-      <File FileName="Assets/Scripts/TestingScripts/testDialogue.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_Astofena/Enemy_Astofena_spiders.cs" Line="17" Column="44" />
+      <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Unit.cs" Line="83" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_invoked_zombie/Enemy_invokedZomby.cs" Line="10" Column="33" />
+      <File FileName="Assets/Scripts/Enemies/Zombie.cs" Line="5" Column="25" />
+      <File FileName="Assets/Scripts/Enemies/Enemy.cs" Line="14" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
