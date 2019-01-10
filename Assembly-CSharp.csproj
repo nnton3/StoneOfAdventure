@@ -234,13 +234,12 @@
     <Compile Include="Assets\Scripts\Enemies\Zombie.cs" />
     <Compile Include="Assets\Scripts\Interface\Backstage.cs" />
     <Compile Include="Assets\Scripts\Interface\DialogueWindow.cs" />
-    <Compile Include="Assets\Scripts\Interface\EPBar.cs" />
     <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
+    <Compile Include="Assets\Scripts\Interface\PlayerParamBar.cs" />
     <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
     <Compile Include="Assets\Scripts\Interface\QuestBar.cs" />
     <Compile Include="Assets\Scripts\Interface\QuestBarElements.cs" />
     <Compile Include="Assets\Scripts\Interface\TransitionController.cs" />
-    <Compile Include="Assets\Scripts\Interface\UnitBar.cs" />
     <Compile Include="Assets\Scripts\Levels\Level1.cs" />
     <Compile Include="Assets\Scripts\Objects\Chest.cs" />
     <Compile Include="Assets\Scripts\Objects\ChestTrigger.cs" />

@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{35E2B4C1-3759-1B56-33FF-48755F1A0430}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerScripts/AttackTrigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interface/PlayerParamBar.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemies/Enemy_Astofena/Enemy_Astofena_damage_front.cs" Line="21" Column="48" />
       <File FileName="Assets/Scripts/Enemies/Enemy_Astofena/Enemy_Astofena_damage_back.cs" Line="15" Column="27" />
       <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Damage.cs" Line="152" Column="3" />
       <File FileName="Assets/Scripts/Enemies/Enemy_Astofena/Enemy_Astofena.cs" Line="33" Column="24" />
-      <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Unit.cs" Line="50" Column="3" />
+      <File FileName="Assets/Scripts/BaseScripts/UnitScripts/Unit.cs" Line="38" Column="20" />
       <File FileName="Assets/Scripts/Enemies/Enemy_zombie_Brian/Enemy_zombieBrian.cs" Line="35" Column="14" />
       <File FileName="Assets/Scripts/PlayerScripts/AttackTrigger.cs" Line="15" Column="34" />
+      <File FileName="Assets/AssetStore/Modern UI Pack/Scripts/ProgressBar.cs" Line="20" Column="4" />
+      <File FileName="Assets/Scripts/Interface/PlayerParamBar.cs" Line="17" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

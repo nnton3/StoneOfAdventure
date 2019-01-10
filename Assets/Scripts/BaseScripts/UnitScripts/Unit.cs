@@ -9,18 +9,19 @@ using UnityEngine;
 */
 public abstract class Unit : MonoBehaviour {
 
-	public float health = 0f;   ///< Общий запас здоровья юнита в данный момент
-	public float armor = 0f;   ///< Показатель брони  
-	public float attackPoints = 0f;   ///< Количество урона наносимого за один удар
-	public float attackSpeed = 0f;   ///< Количество секунд до возможности снова произвести атаку
-	public float attackRange = 1f;   ///< Дальность атаки
+	public float health;   ///< Общий запас здоровья юнита в данный момент
+    public float max_health;
+	public float armor;   ///< Показатель брони  
+	public float attackPoints;   ///< Количество урона наносимого за один удар
+	public float attackSpeed;   ///< Количество секунд до возможности снова произвести атаку
+	public float attackRange;   ///< Дальность атаки
 
 	public float moveSpeed;   ///< Скорость бега
 	public float impulsePower;   ///< Силы с которой юнит будет отброшен при получении урона
 	[HideInInspector]
-	public int inputX = 0;   ///< Направление движения по Х
+	public int inputX;   ///< Направление движения по Х
 	[HideInInspector]
-	public int inputY = 0;   ///< Направление движения по Y
+	public int inputY;   ///< Направление движения по Y
 	[HideInInspector]
 	public Rigidbody2D rb;   ///< Ссылка на компонент Rigidbody2D
 	[HideInInspector]
@@ -32,9 +33,9 @@ public abstract class Unit : MonoBehaviour {
 	[HideInInspector]
 	public int direction = 1;   ///< Переменная в которой хранится текущее направление юнита
 	[HideInInspector]
-	public int flipParam = 0;   ///< Переменная в которой записан параметр от которого зависит направление игрока
+	public int flipParam;   ///< Переменная в которой записан параметр от которого зависит направление игрока
 
-	void Start () {
+    void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		conditions = GetComponent<Conditions> ();
