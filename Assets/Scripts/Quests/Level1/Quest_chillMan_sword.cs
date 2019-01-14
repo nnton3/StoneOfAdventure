@@ -11,8 +11,8 @@ public class Quest_chillMan_sword : Quest, I_QuestObject {
 
     public GameObject indicator;
     void Start () {
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         dialogueWindow = (DialogueWindow)FindObjectOfType(typeof(DialogueWindow));
-        if (QuestController.FindActiveQuest(ID) == null)
         indicator.SetActive(true);
     }
 
@@ -21,17 +21,20 @@ public class Quest_chillMan_sword : Quest, I_QuestObject {
     public string player_do = "Взять";
     public void StartDialogue()
     {
-        if (QuestController.FindActiveQuest(ID) == null)
-        {
-            dialogueWindow.Enable(true);
-            dialogueWindow.CreateTextMessage(object_discription);
-            dialogueWindow.CreateButton(player_do, new UnityEngine.Events.UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
-        }
+        dialogueWindow.Enable(true);
+        dialogueWindow.CreateTextMessage(object_discription);
+        dialogueWindow.CreateButton(player_do, new UnityEngine.Events.UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
     }
 
     public void AddThisQuest () {
-        Debug.Log("work");
-		QuestController.AddActiveQuest (GetComponent<Quest>());
+        if (QuestController.FindActiveQuest(2) == null)
+        {
+            QuestController.AddActiveQuest(GetComponent<Quest>());
+        }
+        else
+        {
+            QuestController.AddQuestProgress(2);
+        }
         transform.position = new Vector3(-100, 100, 0);
-  	}
+    }
 }

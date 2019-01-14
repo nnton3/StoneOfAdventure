@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestList : MonoBehaviour {
+public class QuestList {
 
 	public static bool quest1_blacksmith;
 	public static bool quest2_chill_man;

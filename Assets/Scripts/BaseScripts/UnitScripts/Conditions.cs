@@ -11,6 +11,7 @@ public class Conditions : MonoBehaviour {
 	public Unit unit;   //< Ссылка на контроллер юнита
 	[HideInInspector]
 	public Animator anim;   //< Ссылка на контроллер анимаций
+    public GameObject hp_bar;
 
 	void Start () {
 		unit = GetComponent<Unit> ();

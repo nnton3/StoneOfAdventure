@@ -13,10 +13,12 @@ public class Zombie : Enemy {
 		StartCoroutine ("TimeToBorn");
 	}
 
-	public virtual void StartChase() {
-		gameObject.layer = 9;
-		idle = false;
-	}
+    public virtual void StartChase()
+    {
+        gameObject.layer = 9;
+        idle = false;
+        conditions.hp_bar.SetActive(true);
+    }
 
 	//Задержка перед воскрешением
 	public virtual IEnumerator TimeToBorn() {

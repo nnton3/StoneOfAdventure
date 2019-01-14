@@ -19,5 +19,6 @@ public class ZombyConditions : Conditions {
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
         unit.RegistrationCorpse();
+        Destroy(hp_bar);
     }
 }

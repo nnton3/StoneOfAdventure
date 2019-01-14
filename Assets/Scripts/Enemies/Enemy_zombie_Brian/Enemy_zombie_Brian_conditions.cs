@@ -19,5 +19,6 @@ public class Enemy_zombie_Brian_conditions : Conditions {
         alive = false;
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
+        Destroy(hp_bar);
 	}
 }

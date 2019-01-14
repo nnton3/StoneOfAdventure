@@ -24,6 +24,7 @@ public class Quest_chillMan : Quest
         if (!QuestComplete())
         {
             dialogueWindow.Enable(true);
+            indicator.SetActive(false);
             if (QuestInProgress())
             {
                 if (QuestController.CheckProgress(ID))
@@ -34,7 +35,7 @@ public class Quest_chillMan : Quest
                 else
                 {
                     dialogueWindow.CreateTextMessage(not_complete_replic);
-                    dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
+                    dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { EnableIndicator, delegate { dialogueWindow.Enable(false); } });
                 }
             }
             else
@@ -42,10 +43,10 @@ public class Quest_chillMan : Quest
                 dialogueWindow.CreateTextMessage(hello_replic);
                 if (QuestController.FindActiveQuest(3) == null)
                 {
-                    dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
+                    dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, EnableIndicator, delegate { dialogueWindow.Enable(false); } });
                 }
                 else
-                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { TakeSword, delegate { QuestController.DeleteActiveQuest(3); } });
+                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { TakeSword, EnableIndicator, delegate { QuestController.DeleteActiveQuest(3); } });
             }
         }
     }
@@ -79,5 +80,10 @@ public class Quest_chillMan : Quest
         QuestList.quest2_chill_man = true;
         QuestList.quest3_chill_man_sword = true;
         Destroy(indicator.gameObject);
+    }
+
+    void EnableIndicator()
+    {
+        indicator.SetActive(true);
     }
 }

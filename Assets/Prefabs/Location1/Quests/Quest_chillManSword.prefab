@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303231725488512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224656655907410914}
@@ -279,7 +279,7 @@ MonoBehaviour:
   target: 1
   objectivesComplete: 0
   indicator: {fileID: 1086384053116732}
-  object_discription: "\u0412\u044B \u0432\u0438\u0434\u0438\u0442 \u043C\u0435\u0447,
+  object_discription: "\u0412\u044B \u0432\u0438\u0434\u0438\u0442\u0435 \u043C\u0435\u0447,
     \u0441\u0442\u0430\u043B\u044C \u043F\u0435\u0440\u0435\u043B\u0438\u0432\u0430\u0435\u0442\u0441\u044F
     \u0432 \u043B\u0443\u0447\u0430\u0445 \u043B\u0443\u043D\u043D\u043E\u0433\u043E
     \u0441\u0432\u0435\u0442\u0430, \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442

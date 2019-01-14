@@ -234,8 +234,7 @@
     <Compile Include="Assets\Scripts\Enemies\Zombie.cs" />
     <Compile Include="Assets\Scripts\Interface\Backstage.cs" />
     <Compile Include="Assets\Scripts\Interface\DialogueWindow.cs" />
-    <Compile Include="Assets\Scripts\Interface\HPBar.cs" />
-    <Compile Include="Assets\Scripts\Interface\PlayerParamBar.cs" />
+    <Compile Include="Assets\Scripts\Interface\ParamBar.cs" />
     <Compile Include="Assets\Scripts\Interface\Pointer.cs" />
     <Compile Include="Assets\Scripts\Interface\QuestBar.cs" />
     <Compile Include="Assets\Scripts\Interface\QuestBarElements.cs" />

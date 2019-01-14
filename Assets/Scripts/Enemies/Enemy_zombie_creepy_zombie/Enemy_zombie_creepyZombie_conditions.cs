@@ -19,5 +19,6 @@ public class Enemy_zombie_creepyZombie_conditions : Conditions {
 		gameObject.layer = 2;
 		gameObject.tag = "Puddle";
 		unit.RegistrationCorpse ();
-	}
+        Destroy(hp_bar);
+    }
 }
