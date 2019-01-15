@@ -1,65 +1,106 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Quest_blacksmith : Quest {
 
-	void Start () {
-		SetReplics ();
-	}
+    DialogueWindow dialogueWindow;
+    private void Start()
+    {
+        dialogueWindow = (DialogueWindow)FindObjectOfType(typeof(DialogueWindow));
+    }
 
-	public void AddThisQuest () {
-		QuestController.AddActiveQuest (this.GetComponent<Quest>());
-	}
+    [SerializeField]
+    GameObject indicator;
+    [SerializeField]
+    string not_complete_replic = "Того, что ты принес недостаточно, нужно больше руды";
+    [SerializeField]
+    string player_not_complete_answer = "Хорошо постараюсь найти еще";
+    [SerializeField]
+    string hello_replic = "Здравствуй воин. Нужна работа? Мне не хватает руды для работы. Если будет спустись в шахту.";
+    [SerializeField]
+    string player_hello = "Здравствуй, хорошо я помогу тебе";
+    [SerializeField]
+    string player_have_sword = "Отдать руду";
 
-	public void FinishQuest () {
-		QuestController.DeleteActiveQuest (ID);
-		QuestList.quest1_blacksmith = true;
-		replica3.SetActive (false);
-	}
+    public void StartDialogue()
+    {
+        if (!QuestComplete())
+        {
+            dialogueWindow.Enable(true);
+            indicator.SetActive(false);
+           
+            if (QuestInProgress())
+            {
+                if (QuestController.CheckProgress(ID))
+                {
+                    EndQuest();
+                    QuestController.DeleteActiveQuest(ID);
+                }
+                else
+                {
+                    dialogueWindow.CreateTextMessage(not_complete_replic);
+                    dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { EnableIndicator, delegate { dialogueWindow.Enable(false); } });
+                }
+            }
+            else
+            {
+                dialogueWindow.CreateTextMessage(hello_replic);
+                if (QuestController.FindActiveQuest(5) == null)
+                {
+                    dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, SwapIndicator, EnableIndicator, delegate { dialogueWindow.Enable(false); } });
+                }
+                else
+                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { EndQuest, EnableIndicator, delegate { QuestController.DeleteActiveQuest(3); } });
+            }
+        }
+    }
 
-	void OnTriggerEnter2D (Collider2D targetObject) {
-		//Если пришел не игрок
-		if (!targetObject.CompareTag ("Player")) {
-			Debug.Log ("Пришел не игрок");
-			//Не реагировать
-			return;
-		}
-		//Если у него нет этого квеста
-		if (QuestController.FindActiveQuest (ID) == null) {
-			Debug.Log ("Такого квеста еще нет");
-			//Если этот квест еще не выполнялся
-			if (!QuestList.quest1_blacksmith) {
-				Debug.Log ("Квест еще не выполнялся");
-				replica1.SetActive (true);
-			}
-			//Если у него есть этот квест
-		} else {
-			//Если цели выполнены
-			if (QuestController.FindActiveQuest (ID).objectivesComplete) {
-				replica3.SetActive (true);
-			}
-		}
-	}
+    bool QuestComplete()
+    {
+        return QuestList.quest1_blacksmith;
+    }
 
-	void OnTriggerExit2D (Collider2D targetObject) {
-		if (targetObject.CompareTag ("Player")) {
-			replica1.SetActive (false);
-			replica2.SetActive (false);
-			replica3.SetActive (false);
-		}
-	}
+    bool QuestInProgress()
+    {
+        return QuestController.FindActiveQuest(ID) != null;
+    }
 
-	//Получить ссылки на диалоги
-	GameObject replica1;
-	GameObject replica2;
-	GameObject replica3;
-	void SetReplics () {
-		replica1 = GameObject.Find ("Blacksmith_replica1");
-		replica1.SetActive (false);
-		replica2 = GameObject.Find ("Blacksmith_replica2");
-		replica2.SetActive (false);
-		replica3 = GameObject.Find ("Blacksmith_replica3");
-		replica3.SetActive (false);
-	}
+    public void AddThisQuest()
+    {
+        QuestController.AddActiveQuest(GetComponent<Quest>());
+    }
+
+    void EndQuest()
+    {
+        TakeOre();
+        Destroy(indicator);
+        objectivesComplete = true;
+        QuestList.quest1_blacksmith = true;
+        QuestList.quest5_blacksmith_ore = true;
+    }
+
+
+    [SerializeField]
+    string quest_complete = "Спасибо, парень, вот твоя награда";
+    [SerializeField]
+    string player_quest_complete = "Всегда пожалуйста";
+
+
+    void TakeOre()
+    {
+        dialogueWindow.CreateTextMessage(quest_complete);
+        dialogueWindow.CreateButton(player_quest_complete, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
+    }
+
+    void EnableIndicator()
+    {
+        indicator.SetActive(true);
+    }
+
+    public Sprite questionMark;
+    void SwapIndicator()
+    {
+        indicator.GetComponent<Image>().sprite = questionMark;
+    }
 }

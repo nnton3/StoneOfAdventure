@@ -10,8 +10,11 @@ public class Quest_chillMan_sword : Quest, I_QuestObject {
     }
 
     public GameObject indicator;
-    void Start () {
-        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    void Start() {
+        if (transform.lossyScale.x < 0f)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+        }
         dialogueWindow = (DialogueWindow)FindObjectOfType(typeof(DialogueWindow));
         indicator.SetActive(true);
     }

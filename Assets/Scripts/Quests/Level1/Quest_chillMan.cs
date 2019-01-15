@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Quest_chillMan : Quest
 {
@@ -11,14 +10,23 @@ public class Quest_chillMan : Quest
         dialogueWindow = (DialogueWindow)FindObjectOfType(typeof(DialogueWindow));
     }
 
-    public GameObject indicator;
-    public string hello_replic = "Приветствую тебя славный воин, помоги мне вернуть мой меч. Его забрал мерзкий зомби со щитом";
-    public string player_hello = "Здравствуй, хорошо я помогу тебе";
-    public string not_complete_replic = "И где мой меч парень?";
-    public string player_not_complete_answer = "Ща все буит паринь";
-    public string quest_complete = "О, спасибо";
-    public string player_quest_complete = "Да не за что";
-    public string player_have_sword = "Отдать меч";
+    [SerializeField]
+    GameObject indicator;
+    [SerializeField]
+    string hello_replic = "Приветствую тебя славный воин, помоги мне вернуть мой меч. Его забрал мерзкий зомби со щитом";
+    [SerializeField]
+    string player_hello = "Здравствуй, хорошо я помогу тебе";
+    [SerializeField]
+    string not_complete_replic = "И где мой меч парень?";
+    [SerializeField]
+    string player_not_complete_answer = "Ща все буит паринь";
+    [SerializeField]
+    string quest_complete = "О, спасибо";
+    [SerializeField]
+    string player_quest_complete = "Да не за что";
+    [SerializeField]
+    string player_have_sword = "Отдать меч";
+
     public void StartDialogue()
     {
         if (!QuestComplete())
@@ -29,7 +37,7 @@ public class Quest_chillMan : Quest
             {
                 if (QuestController.CheckProgress(ID))
                 {
-                    TakeSword();
+                    EndQuest();
                     QuestController.DeleteActiveQuest(ID);
                 }
                 else
@@ -43,10 +51,10 @@ public class Quest_chillMan : Quest
                 dialogueWindow.CreateTextMessage(hello_replic);
                 if (QuestController.FindActiveQuest(3) == null)
                 {
-                    dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, EnableIndicator, delegate { dialogueWindow.Enable(false); } });
+                    dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, SwapIndicator, EnableIndicator, delegate { dialogueWindow.Enable(false); } });
                 }
                 else
-                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { TakeSword, EnableIndicator, delegate { QuestController.DeleteActiveQuest(3); } });
+                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { EndQuest, EnableIndicator, delegate { QuestController.DeleteActiveQuest(3); } });
             }
         }
     }
@@ -68,22 +76,27 @@ public class Quest_chillMan : Quest
 
     void EndQuest()
     {
+        TakeSword();
         Destroy(indicator);
         objectivesComplete = true;
-        QuestList.quest4_little_girl = true;
+        QuestList.quest2_chill_man = true;
+        QuestList.quest3_chill_man_sword = true;
     }
 
     void TakeSword ()
     {
         dialogueWindow.CreateTextMessage(quest_complete);
         dialogueWindow.CreateButton(player_quest_complete, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });
-        QuestList.quest2_chill_man = true;
-        QuestList.quest3_chill_man_sword = true;
-        Destroy(indicator.gameObject);
     }
 
     void EnableIndicator()
     {
         indicator.SetActive(true);
+    }
+
+    public Sprite questionMark;
+    void SwapIndicator ()
+    {
+        indicator.GetComponent<Image>().sprite = questionMark;
     }
 }

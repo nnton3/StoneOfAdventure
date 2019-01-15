@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{35E2B4C1-3759-1B56-33FF-48755F1A0430}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/Enemy_zombie_creepy_zombie/Enemy_zombie_creepyZombie_conditions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_defaultZombie/ZombyConditions.cs" Line="22" Column="23" />
-      <File FileName="Assets/Scripts/Enemies/Enemy_zombie_creepy_zombie/Enemy_zombie_creepyZombie_conditions.cs" Line="23" Column="5" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan.cs" Line="75" Column="6" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs" Line="47" Column="14" />
+      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestList.cs" Line="11" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
