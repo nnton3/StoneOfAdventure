@@ -13,6 +13,8 @@ public class Quest_blacksmith : Quest {
     [SerializeField]
     GameObject indicator;
     [SerializeField]
+    string hello_friend = "Опять ты? Удалось найти руду?";
+    [SerializeField]
     string not_complete_replic = "Того, что ты принес недостаточно, нужно больше руды";
     [SerializeField]
     string player_not_complete_answer = "Хорошо постараюсь найти еще";
@@ -32,14 +34,16 @@ public class Quest_blacksmith : Quest {
            
             if (QuestInProgress())
             {
+                dialogueWindow.CreateTextMessage(hello_friend);
                 if (QuestController.CheckProgress(ID))
                 {
-                    EndQuest();
+
+                    dialogueWindow.CreateButton(player_have_ore, new UnityAction[] { EndQuest, delegate { dialogueWindow.Enable(false); } });
                     QuestController.DeleteActiveQuest(ID);
                 }
                 else
                 {
-                    QuestNotComplete();
+                    dialogueWindow.CreateButton(player_have_ore, new UnityAction[] { QuestNotComplete });
                 }
             }
             else

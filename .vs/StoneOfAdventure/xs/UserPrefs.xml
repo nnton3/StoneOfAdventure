@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{35E2B4C1-3759-1B56-33FF-48755F1A0430}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Quests/Level1/Quest_wagon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs">
     <Files>
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan.cs" Line="80" Column="26" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan.cs" Line="3" Column="22" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan_sword.cs" Line="8" Column="6" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_deadlyMusic.cs" Line="101" Column="1" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_deadlyMusic_medicine.cs" Line="43" Column="6" />
+      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestList.cs" Line="13" Column="51" />
       <File FileName="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs" Line="56" Column="163" />
-      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestList.cs" Line="11" Column="46" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_wagon.cs" Line="39" Column="13" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_chillMan_sword.cs" Line="18" Column="23" />
-      <File FileName="Assets/Scripts/Interface/QuestBar.cs" Line="40" Column="36" />
-      <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestController.cs" Line="32" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
