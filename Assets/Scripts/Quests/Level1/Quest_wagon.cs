@@ -2,34 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest_wagon : MonoBehaviour {
+public class Quest_wagon : Quest, I_QuestObject
+{
+    public void AddProgress()
+    {
+        QuestController.AddQuestProgress(ID);
+    }
 
-	public GameObject replica1;
-	int ID = 1;
-	int oreNumber = 1;
+    public GameObject indicator;
 
-	void OnTriggerEnter2D (Collider2D targetObject) {
-		//Если пришел игрок
-		if (targetObject.CompareTag ("Player")) {
-			//Если у него есть квест от кузнеца
-			if (QuestController.FindActiveQuest (ID) != null) {
-				//Если в тележке есть руда
-				if (oreNumber > 0) {
-					replica1.SetActive (true);
-				}
-			}
-		}
-	}
+    DialogueWindow dialogueWindow;
+    public string object_discription = "Среди прочего вы находите в вагонетке кусок редкой руды";
+    public string player_do = "Взять";
 
-	void OnTriggerExit2D (Collider2D targetObject) { 
-		if (targetObject.CompareTag ("Player")) {
-			replica1.SetActive (false);
-		}
-	}
+    void Start ()
+    {
+        dialogueWindow = (DialogueWindow)FindObjectOfType(typeof(DialogueWindow));
+    }
 
-	public void PlayerTakeOre() {
-		QuestController.AddQuestProgress (ID);
-		oreNumber--;
-		replica1.SetActive (false);
-	}
+    public void StartDialogue()
+    {
+        dialogueWindow.Enable(true);
+        dialogueWindow.CreateTextMessage(object_discription);
+        dialogueWindow.CreateButton(player_do, new UnityEngine.Events.UnityAction[] { AddThisQuest, delegate { dialogueWindow.Enable(false); } });
+    }
+
+    public void AddThisQuest()
+    {
+        if (QuestController.FindActiveQuest(1) == null)
+        {
+            if (QuestController.FindActiveQuest(ID) == null)
+            {
+                QuestController.AddActiveQuest(GetComponent<Quest>());
+            }
+            Destroy(indicator);
+            QuestController.AddQuestProgress(ID);
+        }
+        else
+        {
+            QuestController.AddQuestProgress(1);
+            Destroy(indicator);
+        }
+    }
 }

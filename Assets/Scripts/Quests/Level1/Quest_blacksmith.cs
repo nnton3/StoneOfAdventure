@@ -17,11 +17,11 @@ public class Quest_blacksmith : Quest {
     [SerializeField]
     string player_not_complete_answer = "Хорошо постараюсь найти еще";
     [SerializeField]
-    string hello_replic = "Здравствуй воин. Нужна работа? Мне не хватает руды для работы. Если будет спустись в шахту.";
+    string hello_replic = "Здравствуй воин. Нужна работа? Мне не хватает руды для работы. Если будет время спустись в шахту.";
     [SerializeField]
     string player_hello = "Здравствуй, хорошо я помогу тебе";
     [SerializeField]
-    string player_have_sword = "Отдать руду";
+    string player_have_ore = "Отдать руду";
 
     public void StartDialogue()
     {
@@ -39,8 +39,7 @@ public class Quest_blacksmith : Quest {
                 }
                 else
                 {
-                    dialogueWindow.CreateTextMessage(not_complete_replic);
-                    dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { EnableIndicator, delegate { dialogueWindow.Enable(false); } });
+                    QuestNotComplete();
                 }
             }
             else
@@ -51,14 +50,29 @@ public class Quest_blacksmith : Quest {
                     dialogueWindow.CreateButton(player_hello, new UnityAction[] { AddThisQuest, SwapIndicator, EnableIndicator, delegate { dialogueWindow.Enable(false); } });
                 }
                 else
-                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { EndQuest, EnableIndicator, delegate { QuestController.DeleteActiveQuest(3); } });
-            }
+                {
+                    if (QuestController.CheckProgress(5))
+                    {
+                        dialogueWindow.CreateButton(player_have_ore, new UnityAction[] { EndQuest, EnableIndicator, delegate { QuestController.DeleteActiveQuest(5); } });
+                    }
+                    else
+                    {
+                        dialogueWindow.CreateButton(player_have_ore, new UnityAction[] { QuestNotComplete });
+                    }
+                }
+           }
         }
     }
 
     bool QuestComplete()
     {
         return QuestList.quest1_blacksmith;
+    }
+
+    void QuestNotComplete()
+    {
+        dialogueWindow.CreateTextMessage(not_complete_replic);
+        dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { EnableIndicator, delegate { dialogueWindow.Enable(false); } });
     }
 
     bool QuestInProgress()
