@@ -6,7 +6,7 @@
       <File FileName="Assets/Scripts/Quests/Level1/Quest_deadlyMusic.cs" Line="101" Column="1" />
       <File FileName="Assets/Scripts/Quests/Level1/Quest_deadlyMusic_medicine.cs" Line="43" Column="6" />
       <File FileName="Assets/Scripts/BaseScripts/QuestScripts/QuestList.cs" Line="13" Column="51" />
-      <File FileName="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs" Line="56" Column="163" />
+      <File FileName="Assets/Scripts/Quests/Level1/Quest_blacksmith.cs" Line="46" Column="106" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
