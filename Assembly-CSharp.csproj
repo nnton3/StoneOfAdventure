@@ -200,6 +200,7 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy_Astofena\Enemy_Astofena_damage_back.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_Astofena\Enemy_Astofena_damage_front.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_Astofena\Enemy_Astofena_spiders.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy_Astofena\Enemy_Astrofena_patron.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_Paladin\Enemy_Paladin.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_Paladin\Enemy_Paladin_conditions.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_Paladin\Enemy_Paladin_damage.cs" />

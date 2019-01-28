@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Rubick_patron : Patron {
 
-	bool hit = false;
-
-	public override void TrueHit (Collider2D target)
-	{
-		//Если еще не было попадания
-		if (!hit) {
+	bool hit;
+    public override void TrueHit(Collider2D target)
+    {
+        //Если еще не было попадания
+        if (!hit) {
 			//Если попало во врагов
 			if (target.CompareTag ("Enemy")) {
 				HitTheMark ();

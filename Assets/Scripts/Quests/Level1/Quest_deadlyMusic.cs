@@ -16,9 +16,9 @@ public class Quest_deadlyMusic : Quest
     [SerializeField]
     string hello_replic = "Ааарргх... Лекарство... Мне нужно лекарство";
     [SerializeField]
-    string player_hello = "...";
+    string hello_friend = "Лекарство!!! Дай мне лекарство! Ааааррр...";
     [SerializeField]
-    string not_complete_replic = "Лекарство...Ааагх";
+    string player_hello = "...";
     [SerializeField]
     string player_not_complete_answer = "...";
     [SerializeField]
@@ -36,14 +36,14 @@ public class Quest_deadlyMusic : Quest
             indicator.SetActive(false);
             if (QuestInProgress())
             {
+                dialogueWindow.CreateTextMessage(hello_friend);
                 if (QuestController.CheckProgress(ID))
                 {
-                    EndQuest();
+                    dialogueWindow.CreateButton(player_have_medicine, new UnityAction[] { EndQuest});
                     QuestController.DeleteActiveQuest(ID);
                 }
                 else
                 {
-                    dialogueWindow.CreateTextMessage(not_complete_replic);
                     dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { EnableIndicator, delegate { dialogueWindow.Enable(false); } });
                 }
             }
@@ -77,14 +77,14 @@ public class Quest_deadlyMusic : Quest
 
     void EndQuest()
     {
-        TakeSword();
+        TakeMedicine();
         Destroy(indicator);
         objectivesComplete = true;
         QuestList.quest2_chill_man = true;
         QuestList.quest3_chill_man_sword = true;
     }
 
-    void TakeSword()
+    void TakeMedicine()
     {
         dialogueWindow.CreateTextMessage(quest_complete);
         dialogueWindow.CreateButton(player_quest_complete, new UnityAction[] { delegate { dialogueWindow.Enable(false); } });

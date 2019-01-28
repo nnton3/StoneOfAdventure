@@ -35,14 +35,14 @@ public class Quest_chillMan : Quest
             indicator.SetActive(false);
             if (QuestInProgress())
             {
+                dialogueWindow.CreateTextMessage(not_complete_replic);
                 if (QuestController.CheckProgress(ID))
                 {
-                    EndQuest();
+                    dialogueWindow.CreateButton(player_have_sword, new UnityAction[] { EndQuest, delegate { dialogueWindow.Enable(false); } });
                     QuestController.DeleteActiveQuest(ID);
                 }
                 else
                 {
-                    dialogueWindow.CreateTextMessage(not_complete_replic);
                     dialogueWindow.CreateButton(player_not_complete_answer, new UnityAction[] { EnableIndicator, delegate { dialogueWindow.Enable(false); } });
                 }
             }

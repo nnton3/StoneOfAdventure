@@ -6,8 +6,7 @@ public class Patron : MonoBehaviour {
 
 	[HideInInspector]
 	public Animator anim;
-	[HideInInspector]
-	public Rigidbody2D rb;
+	Rigidbody2D rb;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -15,9 +14,10 @@ public class Patron : MonoBehaviour {
 		StartCoroutine ("Timer");
 	}
 
-	[HideInInspector]
-	public int input = 0;
-	public float moveSpeed = 0f;
+    [HideInInspector]
+    public int input;
+    [SerializeField]
+    protected float moveSpeed;
 
 	void Update () {
 		rb.velocity = new Vector2 (input * moveSpeed, rb.velocity.y);
@@ -27,7 +27,8 @@ public class Patron : MonoBehaviour {
 		TrueHit (target);
 	}
 		
-	public float attackPoints = 10f;
+    [SerializeField]
+    protected float attackPoints = 10f;
 	public virtual void TrueHit (Collider2D target) {
 		if (target.CompareTag ("Enemy")) {
 			target.GetComponent<Damage> ().DefaultDamage(attackPoints, input);
@@ -42,7 +43,8 @@ public class Patron : MonoBehaviour {
 		}
 	}
 
-	public float lifeTime = 3f;
+    [SerializeField]
+	float lifeTime = 3f;
 	public virtual IEnumerator Timer() {
 		yield return new WaitForSeconds (lifeTime);
 		Destroy (gameObject);

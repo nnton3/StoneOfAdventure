@@ -37,7 +37,6 @@ public class Quest_blacksmith : Quest {
                 dialogueWindow.CreateTextMessage(hello_friend);
                 if (QuestController.CheckProgress(ID))
                 {
-
                     dialogueWindow.CreateButton(player_have_ore, new UnityAction[] { EndQuest, delegate { dialogueWindow.Enable(false); } });
                     QuestController.DeleteActiveQuest(ID);
                 }
