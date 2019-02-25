@@ -13,6 +13,7 @@ public class DangerArea : MonoBehaviour {
     int allEnemies = 0;
 
 	void Start () {
+        player = GameObject.Find("Player");
 		FindUnits ();
 	}
 
@@ -28,15 +29,22 @@ public class DangerArea : MonoBehaviour {
 	}
 
 	//Если игрок вошел в зону видимости
-	void OnTriggerEnter2D (Collider2D other) {
-		if (other.CompareTag ("Player")) {
+	void OnTriggerEnter2D (Collider2D target) {
+		if (target.CompareTag ("Player")) {
 			if (!stackActivated) {
-				GameManager.EnableBattleMode(true);
-				enemieAlert (other.gameObject);
-				stackActivated = true;
-			}
+                GoToAttack();
+
+            }
 		}
 	}
+
+    GameObject player;
+    public void GoToAttack()
+    {
+        GameManager.EnableBattleMode(true);
+        enemieAlert(player);
+        stackActivated = true;
+    }
 
 	//Зафиксировать потери среди врагов
 	public void AddCorpse () {

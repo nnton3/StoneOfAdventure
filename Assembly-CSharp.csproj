@@ -240,7 +240,7 @@
     <Compile Include="Assets\Scripts\Interface\QuestBar.cs" />
     <Compile Include="Assets\Scripts\Interface\QuestBarElements.cs" />
     <Compile Include="Assets\Scripts\Interface\TransitionController.cs" />
-    <Compile Include="Assets\Scripts\Levels\Level1.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level4_events\Level4_startEvent.cs" />
     <Compile Include="Assets\Scripts\Objects\Chest.cs" />
     <Compile Include="Assets\Scripts\Objects\ChestTrigger.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AttackTrigger.cs" />
@@ -276,11 +276,11 @@
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Projects/StoneOfAdventure/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Projects/StoneOfAdventure/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Projects/StoneOfAdventure/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/Projects/StoneOfAdventure/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>D:/Projects/StoneOfAdventure/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
@@ -486,9 +486,6 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Programs/Unity3d/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>D:/Projects/StoneOfAdventure/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>D:/Projects/StoneOfAdventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -497,9 +494,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/Projects/StoneOfAdventure/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>D:/Projects/StoneOfAdventure/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Programs/Unity3d/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
