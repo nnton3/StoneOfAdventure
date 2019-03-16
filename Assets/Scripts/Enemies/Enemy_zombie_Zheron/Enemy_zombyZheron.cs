@@ -15,27 +15,39 @@ public class Enemy_zombyZheron : Zombie {
 				//Определение местоположения игрока
 				FindTarget ();
 				flipParam = inputX;
-
-				//Если можно атаковать
-				if (CanAttack ()) {
-					//Если игрок в зоне досягаемости и в зоне видимости
-					if ((targetRange < (attackRange - 0.5f)) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f))) {
-						//Выбрать тип атаки:
-						//Если в области атаки моргенштерном
-						if (targetRange >= morgenstern_MinimumAttackRange) {
-							//Атаковать моргенштерном
-							Attack ();
-							//Иначе
-						} else
-							//Сделать толчок щитом
-							JerkWithShield ();
-					} else 
-						//Изменить направление движения
-						inputX = -targetDirection;
+                Debug.Log("can move");
+                //Если можно атаковать
+                if (CanAttack ()) {
+                    Debug.Log("can attack");
+                    //Если игрок в зоне досягаемости и в зоне видимости
+                    if ((targetRange < (attackRange - 0.5f)) && ((targetDirection < 0f && direction > 0f) || (targetDirection > 0f && direction < 0f)))
+                    {
+                        Debug.Log("change attack");
+                        //Выбрать тип атаки:
+                        //Если в области атаки моргенштерном
+                        if (targetRange >= morgenstern_MinimumAttackRange)
+                        {
+                            Debug.Log("mille attack");
+                            //Атаковать моргенштерном
+                            Attack();
+                            //Иначе
+                        }
+                        else
+                        {
+                            Debug.Log("shield attack");
+                            //Сделать толчок щитом
+                            JerkWithShield();
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("change direction");
+                        //Изменить направление движения
+                        inputX = -targetDirection;
+                    }
 				}
 			}
 			Run ();
-
 		}
 	}
 
@@ -54,7 +66,13 @@ public class Enemy_zombyZheron : Zombie {
 
 	//Рывок
 	void JerkWithShield () {
-		conditions.attack = true;
+        //Остановиться
+        inputX = 0;
+        //Выйти из стана
+        conditions.DisableStun();
+        //Убрать блок если юнит в блоке
+        CheckBlock();
+        conditions.attack = true;
 		anim.SetTrigger ("attack2");
 	}
 

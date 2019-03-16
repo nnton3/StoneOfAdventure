@@ -11,14 +11,14 @@ public class Level4_startEvent : MonoBehaviour
     }
 
     [SerializeField]
-    string player_hello_replic = "Очередной, мать его, мир";
+    string player_hello_replic = "Ого, кажется игра все таки релизнулась";
     public void PlayerTextPrint()
     {
         dialogueWindow.CreateTextMessage(player_hello_replic);
     }
 
     [SerializeField]
-    string littleGirl_hello_replic = "Очередной, мать его, герой";
+    string littleGirl_hello_replic = "Даже не верится";
     public void LittleGirlTextPrint()
     {
         dialogueWindow.CreateTextMessage(littleGirl_hello_replic);
@@ -46,5 +46,10 @@ public class Level4_startEvent : MonoBehaviour
     public void StartZombieAttack()
     {
         startDangerArea.GoToAttack();
+    }
+
+    public void DisableStartEvent ()
+    {
+        this.gameObject.SetActive(false);
     }
 }
